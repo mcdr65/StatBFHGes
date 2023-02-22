@@ -1,0 +1,35 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "Statistik-Beratung G"
+  navbar:
+    left:
+      - href: organisation.qmd
+        text: Organisation
+      - href: angebot.qmd
+        text: Angebot
+      - href: software.qmd
+        text: Software
+      - href: kompetenzen.qmd
+        text: Kompetenzen
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/mcdr65
+      - icon: rss
+        href: index.xml
+      - text: Ressources
+        menu:
+          - text: R Weekly
+            href: https://rweekly.org/
+          - text: R Bloggers
+            href: https://www.r-bloggers.com/
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly 
+    toc: true
+    code-link: true
+

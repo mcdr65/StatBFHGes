@@ -1,0 +1,63 @@
+# Organisation
+
+::: {.hidden}
+$$
+ \def\RR{{\textsf{R}}}
+ \def\lx{{\LaTeX}} 
+$$
+:::
+
+
+## Präsenz
+
+ * **Montag-Donnerstag**
+ * Finkenhubelweg 11, Raum/Office F108
+ 
+<!-- ## Zeiten Sprechstunde -->
+<!--   * Montag 10:00-12:00 -->
+<!--   * Dienstag 10:00-12:00  -->
+<!--   * Donnerstag 10:00-12:00 -->
+  
+<!-- Die Beratung kann ausnahmsweise auch in anderen Zeitfenstern stattfinden. -->
+  
+ 
+  
+## Anfrage
+
+Kurzes Mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch) mit Angabe:
+
+* Einheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)
+* Forschung oder Lehre
+* Projekt / Thema 
+* Stadium (Planung, Analyse, Interpretation, Publikation)
+
+
+
+## Rahmen
+
+###  Bachelor- oder Master-Thesis 
+
+Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.
+
+
+### Projekte
+ 
+
+Arbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes -- je nach Vereinbarung -- übernommen werden. 
+
+<!-- Eine Beratung wird kostenlos durchgeführt, sofern sie eine oder weniger als eine Stunde dauert. -->
+
+
+### Autorenschaft
+
+Bereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden. 
+
+### Vertraulichkeit
+
+Der Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis der Auftraggeberin oder des Auftraggebers.
+
+
+## Externe Aufträge
+
+Nach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag  erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden. 
+

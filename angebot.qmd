@@ -1,0 +1,24 @@
+# Angebot
+
+## Forschende
+ 
+
+  * Planung: Design, Fallzahl, Simulationen
+  * Datenaufbereitung
+  * Analysen
+  * Interpretation
+  * Dissemination/Publikationen
+  * Interne Fortbildungen
+
+
+## Studierende
+
+Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.
+
+  * Design, Fallzahl
+  * Hilfestellung bei komplexeren Modellen / Analysen
+  * Interpretation
+  * Dissemination/Publikationen
+
+  
+  

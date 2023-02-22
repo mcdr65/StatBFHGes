@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "organisation.html",
+    "href": "organisation.html",
+    "title": "Statistik-Beratung G",
+    "section": "",
+    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\n\n\nMontag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108\n\n\n\n\n\n\n\n\n\nKurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)\n\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis der Auftraggeberin oder des Auftraggebers.\n\n\n\n\nNach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "👋 Hi, I’m André Meichtry\n🌱 I’m currently working as a statistics consultant at the School of Health Professions, Bern University of Applied Sciences.\n \n\n🏢\nBerner Fachhochschule / Bern University of Applied Sciences\nDepartement Gesundheit / Department of Health Professions\nAndré Meichtry\nMurtenstrasse 10\n(Büro: Finkenhubelweg 11, Raum/Office F108)\n3008 Bern\nSwitzerland\n+41 31 848 60 18\n\nandre.meichtry@bfh.ch\nbfh.ch/gesundheit"
+  },
+  {
+    "objectID": "angebot.html",
+    "href": "angebot.html",
+    "title": "Statistik-Beratung G",
+    "section": "",
+    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Statistik-Beratung G",
+    "section": "",
+    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\nSoftware\n\nStatistik: R (plattformunabhängig), JAGS (MCMC)\nBetriebsystem: Windows, Linux (Ubuntu)\nEditoren: RStudio, EMACS (ESS)\nLiterate Programming: \\(\\lx\\) und R-Markdown mit knitr\nVersionsverwaltung: Git, GitHub, BFH GitLab"
+  },
+  {
+    "objectID": "kompetenzen.html",
+    "href": "kompetenzen.html",
+    "title": "Statistik-Beratung G",
+    "section": "",
+    "text": "Fallzahl, Design, Confounding, Power-Aspekte\nTrials: Parallel, Crossover Äquivalenz, Superiority, Non-Inferority\nBayesianische Zugänge\nSchätzen versus Testen\n\n\n\n\n\nGraphische Darstellungen\n\n\n\n\n\nAllgemeines lineares Modell (\\(t\\)-Test, ANOVA, Regression)\nGeneralisiertes lineare Modell (Logistic, Poisson, etc.)\nGemischte Modelle\nGeneralisiertes Gemischtes Modell\nLog-Lineare Modelle\nKumulative Logit-Modelle\nRobuste Methoden\n\n\n\n\n\nMarginal and conditional models (GEE, GLMM)\nTime-dependent exposures\n\n\n\n\n\n\nKlassisch\nNetzwerk (Bayes)\n\n\n\n\n\nAdditive Modelle\nNeural Networks\nClassification und Regression Trees\nRegularisation und Variablenselektion (Ridge, Lasso)\nKreuzvalidierung, Bootstrap, Bagging\n\n\n\n\n\nAalen-Johansen\nKaplan-Meier\nParametrische Modelle\nCox-Modell\nCompeting Risk und Multi-state\n\n\n\n\n\nHauptkomponenten\nCluster\n\n\n\n\n\nFaktoranalyse\nItem-Response, Rasch, Graded Response\nLatente Klassen- und Profilanalyse\n\n\n\n\n\nR mit JAGS"
+  }
+]
