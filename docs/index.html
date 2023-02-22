@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.313">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="dcterms.date" content="2023-02-20">
+<meta name="dcterms.date" content="2023-02-22">
 <meta name="description" content="Willkommen zur Statistik-Beratung des G">
 <title>Statistik-Beratung G - Willkommen</title>
 <style>
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 20, 2023</p>
+      <p class="date">February 22, 2023</p>
     </div>
   </div>
   
@@ -163,9 +163,78 @@ ul.task-list li input[type="checkbox"] {
 
 </header><!-- ```{r demosplines, results="hide"} --><!-- library(MultiKink) --><!-- library(splines) --><!-- library(ggplot2) --><!-- cub.splines.bs <- lm(triceps ~ bs(age, knots = c(5,10,20,30,40)), data=triceps) --><!-- cub.splines.ns <- lm(triceps ~ ns(age, knots = c(5,10,20,30,40)), data=triceps) --><!-- #| fig-cap: "polynomial cubic splines (green), natural cubic splines (red)" --><!-- tri.age.plot <- ggplot(triceps, aes(x=age, y=triceps)) + --><!--                  geom_point(alpha=0.55, color="black") + --><!--                  theme_minimal()+ylab("triceps thickness") --><!-- tri.age.plot + --><!--     stat_smooth(method = "lm", --><!--                formula = y~bs(x,knots = c(5,10,20,30,40)), --><!--                lty = 1, col = "green") + --><!--     stat_smooth(method = "lm", --><!--                formula = y~ns(x,knots = c(5,10,20,30,40)), --><!--                lty = 1, col = "red") --><!-- ``` --><div class="cell">
 <div class="cell-output-display">
-<p><img src="index_files/figure-html/demopenalized-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<!-- ```{r demopenalized, results="hide"} -->
+<!-- library(glmnet) -->
+<!--      set.seed(1010) -->
+<!--      n = 1000 -->
+<!--      p = 100 -->
+<!--      nzc = trunc(p/10) -->
+<!--      x = matrix(rnorm(n * p), n, p) -->
+<!--      beta = rnorm(nzc) -->
+<!--      fx = x[, seq(nzc)] %*% beta -->
+<!--      eps = rnorm(n) * 5 -->
+<!--      y = drop(fx + eps) -->
+<!--      px = exp(fx) -->
+<!--      px = px/(1 + px) -->
+<!--      ly = rbinom(n = length(px), prob = px, size = 1) -->
+<!--      set.seed(1011) -->
+<!--      cvob1a = cv.glmnet(x, y) -->
+<!--           par(mfrow = c(2, 3), mar = c(4.5, 4.5, 4, 1)) -->
+<!--      plot(cvob1a) -->
+<!--      title("Gaussian Family", line = 2.5) -->
+<!--      set.seed(1011) -->
+<!--      cvob2 = cv.glmnet(x, ly, family = "binomial") -->
+<!--      plot(cvob2) -->
+<!--      title("Binomial Family", line = 2.5) -->
+<!--      ## frame() -->
+<!--      set.seed(1011) -->
+<!--      cvob3 = cv.glmnet(x, ly, family = "binomial", type.measure = "class") -->
+<!--      plot(cvob3) -->
+<!--      title("Binomial Family", line = 2.5) -->
+<!--      ## Not run: -->
+<!--      ## cvob1r = cv.glmnet(x, y, relax = TRUE) -->
+<!--      ## plot(cvob1r) -->
+<!--      ## predict(cvob1r, newx = x[, 1:5]) -->
+<!--      set.seed(1011) -->
+<!--      ## cvob3a = cv.glmnet(x, ly, family = "binomial", type.measure = "auc") -->
+<!--      ## plot(cvob3a) -->
+<!--      ## title("Binomial Family", line = 2.5) -->
+<!--      set.seed(1011) -->
+<!--      mu = exp(fx/10) -->
+<!--      y = rpois(n, mu) -->
+<!--      cvob4 = cv.glmnet(x, y, family = "poisson") -->
+<!--      plot(cvob4) -->
+<!--      title("Poisson Family", line = 2.5) -->
+<!--      # Multinomial -->
+<!--      n = 500 -->
+<!--      p = 30 -->
+<!--      nzc = trunc(p/10) -->
+<!--      x = matrix(rnorm(n * p), n, p) -->
+<!--      beta3 = matrix(rnorm(30), 10, 3) -->
+<!--      beta3 = rbind(beta3, matrix(0, p - 10, 3)) -->
+<!--      f3 = x %*% beta3 -->
+<!--      p3 = exp(f3) -->
+<!--      p3 = p3/apply(p3, 1, sum) -->
+<!--      g3 = glmnet:::rmult(p3) -->
+<!--      set.seed(10101) -->
+<!--      cvfit = cv.glmnet(x, g3, family = "multinomial") -->
+<!--      plot(cvfit) -->
+<!--      title("Multinomial Family", line = 2.5) -->
+<!--      # Cox -->
+<!--      beta = rnorm(nzc) -->
+<!--      fx = x[, seq(nzc)] %*% beta/3 -->
+<!--      hx = exp(fx) -->
+<!--      ty = rexp(n, hx) -->
+<!--      tcens = rbinom(n = n, prob = 0.3, size = 1)  # censoring indicator -->
+<!--      y = cbind(time = ty, status = 1 - tcens)  # y=Surv(ty,1-tcens) with library(survival) -->
+<!--      foldid = sample(rep(seq(10), length = n)) -->
+<!--      fit1_cv = cv.glmnet(x, y, family = "cox", foldid = foldid) -->
+<!--      plot(fit1_cv) -->
+<!--      title("Cox Family", line = 2.5) -->
+<!-- ``` -->
 
 
 

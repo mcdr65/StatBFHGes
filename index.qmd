@@ -33,79 +33,87 @@ date: last-modified
 
 
 
-```{r demopenalized, results="hide"}
-library(glmnet)
-     set.seed(1010)
-     n = 1000
-     p = 100
-     nzc = trunc(p/10)
-     x = matrix(rnorm(n * p), n, p)
-     beta = rnorm(nzc)
-     fx = x[, seq(nzc)] %*% beta
-     eps = rnorm(n) * 5
-     y = drop(fx + eps)
-     px = exp(fx)
-     px = px/(1 + px)
-     ly = rbinom(n = length(px), prob = px, size = 1)
-     set.seed(1011)
-     cvob1a = cv.glmnet(x, y)
-          par(mfrow = c(2, 3), mar = c(4.5, 4.5, 4, 1))
-
-     plot(cvob1a)
-     title("Gaussian Family", line = 2.5)
-     set.seed(1011)
-
-     cvob2 = cv.glmnet(x, ly, family = "binomial")
-     plot(cvob2)
-     title("Binomial Family", line = 2.5)
-     ## frame()
-     set.seed(1011)
-     cvob3 = cv.glmnet(x, ly, family = "binomial", type.measure = "class")
-     plot(cvob3)
-     title("Binomial Family", line = 2.5)
-     ## Not run:
-     ## cvob1r = cv.glmnet(x, y, relax = TRUE)
-     ## plot(cvob1r)
-     ## predict(cvob1r, newx = x[, 1:5])
-     set.seed(1011)
-     ## cvob3a = cv.glmnet(x, ly, family = "binomial", type.measure = "auc")
-     ## plot(cvob3a)
-     ## title("Binomial Family", line = 2.5)
-
-
-     set.seed(1011)
-     mu = exp(fx/10)
-     y = rpois(n, mu)
-     cvob4 = cv.glmnet(x, y, family = "poisson")
-     plot(cvob4)
-     title("Poisson Family", line = 2.5)
-     
-     # Multinomial
-     n = 500
-     p = 30
-     nzc = trunc(p/10)
-     x = matrix(rnorm(n * p), n, p)
-     beta3 = matrix(rnorm(30), 10, 3)
-     beta3 = rbind(beta3, matrix(0, p - 10, 3))
-     f3 = x %*% beta3
-     p3 = exp(f3)
-     p3 = p3/apply(p3, 1, sum)
-     g3 = glmnet:::rmult(p3)
-     set.seed(10101)
-     cvfit = cv.glmnet(x, g3, family = "multinomial")
-     plot(cvfit)
-     title("Multinomial Family", line = 2.5)
-     # Cox
-     beta = rnorm(nzc)
-     fx = x[, seq(nzc)] %*% beta/3
-     hx = exp(fx)
-     ty = rexp(n, hx)
-     tcens = rbinom(n = n, prob = 0.3, size = 1)  # censoring indicator
-     y = cbind(time = ty, status = 1 - tcens)  # y=Surv(ty,1-tcens) with library(survival)
-     foldid = sample(rep(seq(10), length = n))
-     fit1_cv = cv.glmnet(x, y, family = "cox", foldid = foldid)
-     plot(fit1_cv)
-     title("Cox Family", line = 2.5)
-      
+```{r }
+library(ggplot2)
+ggplot(diamonds,aes(carat,price))+geom_point(aes(colour=color,shape=cut),size=0.2)+geom_smooth(color="red",lty=1,lwd=0.3)+facet_grid(rows=vars(color),cols=vars(cut))
 ```
+
+
+
+
+<!-- ```{r demopenalized, results="hide"} -->
+<!-- library(glmnet) -->
+<!--      set.seed(1010) -->
+<!--      n = 1000 -->
+<!--      p = 100 -->
+<!--      nzc = trunc(p/10) -->
+<!--      x = matrix(rnorm(n * p), n, p) -->
+<!--      beta = rnorm(nzc) -->
+<!--      fx = x[, seq(nzc)] %*% beta -->
+<!--      eps = rnorm(n) * 5 -->
+<!--      y = drop(fx + eps) -->
+<!--      px = exp(fx) -->
+<!--      px = px/(1 + px) -->
+<!--      ly = rbinom(n = length(px), prob = px, size = 1) -->
+<!--      set.seed(1011) -->
+<!--      cvob1a = cv.glmnet(x, y) -->
+<!--           par(mfrow = c(2, 3), mar = c(4.5, 4.5, 4, 1)) -->
+
+<!--      plot(cvob1a) -->
+<!--      title("Gaussian Family", line = 2.5) -->
+<!--      set.seed(1011) -->
+
+<!--      cvob2 = cv.glmnet(x, ly, family = "binomial") -->
+<!--      plot(cvob2) -->
+<!--      title("Binomial Family", line = 2.5) -->
+<!--      ## frame() -->
+<!--      set.seed(1011) -->
+<!--      cvob3 = cv.glmnet(x, ly, family = "binomial", type.measure = "class") -->
+<!--      plot(cvob3) -->
+<!--      title("Binomial Family", line = 2.5) -->
+<!--      ## Not run: -->
+<!--      ## cvob1r = cv.glmnet(x, y, relax = TRUE) -->
+<!--      ## plot(cvob1r) -->
+<!--      ## predict(cvob1r, newx = x[, 1:5]) -->
+<!--      set.seed(1011) -->
+<!--      ## cvob3a = cv.glmnet(x, ly, family = "binomial", type.measure = "auc") -->
+<!--      ## plot(cvob3a) -->
+<!--      ## title("Binomial Family", line = 2.5) -->
+
+
+<!--      set.seed(1011) -->
+<!--      mu = exp(fx/10) -->
+<!--      y = rpois(n, mu) -->
+<!--      cvob4 = cv.glmnet(x, y, family = "poisson") -->
+<!--      plot(cvob4) -->
+<!--      title("Poisson Family", line = 2.5) -->
+     
+<!--      # Multinomial -->
+<!--      n = 500 -->
+<!--      p = 30 -->
+<!--      nzc = trunc(p/10) -->
+<!--      x = matrix(rnorm(n * p), n, p) -->
+<!--      beta3 = matrix(rnorm(30), 10, 3) -->
+<!--      beta3 = rbind(beta3, matrix(0, p - 10, 3)) -->
+<!--      f3 = x %*% beta3 -->
+<!--      p3 = exp(f3) -->
+<!--      p3 = p3/apply(p3, 1, sum) -->
+<!--      g3 = glmnet:::rmult(p3) -->
+<!--      set.seed(10101) -->
+<!--      cvfit = cv.glmnet(x, g3, family = "multinomial") -->
+<!--      plot(cvfit) -->
+<!--      title("Multinomial Family", line = 2.5) -->
+<!--      # Cox -->
+<!--      beta = rnorm(nzc) -->
+<!--      fx = x[, seq(nzc)] %*% beta/3 -->
+<!--      hx = exp(fx) -->
+<!--      ty = rexp(n, hx) -->
+<!--      tcens = rbinom(n = n, prob = 0.3, size = 1)  # censoring indicator -->
+<!--      y = cbind(time = ty, status = 1 - tcens)  # y=Surv(ty,1-tcens) with library(survival) -->
+<!--      foldid = sample(rep(seq(10), length = n)) -->
+<!--      fit1_cv = cv.glmnet(x, y, family = "cox", foldid = foldid) -->
+<!--      plot(fit1_cv) -->
+<!--      title("Cox Family", line = 2.5) -->
+      
+<!-- ``` -->
 
