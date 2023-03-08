@@ -18,7 +18,7 @@
     "href": "angebot.html",
     "title": "Statistik-Beratung G",
     "section": "",
-    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
+    "text": "To call in the statistician after the experiment is done may be no more than asking him to perform a post-mortem examination: he may be able to say what the experiment died of.\nSir Ronald Aylmer Fisher"
   },
   {
     "objectID": "software.html",
@@ -33,5 +33,54 @@
     "title": "Statistik-Beratung G",
     "section": "",
     "text": "Fallzahl, Design, Confounding, Power-Aspekte\nTrials: Parallel, Crossover Äquivalenz, Superiority, Non-Inferority\nBayesianische Zugänge\nSchätzen versus Testen\n\n\n\n\n\nGraphische Darstellungen\n\n\n\n\n\nAllgemeines lineares Modell (\\(t\\)-Test, ANOVA, Regression)\nGeneralisiertes lineare Modell (Logistic, Poisson, etc.)\nGemischte Modelle\nGeneralisiertes Gemischtes Modell\nLog-Lineare Modelle\nKumulative Logit-Modelle\nRobuste Methoden\n\n\n\n\n\nMarginal and conditional models (GEE, GLMM)\nTime-dependent exposures\n\n\n\n\n\n\nKlassisch\nNetzwerk (Bayes)\n\n\n\n\n\nAdditive Modelle\nNeural Networks\nClassification und Regression Trees\nRegularisation und Variablenselektion (Ridge, Lasso)\nKreuzvalidierung, Bootstrap, Bagging\n\n\n\n\n\nAalen-Johansen\nKaplan-Meier\nParametrische Modelle\nCox-Modell\nCompeting Risk und Multi-state\n\n\n\n\n\nHauptkomponenten\nCluster\n\n\n\n\n\nFaktoranalyse\nItem-Response, Rasch, Graded Response\nLatente Klassen- und Profilanalyse\n\n\n\n\n\nR mit JAGS"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Willkommen",
+    "section": "",
+    "text": "# A tibble: 6 × 10\n  carat cut       color clarity depth table price     x     y     z\n  <dbl> <ord>     <ord> <ord>   <dbl> <dbl> <int> <dbl> <dbl> <dbl>\n1  0.23 Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43\n2  0.21 Premium   E     SI1      59.8    61   326  3.89  3.84  2.31\n3  0.23 Good      E     VS1      56.9    65   327  4.05  4.07  2.31\n4  0.29 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63\n5  0.31 Good      J     SI2      63.3    58   335  4.34  4.35  2.75\n6  0.24 Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48"
+  },
+  {
+    "objectID": "organisation.html#präsenz",
+    "href": "organisation.html#präsenz",
+    "title": "Statistik-Beratung G",
+    "section": "Präsenz",
+    "text": "Präsenz\n\nMontag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108"
+  },
+  {
+    "objectID": "organisation.html#anfrage",
+    "href": "organisation.html#anfrage",
+    "title": "Statistik-Beratung G",
+    "section": "Anfrage",
+    "text": "Anfrage\nKurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)"
+  },
+  {
+    "objectID": "organisation.html#rahmen",
+    "href": "organisation.html#rahmen",
+    "title": "Statistik-Beratung G",
+    "section": "Rahmen",
+    "text": "Rahmen\n\nBachelor- oder Master-Thesis\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.\n\n\nProjekte\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\nAutorenschaft\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\nVertraulichkeit\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis der Auftraggeberin oder des Auftraggebers."
+  },
+  {
+    "objectID": "organisation.html#externe-aufträge",
+    "href": "organisation.html#externe-aufträge",
+    "title": "Statistik-Beratung G",
+    "section": "Externe Aufträge",
+    "text": "Externe Aufträge\nNach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+  },
+  {
+    "objectID": "angebot.html#forschende",
+    "href": "angebot.html#forschende",
+    "title": "Statistik-Beratung G",
+    "section": "Forschende",
+    "text": "Forschende\n\nPlanung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen"
+  },
+  {
+    "objectID": "angebot.html#studierende",
+    "href": "angebot.html#studierende",
+    "title": "Statistik-Beratung G",
+    "section": "Studierende",
+    "text": "Studierende\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
   }
 ]

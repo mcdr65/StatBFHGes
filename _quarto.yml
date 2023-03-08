@@ -17,6 +17,8 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/mcdr65
+      - icon: git
+        href: https://gitlab.ti.bfh.ch/
       - icon: rss
         href: index.xml
       - text: Ressources
@@ -27,8 +29,8 @@ website:
             href: https://www.r-bloggers.com/
 format:
   html:
-    theme:
-      light: flatly
+    theme: 
+      light: litera
       dark: darkly 
     toc: true
     code-link: true
