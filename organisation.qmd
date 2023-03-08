@@ -14,13 +14,7 @@ $$
  * **Montag-Donnerstag**
  * Finkenhubelweg 11, Raum/Office F108
  
-<!-- ## Zeiten Sprechstunde -->
-<!--   * Montag 10:00-12:00 -->
-<!--   * Dienstag 10:00-12:00  -->
-<!--   * Donnerstag 10:00-12:00 -->
-  
-<!-- Die Beratung kann ausnahmsweise auch in anderen Zeitfenstern stattfinden. -->
-  
+
  
   
 ## Anfrage

@@ -19,8 +19,6 @@ website:
         href: https://github.com/mcdr65
       - icon: git
         href: https://gitlab.ti.bfh.ch/
-      - icon: rss
-        href: index.xml
       - text: Ressources
         menu:
           - text: R Weekly
