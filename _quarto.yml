@@ -7,8 +7,6 @@ website:
     left:
       - href: organisation.qmd
         text: Organisation
-      - href: Kolloquium.qmd
-        text: Kolloquium
       - href: angebot.qmd
         text: Angebot
       - href: software.qmd

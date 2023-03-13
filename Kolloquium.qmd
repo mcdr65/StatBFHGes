@@ -1,6 +1,7 @@
 # Statistik-Kolloquium am G (Entwurf)
 
 
+
 ## Ziel
 
 Statistik-Interessierte tauschen sich über ausgewählte Themen zu quantitativen Methoden, Statistik (auch Maschinelles Lernen) und Wissenschaftsphilosophie aus. Themen können von Teilnehmenden eingebracht werden. Teilnehmende können auch selber Inputs geben. Das müssen/sollen keine vollständigen und widerspruchsfreien Vorträge sein. Es soll über ein spezifisches Thema diskutiert, hie und da auch bisschen philosophiert werden. Die Treffen sollen ungezwungen bleiben.
