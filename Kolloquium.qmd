@@ -1,0 +1,50 @@
+# Statistik-Kolloquium am G (Entwurf)
+
+
+## Ziel
+
+Statistik-Interessierte tauschen sich über ausgewählte Themen zu quantitativen Methoden, Statistik (auch Maschinelles Lernen) und Wissenschaftsphilosophie aus. Themen können von Teilnehmenden eingebracht werden. Teilnehmende können auch selber Inputs geben. Das müssen/sollen keine vollständigen und widerspruchsfreien Vorträge sein. Es soll über ein spezifisches Thema diskutiert, hie und da auch bisschen philosophiert werden. Die Treffen sollen ungezwungen bleiben.
+
+Im Rahmen dieser Kolloquien können/sollen keine ganzen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.
+
+Präsenz vor Ort ist aber sehr wünschenswert. Das Kolloquium wird aber hybrid durchgeführt. 
+
+
+
+## Zeitpunkt
+
+Alternierend:
+
+* Kolloquium A: **Erster Mittwoch im Monat**: 13:00 bis 14:00
+
+  * April, Juni, August, Oktober, Dezember
+
+* Kolloquium B: Lunch: **Erster Dienstag im Monat**: 12:30 bis 13:30
+
+  * Mai, Juli, September, November
+
+
+
+## Themen 2023
+
+
+| Tag   | Datum | Thema               | Verantwortlich[^1] | Ort |
+|-------|-------|---------------------|--------------------|-----|
+| A. Mi | 5.4   | Fisher-Neyman-Bayes | André              |     |
+| B. Di | 2.5   |                     |                    |     |
+| A. MI | 7.6   |                     |                    |     |
+| B. DI | 4.7   |                     |                    |     |
+| A. MI | 2.8   |                     |                    |     |
+| B. DI | 5.9   |                     |                    |     |
+| A. MI | 4.10  |                     |                    |     |
+| B. DI | 7.11  |                     |                    |     |
+| A. MI | 6.12  |                     |                    |     |
+
+
+## Dateien
+
+[Dateien](https://bernerfachhochschule.sharepoint.com/:f:/s/g-statistikkolloquiumg/Eohfj9Zbc8RAoAAvGe3iUA8BBNpgKJotThBHzOHAIcTinw?e=vYC2yw)
+
+
+ 
+[^1]: Verantwortlich heisst, dass diejenige Person für ein Thema verantwortlich ist, nicht für einen fertigen Vortrag!!
