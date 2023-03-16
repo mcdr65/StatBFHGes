@@ -4,27 +4,25 @@
 
 ## Ziel
 
-Statistik-Interessierte tauschen sich über ausgewählte Themen zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von Teilnehmenden eingebracht und auch vorgestellt werden. 
+Statistik-Interessierte tauschen sich über **ausgewählte Themen** zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von Teilnehmenden eingebracht und auch vorgestellt werden. Die Art der Vorstellung ist frei. (Info dann per mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch)). 
 
-Im Rahmen dieser Kolloquien können/sollen keine ganzen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.
+Hinweis: Im Rahmen dieser Kolloquien können/sollen keine ganzen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.
 
+
+
+
+
+
+## Zeitpunkt und Information
 Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt. 
 
 
+ * Zeitpunkt: **Dienstag und Mittwoch alternierend**:
+   * Kolloquium A: *Lunch*: **Erster Dienstag ungerade Monate 12:30 bis 13:30** (Januar, März, Mai, September, November)
+   * Kolloquium B: **Erster Mittwoch gerade Monate: 13:00 bis 14:00** (Februar, April, Juni, Oktober, Dezember)
+ 
 
-## Zeitpunkt
-
-Alternierend:
-
-* Kolloquium A: **Erster Mittwoch im Monat: 13:00 bis 14:00**
-
-  * Februar, April, Juni, Oktober, Dezember
-
-* Kolloquium B: Lunch: **Erster Dienstag im Monat 12:30 bis 13:30**
-
-  * Januar, März, Mai, September, November
-
-
+* Informaton: Es werden Terminanfragen per Outlook zur Information verschickt, es sind **keine An- oder Abmeldungen nötig**. 
 
 
 ## Themen 2023
@@ -32,13 +30,13 @@ Alternierend:
 
 | Tag   | Datum | Thema               | Bereich                | Lead  | Ort |
 |-------|-------|---------------------|------------------------|-------|-----|
-| A. Mi | 5.4   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André |     |
-| B. Di | 2.5   |                     |                        |       |     |
-| A. MI | 7.6   |                     |                        |       |     |
-| B. DI | 5.9   |                     |                        |       |     |
-| A. MI | 4.10  |                     |                        |       |     |
-| B. DI | 7.11  |                     |                        |       |     |
-| A. MI | 6.12  |                     |                        |       |     |
+| B. Mi | 5.4   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André |     |
+| A. Di | 2.5   |                     |                        |       |     |
+| B. MI | 7.6   |                     |                        |       |     |
+| A. DI | 5.9   |                     |                        |       |     |
+| B. MI | 4.10  |                     |                        |       |     |
+| A. DI | 7.11  |                     |                        |       |     |
+| B. MI | 6.12  |                     |                        |       |     |
 
 
 ## Dateien auf MS Teams
