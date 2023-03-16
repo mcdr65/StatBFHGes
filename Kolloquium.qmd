@@ -1,13 +1,9 @@
 # Statistik-Kolloquium am G
 
 
+Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Themen** zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von Teilnehmenden eingebracht und auch vorgestellt werden. <!-- Die Art der Vorstellung ist frei. (Info dann per mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch)).  -->
 
-## Ziel
-
-Statistik-Interessierte tauschen sich über **ausgewählte Themen** zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von Teilnehmenden eingebracht und auch vorgestellt werden. Die Art der Vorstellung ist frei. (Info dann per mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch)). 
-
-Hinweis: Im Rahmen dieser Kolloquien können/sollen keine ganzen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.
-
+**Hinweis**: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.
 
 
 
@@ -18,11 +14,11 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 
 
  * Zeitpunkt: **Dienstag und Mittwoch alternierend**:
-   * Kolloquium A: *Lunch*: **Erster Dienstag ungerade Monate 12:30 bis 13:30** (Januar, März, Mai, September, November)
-   * Kolloquium B: **Erster Mittwoch gerade Monate: 13:00 bis 14:00** (Februar, April, Juni, Oktober, Dezember)
+   * Kolloquium A: **Erster Dienstag ungerade Monate 12:30 bis 13:30** (*Lunch*)
+   * Kolloquium B: **Erster Mittwoch gerade Monate: 13:00 bis 14:00** 
  
 
-* Informaton: Es werden Terminanfragen per Outlook zur Information verschickt, es sind **keine An- oder Abmeldungen nötig**. 
+* Information: Es werden Terminanfragen per Outlook zur Information verschickt, es sind **keine An- oder Abmeldungen nötig**. 
 
 
 ## Themen 2023
