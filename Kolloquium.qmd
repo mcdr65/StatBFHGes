@@ -24,15 +24,15 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 ## Themen 2023
 
 
-| Tag   | Datum | Thema               | Bereich                | Lead  | Ort |
-|-------|-------|---------------------|------------------------|-------|-----|
-| B. Mi | 5.4   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André |     |
-| A. Di | 2.5   |                     |                        |       |     |
-| B. MI | 7.6   |                     |                        |       |     |
-| A. DI | 5.9   |                     |                        |       |     |
-| B. MI | 4.10  |                     |                        |       |     |
-| A. DI | 7.11  |                     |                        |       |     |
-| B. MI | 6.12  |                     |                        |       |     |
+| Tag   | Datum | Thema               | Bereich                | Lead  | Ort                   |
+|-------|-------|---------------------|------------------------|-------|-----------------------|
+| B. Mi | 5.4   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André | Murtenstrasse 10: 123 |
+| A. Di | 2.5   |                     |                        |       |                       |
+| B. MI | 7.6   |                     |                        |       |                       |
+| A. DI | 5.9   |                     |                        |       |                       |
+| B. MI | 4.10  |                     |                        |       |                       |
+| A. DI | 7.11  |                     |                        |       |                       |
+| B. MI | 6.12  |                     |                        |       |                       |
 
 
 ## Dateien auf MS Teams
