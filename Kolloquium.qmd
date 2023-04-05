@@ -27,8 +27,8 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | Tag   | Datum | Thema               | Bereich                | Lead  | Ort                   |
 |-------|-------|---------------------|------------------------|-------|-----------------------|
 | B. Mi | 5.4   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André | Murtenstrasse 10: 123 |
-| A. Di | 2.5   |                     |                        |       |                       |
-| B. MI | 7.6   |                     |                        |       |                       |
+| A. Di | 2.5   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André | Murtenstrasse 10: 123 |
+| B. MI | 7.6   | Lineare Modelle?    |                        |       |                       |
 | A. DI | 5.9   |                     |                        |       |                       |
 | B. MI | 4.10  |                     |                        |       |                       |
 | A. DI | 7.11  |                     |                        |       |                       |
@@ -37,6 +37,5 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 
 ## Dateien auf MS Teams
 
-[Statistik Kolloquium G](https://teams.microsoft.com/l/team/19%3agvj8snDL7FYBHmhng2kxL9bYK0aHVvqLbK5tKNrV8Qk1%40thread.tacv2/conversations?groupId=8f5bd215-c94c-4ae1-bf5e-8db849f8c303&tenantId=d6a1cf8c-768e-4187-a738-b6e50c4deb4a)
-
+[Statistik Kolloquium G](https://bernerfachhochschule.sharepoint.com/:f:/s/g-statistikkolloquiumg/Eohfj9Zbc8RAoAAvGe3iUA8BBNpgKJotThBHzOHAIcTinw?e=rOe8K3)
 
