@@ -27,8 +27,8 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | Tag   | Datum | Thema               | Bereich                | Lead  | Ort                   |
 |-------|-------|---------------------|------------------------|-------|-----------------------|
 | B. Mi | 5.4   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André | Murtenstrasse 10: 123 |
-| A. Di | 2.5   | Fisher-Neyman-Bayes | Philosophischer Exkurs | André | Murtenstrasse 10: 123 |
-| B. MI | 7.6   | Lineare Modelle?    |                        |       |                       |
+| A. Di | 2.5   | Fisher-Neyman-Bayes | Philosophischer Exkurs     | André | Murtenstrasse 10: 123 |
+| B. MI | 7.6   | Lineare Modelle     | Anwendung              |       |                       |
 | A. DI | 5.9   |                     |                        |       |                       |
 | B. MI | 4.10  |                     |                        |       |                       |
 | A. DI | 7.11  |                     |                        |       |                       |
