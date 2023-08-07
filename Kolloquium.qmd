@@ -30,7 +30,7 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | A. Di | 2.5   | Bayes                              | Philosophischer Exkurs | André | Murtenstrasse 10: 123 |
 | B. MI | 7.6   | Fallzahl (Power, Precision)        | Planung                | André | Murtenstrasse 10: 123 |
 | A. DI | 5.9   | Das Allgemeine Lineare Modell (LM) | Anwendung              | André | Murtenstrasse 10: 123 |
-| B. MI | 4.10  |                                    |                        |       | Murtenstrasse 10: 123 |
+| B. MI | 4.10  | Kategorielle Eingangsgrössen (LM)  | Anwendung              | André | Murtenstrasse 10: 123 |
 | A. DI | 7.11  |                                    |                        |       | Murtenstrasse 10: 123 |
 | B. MI | 6.12  |                                    |                        |       | Murtenstrasse 10: 123 |
 |       |       |                                    |                        |       |                       |
