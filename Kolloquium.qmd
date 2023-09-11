@@ -33,7 +33,23 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | B. MI | 4.10  | Kategorielle Eingangsgrössen (LM)  | Modell                 | André | Murtenstrasse 10: 123 |
 | A. DI | 7.11  |                                    |                        |       | Murtenstrasse 10: 123 |
 | B. MI | 6.12  |                                    |                        |       | Murtenstrasse 10: 123 |
-|       |       |                                    |                        |       |                       |
+
+## Themen 2024
+
+
+| Tag   | Datum | Thema | Bereich | Lead | Ort |
+|-------|-------|-------|---------|------|-----|
+| A. DI | 9.1   |       |         |      |Murtenstrasse 10: 123     |
+| B. MI | 7.2   |       |         |      |Murtenstrasse 10: 123     |
+| A. DI | 5.3   |       |         |      |Murtenstrasse 10: 123     |
+| B. MI | 3.4   |       |         |      |Murtenstrasse 10: 123     |
+| A. DI | 7.5   |       |         |      |Murtenstrasse 10: 123     |
+| B. MI | 5.6   |       |         |      |Murtenstrasse 10: 123     |
+
+
+	
+
+
 
 
 ## Dateien auf MS Teams
