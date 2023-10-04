@@ -30,7 +30,7 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | B. MI | 7.6   | Fallzahl (Power, Precision)        | Planung                | André | Murtenstrasse 10: 123 |
 | A. DI | 5.9   | Das Allgemeine Lineare Modell (LM) | Modell                 | André | Murtenstrasse 10: 123 |
 | B. MI | 4.10  | Kategorielle Eingangsgrössen (LM)  | Modell                 | André | Murtenstrasse 10: 123 |
-| A. DI | 7.11  |                                    |                        |       | Murtenstrasse 10: 123 |
+| A. DI | 7.11  | LM "ANCOVA"                        | Modell                 | André | Murtenstrasse 10: 123 |
 | B. MI | 6.12  |                                    |                        |       | Murtenstrasse 10: 123 |
 
 ## Themen 2024
