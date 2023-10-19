@@ -19,6 +19,7 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
  
 
 
+::: {.panel-tabset}
 
 ## Themen 2023
 
@@ -45,7 +46,7 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | A. DI | 7.5   |       |         |      |Murtenstrasse 10: 123     |
 | B. MI | 5.6   |       |         |      |Murtenstrasse 10: 123     |
 
-
+:::
 	
 
 
