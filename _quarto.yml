@@ -27,10 +27,13 @@ website:
             href: https://rweekly.org/
           - text: R Bloggers
             href: https://www.r-bloggers.com/
+      - text: BLOG
+        href: https://mcdr65.github.io/myblog/
+      
 format:
   html:
     theme: 
-      light: litera
+      light: litera 
       dark: darkly 
     toc: true
     code-link: true
