@@ -1,7 +1,8 @@
 # Statistik-Kolloquium am G
 
 
-Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Themen** zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von Teilnehmenden eingebracht und auch vorgestellt werden. <!-- Die Art der Vorstellung ist frei. (Info dann per mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch)).  -->
+
+Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Themen** zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von den Teilnehmern eingebracht und auch vorgestellt werden. <!-- Die Art der Vorstellung ist frei. (Info dann per mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch)).  -->
 
 **Hinweis**: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.
 

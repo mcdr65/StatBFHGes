@@ -32,7 +32,7 @@ Kurzes Mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch) mit Angabe:
 
 ###  Bachelor- oder Master-Thesis 
 
-Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.
+Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.
 
 
 ### Projekte
@@ -49,7 +49,8 @@ Bereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften 
 
 ### Vertraulichkeit
 
-Der Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis der Auftraggeberin oder des Auftraggebers.
+Der Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des 
+Auftraggebers.
 
 
 ## Externe Aufträge

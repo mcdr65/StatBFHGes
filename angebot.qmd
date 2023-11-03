@@ -12,6 +12,7 @@
 ## Forschende
  
 
+
   * Planung: Design, Fallzahl, Simulationen
   * Datenaufbereitung
   * Analysen
@@ -22,7 +23,7 @@
 
 ## Studierende
 
-Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.
+Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.
 
   * Design, Fallzahl
   * Hilfestellung bei komplexeren Modellen / Analysen
