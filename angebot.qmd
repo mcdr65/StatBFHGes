@@ -9,9 +9,8 @@
 
 # Angebot
 
-## Forscher  [^1]
+## Forscher 
  
-[^1]: Siehe nächste Fussnote, wieso ich nicht das scheinbar politisch korrekte Partizip Präsenz (Forschende) brauche.
 
   * Planung: Design, Fallzahl, Simulationen
   * Datenaufbereitung
@@ -35,3 +34,4 @@ Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den S
 
   
   
+
