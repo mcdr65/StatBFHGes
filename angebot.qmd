@@ -9,9 +9,9 @@
 
 # Angebot
 
-## Forschende
+## Forscher  [^1]
  
-
+[^1]: Siehe nächste Fussnote, wieso ich nicht das scheinbar politisch korrekte Partizip Präsenz (Forschende) brauche.
 
   * Planung: Design, Fallzahl, Simulationen
   * Datenaufbereitung
@@ -21,7 +21,10 @@
   * Interne Fortbildungen
 
 
-## Studierende
+## Studenten [^2]
+
+[^2]: Menschen, die an einer Hochschule einem Studium nachgehen, heissen Studenten. Man kann nicht sagen: "In der Kneipe sitzen biertrinkende Studierende" oder "Wir weinen um die gestorbenen Studierenden".
+
 
 Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.
 
