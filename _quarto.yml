@@ -31,7 +31,7 @@ website:
 format:
   html:
     theme: 
-      light: default 
+      light: litera
       dark: darkly 
     toc: true
     code-link: true
