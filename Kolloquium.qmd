@@ -27,14 +27,14 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 ## Themen 2024
 
 
-| Tag   | Datum | Thema                  | Bereich    | Lead  | Ort                   |
-|-------|-------|------------------------|------------|-------|-----------------------|
-| A. DI | 9.1   | --                     | --         | --    | Murtenstrasse 10: 123 |
-| B. MI | 7.2   | Likelihood             | Grundlagen | André | Murtenstrasse 10: 123 |
-| A. DI | 5.3   | Regression to the mean | Grundlagen | André | Murtenstrasse 10: 123 |
-| B. MI | 3.4   |                        |            |       | Murtenstrasse 10: 123 |
-| A. DI | 7.5   |                        |            |       | Murtenstrasse 10: 123 |
-| B. MI | 5.6   |                        |            |       | Murtenstrasse 10: 123 |
+| Tag   | Datum | Thema      | Bereich    | Lead  | Ort                   |
+|-------|-------|------------|------------|-------|-----------------------|
+| A. DI | 9.1   | --         | --         | --    | Murtenstrasse 10: 123 |
+| B. MI | 7.2   | Likelihood | Grundlagen | André | Murtenstrasse 10: 123 |
+| A. DI | 5.3   |            |            | André | Murtenstrasse 10: 123 |
+| B. MI | 3.4   |            |            |       | Murtenstrasse 10: 123 |
+| A. DI | 7.5   |            |            |       | Murtenstrasse 10: 123 |
+| B. MI | 5.6   |            |            |       | Murtenstrasse 10: 123 |
 
 
 ## Themen 2023
