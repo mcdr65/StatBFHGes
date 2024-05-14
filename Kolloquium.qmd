@@ -35,7 +35,9 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | A. DI | 5.3   | Severe Testing         | André | Murtenstrasse 10: 123 |
 | B. MI | 3.4   | fällt aus              | André | Murtenstrasse 10: 123 |
 | A. DI | 7.5   | Regression to the mean | André | Murtenstrasse 10: 123 |
-| B. MI | 5.6   |                        |       | Murtenstrasse 10: 123 |
+| B. MI | 5.6   | Äquivalenztests        | André | Murtenstrasse 10: 123 |
+
+
 
 
 ## Themen 2023
