@@ -2,7 +2,7 @@
   {
     "objectID": "organisation.html",
     "href": "organisation.html",
-    "title": "Statistik-Beratung G",
+    "title": "Organisation",
     "section": "",
     "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\n\n\nMontag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108\n\n\n\n\nKurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)\n\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers.\n\n\n\n\nNach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
   },
@@ -44,30 +44,30 @@
   {
     "objectID": "organisation.html#präsenz",
     "href": "organisation.html#präsenz",
-    "title": "Statistik-Beratung G",
-    "section": "Präsenz",
-    "text": "Präsenz\n\nMontag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108"
+    "title": "Organisation",
+    "section": "",
+    "text": "Montag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108"
   },
   {
     "objectID": "organisation.html#anfrage",
     "href": "organisation.html#anfrage",
-    "title": "Statistik-Beratung G",
-    "section": "Anfrage",
-    "text": "Anfrage\nKurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)"
+    "title": "Organisation",
+    "section": "",
+    "text": "Kurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)"
   },
   {
     "objectID": "organisation.html#rahmen",
     "href": "organisation.html#rahmen",
-    "title": "Statistik-Beratung G",
-    "section": "Rahmen",
-    "text": "Rahmen\n\nBachelor- oder Master-Thesis\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studierenden auch die jeweiligen Betreuerinnen oder Betreuer am Beratungsgespräch teilnehmen.\n\n\nProjekte\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\nAutorenschaft\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\nVertraulichkeit\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis der Auftraggeberin oder des Auftraggebers."
+    "title": "Organisation",
+    "section": "",
+    "text": "Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers."
   },
   {
     "objectID": "organisation.html#externe-aufträge",
     "href": "organisation.html#externe-aufträge",
-    "title": "Statistik-Beratung G",
-    "section": "Externe Aufträge",
-    "text": "Externe Aufträge\nNach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+    "title": "Organisation",
+    "section": "",
+    "text": "Nach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
   },
   {
     "objectID": "angebot.html#forschende",
@@ -86,8 +86,22 @@
   {
     "objectID": "Kolloquium.html",
     "href": "Kolloquium.html",
-    "title": "Statistik-Beratung G",
+    "title": "Statistik-Kolloquium am G",
     "section": "",
-    "text": "Einmal monatlich tauschen sich Statistik-Interessierte über ausgewählte Themen zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von den Teilnehmern eingebracht und auch vorgestellt werden. \nHinweis: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.\n\n\nAngedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt.\n\nZeitpunkt: Dienstag und Mittwoch alternierend:\n\nKolloquium A: Erster Dienstag ungerade Monate: 12:30 bis 13:30\nKolloquium B: Erster Mittwoch gerade Monate: 13:00 bis 14:00\n\n\n\nThemen 2024Themen 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\nOrt\n\n\n\n\nA. DI\n9.1\n–\n–\nMurtenstrasse 10: 123\n\n\nB. MI\n7.2\nLikelihood\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n5.3\nSevere Testing\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n3.4\nfällt aus\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\nMurtenstrasse 10: 123\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\nOrt\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\nMurtenstrasse 10: 123\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric\nMurtenstrasse 10: 123\n\n\n\n\n\n\n\n\n\nStatistik Kolloquium G"
+    "text": "Einmal monatlich tauschen sich Statistik-Interessierte über ausgewählte Themen zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von den Teilnehmern eingebracht und auch vorgestellt werden. \nHinweis: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.\n\n\nAngedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt.\n\nZeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\n\n\nThemen 2024Themen 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\nOrt\n\n\n\n\nA. DI\n9.1\n–\n–\nMurtenstrasse 10: 123\n\n\nB. MI\n7.2\nLikelihood\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n5.3\nSevere Testing\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n3.4\nfällt aus\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\nMurtenstrasse 10: 123\n\n\nMI\n4.9\n\n\nMurtenstrasse 10: 123\n\n\nMI\n2.10\n\n\nMurtenstrasse 10: 123\n\n\nMI\n6.11\n\n\nMurtenstrasse 10: 123\n\n\nMI\n4.12\n\n\nMurtenstrasse 10: 123\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\nOrt\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\nMurtenstrasse 10: 123\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric\nMurtenstrasse 10: 123\n\n\n\n\n\n\n\n\n\nStatistik Kolloquium G"
+  },
+  {
+    "objectID": "Kolloquium.html#zeitpunkt-und-information",
+    "href": "Kolloquium.html#zeitpunkt-und-information",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt.\n\nZeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\n\n\nThemen 2024Themen 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\nOrt\n\n\n\n\nA. DI\n9.1\n–\n–\nMurtenstrasse 10: 123\n\n\nB. MI\n7.2\nLikelihood\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n5.3\nSevere Testing\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n3.4\nfällt aus\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\nMurtenstrasse 10: 123\n\n\nMI\n4.9\n\n\nMurtenstrasse 10: 123\n\n\nMI\n2.10\n\n\nMurtenstrasse 10: 123\n\n\nMI\n6.11\n\n\nMurtenstrasse 10: 123\n\n\nMI\n4.12\n\n\nMurtenstrasse 10: 123\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\nOrt\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\nMurtenstrasse 10: 123\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\nMurtenstrasse 10: 123\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric\nMurtenstrasse 10: 123"
+  },
+  {
+    "objectID": "Kolloquium.html#dateien-auf-ms-teams",
+    "href": "Kolloquium.html#dateien-auf-ms-teams",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Statistik Kolloquium G"
   }
 ]

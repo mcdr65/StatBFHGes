@@ -15,9 +15,7 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt. 
 
 
- * Zeitpunkt: **Dienstag und Mittwoch alternierend**:
-   * Kolloquium A: **Erster Dienstag ungerade Monate: 12:30 bis 13:30**
-   * Kolloquium B: **Erster Mittwoch gerade Monate: 13:00 bis 14:00** 
+ * Zeitpunkt: **Erster Mittwoch Monat: 13:00 bis 14:00** 
  
 
 
@@ -36,6 +34,12 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | B. MI | 3.4   | fällt aus              | André | Murtenstrasse 10: 123 |
 | A. DI | 7.5   | Regression to the mean | André | Murtenstrasse 10: 123 |
 | B. MI | 5.6   | Äquivalenztests        | André | Murtenstrasse 10: 123 |
+| MI    | 4.9   |                        |       | Murtenstrasse 10: 123 |
+| MI    | 2.10  |                        |       | Murtenstrasse 10: 123 |
+| MI    | 6.11  |                        |       | Murtenstrasse 10: 123 |
+| MI    | 4.12  |                        |       | Murtenstrasse 10: 123 |
+
+
 
 
 

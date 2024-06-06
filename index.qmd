@@ -101,7 +101,8 @@ ggplot(diamonds,aes(carat,price))+geom_point(aes(colour=color,shape=cut),size=0.
 <!--      cvfit = cv.glmnet(x, g3, family = "multinomial") -->
 <!--      plot(cvfit) -->
 <!--      title("Multinomial Family", line = 2.5) -->
-<!--      # Cox -->
+
+<!--                                         # Cox -->
 <!--      beta = rnorm(nzc) -->
 <!--      fx = x[, seq(nzc)] %*% beta/3 -->
 <!--      hx = exp(fx) -->
