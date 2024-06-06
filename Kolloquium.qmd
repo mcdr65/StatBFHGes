@@ -15,7 +15,8 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt. 
 
 
- * Zeitpunkt: **Erster Mittwoch Monat: 13:00 bis 14:00** 
+ * Zeitpunkt: **Erster Mittwoch Monat: 13:00 bis 14:00**
+ * Ort: **Murtenstrasse 10, Raum 123**
  
 
 
@@ -26,18 +27,18 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 ## Themen 2024
 
 
-| Tag   | Datum | Thema                  | Lead  | Ort                   |
-|-------|-------|------------------------|-------|-----------------------|
-| A. DI | 9.1   | --                     | --    | Murtenstrasse 10: 123 |
-| B. MI | 7.2   | Likelihood             | André | Murtenstrasse 10: 123 |
-| A. DI | 5.3   | Severe Testing         | André | Murtenstrasse 10: 123 |
-| B. MI | 3.4   | fällt aus              | André | Murtenstrasse 10: 123 |
-| A. DI | 7.5   | Regression to the mean | André | Murtenstrasse 10: 123 |
-| B. MI | 5.6   | Äquivalenztests        | André | Murtenstrasse 10: 123 |
-| MI    | 4.9   |                        |       | Murtenstrasse 10: 123 |
-| MI    | 2.10  |                        |       | Murtenstrasse 10: 123 |
-| MI    | 6.11  |                        |       | Murtenstrasse 10: 123 |
-| MI    | 4.12  |                        |       | Murtenstrasse 10: 123 |
+| Tag   | Datum | Thema                  | Lead  |
+|-------|-------|------------------------|-------|
+| A. DI | 9.1   | --                     | --    |
+| B. MI | 7.2   | Likelihood             | André |
+| A. DI | 5.3   | Severe Testing         | André |
+| B. MI | 3.4   | fällt aus              | André | 
+| A. DI | 7.5   | Regression to the mean | André | 
+| B. MI | 5.6   | Äquivalenztests        | André | 
+| MI    | 4.9   |                        |       | 
+| MI    | 2.10  |                        |       | 
+| MI    | 6.11  |                        |       | 
+| MI    | 4.12  |                        |       |
 
 
 
@@ -47,16 +48,15 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 ## Themen 2023
 
 
-| Tag   | Datum | Thema                              | Bereich                | Lead   | Ort                   |
-|-------|-------|------------------------------------|------------------------|--------|-----------------------|
-| B. Mi | 5.4   | Fisher-Neyman                      | Philosophischer Exkurs | André  | Murtenstrasse 10: 123 |
-| A. Di | 2.5   | Bayes                              | Philosophischer Exkurs | André  | Murtenstrasse 10: 123 |
-| B. MI | 7.6   | Fallzahl (Power, Precision)        | Planung                | André  | Murtenstrasse 10: 123 |
-| A. DI | 5.9   | Das Allgemeine Lineare Modell (LM) | Modell                 | André  | Murtenstrasse 10: 123 |
-| B. MI | 4.10  | Kategorielle Eingangsgrössen (LM)  | Modell                 | André  | Murtenstrasse 10: 123 |
-| A. DI | 7.11  | LM "ANCOVA"                        | Modell                 | André  | Murtenstrasse 10: 123 |
-| B. MI | 6.12  | ggplot                             | Anwendung              | Patric | Murtenstrasse 10: 123 |
-
+| Tag   | Datum | Thema                              | Bereich                | Lead   |
+|-------|-------|------------------------------------|------------------------|--------|
+| B. Mi | 5.4   | Fisher-Neyman                      | Philosophischer Exkurs | André  |
+| A. Di | 2.5   | Bayes                              | Philosophischer Exkurs | André  | 
+| B. MI | 7.6   | Fallzahl (Power, Precision)        | Planung                | André  | 
+| A. DI | 5.9   | Das Allgemeine Lineare Modell (LM) | Modell                 | André  |
+| B. MI | 4.10  | Kategorielle Eingangsgrössen (LM)  | Modell                 | André  |
+| A. DI | 7.11  | LM "ANCOVA"                        | Modell                 | André  |
+| B. MI | 6.12  | ggplot                             | Anwendung              | Patric |
 
 :::
 	
