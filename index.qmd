@@ -33,6 +33,7 @@ date: last-modified
 
 
 
+
 ```{r }
 library(ggplot2)
 ggplot(diamonds,aes(carat,price))+geom_point(aes(colour=color,shape=cut),size=0.2)+geom_smooth(color="red",lty=1,lwd=0.3)+facet_grid(rows=vars(color),cols=vars(cut))
