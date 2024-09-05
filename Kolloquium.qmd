@@ -36,7 +36,7 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | A. DI | 7.5   | Regression to the mean | André |
 | B. MI | 5.6   | Äquivalenztests        | André |
 | MI    | 4.9   | Bayesian $t$-test      | André |
-| MI    | 2.10  |                        |       |
+| MI    | 2.10  | GLM I                  | André |
 | MI    | 6.11  |                        |       |
 | MI    | 4.12  |                        |       |
 
