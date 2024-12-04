@@ -25,6 +25,22 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 
 
 
+## Themen 2025
+
+
+
+| Tag | Datum | Thema                | Lead  |   |
+|-----|-------|----------------------|-------|---|
+| MI  | 5.2   | Diagnostik und Bayes | André |   |
+| MI  | 5.3   |                      |       |   |
+| MI  | 2.4   |                      |       |   |
+| MI  | 7.5   |                      |       |   |
+| MI  | 4.6   |                      |       |   |
+| MI  | 3.9   |                      |       |   |
+| MI  | 1.10  |                      |       |   |
+| MI  | 5.11  |                      |       |   |
+| MI  | 3.12  | 
+
 
 ## Themen 2024
 
@@ -61,25 +77,9 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 | B. MI | 6.12  | ggplot                             | Anwendung              | Patric |
 
 :::
-	
 
 
 
-## Themen 2025
-
-
-
-| Tag | Datum | Thema                | Lead  |   |
-|-----|-------|----------------------|-------|---|
-| MI  | 5.2   | Diagnostik und Bayes | André |   |
-| MI  | 5.3   |                      |       |   |
-| MI  | 2.4   |                      |       |   |
-| MI  | 7.5   |                      |       |   |
-| MI  | 4.6   |                      |       |   |
-| MI  | 3.9   |                      |       |   |
-| MI  | 1.10  |                      |       |   |
-| MI  | 5.11  |                      |       |   |
-| MI  | 3.12  |                      |       |   |
 
 
 
