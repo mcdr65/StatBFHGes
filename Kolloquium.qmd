@@ -12,7 +12,7 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 ## Zeitpunkt und Information
-Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt. 
+<!-- Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt.  -->
 
 
  * Zeitpunkt: **Erster Mittwoch Monat: 13:00 bis 14:00**
@@ -30,17 +30,17 @@ Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybr
 
 
 
-| Tag | Datum | Thema                                      | Lead  |   |
-|-----|-------|--------------------------------------------|-------|---|
-| MI  | 5.2   | Diagnostik und Bayes                       | André |   |
-| MI  | 5.3   | Prinzipien Power und Fallzahl              | André |   |
-| MI  | 2.4   | Klassifikation, Neural Network, Link zu KI | André |   |
-| MI  | 7.5   | Latent Variable Modeling, CFA              | André |   |
-| MI  | 4.6   |                                            |       |   |
-| MI  | 3.9   |                                            |       |   |
-| MI  | 1.10  |                                            |       |   |
-| MI  | 5.11  |                                            |       |   |
-| MI  | 3.12  |                                            |       |   |
+| Tag | Datum | Thema                                        | Lead  |   |
+|-----|-------|----------------------------------------------|-------|---|
+| MI  | 5.2   | Diagnostik und Bayes                         | André |   |
+| MI  | 5.3   | Prinzipien Power und Fallzahl                | André |   |
+| MI  | 2.4   | Klassifikation, Neural Network, Link zu KI   | André |   |
+| MI  | 7.5   | Faktoranalyse: EFA                           | André |   |
+| MI  | 4.6   | Faktoranalyse: Latent Variable Modeling, CFA | André |   |
+| MI  | 3.9   |                                              |       |   |
+| MI  | 1.10  |                                              |       |   |
+| MI  | 5.11  |                                              |       |   |
+| MI  | 3.12  |                                              |       |   |
 
 
 ## Themen 2024
