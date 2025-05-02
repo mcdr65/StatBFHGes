@@ -30,17 +30,17 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
-| Tag | Datum | Thema                                        | Lead  |   |
-|-----|-------|----------------------------------------------|-------|---|
-| MI  | 5.2   | Diagnostik und Bayes                         | André |   |
-| MI  | 5.3   | Prinzipien Power und Fallzahl                | André |   |
-| MI  | 2.4   | Klassifikation, Neural Network, Link zu KI   | André |   |
-| MI  | 7.5   | Faktoranalyse: EFA                           | André |   |
-| MI  | 4.6   | Faktoranalyse: Latent Variable Modeling, CFA | André |   |
-| MI  | 3.9   |                                              |       |   |
-| MI  | 1.10  |                                              |       |   |
-| MI  | 5.11  |                                              |       |   |
-| MI  | 3.12  |                                              |       |   |
+| Tag | Datum | Thema                                      | Lead  |   |
+|-----|-------|--------------------------------------------|-------|---|
+| MI  | 5.2   | Diagnostik und Bayes                       | André |   |
+| MI  | 5.3   | Prinzipien Power und Fallzahl              | André |   |
+| MI  | 2.4   | Klassifikation, Neural Network, Link zu KI | André |   |
+| MI  | 7.5   | Latent Variable Model: EFA                 | André |   |
+| MI  | 4.6   | Latent Variable Model: CFA                 | André |   |
+| MI  | 3.9   |                                            |       |   |
+| MI  | 1.10  |                                            |       |   |
+| MI  | 5.11  |                                            |       |   |
+| MI  | 3.12  |                                            |       |   |
 
 
 ## Themen 2024
