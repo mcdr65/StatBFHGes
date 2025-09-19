@@ -83,6 +83,10 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
+## Statistik-Skript
+
+
+[Download Statistik-Skript](docs/Master.pdf)
 
 
 ## Dateien auf MS Teams
