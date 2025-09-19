@@ -83,12 +83,6 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
-## Statistik-Skript
-
-
-[Download Statistik-Skript](docs/Master.pdf)
-
-
 ## Dateien auf MS Teams
 
 [Statistik Kolloquium G](https://bernerfachhochschule.sharepoint.com/:f:/s/g-statistikkolloquiumg/Eohfj9Zbc8RAoAAvGe3iUA8BBNpgKJotThBHzOHAIcTinw?e=rOe8K3)

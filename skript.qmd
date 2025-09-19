@@ -1,0 +1,12 @@
+# Skript
+
+
+Für die Interessierten
+
+- Einführung in die Wahrscheinlichkeitstheorie
+- Statistische Grundlagen
+- Lineare Modelle
+- Alles mit `R`
+
+
+[Download Statistik-Skript](docs/Master.pdf)
