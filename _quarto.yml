@@ -23,8 +23,8 @@ website:
         href: https://github.com/mcdr65
       - icon: git
         href: https://gitlab.ti.bfh.ch/
-      - text: Blog
-        href: https://mcdr65.github.io/myblog/
+      # - text: Blog
+      #   href: https://mcdr65.github.io/myblog/
       - text: Ressources
         menu:
           - text: R Weekly
