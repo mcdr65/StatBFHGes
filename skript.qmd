@@ -1,15 +1,9 @@
-# Skript
+# Skripts
 
-
-Für die Interessierten
-
-- Einführung in die Wahrscheinlichkeitstheorie
-- Statistische Grundlagen
-- Lineare Modelle
-- Beispiele mit `R`
-
+- Einführung in die Wahrscheinlichkeitstheorie, Statistische Grundlagen, Lineare Modelle, Beispiele mit `R`
 
 [Download Statistik-Skript](docs/Master.pdf)
+
 
 - Wahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung
 

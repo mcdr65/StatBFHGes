@@ -30,7 +30,7 @@
   {
     "objectID": "kompetenzen.html",
     "href": "kompetenzen.html",
-    "title": "Statistik-Beratung G",
+    "title": "Kompetenzen",
     "section": "",
     "text": "Fallzahl, Design, Confounding, Power-Aspekte\nTrials: Parallel, Crossover Äquivalenz, Superiority, Non-Inferority\nBayesianische Zugänge\nSchätzen versus Testen\n\n\n\n\n\nGraphische Darstellungen\n\n\n\n\n\nAllgemeines lineares Modell (\\(t\\)-Test, ANOVA, Regression)\nGeneralisiertes lineare Modell (Logistic, Poisson, etc.)\nGemischte Modelle\nGeneralisiertes Gemischtes Modell\nLog-Lineare Modelle\nKumulative Logit-Modelle\nRobuste Methoden\n\n\n\n\n\nMarginal and conditional models (GEE, GLMM)\nTime-dependent exposures\n\n\n\n\n\n\nKlassisch\nNetzwerk (Bayes)\n\n\n\n\n\nAdditive Modelle\nNeural Networks\nClassification und Regression Trees\nRegularisation und Variablenselektion (Ridge, Lasso)\nKreuzvalidierung, Bootstrap, Bagging\n\n\n\n\n\nAalen-Johansen\nKaplan-Meier\nParametrische Modelle\nCox-Modell\nCompeting Risk und Multi-state\n\n\n\n\n\nHauptkomponenten\nCluster\n\n\n\n\n\nFaktoranalyse\nItem-Response, Rasch, Graded Response\nLatente Klassen- und Profilanalyse\n\n\n\n\n\nR mit JAGS"
   },
@@ -142,8 +142,92 @@
   {
     "objectID": "skript.html",
     "href": "skript.html",
+    "title": "Skripts",
+    "section": "",
+    "text": "Skripts\n\nEinführung in die Wahrscheinlichkeitstheorie, Statistische Grundlagen, Lineare Modelle, Beispiele mit R\n\nDownload Statistik-Skript\n\nWahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung\n\nDownload Skript Wahrscheinlichkeitstheorie"
+  },
+  {
+    "objectID": "skript.html#für-die-interessierten",
+    "href": "skript.html#für-die-interessierten",
     "title": "Skript",
     "section": "",
-    "text": "Skript\nFür die Interessierten\n\nEinführung in die Wahrscheinlichkeitstheorie\nStatistische Grundlagen\nLineare Modelle\nBeispiele mit R\n\nDownload Statistik-Skript\n\nWahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung\n\nDownload Skript Wahrscheinlichkeitstheorie"
+    "text": "Einführung in die Wahrscheinlichkeitstheorie\nStatistische Grundlagen\nLineare Modelle\nBeispiele mit R\n\nDownload Statistik-Skript"
+  },
+  {
+    "objectID": "skript.html#wahrscheinlichkeitstheorie-zufallsvariablen-und-ihre-verteilung",
+    "href": "skript.html#wahrscheinlichkeitstheorie-zufallsvariablen-und-ihre-verteilung",
+    "title": "Skript",
+    "section": "",
+    "text": "Download Skript Wahrscheinlichkeitstheorie"
+  },
+  {
+    "objectID": "kompetenzen.html#planung",
+    "href": "kompetenzen.html#planung",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Fallzahl, Design, Confounding, Power-Aspekte\nTrials: Parallel, Crossover Äquivalenz, Superiority, Non-Inferority\nBayesianische Zugänge\nSchätzen versus Testen"
+  },
+  {
+    "objectID": "kompetenzen.html#explorative-analysen",
+    "href": "kompetenzen.html#explorative-analysen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Graphische Darstellungen"
+  },
+  {
+    "objectID": "kompetenzen.html#lineares-modell-und-erweiterungen",
+    "href": "kompetenzen.html#lineares-modell-und-erweiterungen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Allgemeines lineares Modell (\\(t\\)-Test, ANOVA, Regression)\nGeneralisiertes lineare Modell (Logistic, Poisson, etc.)\nGemischte Modelle\nGeneralisiertes Gemischtes Modell\nLog-Lineare Modelle\nKumulative Logit-Modelle\nRobuste Methoden"
+  },
+  {
+    "objectID": "kompetenzen.html#longitudinale-datenanalysen",
+    "href": "kompetenzen.html#longitudinale-datenanalysen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Marginal and conditional models (GEE, GLMM)\nTime-dependent exposures"
+  },
+  {
+    "objectID": "kompetenzen.html#metaanalysen",
+    "href": "kompetenzen.html#metaanalysen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Klassisch\nNetzwerk (Bayes)"
+  },
+  {
+    "objectID": "kompetenzen.html#flexible-methoden-für-regression-und-klassifikation",
+    "href": "kompetenzen.html#flexible-methoden-für-regression-und-klassifikation",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Additive Modelle\nNeural Networks\nClassification und Regression Trees\nRegularisation und Variablenselektion (Ridge, Lasso)\nKreuzvalidierung, Bootstrap, Bagging"
+  },
+  {
+    "objectID": "kompetenzen.html#überlebensanalyse",
+    "href": "kompetenzen.html#überlebensanalyse",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Aalen-Johansen\nKaplan-Meier\nParametrische Modelle\nCox-Modell\nCompeting Risk und Multi-state"
+  },
+  {
+    "objectID": "kompetenzen.html#multivariate-methoden",
+    "href": "kompetenzen.html#multivariate-methoden",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Hauptkomponenten\nCluster"
+  },
+  {
+    "objectID": "kompetenzen.html#latente-variablenmodelle",
+    "href": "kompetenzen.html#latente-variablenmodelle",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Faktoranalyse\nItem-Response, Rasch, Graded Response\nLatente Klassen- und Profilanalyse"
+  },
+  {
+    "objectID": "kompetenzen.html#bayes-inferenz",
+    "href": "kompetenzen.html#bayes-inferenz",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "R mit JAGS"
   }
 ]
