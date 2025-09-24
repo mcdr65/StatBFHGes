@@ -10,3 +10,7 @@ Für die Interessierten
 
 
 [Download Statistik-Skript](docs/Master.pdf)
+
+- Wahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung
+
+[Download Skript Wahrscheinlichkeitstheorie](docs/WKVertiefung.pdf)

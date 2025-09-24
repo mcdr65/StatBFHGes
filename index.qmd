@@ -43,8 +43,8 @@ p3<-tri.age.plot + geom_line(aes(color="Smoothing Splines",x,y),spline_data,lwd=
        
 p1+p2+p3
 
-
 ```
+
 
 
 
