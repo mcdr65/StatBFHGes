@@ -25,7 +25,7 @@
     "href": "software.html",
     "title": "Software",
     "section": "",
-    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\nSoftware\n\nStatistik: R (plattformunabhängig), JAGS (MCMC)\nBetriebsystem: Windows, Linux (Ubuntu)\nEditoren: RStudio, EMACS (ESS)\nLiterate Programming: \\(\\lx\\) und R-Markdown mit knitr\nVersionsverwaltung: Git, GitHub, BFH GitLab"
+    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\nSoftware\n\nStatistik: R (plattformunabhängig), JAGS (MCMC)\nBetriebsystem: Windows, Linux (Ubuntu)\nEditoren: RStudio, EMACS (ESS)\nLiterate Programming: \\(\\lx\\) und R-Markdown mit knitr, quarto\nVersionsverwaltung: Git, GitHub, BFH GitLab"
   },
   {
     "objectID": "kompetenzen.html",
