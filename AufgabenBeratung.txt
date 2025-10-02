@@ -1,0 +1,16 @@
+Aufgaben Statistiker:
+
+Beratung bei der Studienplanung: Unterstützung bei der Entwicklung von Forschungsfragen und Hypothesen sowie bei der Auswahl geeigneter Studiendesigns und statistischer Methoden.
+
+Datenanalyse: Durchführung von statistischen Analysen. Auswahl der richtigen Analysemethoden, Programmieren statistischer Software und Interpretation der Ergebnisse.
+
+Schulungen/Fortbildungen/Kolloquien: Durchführung Schulungen und Fortbildungen in Forschung und Lehre. Dies umfasst das Lehren von statistischen Grundlagen und der Anwendung spezifischer Software, insbesondere R.
+
+Interpretation und Kommunikation von Ergebnissen: Hilfe bei der Interpretation der Analyseergebnisse und deren Kommunikation in Form von Berichten, Präsentationen oder wissenschaftlichen Publikationen.
+
+Qualitätssicherung: Überprüfung der Datenqualität und der statistischen Methoden, um die Zuverlässigkeit und die Reproduzierbarkeit von Forschungsergebnissen sicherzustellen. Unterstützung bei der Erstellung von Studienprotokollen und der Einhaltung ethischer Standards.
+
+Beratung zu Förderanträgen: Unterstützung bei der Erstellung von Forschungsanträgen, insbesondere in Bezug auf den statistischen Teil der Planung und Budgetierung.
+
+Interdisziplinäre Zusammenarbeit: Zusammenarbeit mit verschiedenen Fachbereichen, um die Integration statistischer Ansätze in unterschiedliche Forschungsprojekte und Lehrpläne zu fördern.
+

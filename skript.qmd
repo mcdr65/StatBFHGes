@@ -1,0 +1,10 @@
+# Skripts
+
+- Einführung in die Wahrscheinlichkeitstheorie, Statistische Grundlagen, Lineare Modelle, Beispiele mit `R`
+
+[Download Statistik-Skript](docs/Master.pdf)
+
+
+- Wahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung
+
+[Download Skript Wahrscheinlichkeitstheorie](docs/WKVertiefung.pdf)

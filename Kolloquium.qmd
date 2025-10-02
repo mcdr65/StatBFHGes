@@ -1,0 +1,89 @@
+# Statistik-Kolloquium am G
+
+
+
+Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Themen** zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von den Teilnehmern eingebracht und auch vorgestellt werden. <!-- Die Art der Vorstellung ist frei. (Info dann per mail an [andre.meichtry@bfh.ch](mailto:andre.meichtry@bfh.ch)).  -->
+
+**Hinweis**: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.
+
+
+
+
+
+
+## Zeitpunkt und Information
+<!-- Angedacht ist das Kolloquium als Präsenz vor Ort. Das Kolloquium wird aber hybrid durchgeführt.  -->
+
+
+ * Zeitpunkt: **Erster Mittwoch Monat: 13:00 bis 14:00**
+ * Ort: **Murtenstrasse 10, Raum 123**
+ 
+
+::: {.panel-tabset}
+
+
+
+
+
+
+## Themen 2025
+
+
+
+| Tag | Datum | Thema                                      | Lead  |                        |
+|-----|-------|--------------------------------------------|-------|------------------------|
+| MI  | 5.2   | Diagnostik und Bayes                       | André |                        |
+| MI  | 5.3   | Prinzipien Power und Fallzahl              | André |                        |
+| MI  | 2.4   | Klassifikation, Neural Network, Link zu KI | André |                        |
+| MI  | 7.5   | Latent Variable Model: EFA                 | André |                        |
+| MI  | 4.6   | Latent Variable Model: CFA                 | André |                        |
+| MI  | 3.9   | Latent Class Linear Mixed Model            | André |                        |
+| MI  | 1.10  | ---                                        | André | verschoben             |
+| MI  | 5.11  | Das Anti-Falsifikations-Paradigma          | André | Philosophischer Exkurs |
+| MI  | 3.12  | Güte von Klassifikatoren                   | André |                        |
+
+
+## Themen 2024
+
+
+| Tag   | Datum | Thema                      | Lead   |
+|-------|-------|----------------------------|--------|
+| A. DI | 9.1   | --                         | --     |
+| B. MI | 7.2   | Likelihood                 | André  |
+| A. DI | 5.3   | Severe Testing             | André  |
+| B. MI | 3.4   | fällt aus                  | André  |
+| A. DI | 7.5   | Regression to the mean     | André  |
+| B. MI | 5.6   | Äquivalenztests            | André  |
+| MI    | 4.9   | Bayesian $t$-test          | André  |
+| MI    | 2.10  | Generalised Linear Model   | André  |
+| MI    | 6.11  | Linear Mixed Model         | André  |
+| MI    | 4.12  | Projekt Linear Mixed Model | Aglaja |
+
+
+
+
+
+
+## Themen 2023
+
+
+| Tag   | Datum | Thema                              | Bereich                | Lead   |
+|-------|-------|------------------------------------|------------------------|--------|
+| B. Mi | 5.4   | Fisher-Neyman                      | Philosophischer Exkurs | André  |
+| A. Di | 2.5   | Bayes                              | Philosophischer Exkurs | André  | 
+| B. MI | 7.6   | Fallzahl (Power, Precision)        | Planung                | André  | 
+| A. DI | 5.9   | Das Allgemeine Lineare Modell (LM) | Modell                 | André  |
+| B. MI | 4.10  | Kategorielle Eingangsgrössen (LM)  | Modell                 | André  |
+| A. DI | 7.11  | LM "ANCOVA"                        | Modell                 | André  |
+| B. MI | 6.12  | ggplot                             | Anwendung              | Patric |
+
+:::
+
+
+
+
+
+## Dateien auf MS Teams
+
+[Statistik Kolloquium G](https://bernerfachhochschule.sharepoint.com/:f:/s/g-statistikkolloquiumg/Eohfj9Zbc8RAoAAvGe3iUA8BBNpgKJotThBHzOHAIcTinw?e=rOe8K3)
+
