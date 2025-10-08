@@ -2,7 +2,7 @@
 
 - Einführung in die Wahrscheinlichkeitstheorie, Statistische Grundlagen, Lineare Modelle, Beispiele mit `R`
 
-[Download Statistik-Skript](docs/Master.pdf)
+[Download Statistik-Skript](docs/MScPTAndre.pdf)
 
 
 - Wahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung
