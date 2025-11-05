@@ -48,11 +48,11 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
-| Tag | Datum | Thema               | Lead  |   |
-|-----|-------|---------------------|-------|---|
-| MI  | 7.1   | Metaanalyse         | André |   |
-| MI  | 4.2   | fällt aus           | ---   |   |
-| MI  | 4.3   | Non-Null Hypothesis | André |   |
+| Tag | Datum | Thema          | Lead  |   |
+|-----|-------|----------------|-------|---|
+| MI  | 7.1   | Metaanalyse    | André |   |
+| MI  | 4.2   | fällt aus      | ---   |   |
+| MI  | 4.3   | Non-Null $H_0$ | André |   |
 	
 
 ## Themen 2024
