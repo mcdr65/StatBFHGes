@@ -43,6 +43,18 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 | MI  | 3.12  | Güte von Klassifikatoren                   | André |                        |
 
 
+
+## Themen 2026
+
+
+
+| Tag | Datum | Thema               | Lead  |   |
+|-----|-------|---------------------|-------|---|
+| MI  | 7.1   | Metaanalye          | André |   |
+| MI  | 4.2   | fällt aus           | ---   |   |
+| MI  | 4.3   | Non-Null Hypothesis | André |   |
+
+
 ## Themen 2024
 
 
