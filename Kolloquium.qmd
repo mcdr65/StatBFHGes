@@ -26,8 +26,21 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
-## Themen 2025
+## Themen 2026
 
+
+| Tag | Datum   | Thema          | Lead  |   |
+|-----|---------|----------------|-------|---|
+| MI  | 3.12.25 | Klassifikation | André |   |
+| MI  | 7.1     | Metaanalyse    | André |   |
+| MI  | 4.2     | fällt aus      | ---   |   |
+| MI  | 4.3     | Non-Null $H_0$ | André |   |
+
+
+
+	
+
+## Themen 2025
 
 
 | Tag | Datum | Thema                                      | Lead  |                        |
@@ -44,17 +57,6 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
-## Themen 2026
-
-
-
-| Tag | Datum | Thema          | Lead  |   |
-|-----|-------|----------------|-------|---|
-| MI  | 7.1   | Metaanalyse    | André |   |
-| MI  | 4.2   | fällt aus      | ---   |   |
-| MI  | 4.3   | Non-Null $H_0$ | André |   |
-	
-
 ## Themen 2024
 
 
@@ -70,10 +72,6 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 | MI    | 2.10  | Generalised Linear Model   | André  |
 | MI    | 6.11  | Linear Mixed Model         | André  |
 | MI    | 4.12  | Projekt Linear Mixed Model | Aglaja |
-
-
-
-
 
 
 ## Themen 2023
@@ -95,7 +93,7 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
-## Dateien auf MS Teams
+## Ablage
 
 [Statistik Kolloquium G](https://bernerfachhochschule.sharepoint.com/:f:/s/g-statistikkolloquiumg/Eohfj9Zbc8RAoAAvGe3iUA8BBNpgKJotThBHzOHAIcTinw?e=rOe8K3)
 
