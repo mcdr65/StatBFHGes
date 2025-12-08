@@ -29,12 +29,11 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 ## Themen 2026
 
 
-| Tag | Datum   | Thema          | Lead  |   |
-|-----|---------|----------------|-------|---|
-| MI  | 3.12.25 | Klassifikation | André |   |
-| MI  | 7.1     | Metaanalyse    | André |   |
-| MI  | 4.2     | fällt aus      | ---   |   |
-| MI  | 4.3     | Non-Null $H_0$ | André |   |
+| Tag | Datum | Thema          | Lead           |   |
+|-----|-------|----------------|----------------|---|
+| MI  | 7.1   | Metaanalyse    | André          |   |
+| MI  | 4.2   |                | André abwesend |   |
+| MI  | 4.3   | Non-Null $H_0$ | André          |   |
 
 
 
