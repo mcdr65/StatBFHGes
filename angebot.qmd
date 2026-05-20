@@ -1,0 +1,36 @@
+<!-- > *To call in the statistician after the experiment is done may be no* -->
+<!-- >     *more than asking him to perform a post-mortem examination: he may* -->
+<!-- >     *be able to say what the experiment died of.* -->
+<!-- > -->
+<!-- > *Sir Ronald Aylmer Fisher* -->
+
+
+
+
+# Angebot
+
+## Forschung
+ 
+  * Planung: Design, Fallzahl, Simulationen
+  * Datenaufbereitung
+  * Analysen
+  * Interpretation
+  * Dissemination/Publikationen
+  * Interne Fortbildungen
+
+
+## Lehre
+
+<!-- [^2]: Menschen, die an einer Hochschule einem Studium nachgehen, heissen Studenten. Man kann nicht sagen: "In der Kneipe sitzen biertrinkende Studierende" oder "Wir weinen um die gestorbenen Studierenden". -->
+
+
+Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.
+
+  * Design, Fallzahl
+  * Hilfestellung bei komplexeren Modellen / Analysen
+  * Interpretation
+  * Dissemination/Publikationen
+
+  
+  
+

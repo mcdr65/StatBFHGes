@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "kompetenzen.html",
+    "href": "kompetenzen.html",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Fallzahl, Design, Confounding, Power-Aspekte\nTrials: Parallel, Crossover Äquivalenz, Superiority, Non-Inferority\nBayesianische Zugänge\nSchätzen versus Testen\n\n\n\n\n\nGraphische Darstellungen\n\n\n\n\n\nAllgemeines lineares Modell (\\(t\\)-Test, ANOVA, Regression)\nGeneralisiertes lineare Modell (Logistic, Poisson, etc.)\nGemischte Modelle\nGeneralisiertes Gemischtes Modell\nLog-Lineare Modelle\nKumulative Logit-Modelle\nRobuste Methoden\n\n\n\n\n\nMarginal and conditional models (GEE, GLMM)\nTime-dependent exposures\n\n\n\n\n\n\nKlassisch\nNetzwerk (Bayes)\n\n\n\n\n\nAdditive Modelle\nNeural Networks\nClassification und Regression Trees\nRegularisation und Variablenselektion (Ridge, Lasso)\nKreuzvalidierung, Bootstrap, Bagging\n\n\n\n\n\nAalen-Johansen\nKaplan-Meier\nParametrische Modelle\nCox-Modell\nCompeting Risk und Multi-state\n\n\n\n\n\nHauptkomponenten\nCluster\n\n\n\n\n\nFaktoranalyse\nItem-Response, Rasch, Graded Response\nLatente Klassen- und Profilanalyse\n\n\n\n\n\nR mit JAGS"
+  },
+  {
+    "objectID": "kompetenzen.html#planung",
+    "href": "kompetenzen.html#planung",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Fallzahl, Design, Confounding, Power-Aspekte\nTrials: Parallel, Crossover Äquivalenz, Superiority, Non-Inferority\nBayesianische Zugänge\nSchätzen versus Testen"
+  },
+  {
+    "objectID": "kompetenzen.html#explorative-analysen",
+    "href": "kompetenzen.html#explorative-analysen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Graphische Darstellungen"
+  },
+  {
+    "objectID": "kompetenzen.html#lineares-modell-und-erweiterungen",
+    "href": "kompetenzen.html#lineares-modell-und-erweiterungen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Allgemeines lineares Modell (\\(t\\)-Test, ANOVA, Regression)\nGeneralisiertes lineare Modell (Logistic, Poisson, etc.)\nGemischte Modelle\nGeneralisiertes Gemischtes Modell\nLog-Lineare Modelle\nKumulative Logit-Modelle\nRobuste Methoden"
+  },
+  {
+    "objectID": "kompetenzen.html#longitudinale-datenanalysen",
+    "href": "kompetenzen.html#longitudinale-datenanalysen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Marginal and conditional models (GEE, GLMM)\nTime-dependent exposures"
+  },
+  {
+    "objectID": "kompetenzen.html#metaanalysen",
+    "href": "kompetenzen.html#metaanalysen",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Klassisch\nNetzwerk (Bayes)"
+  },
+  {
+    "objectID": "kompetenzen.html#flexible-methoden-für-regression-und-klassifikation",
+    "href": "kompetenzen.html#flexible-methoden-für-regression-und-klassifikation",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Additive Modelle\nNeural Networks\nClassification und Regression Trees\nRegularisation und Variablenselektion (Ridge, Lasso)\nKreuzvalidierung, Bootstrap, Bagging"
+  },
+  {
+    "objectID": "kompetenzen.html#überlebensanalyse",
+    "href": "kompetenzen.html#überlebensanalyse",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Aalen-Johansen\nKaplan-Meier\nParametrische Modelle\nCox-Modell\nCompeting Risk und Multi-state"
+  },
+  {
+    "objectID": "kompetenzen.html#multivariate-methoden",
+    "href": "kompetenzen.html#multivariate-methoden",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Hauptkomponenten\nCluster"
+  },
+  {
+    "objectID": "kompetenzen.html#latente-variablenmodelle",
+    "href": "kompetenzen.html#latente-variablenmodelle",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "Faktoranalyse\nItem-Response, Rasch, Graded Response\nLatente Klassen- und Profilanalyse"
+  },
+  {
+    "objectID": "kompetenzen.html#bayes-inferenz",
+    "href": "kompetenzen.html#bayes-inferenz",
+    "title": "Kompetenzen",
+    "section": "",
+    "text": "R mit JAGS"
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\nSoftware\n\nStatistik: R (plattformunabhängig), JAGS (MCMC)\nBetriebsystem: Windows, Linux (Ubuntu)\nEditoren: RStudio, EMACS (ESS)\nLiterate Programming: \\(\\lx\\) und R-Markdown mit knitr, quarto\nVersionsverwaltung: Git, GitHub, BFH GitLab"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "👋 Hi, I’m André Meichtry\n🌱 I’m currently working as a statistics consultant at the School of Health Professions, Bern University of Applied Sciences.\n \n\n🏢\nBerner Fachhochschule / Bern University of Applied Sciences\nDepartement Gesundheit / Department of Health Professions\nAndré Meichtry\nMurtenstrasse 10\n(Büro: Finkenhubelweg 11, Raum/Office F108)\n3008 Bern\nSwitzerland\n+41 31 848 60 18\n\nandre.meichtry@bfh.ch\nbfh.ch/gesundheit"
+  },
+  {
+    "objectID": "organisation.html",
+    "href": "organisation.html",
+    "title": "Organisation",
+    "section": "",
+    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\n\n\nMontag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108\n\n\n\n\nKurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)\n\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers.\n\n\n\n\nNach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+  },
+  {
+    "objectID": "organisation.html#präsenz",
+    "href": "organisation.html#präsenz",
+    "title": "Organisation",
+    "section": "",
+    "text": "Montag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108"
+  },
+  {
+    "objectID": "organisation.html#anfrage",
+    "href": "organisation.html#anfrage",
+    "title": "Organisation",
+    "section": "",
+    "text": "Kurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)"
+  },
+  {
+    "objectID": "organisation.html#rahmen",
+    "href": "organisation.html#rahmen",
+    "title": "Organisation",
+    "section": "",
+    "text": "Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers."
+  },
+  {
+    "objectID": "organisation.html#externe-aufträge",
+    "href": "organisation.html#externe-aufträge",
+    "title": "Organisation",
+    "section": "",
+    "text": "Nach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+  },
+  {
+    "objectID": "Kolloquium.html",
+    "href": "Kolloquium.html",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Einmal monatlich tauschen sich Statistik-Interessierte über ausgewählte Themen zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von den Teilnehmern eingebracht und auch vorgestellt werden. \nHinweis: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.\n\n\n\n\nZeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\nOrt: Murtenstrasse 10, Raum 123\n\n\nThemen 2026Themen 2025Themen 2024Themen 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n7.1\nMetaanalyse\nAndré\n\n\n\nMI\n4.2\n—\n—\n\n\n\nMI\n4.3\nNon-Null \\(H_0\\)\nAndré\n\n\n\nMI\n1.4\nFisher/Neyman/Bayes\nAndré\n\n\n\nMI\n6.5\nGit/GitLab/Magit Workflow\nAndré\n\n\n\nMI\n3.6\nGit/GitLab, Exercises\nPatric, Nathanael, André\n\n\n\nMI\n2.9\n\n\n\n\n\nMI\n7.10\n\n\n\n\n\nMI\n4.11\n\n\n\n\n\nMI\n2.12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n5.2\nDiagnostik und Bayes\nAndré\n\n\n\nMI\n5.3\nPrinzipien Power und Fallzahl\nAndré\n\n\n\nMI\n2.4\nKlassifikation, Neural Network, Link zu KI\nAndré\n\n\n\nMI\n7.5\nLatent Variable Model: EFA\nAndré\n\n\n\nMI\n4.6\nLatent Variable Model: CFA\nAndré\n\n\n\nMI\n3.9\nLatent Class Linear Mixed Model\nAndré\n\n\n\nMI\n1.10\n—\nAndré\nverschoben\n\n\nMI\n5.11\nDas Anti-Falsifikations-Paradigma\nAndré\nPhilosophischer Exkurs\n\n\nMI\n3.12\nGüte von Klassifikatoren\nAndré\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\nA. DI\n9.1\n–\n–\n\n\nB. MI\n7.2\nLikelihood\nAndré\n\n\nA. DI\n5.3\nSevere Testing\nAndré\n\n\nB. MI\n3.4\nfällt aus\nAndré\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\n\n\nMI\n4.9\nBayesian \\(t\\)-test\nAndré\n\n\nMI\n2.10\nGeneralised Linear Model\nAndré\n\n\nMI\n6.11\nLinear Mixed Model\nAndré\n\n\nMI\n4.12\nProjekt Linear Mixed Model\nAglaja\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric\n\n\n\n\n\n\n\n\n\nStatistik Kolloquium G"
+  },
+  {
+    "objectID": "Kolloquium.html#zeitpunkt-und-information",
+    "href": "Kolloquium.html#zeitpunkt-und-information",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Zeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\nOrt: Murtenstrasse 10, Raum 123\n\n\nThemen 2026Themen 2025Themen 2024Themen 2023\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n7.1\nMetaanalyse\nAndré\n\n\n\nMI\n4.2\n—\n—\n\n\n\nMI\n4.3\nNon-Null \\(H_0\\)\nAndré\n\n\n\nMI\n1.4\nFisher/Neyman/Bayes\nAndré\n\n\n\nMI\n6.5\nGit/GitLab/Magit Workflow\nAndré\n\n\n\nMI\n3.6\nGit/GitLab, Exercises\nPatric, Nathanael, André\n\n\n\nMI\n2.9\n\n\n\n\n\nMI\n7.10\n\n\n\n\n\nMI\n4.11\n\n\n\n\n\nMI\n2.12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n5.2\nDiagnostik und Bayes\nAndré\n\n\n\nMI\n5.3\nPrinzipien Power und Fallzahl\nAndré\n\n\n\nMI\n2.4\nKlassifikation, Neural Network, Link zu KI\nAndré\n\n\n\nMI\n7.5\nLatent Variable Model: EFA\nAndré\n\n\n\nMI\n4.6\nLatent Variable Model: CFA\nAndré\n\n\n\nMI\n3.9\nLatent Class Linear Mixed Model\nAndré\n\n\n\nMI\n1.10\n—\nAndré\nverschoben\n\n\nMI\n5.11\nDas Anti-Falsifikations-Paradigma\nAndré\nPhilosophischer Exkurs\n\n\nMI\n3.12\nGüte von Klassifikatoren\nAndré\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\nA. DI\n9.1\n–\n–\n\n\nB. MI\n7.2\nLikelihood\nAndré\n\n\nA. DI\n5.3\nSevere Testing\nAndré\n\n\nB. MI\n3.4\nfällt aus\nAndré\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\n\n\nMI\n4.9\nBayesian \\(t\\)-test\nAndré\n\n\nMI\n2.10\nGeneralised Linear Model\nAndré\n\n\nMI\n6.11\nLinear Mixed Model\nAndré\n\n\nMI\n4.12\nProjekt Linear Mixed Model\nAglaja\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric"
+  },
+  {
+    "objectID": "Kolloquium.html#ablage",
+    "href": "Kolloquium.html#ablage",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Statistik Kolloquium G"
+  },
+  {
+    "objectID": "angebot.html",
+    "href": "angebot.html",
+    "title": "Angebot",
+    "section": "",
+    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
+  },
+  {
+    "objectID": "angebot.html#forschung",
+    "href": "angebot.html#forschung",
+    "title": "Angebot",
+    "section": "",
+    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen"
+  },
+  {
+    "objectID": "angebot.html#lehre",
+    "href": "angebot.html#lehre",
+    "title": "Angebot",
+    "section": "",
+    "text": "Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
+  },
+  {
+    "objectID": "skript.html",
+    "href": "skript.html",
+    "title": "Statistik",
+    "section": "",
+    "text": "Statistik\n\nEinführung in die Wahrscheinlichkeitstheorie, Statistische Grundlagen, Lineare Modelle, Beispiele mit R: Statistik-Skript\nWahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung: Skript Wahrscheinlichkeitstheorie\n\n\n\nPhilosophie\n\nKarl Popper kritisierte erkenntnistheoretische Positionen, die objektive Wahrheit, rationale Kritik oder wissenschaftliche Prüfbarkeit relativieren. Er verstand sich ausdrücklich als Verteidiger der Aufklärung: Vernunft, offene Kritik, argumentative Auseinandersetzung und die Möglichkeit objektiver Erkenntnis standen im Zentrum seines Denkens. Positionen, die wissenschaftliche Erkenntnis primär als soziale Konstruktion, Machtprodukt oder Perspektivenfrage interpretieren, gefährden aus seiner Sicht die rationale Kritik und fördern einen erkenntnistheoretischen Relativismus. Wissenschaft macht nach Popper gerade deshalb Fortschritte, weil Theorien an einer von uns unabhängigen Realität scheitern können. Wenn dagegen alle Sichtweisen primär als „konstruiert“ gelten, wird die Unterscheidung zwischen besseren und schlechteren Erklärungen erschwert. Darin sah Popper eine problematische Abkehr vom aufklärerischen Ideal der kritischen Rationalität.\nDazu mein Betrag zum wissenschaftlichen Diskurs: Das Anti-Falsifikations-Paradigma"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Willkommen",
+    "section": "",
+    "text": "1"
+  },
+  {
+    "objectID": "philo.html",
+    "href": "philo.html",
+    "title": "Philosophie",
+    "section": "",
+    "text": "Philosophie\n\nKarl Popper kritisierte erkenntnistheoretische Positionen, die objektive Wahrheit, rationale Kritik oder wissenschaftliche Prüfbarkeit relativieren. Er verstand sich ausdrücklich als Verteidiger der Aufklärung: Vernunft, offene Kritik, argumentative Auseinandersetzung und die Möglichkeit objektiver Erkenntnis standen im Zentrum seines Denkens. Positionen, die wissenschaftliche Erkenntnis primär als soziale Konstruktion, Machtprodukt oder Perspektivenfrage interpretieren, gefährden aus seiner Sicht die rationale Kritik und fördern einen erkenntnistheoretischen Relativismus. Wissenschaft macht nach Popper gerade deshalb Fortschritte, weil Theorien an einer von uns unabhängigen Realität scheitern können. Wenn dagegen alle Sichtweisen primär als „konstruiert“ gelten, wird die Unterscheidung zwischen besseren und schlechteren Erklärungen erschwert. Darin sah Popper eine problematische Abkehr vom aufklärerischen Ideal der kritischen Rationalität.\nDazu ein Betrag zum wissenschaftlichen Diskurs: Das Anti-Falsifikations-Paradigma"
+  }
+]

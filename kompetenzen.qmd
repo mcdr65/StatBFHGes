@@ -1,0 +1,63 @@
+# Kompetenzen
+
+## Planung
+  * Fallzahl, Design, Confounding, Power-Aspekte
+  * Trials: Parallel, Crossover Äquivalenz, Superiority, Non-Inferority
+  * Bayesianische Zugänge
+  * Schätzen versus Testen
+
+  
+## Explorative Analysen
+  * Graphische Darstellungen
+
+## Lineares Modell und Erweiterungen
+  * Allgemeines lineares Modell ($t$-Test, ANOVA, Regression)
+  * Generalisiertes lineare Modell (Logistic, Poisson, etc.)
+  * Gemischte Modelle
+  * Generalisiertes Gemischtes Modell
+  * Log-Lineare Modelle
+  * Kumulative Logit-Modelle
+  * Robuste Methoden
+
+  
+## Longitudinale Datenanalysen
+  * Marginal and conditional models (GEE, GLMM)
+  * Time-dependent exposures
+  
+<!-- ## Nicht-linere Modelle  -->
+
+## Metaanalysen
+  * Klassisch
+  * Netzwerk (Bayes)
+
+## Flexible Methoden für Regression und Klassifikation
+  * Additive Modelle
+  * Neural Networks
+  * Classification und Regression Trees
+  * Regularisation und Variablenselektion (Ridge, Lasso)
+  * Kreuzvalidierung, Bootstrap, Bagging
+
+
+## Überlebensanalyse
+  * Aalen-Johansen
+  * Kaplan-Meier
+  * Parametrische Modelle
+  * Cox-Modell
+  * Competing Risk und Multi-state
+
+
+
+## Multivariate Methoden
+  * Hauptkomponenten
+  * Cluster
+
+## Latente Variablenmodelle
+  * Faktoranalyse
+  * Item-Response, Rasch, Graded Response 
+  * Latente Klassen- und Profilanalyse
+
+## Bayes-Inferenz
+  * R mit JAGS
+
+## Missing data und Imputation
+  

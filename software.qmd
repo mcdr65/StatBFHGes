@@ -1,0 +1,20 @@
+
+
+::: {.hidden}
+$$
+ \def\RR{{\textsf{R}}}
+ \def\lx{{\LaTeX}}
+$$
+:::
+
+
+
+
+# Software
+  * Statistik: R (plattformunabhängig), JAGS (MCMC)
+  * Betriebsystem: Windows, Linux (Ubuntu) 
+  * Editoren: RStudio, EMACS (ESS) 
+  * Literate Programming: $\lx$ und R-Markdown mit knitr, quarto
+  * Versionsverwaltung: Git, GitHub, BFH GitLab
+
+
