@@ -307,22 +307,26 @@ window.Quarto = {
 <span class="menu-text">Kompetenzen</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./skript.html"> 
-<span class="menu-text">Skript</span></a>
+    <a class="nav-link" href="./skript.html" target="_blank"> 
+<span class="menu-text">Skripts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://mcdr65.github.io/myblog/" target="_blank"> 
+<span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="./about.html" target="_blank"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/mcdr65"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/mcdr65" target="_blank"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://gitlab.ti.bfh.ch/"> <i class="bi bi-git" role="img">
+    <a class="nav-link" href="https://gitlab.ti.bfh.ch/" target="_blank"> <i class="bi bi-git" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -332,11 +336,11 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ressources">    
         <li>
-    <a class="dropdown-item" href="https://rweekly.org/">
+    <a class="dropdown-item" href="https://rweekly.org/" target="_blank">
  <span class="dropdown-text">R Weekly</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://www.r-bloggers.com/">
+    <a class="dropdown-item" href="https://www.r-bloggers.com/" target="_blank">
  <span class="dropdown-text">R Bloggers</span></a>
   </li>  
     </ul>
@@ -536,6 +540,11 @@ window.Quarto = {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
