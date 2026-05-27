@@ -1,4 +1,4 @@
-
+# Software
 
 ::: {.hidden}
 $$
@@ -8,9 +8,6 @@ $$
 :::
 
 
-
-
-# Software
   * Statistik: R (plattformunabhängig), JAGS (MCMC)
   * Betriebsystem: Windows, Linux (Ubuntu) 
   * Editoren: RStudio, EMACS (ESS) 
