@@ -47,3 +47,4 @@ format:
     toc: true
     code-link: true
     link-external-newwindow: true
+    embed-resources: true

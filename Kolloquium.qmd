@@ -29,22 +29,54 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 ## Themen 2026
 
 
-| Tag | Datum | Thema                     | Lead                     |   |
-|-----|-------|---------------------------|--------------------------|---|
-| MI  | 7.1   | Metaanalyse               | André                    |   |
-| MI  | 4.2   | ---                       | ---                      |   |
-| MI  | 4.3   | Non-Null $H_0$            | André                    |   |
-| MI  | 1.4   | Fisher/Neyman/Bayes       | André                    |   |
-| MI  | 6.5   | Git/GitLab/Magit Workflow | André                    |   |
-| MI  | 3.6   | Git/GitLab, Exercises     | Patric, Nathanael, André |   |
-| MI  | 2.9   |                           |                          |   |
-| MI  | 7.10  |                           |                          |   |
-| MI  | 4.11  |                           |                          |   |
-| MI  | 2.12  |                           |                          |   |
+| Tag | Datum | Thema                                                                                 | Lead             |   |
+|-----|-------|---------------------------------------------------------------------------------------|------------------|---|
+| MI  | 7.1   | Metaanalyse                                                                           | André            |   |
+| MI  | 4.2   | ---                                                                                   | ---              |   |
+| MI  | 4.3   | Non-Null $H_0$                                                                        | André            |   |
+| MI  | 1.4   | Fisher/Neyman/Bayes                                                                   | André            |   |
+| MI  | 6.5   | Git/GitLab/Magit Workflow                                                             | André            |   |
+| MI  | 3.6   | Git/GitLab, Exercises ([ÜbungsProjekt](https://gitlab.ti.bfh.ch/mta3/gitcollabintro)) | André und Patric |   |
+| MI  | 2.9   |                                                                                       |                  |   |
+| MI  | 7.10  |                                                                                       |                  |   |
+| MI  | 4.11  |                                                                                       |                  |   |
+| MI  | 2.12  |                                                                                       |                  |   |
 
 
+<!-- ```{r echo=FALSE} -->
+<!-- #| label: regvec3d -->
+<!-- #| warning: false -->
+<!-- #| message: false -->
 
-	
+<!-- options(rgl.useNULL = TRUE) -->
+
+<!-- library(rgl) -->
+<!-- library(matlib) -->
+
+<!-- rgl::setupKnitr() -->
+<!-- rgl::clear3d() -->
+
+<!-- states.vec <- regvec3d( -->
+<!--   Fertility ~ Education+Agriculture, -->
+<!--   data = swiss, -->
+<!--   scale = TRUE -->
+<!-- ) -->
+
+<!-- plot( -->
+<!--   states.vec, -->
+<!--   show.marginal = TRUE, -->
+<!--   show.angles = FALSE, -->
+<!--   show.hplane = FALSE, -->
+<!--   col.vec = "blue", -->
+<!--   col.residuals = "gray", -->
+<!--   col.points = "red", -->
+<!--   main = "3D Regression Vectors" -->
+<!-- ) -->
+
+<!-- rgl::rglwidget() -->
+<!-- ``` -->
+
+
 
 ## Themen 2025
 
