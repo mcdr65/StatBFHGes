@@ -37,7 +37,7 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 | MI  | 1.4   | Fisher/Neyman/Bayes                                                                   | André            |   |
 | MI  | 6.5   | Git/GitLab/Magit Workflow                                                             | André            |   |
 | MI  | 3.6   | Git/GitLab, Exercises ([ÜbungsProjekt](https://gitlab.ti.bfh.ch/mta3/gitcollabintro)) | André und Patric |   |
-| MI  | 2.9   |                                                                                       |                  |   |
+| MI  | 2.9   | Longitudinal Latent Variable Models                                                   | André            |   |
 | MI  | 7.10  |                                                                                       |                  |   |
 | MI  | 4.11  |                                                                                       |                  |   |
 | MI  | 2.12  |                                                                                       |                  |   |
