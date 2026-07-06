@@ -19,7 +19,7 @@ website:
         text: Skripts
         target: _blank
       - href: blog.qmd
-        text: Stats and other things
+        text: Blog
         target: _blank
     right:
       - href: about.qmd
