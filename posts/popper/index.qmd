@@ -1,0 +1,15 @@
+---
+title: "Das Anti-Falsifikations-Paradigma"
+date: "2026-07-03"
+description: "Wir brauchen wieder mehr Popper"
+categories: [meinung]
+resources:
+  - KritischerRationalismus2015.pdf
+---
+
+
+Karl Popper kritisierte erkenntnistheoretische Positionen, die die Existenz einer objektiven Realität, die Möglichkeit objektiver Erkenntnis, rationale Kritik oder wissenschaftliche Prüfbarkeit relativieren. Er verstand sich ausdrücklich als Verteidiger der Aufklärung: Vernunft, offene Kritik, argumentative Auseinandersetzung und die Möglichkeit objektiver Erkenntnis standen im Zentrum seines Denkens. Positionen, die wissenschaftliche Erkenntnis primär als soziale Konstruktion, Machtprodukt oder Perspektivenfrage interpretieren, gefährden aus seiner Sicht die rationale Kritik und fördern einen erkenntnistheoretischen Relativismus. Wissenschaft macht nach Popper gerade deshalb Fortschritte, weil Theorien an einer von uns unabhängigen Realität scheitern können. Werden dagegen alle Sichtweisen primär als „konstruiert“ betrachtet, wird die Unterscheidung zwischen besseren und schlechteren Erklärungen erschwert. Darin sah Popper eine problematische Abkehr vom aufklärerischen Ideal der kritischen Rationalität. Selbst Entwicklungen der modernen Physik, etwa die Quantenmechanik mit ihren kontraintuitiven Phänomenen, verstand Popper nicht als Argument gegen die Existenz einer objektiven Realität. Dass wissenschaftliche Theorien immer wieder durch Beobachtungen und Experimente korrigiert werden müssen, wertete er vielmehr als Hinweis darauf, dass die Welt unabhängig von unseren Überzeugungen existiert und unseren Konstruktionen Grenzen setzt. Diese Sicht steht im deutlichen Gegensatz zu erkenntnistheoretischen Positionen, die wissenschaftliches Wissen primär als Ergebnis sozialer Aushandlungsprozesse verstehen*.
+
+
+- Dazu mein Beitrag zum wissenschaftlichen Diskurs in den Gesundheitswissenschaften: [Das Anti-Falsifikations-Paradigma](KritischerRationalismus2015.pdf)
+

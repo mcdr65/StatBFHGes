@@ -18,6 +18,9 @@ website:
       - href: skript.qmd
         text: Skripts
         target: _blank
+      - href: blog.qmd
+        text: Stats and other things
+        target: _blank
     right:
       - href: about.qmd
         target: _blank
@@ -34,9 +37,6 @@ website:
             target: _blank
           - text: R Bloggers
             href: https://www.r-bloggers.com/
-            target: _blank
-          - text: Blog
-            href: https://mcdr65.github.io/myblog/
             target: _blank
 format:
   html:
