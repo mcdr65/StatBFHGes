@@ -2,7 +2,7 @@
 title: "Das Anti-Falsifikations-Paradigma"
 date: "2026-07-03"
 description: "Wir brauchen wieder mehr Popper"
-categories: [meinung]
+categories: [meinung, philosophie]
 resources:
   - KritischerRationalismus2015.pdf
 ---

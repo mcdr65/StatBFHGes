@@ -11,7 +11,6 @@ date: last-modified
 
 
 
-
 ```{r demosplines, results="hide",fig.width=10}
 library(MultiKink)
 library(splines)
