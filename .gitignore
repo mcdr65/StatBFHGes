@@ -1,3 +1,10 @@
-/.quarto/
+# Quarto cache
+.quarto/
 
-**/*.quarto_ipynb
+# Knitr / execution cache
+*_cache/
+*_files/
+
+
+
+*.txt

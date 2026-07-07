@@ -6,8 +6,3 @@
 
 
 
-# Philosophie
-
-
-- Mein Beitrag zum wissenschaftlichen Diskurs in den Gesundheitswissenschaften: [Das Anti-Falsifikations-Paradigma](docs/KritischerRationalismus2015.pdf)
-
