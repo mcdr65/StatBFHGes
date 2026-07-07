@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - docs/
 website:
   title: "Statistik-Beratung G"
   navbar:
