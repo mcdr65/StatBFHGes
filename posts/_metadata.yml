@@ -25,10 +25,7 @@ format:
     df-print: kable
     code-fold: true
     code-copy: true
-    code-tools:
-      source: false
-      toggle: true
-
+    code-tools: false
 
 
 page-layout: article
