@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources:
-    - docs/
+    - assets
 website:
   title: "Statistik-Beratung G"
   navbar:
