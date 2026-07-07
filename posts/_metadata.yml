@@ -7,7 +7,6 @@ freeze: true
 # Enable banner style title blocks
 title-block-banner: true
 
-
 # Author name of all blog posts
 author: "André Meichtry"
 
@@ -24,16 +23,18 @@ knitr:
 format:
   html:
     df-print: kable
-    embed-resources: true
-    code-fold: false
+    code-fold: true
+    code-copy: true
     code-tools:
-      source: true
-      toggle: false
+      source: false
+      toggle: true
 
 
 
 page-layout: article
+
 fig-cap-location: top
+
 comments: 
   utterances: 
-    repo: mcdr65/myblog
+    repo: mcdr65/StatBFHGes
