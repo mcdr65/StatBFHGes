@@ -3,7 +3,6 @@
 
 # Knitr / execution cache
 *_cache/
-*_files/
 
 
 
