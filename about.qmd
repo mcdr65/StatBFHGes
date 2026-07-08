@@ -7,6 +7,9 @@ about:
     - icon: github
       text: Github
       href: https://github.com
+author:
+  - name: "André Meichtry"
+    affiliation: "Berner Fachhochschule"
 ---
 
 <div style="text-align: justify"> 
