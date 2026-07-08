@@ -1,5 +1,5 @@
 ---
-title: "Willkommen"
+title: "Statistik-Beratung G"
 description: "Willkommen zur Statistik-Beratung des G"
 #date: last-modified
 ---
