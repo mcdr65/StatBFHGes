@@ -3,10 +3,6 @@ title: "About"
 image: profile.png
 about:
   template: jolla
-  links:
-    - icon: github
-      text: Github
-      href: https://github.com
 author:
   - name: "André Meichtry"
     affiliation: "Berner Fachhochschule"
@@ -14,8 +10,11 @@ author:
 
 <div style="text-align: justify"> 
 
+
 👋 Hi, I’m André Meichtry\
+
 🌱 I’m currently working as a statistics consultant at the School of Health Professions, Bern University of Applied Sciences.\
+
 👀 I’m interested in philosophy, physics, quantitative research methodology and biostatistics.
 
 
