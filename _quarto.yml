@@ -41,3 +41,8 @@ format:
       dark: darkly 
     toc: true
     link-external-newwindow: true
+
+execute:
+  echo: false
+  warning: false
+  message: false    
