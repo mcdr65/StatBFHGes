@@ -36,9 +36,7 @@ website:
             href: https://www.r-bloggers.com/
 format:
   html:
-    theme: 
-      light: litera
-      dark: darkly 
+    theme: litera
     toc: true
     link-external-newwindow: true
 
