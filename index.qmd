@@ -8,7 +8,6 @@ description: "Willkommen zur Statistik-Beratung des G"
 
 
 
-
 ```{r demosplines, results="hide",fig.width=10}
 library(MultiKink)
 library(splines)

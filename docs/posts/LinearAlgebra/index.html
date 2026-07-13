@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="André Meichtry">
+<meta name="dcterms.date" content="2026-05-20">
+<meta name="description" content="Analogies in Quantum Mechanics and Statistics">
 
-<title>Beiträge zu Statistik und Wissenschaftstheorie – Statistik-Beratung G</title>
+<title>The Magic of Linear Algebra – Statistik-Beratung G</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f1a3f375b1699aa8fbae1049d7864ae9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-71064726742a3f8f9ee199bee8c7aa24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,35 +73,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-description','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -137,11 +109,11 @@ window.Quarto = {
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Statistik-Beratung G</span>
     </a>
   </div>
@@ -152,37 +124,37 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./organisation.html"> 
+    <a class="nav-link" href="../../organisation.html"> 
 <span class="menu-text">Organisation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Kolloquium.html"> 
+    <a class="nav-link" href="../../Kolloquium.html"> 
 <span class="menu-text">Kolloquium</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./angebot.html"> 
+    <a class="nav-link" href="../../angebot.html"> 
 <span class="menu-text">Angebot</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html"> 
+    <a class="nav-link" href="../../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./kompetenzen.html"> 
+    <a class="nav-link" href="../../kompetenzen.html"> 
 <span class="menu-text">Kompetenzen</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./skript.html"> 
+    <a class="nav-link" href="../../skript.html"> 
 <span class="menu-text">Skripts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -218,321 +190,215 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">The Magic of Linear Algebra</h1>
+                  <div>
+        <div class="description">
+          Analogies in Quantum Mechanics and Statistics
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">philosophie</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>André Meichtry </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 20, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(5)</span></div><div class="category" data-category="bWVpbnVuZw==">meinung <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cGhpbG9zb3BoaWU=">philosophie <span class="quarto-category-count">(4)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Beiträge zu Statistik und Wissenschaftstheorie</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quantum-mechanics-through-the-lens-of-statistics" id="toc-quantum-mechanics-through-the-lens-of-statistics" class="nav-link active" data-scroll-target="#quantum-mechanics-through-the-lens-of-statistics">Quantum Mechanics Through the Lens of Statistics</a></li>
+  <li><a href="#quantum-mechanics-as-generalized-probability-theory" id="toc-quantum-mechanics-as-generalized-probability-theory" class="nav-link" data-scroll-target="#quantum-mechanics-as-generalized-probability-theory">Quantum Mechanics as Generalized Probability Theory</a></li>
+  </ul>
+</nav>
     </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWVpbnVuZyUyQ3BoaWxvc29waGll" data-listing-date-sort="1783029600000" data-listing-file-modified-sort="1783325762380" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="197">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/popper/index.html" class="no-external">Das Anti-Falsifikations-Paradigma</a>
-</h3>
-<div class="listing-categories">
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<div class="listing-category" onclick="window.quartoListingCategory('bWVpbnVuZw=='); return false;">meinung</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('cGhpbG9zb3BoaWU='); return false;">philosophie</div>
 
-</div>
-<div class="delink listing-description"><a href="./posts/popper/index.html" class="no-external">
-<p>Wir brauchen wieder mehr Popper</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/popper/index.html" class="no-external">
-<div class="listing-date">
-Jul 3, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cGhpbG9zb3BoaWU=" data-listing-date-sort="1780956000000" data-listing-file-modified-sort="1782462370757" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="407">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Trace/index.html" class="no-external">The trace of a matrix</a>
-</h3>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('cGhpbG9zb3BoaWU='); return false;">philosophie</div>
 
-</div>
-<div class="delink listing-description"><a href="./posts/Trace/index.html" class="no-external">
-<p>Trace as a Bridge Between Item Space and Factor Space</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Trace/index.html" class="no-external">
-<div class="listing-date">
-Jun 9, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="cGhpbG9zb3BoaWU=" data-listing-date-sort="1779228000000" data-listing-file-modified-sort="1780399669846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="853">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/LinearAlgebra/index.html" class="no-external">The Magic of Linear Algebra</a>
-</h3>
-<div class="listing-categories">
+<section id="quantum-mechanics-through-the-lens-of-statistics" class="level1">
+<h1>Quantum Mechanics Through the Lens of Statistics</h1>
+<p>A modern perspective views the superposition principle as the fundamental empirical observation underlying quantum mechanics. Experiments indicate that if two states <span class="math inline">\(\psi_1\)</span> and <span class="math inline">\(\psi_2\)</span> are physically possible, then any linear combination</p>
+<p><span class="math display">\[
+a\psi_1 + b\psi_2
+\]</span></p>
+<p>is also a possible state. This implies that quantum states form a vector space, more precisely a Hilbert space. Once states are represented as vectors, the mathematical framework of linear algebra emerges naturally.</p>
+<p>To be compatible with superposition, physical observables such as energy, momentum, or spin are represented by linear operators acting on the state space. Likewise, the time evolution of a quantum system must preserve superpositions and is therefore described by a linear dynamical law. The Schrödinger equation</p>
+<p><span class="math display">\[
+i\hbar \frac{\partial \psi}{\partial t}
+=
+H\psi
+\]</span></p>
+<p>can be understood as the mathematical expression of continuous linear time evolution, where <span class="math inline">\(H\)</span> denotes the Hamiltonian, the operator associated with energy.</p>
+<p>From a statistical perspective, there are several striking analogies. In multivariate statistics, a covariance matrix <span class="math inline">\(\Sigma\)</span> summarizes the dependence structure among variables. In quantum mechanics, a Hermitian operator such as the Hamiltonian <span class="math inline">\(H\)</span> plays a similarly central role by determining the structure of a physical system and its possible energy states.</p>
+<p>Eigenvalue decompositions are fundamental in both fields. In principal component analysis (PCA),</p>
+<p><span class="math display">\[
+\Sigma v = \lambda v,
+\]</span></p>
+<p>where <span class="math inline">\(\lambda\)</span> denotes the variance explained by the principal component <span class="math inline">\(v\)</span>. In quantum mechanics,</p>
+<p><span class="math display">\[
+H\psi = E\psi,
+\]</span></p>
+<p>where <span class="math inline">\(E\)</span> denotes an energy level and <span class="math inline">\(\psi\)</span> the corresponding energy eigenstate. In both cases, eigenvectors identify privileged directions or states, and eigenvalues quantify important properties of those directions.</p>
+<p>There is also a conceptual analogy between latent variable models and quantum theory. In factor analysis, observed correlations are explained through unobserved latent factors:</p>
+<p><span class="math display">\[
+\Sigma = \Lambda \Phi \Lambda^\top + \Psi.
+\]</span></p>
+<p>Similarly, quantum mechanics postulates an underlying state <span class="math inline">\(\psi\)</span> that is not directly observable. What can be observed are the probabilities of measurement outcomes, which are derived from the state through the Born rule:</p>
+<p><span class="math display">\[
+P(i)
+=
+\left|
+\langle i \mid \psi \rangle
+\right|^2.
+\]</span></p>
+<p>Thus, both statistics and quantum mechanics infer hidden structure from observable data.</p>
+<p>Another parallel arises from spectral decomposition. In statistics, a covariance matrix can be decomposed as</p>
+<p><span class="math display">\[
+\Sigma = Q D Q^\top,
+\]</span></p>
+<p>where the columns of <span class="math inline">\(Q\)</span> are eigenvectors and the diagonal elements of <span class="math inline">\(D\)</span> are eigenvalues. In quantum mechanics, a Hermitian operator admits an analogous decomposition:</p>
+<p><span class="math display">\[
+H = U D U^\dagger,
+\]</span></p>
+<p>where <span class="math inline">\(U\)</span> is a unitary matrix and <span class="math inline">\(D\)</span> contains the energy eigenvalues. The mathematical structure is nearly identical; only the interpretation differs.</p>
+<p>From this viewpoint, much of the mathematical machinery of quantum mechanics—Hilbert spaces, Hermitian operators, eigenvalues, eigenvectors, traces, and spectral decompositions—can be seen as consequences of the experimentally observed validity of superposition. The deepest mystery is perhaps not why quantum mechanics relies so heavily on linear algebra, but why nature itself appears to obey the superposition principle with such extraordinary precision.</p>
+</section>
+<section id="quantum-mechanics-as-generalized-probability-theory" class="level1">
+<h1>Quantum Mechanics as Generalized Probability Theory</h1>
+<p>The previous discussion emphasized why quantum mechanics naturally leads to linear algebra. However, quantum theory can also be viewed as a generalization of probability theory. This perspective becomes particularly clear through the concept of the density matrix, which plays a role analogous to a probability distribution in classical statistics.</p>
+<p>In classical probability theory, a random variable <span class="math inline">\(X\)</span> takes values <span class="math inline">\(x_i\)</span> with probabilities <span class="math inline">\(p_i\)</span>. The expectation of <span class="math inline">\(X\)</span> is given by</p>
+<p><span class="math display">\[
+E(X)
+=
+\sum_i x_i p_i.
+\]</span></p>
+<p>The probability distribution contains all information necessary to predict future observations and compute expectations.</p>
+<p>Quantum mechanics has a remarkably similar structure. The state of a system is described by a density matrix <span class="math inline">\(\rho\)</span>, while a measurable quantity is represented by a Hermitian operator <span class="math inline">\(A\)</span>. In this analogy, the density matrix plays a role similar to a probability distribution, whereas observables generalize the notion of random variables.</p>
+<p>The expectation of an observable is given by</p>
+<p><span class="math display">\[
+E(A)
+=
+\operatorname{tr}(\rho A).
+\]</span></p>
+<p>This formula is the quantum analogue of the classical expectation.</p>
+<p>To understand why, consider the spectral decomposition of the observable:</p>
+<p><span class="math display">\[
+A
+=
+\sum_i a_i P_i,
+\]</span></p>
+<p>where <span class="math inline">\(a_i\)</span> are the eigenvalues of <span class="math inline">\(A\)</span> and <span class="math inline">\(P_i\)</span> are the corresponding projection operators. The eigenvalues represent the possible outcomes of a measurement. Their probabilities are determined by the Born rule:</p>
+<p><span class="math display">\[
+P(a_i)
+=
+\operatorname{tr}(\rho P_i).
+\]</span></p>
+<p>The expectation of the observable therefore becomes</p>
+<p><span class="math display">\[
+E(A)
+=
+\sum_i a_i P(a_i).
+\]</span></p>
+<p>Substituting the Born rule yields</p>
+<p><span class="math display">\[
+E(A)
+=
+\sum_i a_i \operatorname{tr}(\rho P_i).
+\]</span></p>
+<p>Using the linearity of the trace,</p>
+<p><span class="math display">\[
+E(A)
+=
+\operatorname{tr}
+\left(
+\rho
+\sum_i a_i P_i
+\right)
+=
+\operatorname{tr}(\rho A).
+\]</span></p>
+<p>Thus, the familiar formula for expectation in statistics reappears in quantum mechanics in matrix form.</p>
+<p>The analogy can be summarized as follows:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 38%">
+<col style="width: 61%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Statistics</th>
+<th>Quantum Mechanics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Probability distribution <span class="math inline">\(P\)</span></td>
+<td>Density matrix <span class="math inline">\(\rho\)</span></td>
+</tr>
+<tr class="even">
+<td>Random variable <span class="math inline">\(X\)</span></td>
+<td>Observable <span class="math inline">\(A\)</span></td>
+</tr>
+<tr class="odd">
+<td>Possible values <span class="math inline">\(x_i\)</span></td>
+<td>Eigenvalues <span class="math inline">\(a_i\)</span></td>
+</tr>
+<tr class="even">
+<td>Probabilities <span class="math inline">\(P(X=x_i)\)</span></td>
+<td>Born probabilities <span class="math inline">\(\operatorname{tr}(\rho P_i)\)</span></td>
+</tr>
+<tr class="odd">
+<td>Expectation <span class="math inline">\(E(X)\)</span></td>
+<td>Expectation <span class="math inline">\(\operatorname{tr}(\rho A)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>From this perspective, quantum mechanics may be viewed as a form of <em>non-commutative probability theory</em>. In classical probability, random variables are ordinary functions and therefore commute:</p>
+<p><span class="math display">\[
+XY = YX.
+\]</span></p>
+<p>In quantum mechanics, observables are operators and generally do not commute:</p>
+<p><span class="math display">\[
+AB \neq BA.
+\]</span></p>
+<p>This seemingly small mathematical change has profound consequences. Non-commutativity leads to uncertainty relations, interference phenomena, and many of the characteristic features that distinguish quantum mechanics from classical probability theory.</p>
+<p>From a mathematical perspective, one may therefore view quantum mechanics as a generalization of probability theory in which probability distributions are replaced by density matrices, random variables by Hermitian operators, and integration by the trace operator. The familiar concepts of probabilities, expectations, variances, and mixtures survive, but they are expressed in the language of linear operators rather than functions.</p>
 
-<div class="listing-category" onclick="window.quartoListingCategory('cGhpbG9zb3BoaWU='); return false;">philosophie</div>
 
-</div>
-<div class="delink listing-description"><a href="./posts/LinearAlgebra/index.html" class="no-external">
-<p>Analogies in Quantum Mechanics and Statistics</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/LinearAlgebra/index.html" class="no-external">
-<div class="listing-date">
-May 20, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cGhpbG9zb3BoaWU=" data-listing-date-sort="1779228000000" data-listing-file-modified-sort="1780058024154" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1192">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/AllIsIntegration/index.html" class="no-external">“All Is Integration”</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('cGhpbG9zb3BoaWU='); return false;">philosophie</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/AllIsIntegration/index.html" class="no-external">
-<p>Integrieren über unbekannte Welten</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/AllIsIntegration/index.html" class="no-external">
-<div class="listing-date">
-May 20, 2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Y29kZSUyQ2FuYWx5c2lz" data-listing-date-sort="1738796400000" data-listing-file-modified-sort="1738940538812" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/Khatri-Rao-Product/index.html" class="no-external">Design Matrix for interaction effects</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/Khatri-Rao-Product/index.html" class="no-external">
-<p>Matrix Algebra</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/Khatri-Rao-Product/index.html" class="no-external">
-<div class="listing-date">
-Feb 6, 2025
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Y29kZSUyQ2FuYWx5c2lz" data-listing-date-sort="1701471600000" data-listing-file-modified-sort="1738857504938" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="854">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/noncollaps/index.html" class="no-external">Noncollapsibility of the odds ratio</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/noncollaps/index.html" class="no-external">
-<p>IPW-analysis</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/noncollaps/index.html" class="no-external">
-<div class="listing-date">
-Dec 2, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Y29kZSUyQ2FuYWx5c2lz" data-listing-date-sort="1667430000000" data-listing-file-modified-sort="1667577376000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/logratioGeometry/index.html" class="no-external">Compositions</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/logratioGeometry/index.html" class="no-external">
-<p>Simplex as sample space: Tetrahedron for 4-part compositions</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/logratioGeometry/index.html" class="no-external">
-<div class="listing-date">
-Nov 3, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="bWVpbnVuZw==" data-listing-date-sort="1666648800000" data-listing-file-modified-sort="1701858393088" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="999">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/gendern/index.html" class="no-external">Aber der Kaiser hat ja gar nichts an!</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWVpbnVuZw=='); return false;">meinung</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/gendern/index.html" class="no-external">
-<p>Gegen Identitätspolitik</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/gendern/index.html" class="no-external">
-<div class="listing-date">
-Oct 25, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="Y29kZSUyQ2FuYWx5c2lz" data-listing-date-sort="1665007200000" data-listing-file-modified-sort="1739440876015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" data-listing-word-count-sort="2087">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fromLMtoSplines/index.html" class="no-external">Beyond linearity</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/fromLMtoSplines/index.html" class="no-external">
-<p>From linear model to GAM</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/fromLMtoSplines/index.html" class="no-external">
-<div class="listing-date">
-Oct 6, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1664402400000" data-listing-file-modified-sort="1738859524414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="397">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/exponentialGrowth/index.html" class="no-external">Exponential Growth</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">analysis</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/exponentialGrowth/index.html" class="no-external">
-<p>exp and log</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/exponentialGrowth/index.html" class="no-external">
-<div class="listing-date">
-Sep 29, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="10" data-categories="bmV3cw==" data-listing-date-sort="1664143200000" data-listing-file-modified-sort="1665152101000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/welcome/index.html" class="no-external">
-Welcome!
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Sep 26, 2022
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -938,6 +804,8 @@ Sep 26, 2022
     }
   });
   </script>
+<script src="https://utteranc.es/client.js" repo="mcdr65/StatBFHGes" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 
 

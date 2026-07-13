@@ -460,5 +460,278 @@
     "title": "“All Is Integration”",
     "section": "",
     "text": "Statistics, viewed from a sufficient distance, is often presented as a science of estimation, testing, prediction, or uncertainty quantification. Yet beneath these familiar activities lies a deeper and more universal mathematical structure: the repeated necessity of integrating over what cannot be directly observed.\n\n\n\n\n\n\n\n\n\n\n\n\nModel class\nExample model\nObservation model\nWhat is integrated over?\nIntegral / summation structure\nPhilosophical interpretation\nAdditional explanation\n\n\n\n\nDeterministic regression\n\\(y=x^\\top\\beta\\)\nnone\nnothing\nnone\nPure functional law\nNo probability model; data assumed to follow an exact deterministic relation.\n\n\nGaussian LM\n\\(Y_i=x_i^\\top\\beta+\\varepsilon_i\\)\n\\(\\varepsilon_i\\sim N(0,\\sigma^2)\\)\nGaussian error noise\nimplicit in Gaussian density\nAdditive uncertainty around deterministic mean\nClassical regression with homoscedastic additive residuals.\n\n\nOne-sample \\(t\\)-test\n\\(Y_i\\sim N(\\mu,\\sigma^2)\\)\nGaussian\nerror variability\nproduct of normal densities\nMean inference under stochastic sampling\nSpecial case of Gaussian likelihood with one mean parameter.\n\n\nTwo-sample \\(t\\)-test\n\\(Y_i=\\beta_0+\\beta_1G_i+\\varepsilon_i\\)\nGaussian\nresidual noise\nGaussian likelihood\nGroup differences with uncertainty\nEquivalent to a linear model with a binary group predictor.\n\n\nANOVA\n\\(Y_{ij}=\\mu+\\alpha_j+\\varepsilon_{ij}\\)\nGaussian\nresidual noise\nGaussian likelihood\nGroup means plus stochastic variation\nMulti-group extension of the linear model.\n\n\nLogistic regression\n\\(Y_i\\sim \\mathrm{Bernoulli}(p_i)\\)\nBernoulli\nbinary outcome randomness\nproduct of Bernoulli probabilities\nUncertainty in binary realizations\nModels probabilities through a link function such as the logit.\n\n\nPoisson regression\n\\(Y_i\\sim \\mathrm{Poisson}(\\mu_i)\\)\nPoisson\ncount randomness\nproduct of Poisson probabilities\nEvent generation process\nVariance equals the mean under the Poisson assumption.\n\n\nGamma GLM\n\\(Y_i\\sim \\mathrm{Gamma}(\\mu_i,\\phi)\\)\nGamma\nmultiplicative positive noise\nGamma likelihood\nRelative / proportional variability\nSuitable for positive skewed outcomes with variance increasing quadratically with the mean.\n\n\nNegative-binomial GLM\n\\(Y_i\\sim NB(\\mu_i,\\theta)\\)\nNB\nPoisson intensity heterogeneity\nPoisson-Gamma mixture\nExtra latent variability in rates\nCan be derived as a Poisson model with a Gamma-distributed latent rate.\n\n\nProbit regression\n\\(Y_i=1[Z_i&gt;0]\\)\nlatent Gaussian threshold\nlatent \\(Z_i\\)\n\\(\\int 1(z&gt;0)\\phi(z)\\,dz\\)\nHidden continuous propensity\nBinary outcomes arise from an unobserved continuous latent variable.\n\n\nFinite mixture model\n\\(Y_i\\sim \\sum_k \\pi_k f_k(y)\\)\nmixture\nlatent class membership\n\\(\\sum_k \\pi_k f_k(y)\\)\nPopulation heterogeneity\nData assumed to arise from several overlapping subpopulations.\n\n\nLatent class analysis\ncategorical latent groups\nmultinomial\nlatent class \\(C_i\\)\n\\(\\sum_c P(Y\\mid C=c)P(C=c)\\)\nHidden subpopulations\nCommon in psychometrics and sociology for identifying hidden categories.\n\n\nFactor analysis\n\\(Y=\\Lambda f+\\varepsilon\\)\nGaussian\nlatent factors \\(f\\)\n\\(\\int f(y\\mid f)p(f)df\\)\nHidden dimensions generate observed variables\nCorrelations among variables explained through lower-dimensional latent traits.\n\n\nIRT / Rasch\n\\(P(Y_{ij}=1)=\\mathrm{logit}^{-1}(\\theta_i-b_j)\\)\nBernoulli\nlatent ability \\(\\theta_i\\)\n\\(\\int P(Y\\mid\\theta)p(\\theta)d\\theta\\)\nHidden trait generates responses\nItem responses modeled via latent ability and item difficulty.\n\n\nRandom intercept LMM\n\\(Y_{ij}=x_{ij}^\\top\\beta+b_j+\\varepsilon_{ij}\\)\nGaussian\nrandom intercepts \\(b_j\\)\n\\(\\int f(y\\mid b)f(b)db\\)\nCluster heterogeneity\nObservations within a cluster become correlated through shared latent effects.\n\n\nRandom slope model\n\\(Y_{ij}=x_{ij}^\\top\\beta+b_{1j}+b_{2j}x_{ij}+\\varepsilon\\)\nGaussian\nrandom coefficient vector\nmultivariate integral\nIndividual-specific effects\nAllows regression slopes to vary between clusters or persons.\n\n\nLogistic GLMM\nbinary mixed model\nBernoulli\nrandom effects\n\\(\\int f(y\\mid b)f(b)db\\)\nCluster-specific risk differences\nExtends logistic regression to clustered or longitudinal data.\n\n\nPoisson GLMM\ncount mixed model\nPoisson\nlatent cluster intensity\n\\(\\int f(y\\mid b)f(b)db\\)\nUnobserved rate heterogeneity\nRandom effects induce extra-Poisson variability and correlation.\n\n\nGamma GLMM\npositive skewed mixed model\nGamma\nlatent cluster effects\n\\(\\int f(y\\mid b)f(b)db\\)\nMultiplicative cluster heterogeneity\nUseful for repeated positive skewed outcomes.\n\n\nFrailty survival model\nhazard with frailty \\(u_j\\)\nsurvival process\nfrailty term\n\\(\\int f(t\\mid u)f(u)du\\)\nHidden susceptibility\nSurvival differences explained by latent vulnerability.\n\n\nHidden Markov model\nlatent states \\(S_t\\)\nconditional observation model\nhidden states\n\\(\\sum_{S_1,\\dots,S_T}\\)\nHidden dynamic process\nObserved sequences generated from unobserved evolving states.\n\n\nKalman filter\nstate-space Gaussian model\nGaussian\nlatent states\nrecursive Gaussian integration\nContinuous hidden dynamics\nSequential updating of hidden continuous states over time.\n\n\nGaussian process regression\n\\(f(x)\\sim GP\\)\nGaussian\nlatent function \\(f\\)\nfunctional integral\nDistribution over functions\nBayesian nonparametric regression over infinite-dimensional function spaces.\n\n\nRidge regression\npenalized LM\nGaussian\nequivalent Gaussian prior on \\(\\beta\\)\nMAP / Bayesian integral\nShrinkage via prior uncertainty\nPenalization corresponds to Gaussian priors on coefficients.\n\n\nLasso\nLaplace prior\nGaussian\nprior uncertainty on coefficients\nBayesian interpretation\nSparse latent structure\nEncourages sparse solutions by shrinking some coefficients exactly to zero.\n\n\nBayesian linear regression\nprior on \\(\\beta,\\sigma^2\\)\nGaussian\nparameter uncertainty\n\\(\\int f(y\\mid\\theta)p(\\theta)d\\theta\\)\nEpistemic uncertainty\nUncertainty exists not only in observations but also in parameters.\n\n\nBayesian GLM\nprior on coefficients\nexponential-family\nposterior over parameters\nfull posterior integral\nUncertainty in effects\nGeneralizes Bayesian inference to non-Gaussian outcomes.\n\n\nBayesian GLMM\npriors + random effects\nhierarchical\nparameters and random effects\nnested integrals\nFull uncertainty hierarchy\nSimultaneously integrates over latent effects and parameter uncertainty.\n\n\nPosterior predictive distribution\n\\(p(y^{new}\\mid y)\\)\npredictive\nposterior uncertainty\n\\(\\int p(y^{new}\\mid\\theta)p(\\theta\\mid y)d\\theta\\)\nPrediction averaged over uncertainty\nBayesian prediction averages over all plausible parameter values.\n\n\nMarginal likelihood\n\\(p(y)\\)\nany Bayesian model\nall parameter uncertainty\n\\(\\int f(y\\mid\\theta)p(\\theta)d\\theta\\)\nOccam averaging\nCentral quantity in Bayesian model comparison and Bayes factors.\n\n\nEM algorithm\nincomplete-data likelihood\nlatent-variable model\nlatent missing data\n\\(\\int f(y,z\\mid\\theta)dz\\)\nUnobserved structure\nAlternates between estimating latent variables and parameters.\n\n\nMissing-data model\nobserved-data likelihood\npartial observation\nmissing values\n\\(\\int f(y_{obs},y_{mis})dy_{mis}\\)\nUncertainty about missingness\nMissing values treated as latent unknown quantities.\n\n\nCausal marginalization\npotential outcomes\ncounterfactual model\ncovariate distribution\n\\(\\int E(Y\\mid X=x)dF(x)\\)\nPopulation-average causal effect\nStandardization averages causal effects over a target population.\n\n\nMarginal means / emmeans\nadjusted means\nregression model\nnuisance covariates\naveraging over covariate distribution\nPopulation-adjusted effects\nProduces covariate-adjusted group means or contrasts.\n\n\nRandom-effects meta-analysis\nstudy effects \\(\\theta_j\\sim N(\\mu,\\tau^2)\\)\nstudy likelihoods\ntrue study heterogeneity\n\\(\\int f(y_j\\mid\\theta_j)f(\\theta_j)d\\theta_j\\)\nBetween-study variability\nStudies assumed to estimate varying underlying true effects.\n\n\nDeep neural network (Bayesian view)\nstochastic weights\nflexible nonlinear model\nparameter uncertainty\nhigh-dimensional integral\nDistribution over representations\nBayesian interpretation treats weights as uncertain latent parameters.\n\n\nVariational Bayes\napproximate posterior\narbitrary\nlatent posterior distribution\noptimized approximate integral\nTractable uncertainty approximation\nReplaces exact integration by optimization over simpler distributions.\n\n\nMCMC\nsampling algorithm\narbitrary Bayesian model\nposterior distribution\nMonte Carlo integration\nNumerical integration engine\nNumerical approximation of otherwise intractable integrals."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html",
+    "href": "posts/QMandStats/index.html",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "",
+    "text": "Quantum mechanics often appears mysterious to statisticians. However, many of its central concepts have close analogues in probability theory and statistics. In fact, much of quantum mechanics can be understood naturally through the language of joint distributions, marginalization, and conditional inference.\nA useful guiding principle is:\n\nThe density matrix is to quantum mechanics what the probability distribution is to statistics. Just as a probability distribution contains all statistical information about a random variable, the density matrix contains all statistical information about a quantum system.\n\nThe analogy begins to break down with quantum superposition. Unlike a classical probability distribution, a quantum state can contain coherent superpositions of different outcomes. For composite systems, these coherences give rise to quantum entanglement, which has no counterpart in classical probability theory.\nThis article compares the statistical and quantum-mechanical viewpoints and explains where classical probability theory reaches its limits."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#einleitung",
+    "href": "posts/QMandStats/index.html#einleitung",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "",
+    "text": "Für Statistikerinnen und Statistiker wird die Quantenmechanik oft verständlicher, wenn man sie zunächst durch die Brille der Wahrscheinlichkeitstheorie betrachtet. Tatsächlich besitzen beide Gebiete viele strukturelle Gemeinsamkeiten. An einer entscheidenden Stelle endet die Analogie jedoch: bei der Quantenverschränkung (Entanglement).\nDer folgende Beitrag vergleicht zentrale Konzepte der Statistik mit ihren Entsprechungen in der Quantenmechanik und zeigt, wo die klassische Wahrscheinlichkeitstheorie an ihre Grenzen stößt."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#statistik-und-quantenmechanik-im-vergleich",
+    "href": "posts/QMandStats/index.html#statistik-und-quantenmechanik-im-vergleich",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "Statistik und Quantenmechanik im Vergleich",
+    "text": "Statistik und Quantenmechanik im Vergleich\n\n\n\nStatistik\nQuantenmechanik\n\n\n\n\nZufallsvariable \\(X\\))\nObservable \\(A\\)\n\n\nWahrscheinlichkeitsverteilung \\(P(X)\\)\nDichtematrix \\(\\rho\\)\n\n\nGemeinsame Verteilung \\(P(X,Y)\\)\nGemeinsame Dichtematrix $_{AB}\n\n\nMarginalisierung\nPartielle Spur (Partial Trace)\n\n\nKorrelation\nQuantenkorrelation bzw. Verschränkung\n\n\nBedingte Verteilung\nBedingter Zustand nach einer Messung\n\n\nUnabhängigkeit\nProduktzustand"
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#gemeinsame-verteilungen",
+    "href": "posts/QMandStats/index.html#gemeinsame-verteilungen",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "1. Gemeinsame Verteilungen",
+    "text": "1. Gemeinsame Verteilungen\nBetrachten wir zwei Zufallsvariablen\n\\[\nX,\\;Y,\n\\]\nderen gemeinsame Verteilung\n\\[\nP(X,Y)\n\\]\ngegeben ist.\nAlle Informationen über das System sind in dieser gemeinsamen Verteilung enthalten.\nBeispielsweise\n\n\n\nX\nY\nP\n\n\n\n\n0\n0\n0.4\n\n\n0\n1\n0.1\n\n\n1\n0\n0.1\n\n\n1\n1\n0.4\n\n\n\nInteressiert uns nur \\(X\\), so marginalisieren wir über \\(Y\\):\n\\[\nP(X)=\\sum_y P(X,y).\n\\]\nIn der Quantenmechanik erfolgt derselbe Schritt mittels der partiellen Spur\n\\[\n\\rho_A=\\operatorname{Tr}_B(\\rho_{AB}).\n\\]\nDamit gilt unmittelbar:\n\nMarginalisierung entspricht in der Quantenmechanik der partiellen Spur."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#korrelation",
+    "href": "posts/QMandStats/index.html#korrelation",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "2. Korrelation",
+    "text": "2. Korrelation\nAngenommen,\n\\[\nX=Y\n\\]\ngilt immer.\nDann ist\n\\[\nP(0,0)=0.5,\\qquad\nP(1,1)=0.5.\n\\]\nDie beiden Variablen sind perfekt korreliert.\nDie Randverteilung lautet\n\\[\nP(X=0)=P(X=1)=0.5.\n\\]\nBis hierhin gibt es nichts Spezifisch-Quantenmechanisches.\nBetrachten wir nun den Bell-Zustand\n\\[\n|\\Psi\\rangle=\n\\frac{|00\\rangle+|11\\rangle}{\\sqrt2}.\n\\]\nMessen Alice und Bob beide in der Standardbasis, erhalten sie exakt dieselben Häufigkeiten:\n\n\n\nAlice\nBob\nWahrscheinlichkeit\n\n\n\n\n0\n0\n0.5\n\n\n1\n1\n0.5\n\n\n\nAus Sicht der beobachteten Wahrscheinlichkeiten unterscheiden sich beide Situationen zunächst überhaupt nicht."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#wo-endet-die-analogie",
+    "href": "posts/QMandStats/index.html#wo-endet-die-analogie",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "3. Wo endet die Analogie?",
+    "text": "3. Wo endet die Analogie?\nIn der Statistik beschreibt die gemeinsame Verteilung das gesamte System vollständig.\nIn der Quantenmechanik ist die Situation grundlegend anders.\nDer Bell-Zustand besitzt die Dichtematrix\n\\[\n\\rho=\n\\begin{pmatrix}\n0.5&0&0&0.5\\\\\n0&0&0&0\\\\\n0&0&0&0\\\\\n0.5&0&0&0.5\n\\end{pmatrix}.\n\\]\nDie Off-Diagonal-Elemente besitzen kein klassisches Gegenstück.\nSie beschreiben die Quantenkohärenz."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#klassische-korrelation",
+    "href": "posts/QMandStats/index.html#klassische-korrelation",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "4. Klassische Korrelation",
+    "text": "4. Klassische Korrelation\nMan stelle sich zwei Münzen vor.\nEine faire Münze wird einmal geworfen.\nDas Ergebnis wird kopiert.\nAlice erhält eine Münze, Bob die andere.\nDie gemeinsame Verteilung lautet\n\\[\nP(K,K)=0.5,\\qquad\nP(Z,Z)=0.5.\n\\]\nDies ist eine klassische Mischung.\nDas Ergebnis steht objektiv fest.\nLediglich Alice und Bob kennen es nicht."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#quantenverschränkung",
+    "href": "posts/QMandStats/index.html#quantenverschränkung",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "5. Quantenverschränkung",
+    "text": "5. Quantenverschränkung\nDer Bell-Zustand\n\\[\n|\\Psi\\rangle=\n\\frac{|KK\\rangle+|ZZ\\rangle}{\\sqrt2}\n\\]\nbedeutet dagegen nicht\n\nentweder Kopf-Kopf\n\noder\n\nZahl-Zahl.\n\nVielmehr befindet sich das Gesamtsystem in einer Superposition beider Möglichkeiten.\nErst eine Messung liefert einen konkreten Ausgang.\nGenau diese Superposition besitzt in der klassischen Wahrscheinlichkeitstheorie keine Entsprechung."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#vergleich-der-dichtematrizen",
+    "href": "posts/QMandStats/index.html#vergleich-der-dichtematrizen",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "6. Vergleich der Dichtematrizen",
+    "text": "6. Vergleich der Dichtematrizen\nDie klassische Mischung\n\\[\n50\\%\\;KK\n+\n50\\%\\;ZZ\n\\]\nbesitzt die Dichtematrix\n\\[\n\\rho_{\\text{mix}}=\n\\begin{pmatrix}\n0.5&0&0&0\\\\\n0&0&0&0\\\\\n0&0&0&0\\\\\n0&0&0&0.5\n\\end{pmatrix}.\n\\]\nDer verschränkte Bell-Zustand besitzt dagegen\n\\[\n\\rho_{\\text{ent}}=\n\\begin{pmatrix}\n0.5&0&0&0.5\\\\\n0&0&0&0\\\\\n0&0&0&0\\\\\n0.5&0&0&0.5\n\\end{pmatrix}.\n\\]\nDie Diagonalelemente sind identisch.\nDer gesamte Unterschied steckt in den Off-Diagonal-Elementen.\nDiese enthalten die Quantenkohärenz und damit die Verschränkung."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#marginalisierung-und-partielle-spur",
+    "href": "posts/QMandStats/index.html#marginalisierung-und-partielle-spur",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "7. Marginalisierung und partielle Spur",
+    "text": "7. Marginalisierung und partielle Spur\nIn der Statistik gilt\n\\[\nP(X)=\\sum_Y P(X,Y).\n\\]\nIn der Quantenmechanik lautet die entsprechende Operation\n\\[\n\\rho_A=\\operatorname{Tr}_B(\\rho_{AB}).\n\\]\nFür den Bell-Zustand erhält Alice\n\\[\n\\rho_A=\n\\frac12 I.\n\\]\nFür Alice allein erscheint das System völlig zufällig,\ngenau wie\n\\[\nP(X=0)=P(X=1)=0.5.\n\\]\nBis hierhin bleibt die Analogie zur Statistik vollständig erhalten."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#was-geht-verloren",
+    "href": "posts/QMandStats/index.html#was-geht-verloren",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "8. Was geht verloren?",
+    "text": "8. Was geht verloren?\nNach einer Marginalisierung geht in der Statistik nichts Geheimnisvolles verloren.\nMan ignoriert lediglich eine Variable.\nNach der partiellen Spur ist die Situation grundlegend anders.\nObwohl der Gesamtzustand rein ist, ist\n\\[\n\\rho_A\n\\]\nein gemischter Zustand.\nDie fehlende Information befindet sich nicht mehr im Teilsystem selbst, sondern in den Quantenkorrelationen zwischen Alice und Bob."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#eine-statistische-analogie",
+    "href": "posts/QMandStats/index.html#eine-statistische-analogie",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "9. Eine statistische Analogie",
+    "text": "9. Eine statistische Analogie\nAngenommen,\n\\[\nY=X.\n\\]\nKennt man \\(Y\\), kennt man automatisch auch \\(X\\).\nIgnoriert man \\(Y\\), nimmt die Unsicherheit über \\(X\\) zu.\nGanz ähnlich verhält es sich in der Quantenmechanik:\nIgnoriert man Bob, erscheint Alice in einem gemischten Zustand.\nEs gibt jedoch einen entscheidenden Unterschied.\nIn der Statistik existiert tatsächlich ein verborgener Wert von \\(X\\).\nFür verschränkte Quantensysteme zeigt das Bell-Theorem dagegen, dass eine Beschreibung durch lokale verborgene Variablen die experimentellen Vorhersagen der Quantenmechanik nicht reproduzieren kann."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#bedingte-wahrscheinlichkeiten-und-messungen",
+    "href": "posts/QMandStats/index.html#bedingte-wahrscheinlichkeiten-und-messungen",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "10. Bedingte Wahrscheinlichkeiten und Messungen",
+    "text": "10. Bedingte Wahrscheinlichkeiten und Messungen\nIn der Statistik beobachtet man\n\\[\nY=y\n\\]\nund berechnet anschließend\n\\[\nP(X\\mid Y=y).\n\\]\nDabei verändert sich das zugrunde liegende System nicht.\nLediglich unser Wissen wird aktualisiert.\nIn der Quantenmechanik führt eine Messung an Bob dagegen zu einem neuen Zustand von Alice\n\\[\n\\rho_A\n\\longrightarrow\n\\rho_{A|b}.\n\\]\nMathematisch erinnert dies an eine bedingte Verteilung.\nPhysikalisch beschreibt es jedoch eine Zustandsänderung infolge der Messung."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#fazit",
+    "href": "posts/QMandStats/index.html#fazit",
+    "title": "Quantenverschränkung aus Sicht der Statistik",
+    "section": "Fazit",
+    "text": "Fazit\nAus statistischer Sicht ähnelt die Dichtematrix einer gemeinsamen Wahrscheinlichkeitsverteilung oder einer Kovarianzmatrix: Sie enthält sämtliche Informationen, aus denen Erwartungswerte berechnet werden können.\nEbenso entspricht die partielle Spur genau der Marginalisierung.\nDie eigentliche Neuerung der Quantenmechanik liegt jedoch darin, dass eine Dichtematrix nicht nur Wahrscheinlichkeiten (Diagonalelemente), sondern zusätzlich Wahrscheinlichkeitsamplituden (Off-Diagonal-Elemente) enthält.\nDiese Amplituden können interferieren und – zwischen verschiedenen Teilsystemen – Quantenverschränkung erzeugen.\nGenau hierfür existiert in der klassischen Wahrscheinlichkeitstheorie kein Analogon.\nIn diesem Sinn ist Quantenverschränkung nicht einfach eine besonders starke Korrelation, sondern eine grundsätzlich neue Form statistischer Abhängigkeit, die daraus entsteht, dass Quantenzustände nicht durch Wahrscheinlichkeiten, sondern durch Vektoren bzw. Dichteoperatoren beschrieben werden."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#introduction",
+    "href": "posts/QMandStats/index.html#introduction",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "",
+    "text": "Quantum mechanics often appears mysterious to statisticians. However, many of its central concepts have close analogues in probability theory and statistics. In fact, much of quantum mechanics can be understood naturally through the language of joint distributions, marginalization, and conditional inference.\nThe analogy breaks down at one crucial point: quantum entanglement.\nThis article compares the statistical and quantum-mechanical viewpoints and explains where classical probability theory reaches its limits."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#statistics-and-quantum-mechanics",
+    "href": "posts/QMandStats/index.html#statistics-and-quantum-mechanics",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Statistics and Quantum Mechanics",
+    "text": "Statistics and Quantum Mechanics\n\n\n\nStatistics\nQuantum Mechanics\n\n\n\n\nRandom variable \\(X\\)\nObservable \\(A\\)\n\n\nProbability distribution \\(P(X)\\)\nDensity matrix \\(\\rho\\)\n\n\nJoint distribution \\(P(X,Y)\\)\nJoint density matrix \\(\\rho_{AB}\\)\n\n\nMarginalization\nPartial trace\n\n\nCorrelation\nQuantum correlation / entanglement\n\n\nConditional distribution\nConditional (post-measurement) state\n\n\nIndependence\nProduct state"
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#joint-distributions",
+    "href": "posts/QMandStats/index.html#joint-distributions",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Joint Distributions",
+    "text": "Joint Distributions\nConsider two random variables\n\\[\nX,\\;Y,\n\\]\nwith joint distribution\n\\[\nP(X,Y).\n\\]\nThe complete statistical description of the system is contained in this joint distribution.\nFor example,\n\n\n\nX\nY\nProbability\n\n\n\n\n0\n0\n0.4\n\n\n0\n1\n0.1\n\n\n1\n0\n0.1\n\n\n1\n1\n0.4\n\n\n\nSuppose we are interested only in \\(X\\).\nWe obtain the marginal distribution by summing over \\(Y\\):\n\\[\nP(X)=\\sum_y P(X,y).\n\\]\nIn quantum mechanics the corresponding operation is the partial trace\n\\[\n\\rho_A=\\operatorname{Tr}_B(\\rho_{AB}).\n\\]\nThus,\n\nMarginalization in statistics corresponds exactly to the partial trace in quantum mechanics."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#classical-correlation",
+    "href": "posts/QMandStats/index.html#classical-correlation",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Classical Correlation",
+    "text": "Classical Correlation\nSuppose\n\\[\nX=Y\n\\]\nalways.\nThen\n\\[\nP(0,0)=0.5,\\qquad\nP(1,1)=0.5.\n\\]\nThe variables are perfectly correlated.\nTheir marginal distributions remain\n\\[\nP(X=0)=P(X=1)=0.5.\n\\]\nNothing unusual has happened.\nNow consider the Bell state\n\\[\n|\\Psi\\rangle=\n\\frac{|00\\rangle+|11\\rangle}{\\sqrt2}.\n\\]\nIf Alice and Bob both measure in the computational basis, they obtain exactly the same probabilities:\n\n\n\nAlice\nBob\nProbability\n\n\n\n\n0\n0\n0.5\n\n\n1\n1\n0.5\n\n\n\nAt the level of observed probabilities, both situations appear identical."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#classical-mixtures",
+    "href": "posts/QMandStats/index.html#classical-mixtures",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Classical Mixtures",
+    "text": "Classical Mixtures\nThis is the point where statisticians should be careful.\nIn statistics, a mixture is always a mixture of probability distributions, not a mixture of observations.\nSuppose there exists an unobserved latent variable\n\\[\nC\\in\\{1,2\\},\n\\]\nwith\n\\[\nP(C=1)=P(C=2)=0.5.\n\\]\nConditional on \\(C\\),\n\nif \\(C=1\\), then\n\n\\[\nP(A,B\\mid C=1)=\\delta_{(H,H)},\n\\]\nthat is, Alice and Bob certainly receive \\((H,H)\\);\n\nif \\(C=2\\), then\n\n\\[\nP(A,B\\mid C=2)=\\delta_{(T,T)},\n\\]\nthat is, they certainly receive \\((T,T)\\).\nThe observed distribution is therefore\n\\[\nP(A,B)\n=\n0.5\\,P(A,B\\mid C=1)\n+\n0.5\\,P(A,B\\mid C=2).\n\\]\nThis is a genuine finite mixture model.\nPhysicists often summarize this situation informally as\n\\[\n50\\%\\,(H,H)+50\\%\\,(T,T),\n\\]\nalthough what is really meant is a random preparation of one of two pure states."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#mixed-states",
+    "href": "posts/QMandStats/index.html#mixed-states",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Mixed States",
+    "text": "Mixed States\nQuantum mechanics represents the same classical mixture by the density matrix\n\\[\n\\rho_{\\text{mix}}\n=\n0.5\\,|HH\\rangle\\langle HH|\n+\n0.5\\,|TT\\rangle\\langle TT|.\n\\]\nExpanding this expression gives\n\\[\n\\rho_{\\text{mix}}\n=\n\\begin{pmatrix}\n0.5&0&0&0\\\\\n0&0&0&0\\\\\n0&0&0&0\\\\\n0&0&0&0.5\n\\end{pmatrix}.\n\\]\nNotice that all off-diagonal elements are zero.\nThis reflects the fact that, in every experimental run, the system is actually in one definite state.\nOur uncertainty is purely epistemic."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#entanglement",
+    "href": "posts/QMandStats/index.html#entanglement",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Entanglement",
+    "text": "Entanglement\nNow consider instead the Bell state\n\\[\n|\\Psi\\rangle=\n\\frac{|HH\\rangle+|TT\\rangle}{\\sqrt2}.\n\\]\nThis is not a classical mixture.\nNature has not secretly chosen either \\(|HH\\rangle\\) or \\(|TT\\rangle\\).\nInstead, the entire system is described by a single pure quantum state.\nIts density matrix is\n\\[\n\\rho_{\\text{Bell}}\n=\n|\\Psi\\rangle\\langle\\Psi|\n=\n\\frac12\n\\Big(\n|HH\\rangle\\langle HH|\n+\n|HH\\rangle\\langle TT|\n+\n|TT\\rangle\\langle HH|\n+\n|TT\\rangle\\langle TT|\n\\Big).\n\\]\nIn matrix form,\n\\[\n\\rho_{\\text{Bell}}\n=\n\\begin{pmatrix}\n0.5&0&0&0.5\\\\\n0&0&0&0\\\\\n0&0&0&0\\\\\n0.5&0&0&0.5\n\\end{pmatrix}.\n\\]\nThe diagonal entries are identical to those of the classical mixture.\nThe difference lies entirely in the off-diagonal elements.\nThese encode quantum coherence."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#partial-trace",
+    "href": "posts/QMandStats/index.html#partial-trace",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Partial Trace",
+    "text": "Partial Trace\nThe statistical analogue of marginalization is the partial trace.\nIn statistics,\n\\[\nP(X)=\\sum_Y P(X,Y).\n\\]\nIn quantum mechanics,\n\\[\n\\rho_A\n=\n\\operatorname{Tr}_B(\\rho_{AB}).\n\\]\nFor the Bell state,\n\\[\n\\rho_A\n=\n\\frac12I.\n\\]\nAlice’s subsystem alone appears completely random,\njust as\n\\[\nP(X=0)=P(X=1)=0.5.\n\\]\nThus, the analogy between marginalization and the partial trace is exact."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#what-is-lost",
+    "href": "posts/QMandStats/index.html#what-is-lost",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "What Is Lost?",
+    "text": "What Is Lost?\nAfter marginalization in statistics, nothing mysterious has disappeared.\nWe have simply ignored one variable.\nAfter taking the partial trace, however, something fundamentally different happens.\nThe global Bell state is pure,\nyet the reduced state\n\\[\n\\rho_A\n\\]\nis mixed.\nThe “missing information” is not hidden inside Alice’s subsystem.\nRather, it resides in the quantum correlations between Alice and Bob."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#a-statistical-analogy",
+    "href": "posts/QMandStats/index.html#a-statistical-analogy",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "A Statistical Analogy",
+    "text": "A Statistical Analogy\nSuppose\n\\[\nY=X.\n\\]\nKnowing \\(Y\\) determines \\(X\\) completely.\nIgnoring \\(Y\\) increases uncertainty about \\(X\\).\nThe same happens in quantum mechanics.\nIgnoring Bob makes Alice’s subsystem appear mixed.\nThere is, however, one essential difference.\nIn classical statistics there always exists a definite value of \\(X\\), even if we do not know it.\nBell’s theorem shows that no local hidden-variable model can reproduce the predictions of quantum mechanics for entangled states."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#conditional-distributions-and-measurement",
+    "href": "posts/QMandStats/index.html#conditional-distributions-and-measurement",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Conditional Distributions and Measurement",
+    "text": "Conditional Distributions and Measurement\nIn statistics we observe\n\\[\nY=y\n\\]\nand update our knowledge by computing\n\\[\nP(X\\mid Y=y).\n\\]\nThe underlying system does not change.\nOnly our information changes.\nIn quantum mechanics, measuring Bob changes Alice’s conditional state,\n\\[\n\\rho_A\n\\longrightarrow\n\\rho_{A\\mid b}.\n\\]\nMathematically this resembles conditioning.\nPhysically it represents a state update induced by measurement."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#conclusion",
+    "href": "posts/QMandStats/index.html#conclusion",
+    "title": "Entanglement from a Statistician’s Perspective",
+    "section": "Conclusion",
+    "text": "Conclusion\nFrom a statistician’s perspective, the density matrix resembles a joint probability distribution or a covariance matrix: it is a mathematical object from which all expectation values can be computed.\nLikewise, the partial trace is the direct analogue of marginalization.\nThe essential novelty of quantum mechanics is that a density matrix contains not only probabilities (its diagonal elements) but also probability amplitudes (its off-diagonal elements).\nThese amplitudes can interfere and, when shared between subsystems, give rise to quantum entanglement.\nThere is no counterpart to these coherent amplitudes in classical probability theory.\nIn this sense, quantum entanglement is not simply an especially strong correlation. It is a fundamentally new kind of statistical dependence that arises because quantum states are described by vectors (or density operators), rather than by probability distributions alone."
+  },
+  {
+    "objectID": "posts/LinearAlgebra/index.html",
+    "href": "posts/LinearAlgebra/index.html",
+    "title": "The Magic of Linear Algebra",
+    "section": "",
+    "text": "Quantum Mechanics Through the Lens of Statistics\nA modern perspective views the superposition principle as the fundamental empirical observation underlying quantum mechanics. Experiments indicate that if two states \\(\\psi_1\\) and \\(\\psi_2\\) are physically possible, then any linear combination\n\\[\na\\psi_1 + b\\psi_2\n\\]\nis also a possible state. This implies that quantum states form a vector space, more precisely a Hilbert space. Once states are represented as vectors, the mathematical framework of linear algebra emerges naturally.\nTo be compatible with superposition, physical observables such as energy, momentum, or spin are represented by linear operators acting on the state space. Likewise, the time evolution of a quantum system must preserve superpositions and is therefore described by a linear dynamical law. The Schrödinger equation\n\\[\ni\\hbar \\frac{\\partial \\psi}{\\partial t}\n=\nH\\psi\n\\]\ncan be understood as the mathematical expression of continuous linear time evolution, where \\(H\\) denotes the Hamiltonian, the operator associated with energy.\nFrom a statistical perspective, there are several striking analogies. In multivariate statistics, a covariance matrix \\(\\Sigma\\) summarizes the dependence structure among variables. In quantum mechanics, a Hermitian operator such as the Hamiltonian \\(H\\) plays a similarly central role by determining the structure of a physical system and its possible energy states.\nEigenvalue decompositions are fundamental in both fields. In principal component analysis (PCA),\n\\[\n\\Sigma v = \\lambda v,\n\\]\nwhere \\(\\lambda\\) denotes the variance explained by the principal component \\(v\\). In quantum mechanics,\n\\[\nH\\psi = E\\psi,\n\\]\nwhere \\(E\\) denotes an energy level and \\(\\psi\\) the corresponding energy eigenstate. In both cases, eigenvectors identify privileged directions or states, and eigenvalues quantify important properties of those directions.\nThere is also a conceptual analogy between latent variable models and quantum theory. In factor analysis, observed correlations are explained through unobserved latent factors:\n\\[\n\\Sigma = \\Lambda \\Phi \\Lambda^\\top + \\Psi.\n\\]\nSimilarly, quantum mechanics postulates an underlying state \\(\\psi\\) that is not directly observable. What can be observed are the probabilities of measurement outcomes, which are derived from the state through the Born rule:\n\\[\nP(i)\n=\n\\left|\n\\langle i \\mid \\psi \\rangle\n\\right|^2.\n\\]\nThus, both statistics and quantum mechanics infer hidden structure from observable data.\nAnother parallel arises from spectral decomposition. In statistics, a covariance matrix can be decomposed as\n\\[\n\\Sigma = Q D Q^\\top,\n\\]\nwhere the columns of \\(Q\\) are eigenvectors and the diagonal elements of \\(D\\) are eigenvalues. In quantum mechanics, a Hermitian operator admits an analogous decomposition:\n\\[\nH = U D U^\\dagger,\n\\]\nwhere \\(U\\) is a unitary matrix and \\(D\\) contains the energy eigenvalues. The mathematical structure is nearly identical; only the interpretation differs.\nFrom this viewpoint, much of the mathematical machinery of quantum mechanics—Hilbert spaces, Hermitian operators, eigenvalues, eigenvectors, traces, and spectral decompositions—can be seen as consequences of the experimentally observed validity of superposition. The deepest mystery is perhaps not why quantum mechanics relies so heavily on linear algebra, but why nature itself appears to obey the superposition principle with such extraordinary precision.\n\n\nQuantum Mechanics as Generalized Probability Theory\nThe previous discussion emphasized why quantum mechanics naturally leads to linear algebra. However, quantum theory can also be viewed as a generalization of probability theory. This perspective becomes particularly clear through the concept of the density matrix, which plays a role analogous to a probability distribution in classical statistics.\nIn classical probability theory, a random variable \\(X\\) takes values \\(x_i\\) with probabilities \\(p_i\\). The expectation of \\(X\\) is given by\n\\[\nE(X)\n=\n\\sum_i x_i p_i.\n\\]\nThe probability distribution contains all information necessary to predict future observations and compute expectations.\nQuantum mechanics has a remarkably similar structure. The state of a system is described by a density matrix \\(\\rho\\), while a measurable quantity is represented by a Hermitian operator \\(A\\). In this analogy, the density matrix plays a role similar to a probability distribution, whereas observables generalize the notion of random variables.\nThe expectation of an observable is given by\n\\[\nE(A)\n=\n\\operatorname{tr}(\\rho A).\n\\]\nThis formula is the quantum analogue of the classical expectation.\nTo understand why, consider the spectral decomposition of the observable:\n\\[\nA\n=\n\\sum_i a_i P_i,\n\\]\nwhere \\(a_i\\) are the eigenvalues of \\(A\\) and \\(P_i\\) are the corresponding projection operators. The eigenvalues represent the possible outcomes of a measurement. Their probabilities are determined by the Born rule:\n\\[\nP(a_i)\n=\n\\operatorname{tr}(\\rho P_i).\n\\]\nThe expectation of the observable therefore becomes\n\\[\nE(A)\n=\n\\sum_i a_i P(a_i).\n\\]\nSubstituting the Born rule yields\n\\[\nE(A)\n=\n\\sum_i a_i \\operatorname{tr}(\\rho P_i).\n\\]\nUsing the linearity of the trace,\n\\[\nE(A)\n=\n\\operatorname{tr}\n\\left(\n\\rho\n\\sum_i a_i P_i\n\\right)\n=\n\\operatorname{tr}(\\rho A).\n\\]\nThus, the familiar formula for expectation in statistics reappears in quantum mechanics in matrix form.\nThe analogy can be summarized as follows:\n\n\n\n\n\n\n\nStatistics\nQuantum Mechanics\n\n\n\n\nProbability distribution \\(P\\)\nDensity matrix \\(\\rho\\)\n\n\nRandom variable \\(X\\)\nObservable \\(A\\)\n\n\nPossible values \\(x_i\\)\nEigenvalues \\(a_i\\)\n\n\nProbabilities \\(P(X=x_i)\\)\nBorn probabilities \\(\\operatorname{tr}(\\rho P_i)\\)\n\n\nExpectation \\(E(X)\\)\nExpectation \\(\\operatorname{tr}(\\rho A)\\)\n\n\n\nFrom this perspective, quantum mechanics may be viewed as a form of non-commutative probability theory. In classical probability, random variables are ordinary functions and therefore commute:\n\\[\nXY = YX.\n\\]\nIn quantum mechanics, observables are operators and generally do not commute:\n\\[\nAB \\neq BA.\n\\]\nThis seemingly small mathematical change has profound consequences. Non-commutativity leads to uncertainty relations, interference phenomena, and many of the characteristic features that distinguish quantum mechanics from classical probability theory.\nFrom a mathematical perspective, one may therefore view quantum mechanics as a generalization of probability theory in which probability distributions are replaced by density matrices, random variables by Hermitian operators, and integration by the trace operator. The familiar concepts of probabilities, expectations, variances, and mixtures survive, but they are expressed in the language of linear operators rather than functions."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#introduction-1",
+    "href": "posts/QMandStats/index.html#introduction-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Introduction",
+    "text": "Introduction\nQuantum mechanics often appears mysterious to statisticians. However, many of its central concepts have close analogues in probability theory and statistics. In fact, much of quantum mechanics can be understood naturally through the language of joint distributions, marginalization, and conditional inference.\nThe analogy breaks down at one crucial point: quantum entanglement.\nThis article compares the statistical and quantum-mechanical viewpoints and explains where classical probability theory reaches its limits."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#statistics-and-quantum-mechanics-1",
+    "href": "posts/QMandStats/index.html#statistics-and-quantum-mechanics-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Statistics and Quantum Mechanics",
+    "text": "Statistics and Quantum Mechanics\n\n\n\nStatistics\nQuantum Mechanics\n\n\n\n\nRandom variable \\(X\\)\nObservable \\(A\\)\n\n\nProbability distribution \\(P(X)\\)\nDensity matrix \\(\\rho\\)\n\n\nJoint distribution \\(P(X,Y)\\)\nJoint density matrix \\(\\rho_{AB}\\)\n\n\nMarginalization\nPartial trace\n\n\nCorrelation\nQuantum correlation / entanglement\n\n\nConditional distribution\nConditional (post-measurement) state\n\n\nIndependence\nProduct state"
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#joint-distributions-1",
+    "href": "posts/QMandStats/index.html#joint-distributions-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Joint Distributions",
+    "text": "Joint Distributions\nConsider two random variables\n\\[\nX,\\;Y,\n\\]\nwith joint distribution\n\\[\nP(X,Y).\n\\]\nThe complete statistical description of the system is contained in this joint distribution.\nFor example,\n\n\n\nX\nY\nProbability\n\n\n\n\n0\n0\n0.4\n\n\n0\n1\n0.1\n\n\n1\n0\n0.1\n\n\n1\n1\n0.4\n\n\n\nSuppose we are interested only in \\(X\\).\nWe obtain the marginal distribution by summing over \\(Y\\):\n\\[\nP(X)=\\sum_y P(X,y).\n\\]\nIn quantum mechanics the corresponding operation is the partial trace\n\\[\n\\rho_A=\\operatorname{Tr}_B(\\rho_{AB}).\n\\]\nThus,\n\nMarginalization in statistics corresponds exactly to the partial trace in quantum mechanics."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#classical-correlation-1",
+    "href": "posts/QMandStats/index.html#classical-correlation-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Classical Correlation",
+    "text": "Classical Correlation\nSuppose\n\\[\nX=Y\n\\]\nalways.\nThen\n\\[\nP(0,0)=0.5,\\qquad\nP(1,1)=0.5.\n\\]\nThe variables are perfectly correlated.\nTheir marginal distributions remain\n\\[\nP(X=0)=P(X=1)=0.5.\n\\]\nNothing unusual has happened.\nNow consider the Bell state\n\\[\n|\\Psi\\rangle=\n\\frac{|00\\rangle+|11\\rangle}{\\sqrt2}.\n\\]\nIf Alice and Bob both measure in the computational basis, they obtain exactly the same probabilities:\n\n\n\nAlice\nBob\nProbability\n\n\n\n\n0\n0\n0.5\n\n\n1\n1\n0.5\n\n\n\nAt the level of observed probabilities, both situations appear identical."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#classical-mixtures-1",
+    "href": "posts/QMandStats/index.html#classical-mixtures-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Classical Mixtures",
+    "text": "Classical Mixtures\nThis is the point where statisticians should be careful.\nIn statistics, a mixture is always a mixture of probability distributions, not a mixture of observations.\nSuppose there exists an unobserved latent variable\n\\[\nC\\in\\{1,2\\},\n\\]\nwith\n\\[\nP(C=1)=P(C=2)=0.5.\n\\]\nConditional on \\(C\\),\n\nif \\(C=1\\), then\n\n\\[\nP(A,B\\mid C=1)=\\delta_{(H,H)},\n\\]\nthat is, Alice and Bob certainly receive \\((H,H)\\);\n\nif \\(C=2\\), then\n\n\\[\nP(A,B\\mid C=2)=\\delta_{(T,T)},\n\\]\nthat is, they certainly receive \\((T,T)\\).\nThe observed distribution is therefore\n\\[\nP(A,B)\n=\n0.5\\,P(A,B\\mid C=1)\n+\n0.5\\,P(A,B\\mid C=2).\n\\]\nThis is a genuine finite mixture model.\nPhysicists often summarize this situation informally as\n\\[\n50\\%\\,(H,H)+50\\%\\,(T,T),\n\\]\nalthough what is really meant is a random preparation of one of two pure states."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#mixed-states-1",
+    "href": "posts/QMandStats/index.html#mixed-states-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Mixed States",
+    "text": "Mixed States\nQuantum mechanics represents the same classical mixture by the density matrix\n\\[\n\\rho_{\\text{mix}}\n=\n0.5\\,|HH\\rangle\\langle HH|\n+\n0.5\\,|TT\\rangle\\langle TT|.\n\\]\nExpanding this expression gives\n\\[\n\\rho_{\\text{mix}}\n=\n\\begin{pmatrix}\n0.5&0&0&0\\\\\n0&0&0&0\\\\\n0&0&0&0\\\\\n0&0&0&0.5\n\\end{pmatrix}.\n\\]\nNotice that all off-diagonal elements are zero.\nThis reflects the fact that, in every experimental run, the system is actually in one definite state.\nOur uncertainty is purely epistemic."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#entanglement-1",
+    "href": "posts/QMandStats/index.html#entanglement-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Entanglement",
+    "text": "Entanglement\nNow consider instead the Bell state\n\\[\n|\\Psi\\rangle=\n\\frac{|HH\\rangle+|TT\\rangle}{\\sqrt2}.\n\\]\nThis is not a classical mixture.\nNature has not secretly chosen either \\(|HH\\rangle\\) or \\(|TT\\rangle\\).\nInstead, the entire system is described by a single pure quantum state.\nIts density matrix is\n\\[\n\\rho_{\\text{Bell}}\n=\n|\\Psi\\rangle\\langle\\Psi|\n=\n\\frac12\n\\Big(\n|HH\\rangle\\langle HH|\n+\n|HH\\rangle\\langle TT|\n+\n|TT\\rangle\\langle HH|\n+\n|TT\\rangle\\langle TT|\n\\Big).\n\\]\nIn matrix form,\n\\[\n\\rho_{\\text{Bell}}\n=\n\\begin{pmatrix}\n0.5&0&0&0.5\\\\\n0&0&0&0\\\\\n0&0&0&0\\\\\n0.5&0&0&0.5\n\\end{pmatrix}.\n\\]\nThe diagonal entries are identical to those of the classical mixture.\nThe difference lies entirely in the off-diagonal elements.\nThese encode quantum coherence."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#partial-trace-1",
+    "href": "posts/QMandStats/index.html#partial-trace-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Partial Trace",
+    "text": "Partial Trace\nThe statistical analogue of marginalization is the partial trace.\nIn statistics,\n\\[\nP(X)=\\sum_Y P(X,Y).\n\\]\nIn quantum mechanics,\n\\[\n\\rho_A\n=\n\\operatorname{Tr}_B(\\rho_{AB}).\n\\]\nFor the Bell state,\n\\[\n\\rho_A\n=\n\\frac12I.\n\\]\nAlice’s subsystem alone appears completely random,\njust as\n\\[\nP(X=0)=P(X=1)=0.5.\n\\]\nThus, the analogy between marginalization and the partial trace is exact."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#what-is-lost-1",
+    "href": "posts/QMandStats/index.html#what-is-lost-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "What Is Lost?",
+    "text": "What Is Lost?\nAfter marginalization in statistics, nothing mysterious has disappeared.\nWe have simply ignored one variable.\nAfter taking the partial trace, however, something fundamentally different happens.\nThe global Bell state is pure,\nyet the reduced state\n\\[\n\\rho_A\n\\]\nis mixed.\nThe “missing information” is not hidden inside Alice’s subsystem.\nRather, it resides in the quantum correlations between Alice and Bob."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#a-statistical-analogy-1",
+    "href": "posts/QMandStats/index.html#a-statistical-analogy-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "A Statistical Analogy",
+    "text": "A Statistical Analogy\nSuppose\n\\[\nY=X.\n\\]\nKnowing \\(Y\\) determines \\(X\\) completely.\nIgnoring \\(Y\\) increases uncertainty about \\(X\\).\nThe same happens in quantum mechanics.\nIgnoring Bob makes Alice’s subsystem appear mixed.\nThere is, however, one essential difference.\nIn classical statistics there always exists a definite value of \\(X\\), even if we do not know it.\nBell’s theorem shows that no local hidden-variable model can reproduce the predictions of quantum mechanics for entangled states."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#conditional-distributions-and-measurement-1",
+    "href": "posts/QMandStats/index.html#conditional-distributions-and-measurement-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Conditional Distributions and Measurement",
+    "text": "Conditional Distributions and Measurement\nIn statistics we observe\n\\[\nY=y\n\\]\nand update our knowledge by computing\n\\[\nP(X\\mid Y=y).\n\\]\nThe underlying system does not change.\nOnly our information changes.\nIn quantum mechanics, measuring Bob changes Alice’s conditional state,\n\\[\n\\rho_A\n\\longrightarrow\n\\rho_{A\\mid b}.\n\\]\nMathematically this resembles conditioning.\nPhysically it represents a state update induced by measurement."
+  },
+  {
+    "objectID": "posts/QMandStats/index.html#conclusion-1",
+    "href": "posts/QMandStats/index.html#conclusion-1",
+    "title": "Statistics and Quantum Mechanics: Where the Analogy Ends",
+    "section": "Conclusion",
+    "text": "Conclusion\nFrom a statistician’s perspective, the density matrix resembles a joint probability distribution or a covariance matrix: it is a mathematical object from which all expectation values can be computed.\nLikewise, the partial trace is the direct analogue of marginalization.\nThe essential novelty of quantum mechanics is that a density matrix contains not only probabilities (its diagonal elements) but also probability amplitudes (its off-diagonal elements).\nThese amplitudes can interfere and, when shared between subsystems, give rise to quantum entanglement.\nThere is no counterpart to these coherent amplitudes in classical probability theory.\nIn this sense, quantum entanglement is not simply an especially strong correlation. It is a fundamentally new kind of statistical dependence that arises because quantum states are described by vectors (or density operators), rather than by probability distributions alone."
   }
 ]
