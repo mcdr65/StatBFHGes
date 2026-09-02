@@ -29,18 +29,18 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 ## Themen 2026
 
 
-| Tag | Datum | Thema                                                                                 | Lead             |   |
-|-----|-------|---------------------------------------------------------------------------------------|------------------|---|
-| MI  | 7.1   | Metaanalyse                                                                           | André            |   |
-| MI  | 4.2   | ---                                                                                   | ---              |   |
-| MI  | 4.3   | Non-Null $H_0$                                                                        | André            |   |
-| MI  | 1.4   | Fisher/Neyman/Bayes                                                                   | André            |   |
-| MI  | 6.5   | Git/GitLab/Magit Workflow                                                             | André            |   |
-| MI  | 3.6   | Git/GitLab, Exercises ([ÜbungsProjekt](https://gitlab.ti.bfh.ch/mta3/gitcollabintro)) | André und Patric |   |
-| MI  | 2.9   | Longitudinal Latent Variable Models ([GitLabPage](https://mta3.pages.ti.bfh.ch/lcmm/))  | André            |   |
-| MI  | 7.10  |                                                                                       |                  |   |
-| MI  | 4.11  |                                                                                       |                  |   |
-| MI  | 2.12  |                                                                                       |                  |   |
+| Tag | Datum | Thema                                                                                  | Lead             |   |
+|-----|-------|----------------------------------------------------------------------------------------|------------------|---|
+| MI  | 7.1   | Metaanalyse                                                                            | André            |   |
+| MI  | 4.2   | ---                                                                                    | ---              |   |
+| MI  | 4.3   | Non-Null $H_0$                                                                         | André            |   |
+| MI  | 1.4   | Fisher/Neyman/Bayes                                                                    | André            |   |
+| MI  | 6.5   | Git/GitLab/Magit Workflow                                                              | André            |   |
+| MI  | 3.6   | Git/GitLab, Exercises ([ÜbungsProjekt](https://gitlab.ti.bfh.ch/mta3/gitcollabintro))  | André und Patric |   |
+| MI  | 2.9   | Longitudinal Latent Variable Models ([GitLabPage](https://mta3.pages.ti.bfh.ch/lcmm/)) | André            |   |
+| MI  | 7.10  | Gaussian finite mixture models (Latent Profile Analysis in social-science terminology) | André            |   |
+| MI  | 4.11  | Multiple Primary and Multiple Co-Primary Endpoints: Sample Size                        | André            |   |
+| MI  | 2.12  |                                                                                        |                  |   |
 
 
 <!-- ```{r echo=FALSE} -->
