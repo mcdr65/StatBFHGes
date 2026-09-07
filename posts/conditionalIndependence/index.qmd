@@ -1,0 +1,528 @@
+---
+title: "Local Independence in Latent Class and Longitudinal Latent Variable Models"
+date: "2026-09-03"
+description: "From LPA to LCMM: what are observations independent of, and what explains their dependence?"
+categories: [Latent Variable Models]
+---
+
+
+## Introduction
+
+**Local independence** is one of the central ideas in latent variable models.
+
+In a latent class analysis (LCA) or latent profile analysis (LPA), the idea is relatively simple:
+
+> Once latent class membership is known, the observed indicators should no longer be associated.
+
+Symbolically, for indicators $Y_{i1},\ldots,Y_{iK}$ and latent class $C_i$,
+
+$$
+Y_{i1},\ldots,Y_{iK}
+\perp\!\!\!\perp
+\mid C_i.
+$$
+
+However, this formulation becomes less obvious when moving to longitudinal latent variable models.
+
+In a latent class linear mixed model (LCLMM), repeated measurements remain correlated within a latent class because subjects have random effects. In a multivariate latent class mixed model (LCMM), multiple markers are additionally correlated because they measure the same underlying latent process.
+
+The general principle remains the same:
+
+> **Observed variables should become conditionally independent once we condition on the latent quantities introduced by the model to explain their dependence.**
+
+What changes between models is therefore not the basic idea of conditional independence, but **what we have to condition on**.
+
+## LCA and LPA
+
+Consider $K$ indicators
+
+$$
+Y_{i1},\ldots,Y_{iK}
+$$
+
+and a categorical latent variable
+
+$$
+C_i\in\{1,\ldots,G\}.
+$$
+
+In a standard LCA or LPA, the latent class is intended to explain the association among the indicators.
+
+The local-independence assumption is
+
+$$
+Y_{i1},\ldots,Y_{iK}
+\perp\!\!\!\perp
+\mid C_i.
+$$
+
+For two indicators this implies
+
+$$
+\operatorname{Cov}
+\left(
+Y_{ij},Y_{ik}
+\mid C_i=g
+\right)
+=
+0.
+$$
+
+The indicators can nevertheless be associated **marginally**.
+
+This follows from the law of total covariance:
+
+$$
+\operatorname{Cov}(Y_j,Y_k)
+=
+E\left[
+\operatorname{Cov}(Y_j,Y_k\mid C)
+\right]
++
+\operatorname{Cov}
+\left(
+E[Y_j\mid C],
+E[Y_k\mid C]
+\right).
+$$
+
+Under local independence,
+
+$$
+E\left[
+\operatorname{Cov}(Y_j,Y_k\mid C)
+\right]
+=
+0,
+$$
+
+but
+
+$$
+\operatorname{Cov}
+\left(
+E[Y_j\mid C],
+E[Y_k\mid C]
+\right)
+$$
+
+can be non-zero.
+
+Thus, the indicators are associated because the latent classes differ jointly in their indicator means.
+
+### LPA and the covariance matrix
+
+For continuous indicators, a common LPA specification is
+
+$$
+\mathbf Y_i\mid C_i=g
+\sim
+N(\boldsymbol\mu_g,\boldsymbol\Sigma_g).
+$$
+
+Strict local independence corresponds to a diagonal within-class covariance matrix,
+
+$$
+\boldsymbol\Sigma_g
+=
+\begin{pmatrix}
+\sigma_{1g}^2 & 0 & \cdots & 0\\
+0 & \sigma_{2g}^2 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \sigma_{Kg}^2
+\end{pmatrix}.
+$$
+
+Allowing non-zero within-class covariances relaxes the local-independence assumption.
+
+## Moving to longitudinal data
+
+Suppose we now observe the same outcome repeatedly,
+
+$$
+Y_i(t_1),Y_i(t_2),\ldots,Y_i(t_T).
+$$
+
+The question becomes:
+
+> Should repeated measurements be independent once we know the latent class?
+
+The answer depends on the longitudinal model.
+
+This distinction becomes particularly clear when comparing a latent class growth analysis with a latent class linear mixed model.
+
+## Latent class growth analysis
+
+A simple latent class growth analysis (LCGA) can be written as
+
+$$
+Y_i(t)
+=
+X_i(t)^\top\beta_{C_i}
++
+\epsilon_i(t).
+$$
+
+The latent class determines the trajectory.
+
+For example, with a linear trajectory,
+
+$$
+Y_i(t)
+=
+\beta_{0C_i}
++
+\beta_{1C_i}t
++
+\epsilon_i(t).
+$$
+
+If the residual errors are independent,
+
+$$
+\epsilon_i(t_1)
+\perp\!\!\!\perp
+\epsilon_i(t_2),
+$$
+
+then
+
+$$
+Y_i(t_1)
+\perp\!\!\!\perp
+Y_i(t_2)
+\mid C_i.
+$$
+
+In this model, the latent classes themselves explain the systematic heterogeneity in trajectories.
+
+There are no subject-specific random effects producing additional within-class dependence.
+
+## Latent class linear mixed models
+
+A latent class linear mixed model adds subject-specific random effects:
+
+$$
+Y_i(t)
+=
+X_i(t)^\top\beta_{C_i}
++
+Z_i(t)^\top b_i
++
+\epsilon_i(t).
+$$
+
+For example, with a random intercept and random slope,
+
+$$
+Y_i(t)
+=
+\beta_{0C_i}
++
+\beta_{1C_i}t
++
+b_{0i}
++
+b_{1i}t
++
+\epsilon_i(t).
+$$
+
+Now subjects within the same latent class can have different individual trajectories.
+
+This changes the conditional-independence structure fundamentally.
+
+### Conditioning only on class is not enough
+
+Consider two observations from the same subject:
+
+$$
+Y_i(t_1)
+$$
+
+and
+
+$$
+Y_i(t_2).
+$$
+
+Even if we know that the subject belongs to class $g$, both observations still contain the same random effects $b_i$.
+
+Therefore,
+
+$$
+Y_i(t_1)
+\not\!\perp\!\!\!\perp
+Y_i(t_2)
+\mid C_i.
+$$
+
+For a random-intercept model,
+
+$$
+Y_i(t)
+=
+\beta_{0C_i}
++
+\beta_{1C_i}t
++
+b_{0i}
++
+\epsilon_i(t),
+$$
+
+we obtain, assuming independent residual errors,
+
+$$
+\operatorname{Cov}
+\left\{
+Y_i(t_1),Y_i(t_2)
+\mid C_i=g
+\right\}
+=
+\operatorname{Var}(b_{0i}).
+$$
+
+Thus, within-class correlation is not a violation of the model. It is deliberately introduced by the random effect.
+
+### Conditioning on class and random effects
+
+Once we additionally condition on the subject-specific random effects,
+
+$$
+Y_i(t_1)
+\perp\!\!\!\perp
+Y_i(t_2)
+\mid C_i,b_i,
+$$
+
+provided the remaining residual errors are independent.
+
+The relevant analogue of local independence in an LCLMM is therefore not independence conditional on $C_i$ alone, but conditional independence given
+
+$$
+(C_i,b_i).
+$$
+
+This illustrates an important distinction:
+
+> **Latent classes explain discrete heterogeneity between trajectory types, whereas random effects explain continuous heterogeneity between subjects within a class.**
+
+## Latent process models with multiple markers
+
+Now suppose several longitudinal markers measure a common underlying process.
+
+Let
+
+$$
+Y_{ik}(t)
+$$
+
+denote marker $k$ for subject $i$ at time $t$.
+
+A simple linear measurement model is
+
+$$
+Y_{ik}(t)
+=
+\eta_k
++
+\alpha_k\Lambda_i(t)
++
+\epsilon_{ik}(t),
+$$
+
+where $\Lambda_i(t)$ is the common latent process.
+
+The markers are therefore expected to be associated.
+
+For two markers,
+
+$$
+Y_{i1}(t)
+\leftarrow
+\Lambda_i(t)
+\rightarrow
+Y_{i2}(t).
+$$
+
+Their marginal association is not evidence against the model. On the contrary, this association is precisely what the common latent process is intended to explain.
+
+### Conditional independence of markers
+
+If the marker-specific residual errors are independent,
+
+$$
+\epsilon_{ik}(t)
+\perp\!\!\!\perp
+\epsilon_{ik'}(t),
+$$
+
+then
+
+$$
+Y_{ik}(t)
+\perp\!\!\!\perp
+Y_{ik'}(t)
+\mid
+\Lambda_i(t).
+$$
+
+Thus, the analogue of local independence is now conditional independence of the markers **given the common latent process**.
+
+Again, the general principle has not changed. What has changed is the latent quantity on which we condition.
+
+## Multivariate latent class mixed models
+
+A multivariate LCMM combines the previous structures.
+
+The latent trajectory may be described by
+
+$$
+\Lambda_i(t)\mid C_i=g
+=
+X_i(t)^\top\beta_g
++
+Z_i(t)^\top b_i.
+$$
+
+Multiple markers are then linked to this common latent trajectory:
+
+$$
+Y_{ik}(t)
+=
+H_k
+\left\{
+\Lambda_i(t)
++
+\epsilon_{ik}(t)
+\right\}.
+$$
+
+This model therefore contains several sources of dependence.
+
+### Dependence across time
+
+Repeated observations from the same subject share the same random effects.
+
+Consequently,
+
+$$
+Y_i(t_1)
+\not\!\perp\!\!\!\perp
+Y_i(t_2)
+\mid C_i.
+$$
+
+The latent class alone does not explain the longitudinal dependence.
+
+Conditioning additionally on the individual trajectory or random effects removes the dependence generated by those random effects.
+
+### Dependence across markers
+
+Different markers share the common latent process $\Lambda_i(t)$.
+
+Therefore,
+
+$$
+Y_{ik}(t)
+\not\!\perp\!\!\!\perp
+Y_{ik'}(t)
+$$
+
+marginally.
+
+With independent marker-specific residual errors,
+
+$$
+Y_{ik}(t)
+\perp\!\!\!\perp
+Y_{ik'}(t)
+\mid
+\Lambda_i(t).
+$$
+
+The common latent process therefore plays a role analogous to the latent class in a simple LPA: it explains why observed variables are associated.
+
+## A hierarchy of conditional independence
+
+The models can be summarized by asking which latent quantities are required to explain the dependence among observations.
+
+| Model                | Dependence explained by                 | Conditional independence                                                               |
+| -------------------- | --------------------------------------- | -------------------------------------------------------------------------------------- |
+| LCA                  | latent class                            | indicators independent given $C_i$                                                     |
+| LPA                  | latent class                            | indicators independent given $C_i$ under local independence                            |
+| LCGA                 | latent class                            | repeated outcomes independent given $C_i$ if residuals are independent                 |
+| LCLMM / GMM          | class + random effects                  | repeated outcomes independent given $C_i,b_i$ if residuals are independent             |
+| Latent process model | common latent process                   | markers independent given $\Lambda_i(t)$ if marker residuals are independent           |
+| Multivariate LCMM    | class + random effects + latent process | dependence across time and markers is explained by the corresponding latent quantities |
+
+This suggests a more general formulation of local independence:
+
+> **Observed variables are locally independent when they are conditionally independent after conditioning on the latent structure that the model assumes generates their dependence.**
+
+Under this interpretation, local independence is not restricted to latent class analysis. It is a general principle underlying many latent variable models.
+
+## Why this distinction matters
+
+It would be incorrect to take the LPA statement
+
+$$
+Y_j\perp\!\!\!\perp Y_k\mid C
+$$
+
+and mechanically apply it to every latent class model.
+
+In an LCLMM, observations within the same class are deliberately correlated through the random effects.
+
+In a multivariate LCMM, markers are deliberately correlated through the common latent process.
+
+The relevant question is therefore not simply
+
+> Are the observations independent within a latent class?
+
+Instead, we should ask
+
+> **After conditioning on the latent variables and random effects that the model introduces to explain dependence, is there residual association left that the model does not account for?**
+
+This is the more general and useful interpretation of local independence.
+
+## Summary
+
+The concept of local independence develops naturally as latent variable models become more complex.
+
+For LCA and standard LPA,
+
+$$
+\text{condition on } C_i.
+$$
+
+For an LCLMM,
+
+$$
+\text{condition on } C_i \text{ and } b_i.
+$$
+
+For multiple markers measuring a latent process,
+
+$$
+\text{condition on } \Lambda_i(t).
+$$
+
+For a multivariate LCMM, both ideas operate simultaneously: latent classes describe qualitatively different trajectories, random effects describe individual variation within classes, and the common latent process explains association among multiple markers.
+
+The common principle is therefore
+
+$$
+\boxed{
+\text{dependence in the observed data}
+\quad\longrightarrow\quad
+\text{latent structure}
+\quad\longrightarrow\quad
+\text{conditional independence}
+}
+$$
+
+The phrase **local independence** is easiest to understand not as "independence within classes", but more generally as:
+
+> **independence after conditioning on the latent structure responsible for the observed dependence.**
