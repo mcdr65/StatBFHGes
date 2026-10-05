@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/Erwartungswerte/index.html",
       "/posts/conditionalIndependence/index.html",
       "/posts/popper/index.html",
       "/posts/Trace/index.html",

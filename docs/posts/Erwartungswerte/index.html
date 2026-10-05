@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="André Meichtry">
-<meta name="dcterms.date" content="2026-05-20">
-<meta name="description" content="Analogies in Quantum Mechanics and Statistics">
+<meta name="dcterms.date" content="2026-10-05">
+<meta name="description" content="Konzepte der Wahrscheinlichkeitstheorie">
 
-<title>The Magic of Linear Algebra – Statistik-Beratung G</title>
+<title>Erwartungswert, Varianz und zentrale Zerlegungen – Statistik-Beratung G</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -193,14 +193,14 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">The Magic of Linear Algebra</h1>
+      <h1 class="title">Erwartungswert, Varianz und zentrale Zerlegungen</h1>
                   <div>
         <div class="description">
-          Analogies in Quantum Mechanics and Statistics
+          Konzepte der Wahrscheinlichkeitstheorie
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">philosophie</div>
+                <div class="quarto-category">Wahrscheinlichkeitstheorie</div>
               </div>
                   </div>
   </div>
@@ -218,7 +218,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 20, 2026</p>
+        <p class="date">October 5, 2026</p>
       </div>
     </div>
     
@@ -234,8 +234,41 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quantum-mechanics-through-the-lens-of-statistics" id="toc-quantum-mechanics-through-the-lens-of-statistics" class="nav-link active" data-scroll-target="#quantum-mechanics-through-the-lens-of-statistics">Quantum Mechanics Through the Lens of Statistics</a></li>
-  <li><a href="#quantum-mechanics-as-generalized-probability-theory" id="toc-quantum-mechanics-as-generalized-probability-theory" class="nav-link" data-scroll-target="#quantum-mechanics-as-generalized-probability-theory">Quantum Mechanics as Generalized Probability Theory</a></li>
+  <li><a href="#grundidee" id="toc-grundidee" class="nav-link active" data-scroll-target="#grundidee">Grundidee</a></li>
+  <li><a href="#erwartungswert" id="toc-erwartungswert" class="nav-link" data-scroll-target="#erwartungswert">Erwartungswert</a></li>
+  <li><a href="#momente" id="toc-momente" class="nav-link" data-scroll-target="#momente">Momente</a></li>
+  <li><a href="#varianz" id="toc-varianz" class="nav-link" data-scroll-target="#varianz">Varianz</a></li>
+  <li><a href="#kovarianz" id="toc-kovarianz" class="nav-link" data-scroll-target="#kovarianz">Kovarianz</a></li>
+  <li><a href="#korrelation" id="toc-korrelation" class="nav-link" data-scroll-target="#korrelation">Korrelation</a></li>
+  <li><a href="#bedingter-erwartungswert" id="toc-bedingter-erwartungswert" class="nav-link" data-scroll-target="#bedingter-erwartungswert">Bedingter Erwartungswert</a></li>
+  <li><a href="#law-of-total-expectation" id="toc-law-of-total-expectation" class="nav-link" data-scroll-target="#law-of-total-expectation">Law of Total Expectation</a></li>
+  <li><a href="#law-of-total-variance" id="toc-law-of-total-variance" class="nav-link" data-scroll-target="#law-of-total-variance">Law of Total Variance</a>
+  <ul class="collapse">
+  <li><a href="#beispiel-random-intercept-modell" id="toc-beispiel-random-intercept-modell" class="nav-link" data-scroll-target="#beispiel-random-intercept-modell">Beispiel: Random-Intercept-Modell</a></li>
+  </ul></li>
+  <li><a href="#law-of-total-covariance" id="toc-law-of-total-covariance" class="nav-link" data-scroll-target="#law-of-total-covariance">Law of Total Covariance</a>
+  <ul class="collapse">
+  <li><a href="#total-variance-als-spezialfall" id="toc-total-variance-als-spezialfall" class="nav-link" data-scroll-target="#total-variance-als-spezialfall">Total Variance als Spezialfall</a></li>
+  </ul></li>
+  <li><a href="#eine-weitere-wichtige-kovarianzidentität" id="toc-eine-weitere-wichtige-kovarianzidentität" class="nav-link" data-scroll-target="#eine-weitere-wichtige-kovarianzidentität">Eine weitere wichtige Kovarianzidentität</a></li>
+  <li><a href="#bedingter-erwartungswert-und-regression" id="toc-bedingter-erwartungswert-und-regression" class="nav-link" data-scroll-target="#bedingter-erwartungswert-und-regression">Bedingter Erwartungswert und Regression</a></li>
+  <li><a href="#varianzzerlegung-und-erklärte-varianz" id="toc-varianzzerlegung-und-erklärte-varianz" class="nav-link" data-scroll-target="#varianzzerlegung-und-erklärte-varianz">Varianzzerlegung und erklärte Varianz</a></li>
+  <li><a href="#r2" id="toc-r2" class="nav-link" data-scroll-target="#r2"><span class="math inline">\(R^2\)</span></a></li>
+  <li><a href="#quadratische-fehlerzerlegung" id="toc-quadratische-fehlerzerlegung" class="nav-link" data-scroll-target="#quadratische-fehlerzerlegung">Quadratische Fehlerzerlegung</a>
+  <ul class="collapse">
+  <li><a href="#herleitung" id="toc-herleitung" class="nav-link" data-scroll-target="#herleitung">Herleitung</a></li>
+  </ul></li>
+  <li><a href="#bias-varianz-und-mse" id="toc-bias-varianz-und-mse" class="nav-link" data-scroll-target="#bias-varianz-und-mse">Bias, Varianz und MSE</a></li>
+  <li><a href="#bias-variance-zerlegung-des-vorhersagefehlers" id="toc-bias-variance-zerlegung-des-vorhersagefehlers" class="nav-link" data-scroll-target="#bias-variance-zerlegung-des-vorhersagefehlers">Bias-Variance-Zerlegung des Vorhersagefehlers</a></li>
+  <li><a href="#standardfehler" id="toc-standardfehler" class="nav-link" data-scroll-target="#standardfehler">Standardfehler</a></li>
+  <li><a href="#verlustfunktionen-und-statistische-zielgrössen" id="toc-verlustfunktionen-und-statistische-zielgrössen" class="nav-link" data-scroll-target="#verlustfunktionen-und-statistische-zielgrössen">Verlustfunktionen und statistische Zielgrössen</a></li>
+  <li><a href="#zusammenfassung" id="toc-zusammenfassung" class="nav-link" data-scroll-target="#zusammenfassung">Zusammenfassung</a>
+  <ul class="collapse">
+  <li><a href="#grundlegende-momente" id="toc-grundlegende-momente" class="nav-link" data-scroll-target="#grundlegende-momente">Grundlegende Momente</a></li>
+  <li><a href="#konditionieren" id="toc-konditionieren" class="nav-link" data-scroll-target="#konditionieren">Konditionieren</a></li>
+  <li><a href="#quadratische-fehler" id="toc-quadratische-fehler" class="nav-link" data-scroll-target="#quadratische-fehler">Quadratische Fehler</a></li>
+  <li><a href="#zentrale-konzeptionelle-verbindung" id="toc-zentrale-konzeptionelle-verbindung" class="nav-link" data-scroll-target="#zentrale-konzeptionelle-verbindung">Zentrale konzeptionelle Verbindung</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -246,156 +279,685 @@ window.Quarto = {
 
 
 
-<section id="quantum-mechanics-through-the-lens-of-statistics" class="level1">
-<h1>Quantum Mechanics Through the Lens of Statistics</h1>
-<p>A modern perspective views the superposition principle as the fundamental empirical observation underlying quantum mechanics. Experiments indicate that if two states <span class="math inline">\(\psi_1\)</span> and <span class="math inline">\(\psi_2\)</span> are physically possible, then any linear combination</p>
+<section id="grundidee" class="level1">
+<h1>Grundidee</h1>
+<p>Viele zentrale Konzepte der Wahrscheinlichkeitstheorie und Statistik lassen sich auf wenige grundlegende Grössen zurückführen:</p>
 <p><span class="math display">\[
-a\psi_1 + b\psi_2
+E(X), \qquad E(X^2), \qquad E(XY)
 \]</span></p>
-<p>is also a possible state. This implies that quantum states form a vector space, more precisely a Hilbert space. Once states are represented as vectors, the mathematical framework of linear algebra emerges naturally.</p>
-<p>To be compatible with superposition, physical observables such as energy, momentum, or spin are represented by linear operators acting on the state space. Likewise, the time evolution of a quantum system must preserve superpositions and is therefore described by a linear dynamical law. The Schrödinger equation</p>
+<p>sowie auf ihre bedingten Versionen</p>
 <p><span class="math display">\[
-i\hbar \frac{\partial \psi}{\partial t}
-=
-H\psi
+E(X\mid Z)
+\qquad\text{und}\qquad
+\operatorname{Var}(X\mid Z).
 \]</span></p>
-<p>can be understood as the mathematical expression of continuous linear time evolution, where <span class="math inline">\(H\)</span> denotes the Hamiltonian, the operator associated with energy.</p>
-<p>From a statistical perspective, there are several striking analogies. In multivariate statistics, a covariance matrix <span class="math inline">\(\Sigma\)</span> summarizes the dependence structure among variables. In quantum mechanics, a Hermitian operator such as the Hamiltonian <span class="math inline">\(H\)</span> plays a similarly central role by determining the structure of a physical system and its possible energy states.</p>
-<p>Eigenvalue decompositions are fundamental in both fields. In principal component analysis (PCA),</p>
-<p><span class="math display">\[
-\Sigma v = \lambda v,
-\]</span></p>
-<p>where <span class="math inline">\(\lambda\)</span> denotes the variance explained by the principal component <span class="math inline">\(v\)</span>. In quantum mechanics,</p>
-<p><span class="math display">\[
-H\psi = E\psi,
-\]</span></p>
-<p>where <span class="math inline">\(E\)</span> denotes an energy level and <span class="math inline">\(\psi\)</span> the corresponding energy eigenstate. In both cases, eigenvectors identify privileged directions or states, and eigenvalues quantify important properties of those directions.</p>
-<p>There is also a conceptual analogy between latent variable models and quantum theory. In factor analysis, observed correlations are explained through unobserved latent factors:</p>
-<p><span class="math display">\[
-\Sigma = \Lambda \Phi \Lambda^\top + \Psi.
-\]</span></p>
-<p>Similarly, quantum mechanics postulates an underlying state <span class="math inline">\(\psi\)</span> that is not directly observable. What can be observed are the probabilities of measurement outcomes, which are derived from the state through the Born rule:</p>
-<p><span class="math display">\[
-P(i)
-=
-\left|
-\langle i \mid \psi \rangle
-\right|^2.
-\]</span></p>
-<p>Thus, both statistics and quantum mechanics infer hidden structure from observable data.</p>
-<p>Another parallel arises from spectral decomposition. In statistics, a covariance matrix can be decomposed as</p>
-<p><span class="math display">\[
-\Sigma = Q D Q^\top,
-\]</span></p>
-<p>where the columns of <span class="math inline">\(Q\)</span> are eigenvectors and the diagonal elements of <span class="math inline">\(D\)</span> are eigenvalues. In quantum mechanics, a Hermitian operator admits an analogous decomposition:</p>
-<p><span class="math display">\[
-H = U D U^\dagger,
-\]</span></p>
-<p>where <span class="math inline">\(U\)</span> is a unitary matrix and <span class="math inline">\(D\)</span> contains the energy eigenvalues. The mathematical structure is nearly identical; only the interpretation differs.</p>
-<p>From this viewpoint, much of the mathematical machinery of quantum mechanics—Hilbert spaces, Hermitian operators, eigenvalues, eigenvectors, traces, and spectral decompositions—can be seen as consequences of the experimentally observed validity of superposition. The deepest mystery is perhaps not why quantum mechanics relies so heavily on linear algebra, but why nature itself appears to obey the superposition principle with such extraordinary precision.</p>
+<p>Aus diesen Grössen entstehen Varianz, Kovarianz und Korrelation. Durch Konditionieren erhält man die Gesetze der totalen Erwartung, Varianz und Kovarianz. Dieselben Ideen führen weiter zu Regression, erklärter Varianz, <span class="math inline">\(R^2\)</span>, Mean Squared Error und der Bias-Variance-Zerlegung.</p>
 </section>
-<section id="quantum-mechanics-as-generalized-probability-theory" class="level1">
-<h1>Quantum Mechanics as Generalized Probability Theory</h1>
-<p>The previous discussion emphasized why quantum mechanics naturally leads to linear algebra. However, quantum theory can also be viewed as a generalization of probability theory. This perspective becomes particularly clear through the concept of the density matrix, which plays a role analogous to a probability distribution in classical statistics.</p>
-<p>In classical probability theory, a random variable <span class="math inline">\(X\)</span> takes values <span class="math inline">\(x_i\)</span> with probabilities <span class="math inline">\(p_i\)</span>. The expectation of <span class="math inline">\(X\)</span> is given by</p>
+<section id="erwartungswert" class="level1">
+<h1>Erwartungswert</h1>
+<p>Für eine diskrete Zufallsvariable <span class="math inline">\(X\)</span> ist der Erwartungswert definiert als</p>
+<p><span class="math display">\[
+E(X)=\sum_x xP(X=x).
+\]</span></p>
+<p>Für eine stetige Zufallsvariable gilt entsprechend</p>
+<p><span class="math display">\[
+E(X)=\int x f_X(x)\,dx.
+\]</span></p>
+<p>Allgemeiner gilt für eine Funktion <span class="math inline">\(g\)</span>:</p>
+<p><span class="math display">\[
+E[g(X)]
+=
+\sum_x g(x)P(X=x)
+\]</span></p>
+<p>bzw.</p>
+<p><span class="math display">\[
+E[g(X)]
+=
+\int g(x)f_X(x)\,dx.
+\]</span></p>
+<p>Der Erwartungswert ist damit nicht nur eine Definition des Mittelwerts. Durch geeignete Wahl von <span class="math inline">\(g\)</span> lassen sich viele weitere Grössen ausdrücken.</p>
+</section>
+<section id="momente" class="level1">
+<h1>Momente</h1>
+<p>Die Grössen</p>
+<p><span class="math display">\[
+E(X),\quad E(X^2),\quad E(X^3),\ldots
+\]</span></p>
+<p>heissen Momente von <span class="math inline">\(X\)</span>.</p>
+<p>Das <span class="math inline">\(k\)</span>-te Moment ist</p>
+<p><span class="math display">\[
+m_k=E(X^k).
+\]</span></p>
+<p>Daneben betrachtet man zentrale Momente</p>
+<p><span class="math display">\[
+\mu_k=E[(X-E(X))^k].
+\]</span></p>
+<p>Insbesondere gilt</p>
+<p><span class="math display">\[
+\mu_2=\operatorname{Var}(X).
+\]</span></p>
+<p>Höhere zentrale Momente beschreiben beispielsweise Schiefe und Kurtosis.</p>
+</section>
+<section id="varianz" class="level1">
+<h1>Varianz</h1>
+<p>Die Varianz ist definiert als die erwartete quadratische Abweichung vom Erwartungswert:</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)
+=
+E[(X-E(X))^2].
+\]</span></p>
+<p>Durch Ausmultiplizieren erhält man</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Var}(X)
+&amp;=
+E[X^2-2XE(X)+E(X)^2]\\
+&amp;=
+E(X^2)-2E(X)^2+E(X)^2.
+\end{aligned}
+\]</span></p>
+<p>Damit folgt die wichtige Identität</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{Var}(X)
+=
+E(X^2)-E(X)^2
+}
+\]</span></p>
+<p>oder in Worten:</p>
+<blockquote class="blockquote">
+<p>Die Varianz ist das zweite Moment minus das Quadrat des ersten Moments.</p>
+</blockquote>
+</section>
+<section id="kovarianz" class="level1">
+<h1>Kovarianz</h1>
+<p>Für zwei Zufallsvariablen <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> ist die Kovarianz definiert als</p>
+<p><span class="math display">\[
+\operatorname{Cov}(X,Y)
+=
+E[(X-E(X))(Y-E(Y))].
+\]</span></p>
+<p>Durch Ausmultiplizieren folgt</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{Cov}(X,Y)
+=
+E(XY)-E(X)E(Y)
+}
+\]</span></p>
+<p>Die Varianz ist ein Spezialfall der Kovarianz:</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)
+=
+\operatorname{Cov}(X,X).
+\]</span></p>
+<p>Damit laufen die beiden Identitäten parallel:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Cov}(X,Y)
+&amp;=E(XY)-E(X)E(Y),\\
+\operatorname{Var}(X)
+&amp;=E(X^2)-E(X)^2.
+\end{aligned}
+\]</span></p>
+</section>
+<section id="korrelation" class="level1">
+<h1>Korrelation</h1>
+<p>Die Kovarianz hängt von den Masseinheiten von <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> ab. Durch Standardisierung erhält man die Korrelation:</p>
+<p><span class="math display">\[
+\boxed{
+\rho_{XY}
+=
+\frac{\operatorname{Cov}(X,Y)}
+{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)}}
+}
+\]</span></p>
+<p>Die Korrelation ist damit eine dimensionslose, standardisierte Kovarianz.</p>
+</section>
+<section id="bedingter-erwartungswert" class="level1">
+<h1>Bedingter Erwartungswert</h1>
+<p>Der bedingte Erwartungswert</p>
+<p><span class="math display">\[
+E(X\mid Z)
+\]</span></p>
+<p>ist selbst eine Zufallsvariable: Sein Wert hängt von <span class="math inline">\(Z\)</span> ab.</p>
+<p>Für diskretes <span class="math inline">\(Z\)</span> kann man sich beispielsweise für jede Gruppe <span class="math inline">\(z\)</span> einen eigenen Mittelwert vorstellen:</p>
+<p><span class="math display">\[
+\mu_z=E(X\mid Z=z).
+\]</span></p>
+<p>Diese bedingten Mittelwerte bilden die Grundlage der folgenden Zerlegungen.</p>
+</section>
+<section id="law-of-total-expectation" class="level1">
+<h1>Law of Total Expectation</h1>
+<p>Das Gesetz der totalen Erwartung lautet</p>
+<p><span class="math display">\[
+\boxed{
+E(X)
+=
+E[E(X\mid Z)]
+}
+\]</span></p>
+<p>Für diskretes <span class="math inline">\(Z\)</span>:</p>
 <p><span class="math display">\[
 E(X)
 =
-\sum_i x_i p_i.
+\sum_z E(X\mid Z=z)P(Z=z).
 \]</span></p>
-<p>The probability distribution contains all information necessary to predict future observations and compute expectations.</p>
-<p>Quantum mechanics has a remarkably similar structure. The state of a system is described by a density matrix <span class="math inline">\(\rho\)</span>, while a measurable quantity is represented by a Hermitian operator <span class="math inline">\(A\)</span>. In this analogy, the density matrix plays a role similar to a probability distribution, whereas observables generalize the notion of random variables.</p>
-<p>The expectation of an observable is given by</p>
+<p>Der Gesamtmittelwert ist also ein gewichteter Mittelwert der bedingten Mittelwerte.</p>
+</section>
+<section id="law-of-total-variance" class="level1">
+<h1>Law of Total Variance</h1>
+<p>Die Gesamtvarianz kann in zwei Komponenten zerlegt werden:</p>
 <p><span class="math display">\[
-E(A)
+\boxed{
+\operatorname{Var}(X)
 =
-\operatorname{tr}(\rho A).
+E[\operatorname{Var}(X\mid Z)]
++
+\operatorname{Var}(E[X\mid Z])
+}
 \]</span></p>
-<p>This formula is the quantum analogue of the classical expectation.</p>
-<p>To understand why, consider the spectral decomposition of the observable:</p>
+<p>Dabei ist</p>
 <p><span class="math display">\[
-A
+E[\operatorname{Var}(X\mid Z)]
+\]</span></p>
+<p>die durchschnittliche Variation <strong>innerhalb</strong> der durch <span class="math inline">\(Z\)</span> definierten Gruppen, während</p>
+<p><span class="math display">\[
+\operatorname{Var}(E[X\mid Z])
+\]</span></p>
+<p>die Variation der Gruppenmittelwerte beschreibt.</p>
+<p>Damit gilt konzeptionell</p>
+<p><span class="math display">\[
+\boxed{
+\text{Gesamtvariation}
 =
-\sum_i a_i P_i,
+\text{Within-Variation}
++
+\text{Between-Variation}
+}
 \]</span></p>
-<p>where <span class="math inline">\(a_i\)</span> are the eigenvalues of <span class="math inline">\(A\)</span> and <span class="math inline">\(P_i\)</span> are the corresponding projection operators. The eigenvalues represent the possible outcomes of a measurement. Their probabilities are determined by the Born rule:</p>
+<p>Diese Zerlegung ist grundlegend für ANOVA und hierarchische Modelle.</p>
+<section id="beispiel-random-intercept-modell" class="level2">
+<h2 class="anchored" data-anchor-id="beispiel-random-intercept-modell">Beispiel: Random-Intercept-Modell</h2>
+<p>Betrachte</p>
 <p><span class="math display">\[
-P(a_i)
+X_{ij}
 =
-\operatorname{tr}(\rho P_i).
+\mu+b_j+\varepsilon_{ij},
 \]</span></p>
-<p>The expectation of the observable therefore becomes</p>
+<p>mit</p>
 <p><span class="math display">\[
-E(A)
+b_j\sim(0,\sigma_b^2)
+\]</span></p>
+<p>und</p>
+<p><span class="math display">\[
+\varepsilon_{ij}\sim(0,\sigma_e^2).
+\]</span></p>
+<p>Dann ist die Gesamtvarianz</p>
+<p><span class="math display">\[
+\operatorname{Var}(X_{ij})
 =
-\sum_i a_i P(a_i).
+\sigma_b^2+\sigma_e^2.
 \]</span></p>
-<p>Substituting the Born rule yields</p>
+<p>Die Intraclass Correlation ist entsprechend</p>
 <p><span class="math display">\[
-E(A)
+\operatorname{ICC}
 =
-\sum_i a_i \operatorname{tr}(\rho P_i).
+\frac{\sigma_b^2}
+{\sigma_b^2+\sigma_e^2}.
 \]</span></p>
-<p>Using the linearity of the trace,</p>
+<p>Sie beschreibt den Anteil der Gesamtvarianz, der auf Unterschiede zwischen den Gruppen zurückzuführen ist.</p>
+</section>
+</section>
+<section id="law-of-total-covariance" class="level1">
+<h1>Law of Total Covariance</h1>
+<p>Die entsprechende Zerlegung für zwei Zufallsvariablen lautet</p>
 <p><span class="math display">\[
-E(A)
+\boxed{
+\operatorname{Cov}(X,Y)
 =
-\operatorname{tr}
-\left(
-\rho
-\sum_i a_i P_i
-\right)
+E[\operatorname{Cov}(X,Y\mid Z)]
++
+\operatorname{Cov}(E[X\mid Z],E[Y\mid Z])
+}
+\]</span></p>
+<p>Damit gilt</p>
+<p><span class="math display">\[
+\underbrace{\operatorname{Cov}(X,Y)}_{\text{Gesamtkovarianz}}
 =
-\operatorname{tr}(\rho A).
+\underbrace{E[\operatorname{Cov}(X,Y\mid Z)]}_{\text{Within-Kovarianz}}
++
+\underbrace{\operatorname{Cov}(E[X\mid Z],E[Y\mid Z])}_{\text{Between-Kovarianz}}.
 \]</span></p>
-<p>Thus, the familiar formula for expectation in statistics reappears in quantum mechanics in matrix form.</p>
-<p>The analogy can be summarized as follows:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 38%">
-<col style="width: 61%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Statistics</th>
-<th>Quantum Mechanics</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Probability distribution <span class="math inline">\(P\)</span></td>
-<td>Density matrix <span class="math inline">\(\rho\)</span></td>
-</tr>
-<tr class="even">
-<td>Random variable <span class="math inline">\(X\)</span></td>
-<td>Observable <span class="math inline">\(A\)</span></td>
-</tr>
-<tr class="odd">
-<td>Possible values <span class="math inline">\(x_i\)</span></td>
-<td>Eigenvalues <span class="math inline">\(a_i\)</span></td>
-</tr>
-<tr class="even">
-<td>Probabilities <span class="math inline">\(P(X=x_i)\)</span></td>
-<td>Born probabilities <span class="math inline">\(\operatorname{tr}(\rho P_i)\)</span></td>
-</tr>
-<tr class="odd">
-<td>Expectation <span class="math inline">\(E(X)\)</span></td>
-<td>Expectation <span class="math inline">\(\operatorname{tr}(\rho A)\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>From this perspective, quantum mechanics may be viewed as a form of <em>non-commutative probability theory</em>. In classical probability, random variables are ordinary functions and therefore commute:</p>
+<p>Zwei Variablen können daher innerhalb jeder Gruppe unkorreliert sein,</p>
 <p><span class="math display">\[
-XY = YX.
+\operatorname{Cov}(X,Y\mid Z)=0,
 \]</span></p>
-<p>In quantum mechanics, observables are operators and generally do not commute:</p>
+<p>aber insgesamt trotzdem korreliert sein, wenn ihre Gruppenmittelwerte gemeinsam variieren:</p>
 <p><span class="math display">\[
-AB \neq BA.
+\operatorname{Cov}(E[X\mid Z],E[Y\mid Z])\neq0.
 \]</span></p>
-<p>This seemingly small mathematical change has profound consequences. Non-commutativity leads to uncertainty relations, interference phenomena, and many of the characteristic features that distinguish quantum mechanics from classical probability theory.</p>
-<p>From a mathematical perspective, one may therefore view quantum mechanics as a generalization of probability theory in which probability distributions are replaced by density matrices, random variables by Hermitian operators, and integration by the trace operator. The familiar concepts of probabilities, expectations, variances, and mixtures survive, but they are expressed in the language of linear operators rather than functions.</p>
+<p>Dies ist eine wichtige Grundlage für das Verständnis von Aggregationseffekten und Simpson-artigen Phänomenen.</p>
+<section id="total-variance-als-spezialfall" class="level2">
+<h2 class="anchored" data-anchor-id="total-variance-als-spezialfall">Total Variance als Spezialfall</h2>
+<p>Setzt man <span class="math inline">\(Y=X\)</span>, erhält man</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Cov}(X,X)
+&amp;=
+E[\operatorname{Cov}(X,X\mid Z)]\\
+&amp;\quad+
+\operatorname{Cov}(E[X\mid Z],E[X\mid Z]).
+\end{aligned}
+\]</span></p>
+<p>Damit folgt unmittelbar</p>
+<p><span class="math display">\[
+\operatorname{Var}(X)
+=
+E[\operatorname{Var}(X\mid Z)]
++
+\operatorname{Var}(E[X\mid Z]).
+\]</span></p>
+<p>Das Gesetz der totalen Varianz ist somit ein Spezialfall des Gesetzes der totalen Kovarianz.</p>
+</section>
+</section>
+<section id="eine-weitere-wichtige-kovarianzidentität" class="level1">
+<h1>Eine weitere wichtige Kovarianzidentität</h1>
+<p>Für jede Funktion <span class="math inline">\(g(Z)\)</span> gilt</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{Cov}(X,g(Z))
+=
+\operatorname{Cov}(E[X\mid Z],g(Z))
+}
+\]</span></p>
+<p>Insbesondere:</p>
+<p><span class="math display">\[
+\operatorname{Cov}(X,Z)
+=
+\operatorname{Cov}(E[X\mid Z],Z).
+\]</span></p>
+<p>Für die Kovarianz von <span class="math inline">\(X\)</span> mit <span class="math inline">\(Z\)</span> ist also nur der systematische Anteil</p>
+<p><span class="math display">\[
+E(X\mid Z)
+\]</span></p>
+<p>relevant. Die zufällige Abweichung von diesem bedingten Erwartungswert trägt nichts zur Kovarianz mit <span class="math inline">\(Z\)</span> bei.</p>
+</section>
+<section id="bedingter-erwartungswert-und-regression" class="level1">
+<h1>Bedingter Erwartungswert und Regression</h1>
+<p>Man kann jede Zufallsvariable schreiben als</p>
+<p><span class="math display">\[
+Y
+=
+E(Y\mid X)
++
+\left[Y-E(Y\mid X)\right].
+\]</span></p>
+<p>Definiere</p>
+<p><span class="math display">\[
+\varepsilon
+=
+Y-E(Y\mid X).
+\]</span></p>
+<p>Dann gilt</p>
+<p><span class="math display">\[
+E(\varepsilon\mid X)=0.
+\]</span></p>
+<p>Damit ergibt sich die fundamentale Zerlegung</p>
+<p><span class="math display">\[
+\boxed{
+Y
+=
+E(Y\mid X)+\varepsilon.
+}
+\]</span></p>
+<p>Der erste Term ist der durch <span class="math inline">\(X\)</span> systematisch vorhersagbare Anteil, der zweite Term die nicht vorhersagbare Abweichung.</p>
+<p>Unter quadratischem Verlust ist der bedingte Erwartungswert sogar die optimale Vorhersage:</p>
+<p><span class="math display">\[
+\boxed{
+E(Y\mid X)
+=
+\arg\min_{g(X)}
+E[(Y-g(X))^2].
+}
+\]</span></p>
+<p>Dies ist eine der fundamentalen Verbindungen zwischen Wahrscheinlichkeitstheorie und Regression.</p>
+</section>
+<section id="varianzzerlegung-und-erklärte-varianz" class="level1">
+<h1>Varianzzerlegung und erklärte Varianz</h1>
+<p>Wendet man das Gesetz der totalen Varianz auf <span class="math inline">\(Y\)</span> gegeben <span class="math inline">\(X\)</span> an, erhält man</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{Var}(Y)
+=
+\operatorname{Var}(E[Y\mid X])
++
+E[\operatorname{Var}(Y\mid X)].
+}
+\]</span></p>
+<p>Die beiden Komponenten können interpretiert werden als</p>
+<p><span class="math display">\[
+\underbrace{\operatorname{Var}(E[Y\mid X])}_{\text{erklärbare Variation}}
+\]</span></p>
+<p>und</p>
+<p><span class="math display">\[
+\underbrace{E[\operatorname{Var}(Y\mid X)]}_{\text{nicht erklärte Variation}}.
+\]</span></p>
+<p>Dies führt direkt zur Idee von <span class="math inline">\(R^2\)</span>.</p>
+</section>
+<section id="r2" class="level1">
+<h1><span class="math inline">\(R^2\)</span></h1>
+<p>Auf Populationsebene kann man definieren</p>
+<p><span class="math display">\[
+\boxed{
+R^2
+=
+\frac{\operatorname{Var}(E[Y\mid X])}
+{\operatorname{Var}(Y)}
+}
+\]</span></p>
+<p>und damit äquivalent</p>
+<p><span class="math display">\[
+R^2
+=
+1-
+\frac{E[\operatorname{Var}(Y\mid X)]}
+{\operatorname{Var}(Y)}.
+\]</span></p>
+<p>Die bekannte Zerlegung der linearen Regression</p>
+<p><span class="math display">\[
+SST=SSR+SSE
+\]</span></p>
+<p>ist die Stichprobenanalogie dieser grundlegenden Varianzzerlegung.</p>
+</section>
+<section id="quadratische-fehlerzerlegung" class="level1">
+<h1>Quadratische Fehlerzerlegung</h1>
+<p>Eine weitere fundamentale Identität gilt für eine beliebige Konstante <span class="math inline">\(a\)</span>:</p>
+<p><span class="math display">\[
+\boxed{
+E[(X-a)^2]
+=
+\operatorname{Var}(X)
++
+(E[X]-a)^2.
+}
+\]</span></p>
+<section id="herleitung" class="level2">
+<h2 class="anchored" data-anchor-id="herleitung">Herleitung</h2>
+<p>Schreibe</p>
+<p><span class="math display">\[
+X-a
+=
+(X-E[X])+(E[X]-a).
+\]</span></p>
+<p>Dann</p>
+<p><span class="math display">\[
+\begin{aligned}
+E[(X-a)^2]
+&amp;=
+E[(X-E[X])^2]\\
+&amp;\quad+
+2(E[X]-a)E[X-E[X]]\\
+&amp;\quad+
+(E[X]-a)^2.
+\end{aligned}
+\]</span></p>
+<p>Da</p>
+<p><span class="math display">\[
+E[X-E[X]]=0,
+\]</span></p>
+<p>verschwindet der Kreuzterm. Somit</p>
+<p><span class="math display">\[
+E[(X-a)^2]
+=
+\operatorname{Var}(X)+(E[X]-a)^2.
+\]</span></p>
+<p>Diese einfache Identität ist die Grundlage der Bias-Variance-Zerlegung.</p>
+</section>
+</section>
+<section id="bias-varianz-und-mse" class="level1">
+<h1>Bias, Varianz und MSE</h1>
+<p>Sei <span class="math inline">\(\hat\theta\)</span> ein Schätzer für einen Parameter <span class="math inline">\(\theta\)</span>.</p>
+<p>Der Bias ist</p>
+<p><span class="math display">\[
+\operatorname{Bias}(\hat\theta)
+=
+E(\hat\theta)-\theta.
+\]</span></p>
+<p>Der Mean Squared Error ist</p>
+<p><span class="math display">\[
+\operatorname{MSE}(\hat\theta)
+=
+E[(\hat\theta-\theta)^2].
+\]</span></p>
+<p>Aus der quadratischen Fehlerzerlegung folgt unmittelbar</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{MSE}(\hat\theta)
+=
+\operatorname{Var}(\hat\theta)
++
+\operatorname{Bias}(\hat\theta)^2.
+}
+\]</span></p>
+<p>Ein Schätzer kann daher trotz Bias einen kleineren MSE besitzen, wenn seine Varianz ausreichend stark reduziert wird.</p>
+<p>Dies ist die Grundlage des Bias-Variance-Tradeoffs.</p>
+</section>
+<section id="bias-variance-zerlegung-des-vorhersagefehlers" class="level1">
+<h1>Bias-Variance-Zerlegung des Vorhersagefehlers</h1>
+<p>Betrachte das Datenmodell</p>
+<p><span class="math display">\[
+Y=f(x)+\varepsilon,
+\]</span></p>
+<p>mit</p>
+<p><span class="math display">\[
+E(\varepsilon)=0,
+\qquad
+\operatorname{Var}(\varepsilon)=\sigma^2.
+\]</span></p>
+<p>Aus zufälligen Trainingsdaten wird eine Funktion <span class="math inline">\(\hat f(x)\)</span> geschätzt.</p>
+<p>Für ein festes <span class="math inline">\(x\)</span> interessiert der erwartete Vorhersagefehler</p>
+<p><span class="math display">\[
+E[(Y-\hat f(x))^2].
+\]</span></p>
+<p>Dieser lässt sich zerlegen als</p>
+<p><span class="math display">\[
+\boxed{
+E[(Y-\hat f(x))^2]
+=
+\sigma^2
++
+\operatorname{Var}(\hat f(x))
++
+\operatorname{Bias}(\hat f(x))^2.
+}
+\]</span></p>
+<p>Dabei ist</p>
+<p><span class="math display">\[
+\operatorname{Bias}(\hat f(x))
+=
+E[\hat f(x)]-f(x).
+\]</span></p>
+<p>Somit:</p>
+<p><span class="math display">\[
+\boxed{
+\text{Prediction Error}
+=
+\text{irreducible error}
++
+\text{variance}
++
+\text{bias}^2.
+}
+\]</span></p>
+<p>Der erste Term <span class="math inline">\(\sigma^2\)</span> kann auch mit einem perfekten Modell nicht beseitigt werden.</p>
+</section>
+<section id="standardfehler" class="level1">
+<h1>Standardfehler</h1>
+<p>Ist <span class="math inline">\(\hat\theta\)</span> ein Schätzer, so ist sein Standardfehler</p>
+<p><span class="math display">\[
+\boxed{
+SE(\hat\theta)
+=
+\sqrt{\operatorname{Var}(\hat\theta)}.
+}
+\]</span></p>
+<p>Beispielsweise gilt für den Stichprobenmittelwert bei unabhängigen, identisch verteilten Beobachtungen</p>
+<p><span class="math display">\[
+\operatorname{Var}(\bar X)
+=
+\frac{\sigma^2}{n},
+\]</span></p>
+<p>und daher</p>
+<p><span class="math display">\[
+SE(\bar X)
+=
+\frac{\sigma}{\sqrt n}.
+\]</span></p>
+<p>Damit entsteht die Verbindung</p>
+<p><span class="math display">\[
+\text{Varianz eines Schätzers}
+\longrightarrow
+\text{Standardfehler}
+\longrightarrow
+\text{Konfidenzintervalle und Tests}.
+\]</span></p>
+</section>
+<section id="verlustfunktionen-und-statistische-zielgrössen" class="level1">
+<h1>Verlustfunktionen und statistische Zielgrössen</h1>
+<p>Der Erwartungswert besitzt noch eine tiefere Interpretation.</p>
+<p>Unter quadratischem Verlust ist</p>
+<p><span class="math display">\[
+\boxed{
+E(X)
+=
+\arg\min_a E[(X-a)^2].
+}
+\]</span></p>
+<p>Der Erwartungswert ist also genau derjenige Wert, der den erwarteten quadratischen Fehler minimiert.</p>
+<p>Bei absolutem Verlust erhält man dagegen den Median:</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{Median}(X)
+=
+\arg\min_a E|X-a|.
+}
+\]</span></p>
+<p>Asymmetrische absolute Verlustfunktionen führen entsprechend zu Quantilen.</p>
+<p>Damit besteht eine fundamentale Beziehung</p>
+<p><span class="math display">\[
+\boxed{
+\text{Verlustfunktion}
+\longleftrightarrow
+\text{statistische Zielgrösse}.
+}
+\]</span></p>
+<p>Der Mittelwert ist insbesondere deshalb von herausragender Bedeutung, weil er die optimale Zielgrösse unter quadratischem Verlust darstellt.</p>
+</section>
+<section id="zusammenfassung" class="level1">
+<h1>Zusammenfassung</h1>
+<p>Viele zentrale Grössen lassen sich in einer gemeinsamen Struktur darstellen.</p>
+<section id="grundlegende-momente" class="level2">
+<h2 class="anchored" data-anchor-id="grundlegende-momente">Grundlegende Momente</h2>
+<p><span class="math display">\[
+E(X),\qquad E(X^2),\qquad E(XY).
+\]</span></p>
+<p>Daraus folgen</p>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{Var}(X)
+&amp;=E(X^2)-E(X)^2,\\
+\operatorname{Cov}(X,Y)
+&amp;=E(XY)-E(X)E(Y),\\
+\rho_{XY}
+&amp;=
+\frac{\operatorname{Cov}(X,Y)}
+{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)}}.
+\end{aligned}
+\]</span></p>
+</section>
+<section id="konditionieren" class="level2">
+<h2 class="anchored" data-anchor-id="konditionieren">Konditionieren</h2>
+<p><span class="math display">\[
+E(X\mid Z),
+\qquad
+\operatorname{Var}(X\mid Z).
+\]</span></p>
+<p>Daraus folgen</p>
+<p><span class="math display">\[
+\boxed{
+E(X)=E[E(X\mid Z)]
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{Var}(X)
+=
+E[\operatorname{Var}(X\mid Z)]
++
+\operatorname{Var}(E[X\mid Z])
+}
+\]</span></p>
+<p>und</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{Cov}(X,Y)
+=
+E[\operatorname{Cov}(X,Y\mid Z)]
++
+\operatorname{Cov}(E[X\mid Z],E[Y\mid Z]).
+}
+\]</span></p>
+</section>
+<section id="quadratische-fehler" class="level2">
+<h2 class="anchored" data-anchor-id="quadratische-fehler">Quadratische Fehler</h2>
+<p>Die zentrale Identität</p>
+<p><span class="math display">\[
+E[(X-a)^2]
+=
+\operatorname{Var}(X)
++
+(E[X]-a)^2
+\]</span></p>
+<p>führt zu</p>
+<p><span class="math display">\[
+\boxed{
+\operatorname{MSE}
+=
+\operatorname{Var}
++
+\operatorname{Bias}^2
+}
+\]</span></p>
+<p>und schliesslich zum Vorhersagefehler</p>
+<p><span class="math display">\[
+\boxed{
+\text{Prediction Error}
+=
+\sigma^2
++
+\operatorname{Var}
++
+\operatorname{Bias}^2.
+}
+\]</span></p>
+</section>
+<section id="zentrale-konzeptionelle-verbindung" class="level2">
+<h2 class="anchored" data-anchor-id="zentrale-konzeptionelle-verbindung">Zentrale konzeptionelle Verbindung</h2>
+<p>Die gemeinsame Idee hinter vielen dieser Resultate ist eine Zerlegung in einen <strong>systematischen bzw. erklärbaren Anteil</strong> und einen <strong>zufälligen bzw. nicht erklärbaren Anteil</strong>:</p>
+<p><span class="math display">\[
+\boxed{
+Y
+=
+E(Y\mid X)
++
+[Y-E(Y\mid X)].
+}
+\]</span></p>
+<p>Daraus entstehen Varianzzerlegungen, Regression, erklärte Varianz, <span class="math inline">\(R^2\)</span>, Random-Effects-Modelle sowie zentrale Resultate der Schätz- und Vorhersagetheorie.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

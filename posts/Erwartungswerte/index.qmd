@@ -1,0 +1,849 @@
+---
+title: "Erwartungswert, Varianz und zentrale Zerlegungen"
+date: "2026-10-05"
+description: "Konzepte der Wahrscheinlichkeitstheorie"
+categories: [Wahrscheinlichkeitstheorie]
+---
+
+
+# Grundidee
+
+Viele zentrale Konzepte der Wahrscheinlichkeitstheorie und Statistik lassen sich auf wenige grundlegende Grössen zurückführen:
+
+$$
+E(X), \qquad E(X^2), \qquad E(XY)
+$$
+
+sowie auf ihre bedingten Versionen
+
+$$
+E(X\mid Z)
+\qquad\text{und}\qquad
+\operatorname{Var}(X\mid Z).
+$$
+
+Aus diesen Grössen entstehen Varianz, Kovarianz und Korrelation. Durch Konditionieren erhält man die Gesetze der totalen Erwartung, Varianz und Kovarianz. Dieselben Ideen führen weiter zu Regression, erklärter Varianz, $R^2$, Mean Squared Error und der Bias-Variance-Zerlegung.
+
+# Erwartungswert
+
+Für eine diskrete Zufallsvariable $X$ ist der Erwartungswert definiert als
+
+$$
+E(X)=\sum_x xP(X=x).
+$$
+
+Für eine stetige Zufallsvariable gilt entsprechend
+
+$$
+E(X)=\int x f_X(x)\,dx.
+$$
+
+Allgemeiner gilt für eine Funktion $g$:
+
+$$
+E[g(X)]
+=
+\sum_x g(x)P(X=x)
+$$
+
+bzw.
+
+$$
+E[g(X)]
+=
+\int g(x)f_X(x)\,dx.
+$$
+
+Der Erwartungswert ist damit nicht nur eine Definition des Mittelwerts. Durch geeignete Wahl von $g$ lassen sich viele weitere Grössen ausdrücken.
+
+# Momente
+
+Die Grössen
+
+$$
+E(X),\quad E(X^2),\quad E(X^3),\ldots
+$$
+
+heissen Momente von $X$.
+
+Das $k$-te Moment ist
+
+$$
+m_k=E(X^k).
+$$
+
+Daneben betrachtet man zentrale Momente
+
+$$
+\mu_k=E[(X-E(X))^k].
+$$
+
+Insbesondere gilt
+
+$$
+\mu_2=\operatorname{Var}(X).
+$$
+
+Höhere zentrale Momente beschreiben beispielsweise Schiefe und Kurtosis.
+
+# Varianz
+
+Die Varianz ist definiert als die erwartete quadratische Abweichung vom Erwartungswert:
+
+$$
+\operatorname{Var}(X)
+=
+E[(X-E(X))^2].
+$$
+
+Durch Ausmultiplizieren erhält man
+
+$$
+\begin{aligned}
+\operatorname{Var}(X)
+&=
+E[X^2-2XE(X)+E(X)^2]\\
+&=
+E(X^2)-2E(X)^2+E(X)^2.
+\end{aligned}
+$$
+
+Damit folgt die wichtige Identität
+
+$$
+\boxed{
+\operatorname{Var}(X)
+=
+E(X^2)-E(X)^2
+}
+$$
+
+oder in Worten:
+
+> Die Varianz ist das zweite Moment minus das Quadrat des ersten Moments.
+
+# Kovarianz
+
+Für zwei Zufallsvariablen $X$ und $Y$ ist die Kovarianz definiert als
+
+$$
+\operatorname{Cov}(X,Y)
+=
+E[(X-E(X))(Y-E(Y))].
+$$
+
+Durch Ausmultiplizieren folgt
+
+$$
+\boxed{
+\operatorname{Cov}(X,Y)
+=
+E(XY)-E(X)E(Y)
+}
+$$
+
+Die Varianz ist ein Spezialfall der Kovarianz:
+
+$$
+\operatorname{Var}(X)
+=
+\operatorname{Cov}(X,X).
+$$
+
+Damit laufen die beiden Identitäten parallel:
+
+$$
+\begin{aligned}
+\operatorname{Cov}(X,Y)
+&=E(XY)-E(X)E(Y),\\
+\operatorname{Var}(X)
+&=E(X^2)-E(X)^2.
+\end{aligned}
+$$
+
+# Korrelation
+
+Die Kovarianz hängt von den Masseinheiten von $X$ und $Y$ ab. Durch Standardisierung erhält man die Korrelation:
+
+$$
+\boxed{
+\rho_{XY}
+=
+\frac{\operatorname{Cov}(X,Y)}
+{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)}}
+}
+$$
+
+Die Korrelation ist damit eine dimensionslose, standardisierte Kovarianz.
+
+# Bedingter Erwartungswert
+
+Der bedingte Erwartungswert
+
+$$
+E(X\mid Z)
+$$
+
+ist selbst eine Zufallsvariable: Sein Wert hängt von $Z$ ab.
+
+Für diskretes $Z$ kann man sich beispielsweise für jede Gruppe $z$ einen eigenen Mittelwert vorstellen:
+
+$$
+\mu_z=E(X\mid Z=z).
+$$
+
+Diese bedingten Mittelwerte bilden die Grundlage der folgenden Zerlegungen.
+
+# Law of Total Expectation
+
+Das Gesetz der totalen Erwartung lautet
+
+$$
+\boxed{
+E(X)
+=
+E[E(X\mid Z)]
+}
+$$
+
+Für diskretes $Z$:
+
+$$
+E(X)
+=
+\sum_z E(X\mid Z=z)P(Z=z).
+$$
+
+Der Gesamtmittelwert ist also ein gewichteter Mittelwert der bedingten Mittelwerte.
+
+# Law of Total Variance
+
+Die Gesamtvarianz kann in zwei Komponenten zerlegt werden:
+
+$$
+\boxed{
+\operatorname{Var}(X)
+=
+E[\operatorname{Var}(X\mid Z)]
++
+\operatorname{Var}(E[X\mid Z])
+}
+$$
+
+Dabei ist
+
+$$
+E[\operatorname{Var}(X\mid Z)]
+$$
+
+die durchschnittliche Variation **innerhalb** der durch $Z$ definierten Gruppen, während
+
+$$
+\operatorname{Var}(E[X\mid Z])
+$$
+
+die Variation der Gruppenmittelwerte beschreibt.
+
+Damit gilt konzeptionell
+
+$$
+\boxed{
+\text{Gesamtvariation}
+=
+\text{Within-Variation}
++
+\text{Between-Variation}
+}
+$$
+
+Diese Zerlegung ist grundlegend für ANOVA und hierarchische Modelle.
+
+## Beispiel: Random-Intercept-Modell
+
+Betrachte
+
+$$
+X_{ij}
+=
+\mu+b_j+\varepsilon_{ij},
+$$
+
+mit
+
+$$
+b_j\sim(0,\sigma_b^2)
+$$
+
+und
+
+$$
+\varepsilon_{ij}\sim(0,\sigma_e^2).
+$$
+
+Dann ist die Gesamtvarianz
+
+$$
+\operatorname{Var}(X_{ij})
+=
+\sigma_b^2+\sigma_e^2.
+$$
+
+Die Intraclass Correlation ist entsprechend
+
+$$
+\operatorname{ICC}
+=
+\frac{\sigma_b^2}
+{\sigma_b^2+\sigma_e^2}.
+$$
+
+Sie beschreibt den Anteil der Gesamtvarianz, der auf Unterschiede zwischen den Gruppen zurückzuführen ist.
+
+# Law of Total Covariance
+
+Die entsprechende Zerlegung für zwei Zufallsvariablen lautet
+
+$$
+\boxed{
+\operatorname{Cov}(X,Y)
+=
+E[\operatorname{Cov}(X,Y\mid Z)]
++
+\operatorname{Cov}(E[X\mid Z],E[Y\mid Z])
+}
+$$
+
+Damit gilt
+
+$$
+\underbrace{\operatorname{Cov}(X,Y)}_{\text{Gesamtkovarianz}}
+=
+\underbrace{E[\operatorname{Cov}(X,Y\mid Z)]}_{\text{Within-Kovarianz}}
++
+\underbrace{\operatorname{Cov}(E[X\mid Z],E[Y\mid Z])}_{\text{Between-Kovarianz}}.
+$$
+
+Zwei Variablen können daher innerhalb jeder Gruppe unkorreliert sein,
+
+$$
+\operatorname{Cov}(X,Y\mid Z)=0,
+$$
+
+aber insgesamt trotzdem korreliert sein, wenn ihre Gruppenmittelwerte gemeinsam variieren:
+
+$$
+\operatorname{Cov}(E[X\mid Z],E[Y\mid Z])\neq0.
+$$
+
+Dies ist eine wichtige Grundlage für das Verständnis von Aggregationseffekten und Simpson-artigen Phänomenen.
+
+## Total Variance als Spezialfall
+
+Setzt man $Y=X$, erhält man
+
+$$
+\begin{aligned}
+\operatorname{Cov}(X,X)
+&=
+E[\operatorname{Cov}(X,X\mid Z)]\\
+&\quad+
+\operatorname{Cov}(E[X\mid Z],E[X\mid Z]).
+\end{aligned}
+$$
+
+Damit folgt unmittelbar
+
+$$
+\operatorname{Var}(X)
+=
+E[\operatorname{Var}(X\mid Z)]
++
+\operatorname{Var}(E[X\mid Z]).
+$$
+
+Das Gesetz der totalen Varianz ist somit ein Spezialfall des Gesetzes der totalen Kovarianz.
+
+# Eine weitere wichtige Kovarianzidentität
+
+Für jede Funktion $g(Z)$ gilt
+
+$$
+\boxed{
+\operatorname{Cov}(X,g(Z))
+=
+\operatorname{Cov}(E[X\mid Z],g(Z))
+}
+$$
+
+Insbesondere:
+
+$$
+\operatorname{Cov}(X,Z)
+=
+\operatorname{Cov}(E[X\mid Z],Z).
+$$
+
+Für die Kovarianz von $X$ mit $Z$ ist also nur der systematische Anteil
+
+$$
+E(X\mid Z)
+$$
+
+relevant. Die zufällige Abweichung von diesem bedingten Erwartungswert trägt nichts zur Kovarianz mit $Z$ bei.
+
+# Bedingter Erwartungswert und Regression
+
+Man kann jede Zufallsvariable schreiben als
+
+$$
+Y
+=
+E(Y\mid X)
++
+\left[Y-E(Y\mid X)\right].
+$$
+
+Definiere
+
+$$
+\varepsilon
+=
+Y-E(Y\mid X).
+$$
+
+Dann gilt
+
+$$
+E(\varepsilon\mid X)=0.
+$$
+
+Damit ergibt sich die fundamentale Zerlegung
+
+$$
+\boxed{
+Y
+=
+E(Y\mid X)+\varepsilon.
+}
+$$
+
+Der erste Term ist der durch $X$ systematisch vorhersagbare Anteil, der zweite Term die nicht vorhersagbare Abweichung.
+
+Unter quadratischem Verlust ist der bedingte Erwartungswert sogar die optimale Vorhersage:
+
+$$
+\boxed{
+E(Y\mid X)
+=
+\arg\min_{g(X)}
+E[(Y-g(X))^2].
+}
+$$
+
+Dies ist eine der fundamentalen Verbindungen zwischen Wahrscheinlichkeitstheorie und Regression.
+
+# Varianzzerlegung und erklärte Varianz
+
+Wendet man das Gesetz der totalen Varianz auf $Y$ gegeben $X$ an, erhält man
+
+$$
+\boxed{
+\operatorname{Var}(Y)
+=
+\operatorname{Var}(E[Y\mid X])
++
+E[\operatorname{Var}(Y\mid X)].
+}
+$$
+
+Die beiden Komponenten können interpretiert werden als
+
+$$
+\underbrace{\operatorname{Var}(E[Y\mid X])}_{\text{erklärbare Variation}}
+$$
+
+und
+
+$$
+\underbrace{E[\operatorname{Var}(Y\mid X)]}_{\text{nicht erklärte Variation}}.
+$$
+
+Dies führt direkt zur Idee von $R^2$.
+
+# $R^2$
+
+Auf Populationsebene kann man definieren
+
+$$
+\boxed{
+R^2
+=
+\frac{\operatorname{Var}(E[Y\mid X])}
+{\operatorname{Var}(Y)}
+}
+$$
+
+und damit äquivalent
+
+$$
+R^2
+=
+1-
+\frac{E[\operatorname{Var}(Y\mid X)]}
+{\operatorname{Var}(Y)}.
+$$
+
+Die bekannte Zerlegung der linearen Regression
+
+$$
+SST=SSR+SSE
+$$
+
+ist die Stichprobenanalogie dieser grundlegenden Varianzzerlegung.
+
+# Quadratische Fehlerzerlegung
+
+Eine weitere fundamentale Identität gilt für eine beliebige Konstante $a$:
+
+$$
+\boxed{
+E[(X-a)^2]
+=
+\operatorname{Var}(X)
++
+(E[X]-a)^2.
+}
+$$
+
+## Herleitung
+
+Schreibe
+
+$$
+X-a
+=
+(X-E[X])+(E[X]-a).
+$$
+
+Dann
+
+$$
+\begin{aligned}
+E[(X-a)^2]
+&=
+E[(X-E[X])^2]\\
+&\quad+
+2(E[X]-a)E[X-E[X]]\\
+&\quad+
+(E[X]-a)^2.
+\end{aligned}
+$$
+
+Da
+
+$$
+E[X-E[X]]=0,
+$$
+
+verschwindet der Kreuzterm. Somit
+
+$$
+E[(X-a)^2]
+=
+\operatorname{Var}(X)+(E[X]-a)^2.
+$$
+
+Diese einfache Identität ist die Grundlage der Bias-Variance-Zerlegung.
+
+# Bias, Varianz und MSE
+
+Sei $\hat\theta$ ein Schätzer für einen Parameter $\theta$.
+
+Der Bias ist
+
+$$
+\operatorname{Bias}(\hat\theta)
+=
+E(\hat\theta)-\theta.
+$$
+
+Der Mean Squared Error ist
+
+$$
+\operatorname{MSE}(\hat\theta)
+=
+E[(\hat\theta-\theta)^2].
+$$
+
+Aus der quadratischen Fehlerzerlegung folgt unmittelbar
+
+$$
+\boxed{
+\operatorname{MSE}(\hat\theta)
+=
+\operatorname{Var}(\hat\theta)
++
+\operatorname{Bias}(\hat\theta)^2.
+}
+$$
+
+Ein Schätzer kann daher trotz Bias einen kleineren MSE besitzen, wenn seine Varianz ausreichend stark reduziert wird.
+
+Dies ist die Grundlage des Bias-Variance-Tradeoffs.
+
+# Bias-Variance-Zerlegung des Vorhersagefehlers
+
+Betrachte das Datenmodell
+
+$$
+Y=f(x)+\varepsilon,
+$$
+
+mit
+
+$$
+E(\varepsilon)=0,
+\qquad
+\operatorname{Var}(\varepsilon)=\sigma^2.
+$$
+
+Aus zufälligen Trainingsdaten wird eine Funktion $\hat f(x)$ geschätzt.
+
+Für ein festes $x$ interessiert der erwartete Vorhersagefehler
+
+$$
+E[(Y-\hat f(x))^2].
+$$
+
+Dieser lässt sich zerlegen als
+
+$$
+\boxed{
+E[(Y-\hat f(x))^2]
+=
+\sigma^2
++
+\operatorname{Var}(\hat f(x))
++
+\operatorname{Bias}(\hat f(x))^2.
+}
+$$
+
+Dabei ist
+
+$$
+\operatorname{Bias}(\hat f(x))
+=
+E[\hat f(x)]-f(x).
+$$
+
+Somit:
+
+$$
+\boxed{
+\text{Prediction Error}
+=
+\text{irreducible error}
++
+\text{variance}
++
+\text{bias}^2.
+}
+$$
+
+Der erste Term $\sigma^2$ kann auch mit einem perfekten Modell nicht beseitigt werden.
+
+# Standardfehler
+
+Ist $\hat\theta$ ein Schätzer, so ist sein Standardfehler
+
+$$
+\boxed{
+SE(\hat\theta)
+=
+\sqrt{\operatorname{Var}(\hat\theta)}.
+}
+$$
+
+Beispielsweise gilt für den Stichprobenmittelwert bei unabhängigen, identisch verteilten Beobachtungen
+
+$$
+\operatorname{Var}(\bar X)
+=
+\frac{\sigma^2}{n},
+$$
+
+und daher
+
+$$
+SE(\bar X)
+=
+\frac{\sigma}{\sqrt n}.
+$$
+
+Damit entsteht die Verbindung
+
+$$
+\text{Varianz eines Schätzers}
+\longrightarrow
+\text{Standardfehler}
+\longrightarrow
+\text{Konfidenzintervalle und Tests}.
+$$
+
+# Verlustfunktionen und statistische Zielgrössen
+
+Der Erwartungswert besitzt noch eine tiefere Interpretation.
+
+Unter quadratischem Verlust ist
+
+$$
+\boxed{
+E(X)
+=
+\arg\min_a E[(X-a)^2].
+}
+$$
+
+Der Erwartungswert ist also genau derjenige Wert, der den erwarteten quadratischen Fehler minimiert.
+
+Bei absolutem Verlust erhält man dagegen den Median:
+
+$$
+\boxed{
+\operatorname{Median}(X)
+=
+\arg\min_a E|X-a|.
+}
+$$
+
+Asymmetrische absolute Verlustfunktionen führen entsprechend zu Quantilen.
+
+Damit besteht eine fundamentale Beziehung
+
+$$
+\boxed{
+\text{Verlustfunktion}
+\longleftrightarrow
+\text{statistische Zielgrösse}.
+}
+$$
+
+Der Mittelwert ist insbesondere deshalb von herausragender Bedeutung, weil er die optimale Zielgrösse unter quadratischem Verlust darstellt.
+
+# Zusammenfassung
+
+Viele zentrale Grössen lassen sich in einer gemeinsamen Struktur darstellen.
+
+## Grundlegende Momente
+
+$$
+E(X),\qquad E(X^2),\qquad E(XY).
+$$
+
+Daraus folgen
+
+$$
+\begin{aligned}
+\operatorname{Var}(X)
+&=E(X^2)-E(X)^2,\\
+\operatorname{Cov}(X,Y)
+&=E(XY)-E(X)E(Y),\\
+\rho_{XY}
+&=
+\frac{\operatorname{Cov}(X,Y)}
+{\sqrt{\operatorname{Var}(X)\operatorname{Var}(Y)}}.
+\end{aligned}
+$$
+
+## Konditionieren
+
+$$
+E(X\mid Z),
+\qquad
+\operatorname{Var}(X\mid Z).
+$$
+
+Daraus folgen
+
+$$
+\boxed{
+E(X)=E[E(X\mid Z)]
+}
+$$
+
+$$
+\boxed{
+\operatorname{Var}(X)
+=
+E[\operatorname{Var}(X\mid Z)]
++
+\operatorname{Var}(E[X\mid Z])
+}
+$$
+
+und
+
+$$
+\boxed{
+\operatorname{Cov}(X,Y)
+=
+E[\operatorname{Cov}(X,Y\mid Z)]
++
+\operatorname{Cov}(E[X\mid Z],E[Y\mid Z]).
+}
+$$
+
+## Quadratische Fehler
+
+Die zentrale Identität
+
+$$
+E[(X-a)^2]
+=
+\operatorname{Var}(X)
++
+(E[X]-a)^2
+$$
+
+führt zu
+
+$$
+\boxed{
+\operatorname{MSE}
+=
+\operatorname{Var}
++
+\operatorname{Bias}^2
+}
+$$
+
+und schliesslich zum Vorhersagefehler
+
+$$
+\boxed{
+\text{Prediction Error}
+=
+\sigma^2
++
+\operatorname{Var}
++
+\operatorname{Bias}^2.
+}
+$$
+
+## Zentrale konzeptionelle Verbindung
+
+Die gemeinsame Idee hinter vielen dieser Resultate ist eine Zerlegung in einen **systematischen bzw. erklärbaren Anteil** und einen **zufälligen bzw. nicht erklärbaren Anteil**:
+
+$$
+\boxed{
+Y
+=
+E(Y\mid X)
++
+[Y-E(Y\mid X)].
+}
+$$
+
+Daraus entstehen Varianzzerlegungen, Regression, erklärte Varianz, $R^2$, Random-Effects-Modelle sowie zentrale Resultate der Schätz- und Vorhersagetheorie.

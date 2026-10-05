@@ -5,6 +5,7 @@ project:
     - assets
 website:
   title: "Statistik-Beratung G"
+  site-url: https://github.com/mcdr65
   navbar:
     left:
       - href: organisation.qmd
