@@ -2,6 +2,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/Projektionsgeometrie/row_column_space_regression.html",
+      "/posts/Projektionsgeometrie/index.html",
       "/posts/Erwartungswerte/index.html",
       "/posts/conditionalIndependence/index.html",
       "/posts/popper/index.html",
