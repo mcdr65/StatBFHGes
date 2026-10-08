@@ -7,7 +7,6 @@ categories: [Lineare Algebra]
 
 
 
-
 ## Ausgangspunkt: eine Datenmatrix
 
 Wir betrachten eine Regression mit zwei Eingangsgrössen $x_1$ und $x_2$

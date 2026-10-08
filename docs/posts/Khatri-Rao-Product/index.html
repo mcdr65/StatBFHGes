@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -311,90 +276,67 @@ window.Quarto = {
 <section id="dummy-matrix-j-and-matrix-x-parameter-vector" class="level1 page-columns page-full">
 <h1>Dummy Matrix <span class="math inline">\(J\)</span> and Matrix <span class="math inline">\(X\)</span>, Parameter vector</h1>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Matrix)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">20</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>p1<span class="ot">&lt;-</span><span class="dv">2</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>p2<span class="ot">&lt;-</span><span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
+
 </div>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>k<span class="ot">&lt;-</span>p1<span class="sc">*</span>p2</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>J<span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),n<span class="sc">*</span>p1,<span class="at">replace=</span><span class="cn">TRUE</span>),n,p1)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>X<span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="fu">round</span>(<span class="fu">rnorm</span>(n<span class="sc">*</span>p2,<span class="dv">10</span>,<span class="dv">2</span>)),n,p2)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>beta<span class="ot">&lt;-</span><span class="fu">t</span>(<span class="fu">t</span>(<span class="fu">rnorm</span>(k)))</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>J</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>      [,1] [,2]
- [1,]    1    1
+ [1,]    0    1
  [2,]    1    0
- [3,]    1    1
- [4,]    1    0
- [5,]    0    1
- [6,]    0    0
- [7,]    1    0
- [8,]    1    0
- [9,]    0    0
-[10,]    1    1
-[11,]    1    1
-[12,]    1    0
-[13,]    0    0
-[14,]    0    1
+ [3,]    1    0
+ [4,]    1    1
+ [5,]    1    0
+ [6,]    0    1
+ [7,]    0    0
+ [8,]    0    1
+ [9,]    1    1
+[10,]    0    0
+[11,]    1    0
+[12,]    0    0
+[13,]    1    1
+[14,]    1    1
 [15,]    1    0
-[16,]    0    1
-[17,]    1    1
-[18,]    0    0
-[19,]    1    1
-[20,]    0    1</code></pre>
+[16,]    1    1
+[17,]    0    1
+[18,]    1    0
+[19,]    0    0
+[20,]    0    0</code></pre>
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>X</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>      [,1] [,2] [,3] [,4]
- [1,]    9    8   12   10
- [2,]    9   10   11   11
- [3,]    8    9    9    9
- [4,]   10   11   10   11
- [5,]   10   13   11    9
- [6,]   11    6   10   13
- [7,]    5   15    8    7
- [8,]    7    9    5    9
- [9,]    8   10    9   12
-[10,]   10   12   13   11
-[11,]    8   12   11   11
-[12,]   13    8    8    9
-[13,]    7   12   10    6
-[14,]   12   12   11    8
-[15,]    4   10    6   11
-[16,]   12   11    8   10
-[17,]   12   10   10   10
-[18,]    9    9   10    9
-[19,]   10    9    7   15
-[20,]   11   11   10    7</code></pre>
+ [1,]   12    8   12   10
+ [2,]   12    8   12    9
+ [3,]    7   11   10   10
+ [4,]    9    8    9    6
+ [5,]    6   11   13    8
+ [6,]    6   13    7    8
+ [7,]   11   10   10   12
+ [8,]    9   12   10    9
+ [9,]   10   11   10    9
+[10,]   10    9    8   13
+[11,]   10   10   12   12
+[12,]   12   10   13   12
+[13,]   12   11    9   13
+[14,]   10   10   10   12
+[15,]    7   10   11   12
+[16,]    6   12   12   11
+[17,]   10    9    8   10
+[18,]   10   10    9    4
+[19,]    8   11   12   11
+[20,]    5   10   13   12</code></pre>
 </div>
 </div>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>beta</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output cell-output-stdout">
-<pre><code>         [,1]
-[1,]  1.21479
-[2,] -0.56697
-[3,]  0.17182
-[4,] -0.04816
-[5,]  0.70657
-[6,] -0.02747
-[7,]  1.32019
-[8,] -0.87408</code></pre>
+<pre><code>        [,1]
+[1,] -0.3441
+[2,] -1.9380
+[3,] -1.0247
+[4,]  0.5453
+[5,]  0.6501
+[6,]  0.7426
+[7,] -1.9414
+[8,]  1.1564</code></pre>
 </div>
 </div>
 </section>
@@ -402,21 +344,12 @@ window.Quarto = {
 <h1>Design Matrix: Transposed Khatri-Rao product</h1>
 <p>This is a <strong>row-by-row Kronecker product of two matrices</strong></p>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Design<span class="ot">&lt;-</span><span class="fu">t</span>(<span class="fu">KhatriRao</span>(<span class="fu">t</span>(J),<span class="fu">t</span>(X)))<span class="do">##Design matrix</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
+
 </div>
 </section>
 <section id="alternative-by-hand" class="level1 page-columns page-full">
 <h1>Alternative (“by hand”)</h1>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>KR<span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="dv">0</span>,<span class="fu">rep</span>(n<span class="sc">*</span>p1<span class="sc">*</span>p2),<span class="at">nrow=</span>n,<span class="at">ncol=</span>p1<span class="sc">*</span>p2)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {KR[i,]<span class="ot">&lt;-</span><span class="fu">kronecker</span>(J[i,],X[i,])} <span class="do">##Explicit: row-by-row Kronecker product of two matrices</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">headTail</span>(KR)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display column-page">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
@@ -436,21 +369,21 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">8</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 <td style="text-align: left;">12</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">9</td>
 <td style="text-align: left;">8</td>
 <td style="text-align: left;">12</td>
 <td style="text-align: left;">10</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">12</td>
 <td style="text-align: left;">9</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">11</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
@@ -458,25 +391,25 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td style="text-align: left;">3</td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">4</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">…</td>
@@ -491,21 +424,21 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td style="text-align: left;">17</td>
-<td style="text-align: left;">12</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 <td style="text-align: left;">10</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">10</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">8</td>
 <td style="text-align: left;">10</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">18</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">4</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
@@ -513,14 +446,14 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td style="text-align: left;">19</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">15</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">20</td>
@@ -528,10 +461,10 @@ window.Quarto = {
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">7</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 </tr>
 </tbody>
 </table>
@@ -542,10 +475,6 @@ window.Quarto = {
 <section id="model-matrix-macht-dasselbe" class="level1 page-columns page-full">
 <h1>Model Matrix (macht dasselbe)</h1>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">headTail</span>(<span class="fu">model.matrix</span>(<span class="sc">~</span>X<span class="sc">:</span>J<span class="dv">-1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display column-page">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
@@ -565,21 +494,21 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">8</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 <td style="text-align: left;">12</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">9</td>
 <td style="text-align: left;">8</td>
 <td style="text-align: left;">12</td>
 <td style="text-align: left;">10</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2</td>
+<td style="text-align: left;">12</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">12</td>
 <td style="text-align: left;">9</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">11</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
@@ -587,25 +516,25 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td style="text-align: left;">3</td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">8</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">9</td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">11</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">4</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">…</td>
@@ -620,21 +549,21 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td style="text-align: left;">17</td>
-<td style="text-align: left;">12</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 <td style="text-align: left;">10</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">12</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">10</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">8</td>
 <td style="text-align: left;">10</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">18</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: left;">0</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">4</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
@@ -642,14 +571,14 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td style="text-align: left;">19</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">15</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">9</td>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">15</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">20</td>
@@ -657,10 +586,10 @@ window.Quarto = {
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
 <td style="text-align: left;">0</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">11</td>
-<td style="text-align: left;">10</td>
-<td style="text-align: left;">7</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
 </tr>
 </tbody>
 </table>
@@ -671,21 +600,12 @@ window.Quarto = {
 <section id="linear-prediction" class="level1 page-columns page-full">
 <h1>Linear Prediction</h1>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>eta<span class="ot">&lt;-</span>Design<span class="sc">%*%</span>beta</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Y<span class="ot">&lt;-</span><span class="fu">rnorm</span>(n,<span class="at">mean=</span><span class="fu">as.vector</span>(eta),<span class="at">sd=</span>.<span class="dv">001</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
+
 </div>
 </section>
 <section id="analyse" class="level1 page-columns page-full">
 <h1>Analyse</h1>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dat<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Y=</span>Y,<span class="at">X=</span><span class="fu">as.data.frame</span>(KR))</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">estimated=</span><span class="fu">coef</span>(m<span class="ot">&lt;-</span><span class="fu">lm</span>(Y<span class="sc">~</span>.<span class="sc">-</span><span class="dv">1</span>,dat)),<span class="at">true=</span>beta)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display column-page">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
@@ -699,43 +619,43 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">X.V1</td>
-<td style="text-align: right;">1.2148</td>
-<td style="text-align: right;">1.2148</td>
+<td style="text-align: right;">-0.3440</td>
+<td style="text-align: right;">-0.3441</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">X.V2</td>
-<td style="text-align: right;">-0.5670</td>
-<td style="text-align: right;">-0.5670</td>
+<td style="text-align: right;">-1.9381</td>
+<td style="text-align: right;">-1.9380</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">X.V3</td>
-<td style="text-align: right;">0.1718</td>
-<td style="text-align: right;">0.1718</td>
+<td style="text-align: right;">-1.0249</td>
+<td style="text-align: right;">-1.0247</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">X.V4</td>
-<td style="text-align: right;">-0.0481</td>
-<td style="text-align: right;">-0.0482</td>
+<td style="text-align: right;">0.5454</td>
+<td style="text-align: right;">0.5453</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">X.V5</td>
-<td style="text-align: right;">0.7067</td>
-<td style="text-align: right;">0.7066</td>
+<td style="text-align: right;">0.6499</td>
+<td style="text-align: right;">0.6501</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">X.V6</td>
-<td style="text-align: right;">-0.0276</td>
-<td style="text-align: right;">-0.0275</td>
+<td style="text-align: right;">0.7427</td>
+<td style="text-align: right;">0.7426</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">X.V7</td>
-<td style="text-align: right;">1.3204</td>
-<td style="text-align: right;">1.3202</td>
+<td style="text-align: right;">-1.9415</td>
+<td style="text-align: right;">-1.9414</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">X.V8</td>
-<td style="text-align: right;">-0.8742</td>
-<td style="text-align: right;">-0.8741</td>
+<td style="text-align: right;">1.1566</td>
+<td style="text-align: right;">1.1564</td>
 </tr>
 </tbody>
 </table>

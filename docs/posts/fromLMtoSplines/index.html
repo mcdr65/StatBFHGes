@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -307,28 +272,9 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="example-data">Example Data</h2>
 <p>Triceps skinfold thickness dataset: The data are derived from an anthropometric study of 892 females under 50 years in three Gambian villages in West Africa.</p>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MultiKink)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psych)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'psych'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:ggplot2':
 
-    %+%, alpha</code></pre>
-</div>
 </div>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"triceps"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">headTail</span>(triceps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display column-page">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
@@ -399,13 +345,6 @@ Attaching package: 'psych'</code></pre>
 </table>
 </div>
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(triceps, <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>triceps)) <span class="sc">+</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">geom_point</span>(<span class="at">alpha=</span><span class="fl">0.55</span>, <span class="at">color=</span><span class="st">"black"</span>) <span class="sc">+</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">theme_minimal</span>() </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>tri.age.plot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -419,20 +358,6 @@ Attaching package: 'psych'</code></pre>
 <h2 class="anchored" data-anchor-id="polynomial-regression">Polynomial regression</h2>
 <p>Using <code>poly()</code> in <code>lm()</code>:</p>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>model.cubic.poly <span class="ot">&lt;-</span> <span class="fu">lm</span>(triceps<span class="sc">~</span><span class="fu">poly</span>(age,<span class="dv">3</span>,<span class="at">raw=</span><span class="cn">TRUE</span>),<span class="at">data=</span>triceps)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="do">## the same model:</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="do">## model.cubic &lt;- lm(triceps~age + I(age^2) + I(age^3),</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">##                   data=triceps)</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="sc">+</span> </span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">formula =</span> y<span class="sc">~</span><span class="fu">poly</span>(x,<span class="dv">3</span>,<span class="at">raw=</span>T), <span class="at">size =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.</code></pre>
-</div>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -447,25 +372,6 @@ Attaching package: 'psych'</code></pre>
 <section id="rmse-for-quadratic" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="rmse-for-quadratic">RMSE for quadratic</h3>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: lattice</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>trC.lm <span class="ot">&lt;-</span> <span class="fu">trainControl</span>(<span class="at">method =</span> <span class="st">"repeatedcv"</span>, </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                       <span class="at">number =</span> <span class="dv">10</span>,         </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                       <span class="at">repeats =</span> <span class="dv">10</span>)        </span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>pol.model <span class="ot">&lt;-</span> <span class="fu">train</span>(triceps <span class="sc">~</span> <span class="fu">poly</span>(age,<span class="dv">3</span>),</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>                       <span class="at">data =</span> triceps, </span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>                       <span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>                       <span class="at">trControl =</span> trC.lm)    </span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>pol.model<span class="sc">$</span>results[<span class="dv">2</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display column-page">
 <div class="kable-table">
 <table class="caption-top table table-sm table-striped small">
@@ -487,29 +393,12 @@ Attaching package: 'psych'</code></pre>
 <section id="rmse-for-different-degrees" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="rmse-for-different-degrees">RMSE for different degrees</h3>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my.pol.f <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    xx<span class="ot">&lt;-</span><span class="fu">poly</span>(triceps<span class="sc">$</span>age, x, <span class="at">raw=</span>T)    </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    new.data  <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="at">triceps=</span>triceps<span class="sc">$</span>triceps, xx)                                 </span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    pol.model <span class="ot">&lt;-</span> <span class="fu">train</span>(triceps<span class="sc">~</span>., <span class="at">data =</span> new.data,<span class="at">method =</span> <span class="st">"lm"</span>)    </span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    RMSE.cv <span class="ot">=</span> pol.model<span class="sc">$</span>results[<span class="dv">2</span>]</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">t</span>(<span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, my.pol.f))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>     RMSE  RMSE  RMSE RMSE  RMSE  RMSE  RMSE  RMSE  RMSE  RMSE 
 [1,] 3.985 4.083 3.83 3.776 3.787 3.741 3.847 3.803 3.867 3.804</code></pre>
 </div>
 </div>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="sc">+</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">formula =</span> y<span class="sc">~</span><span class="fu">poly</span>(x,<span class="dv">6</span>,<span class="at">raw=</span>T), <span class="at">size =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -527,34 +416,6 @@ Attaching package: 'psych'</code></pre>
 <p>where the coefficients differ in different parts of the range of <span class="math inline">\(X\)</span>. The points where the coefficients change are called <em>knots</em> <span class="math inline">\(\xi_k\)</span>, <span class="math inline">\(k=1,\dots,K\)</span>.</p>
 <p>Let us begin with a piecewise linear (degree=1):</p>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>pred1 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span>age, </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps[triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">5</span>,]))</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>pred2 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span>age, </span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps[triceps<span class="sc">$</span>age <span class="sc">&gt;=</span><span class="dv">5</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">10</span>,]))</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>pred3 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span>age, </span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">10</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">20</span>,]))</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>pred4 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span>age, </span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">20</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">30</span>,]))</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>pred5 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span>age, </span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">30</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">40</span>,]))</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>pred6 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span>age, </span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">40</span>,]))</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="sc">+</span> </span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps[triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">5</span>,], </span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred1, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps[triceps<span class="sc">$</span>age <span class="sc">&gt;=</span><span class="dv">5</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">10</span>,], </span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred2, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">10</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">20</span>,], </span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred3, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">20</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">30</span>,], </span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred4, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">30</span> <span class="sc">&amp;</span> triceps<span class="sc">$</span>age<span class="sc">&lt;</span><span class="dv">40</span>,], </span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred5, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps[triceps<span class="sc">$</span>age<span class="sc">&gt;=</span><span class="dv">40</span>,], </span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred6, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -576,22 +437,6 @@ Attaching package: 'psych'</code></pre>
 <p><span class="math display">\[Y_i=\beta_0+\beta_1x_i+\beta_2 h(x_i,5)+\cdots+\beta_6 h(x_i,40) + \epsilon_i\]</span></p>
 <p>This can be done -by hand- or with B-splines <code>splines::bs()</code></p>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>pred7 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span> age <span class="sc">+</span> <span class="fu">I</span>((age<span class="dv">-5</span>)<span class="sc">*</span>(age<span class="sc">&gt;=</span><span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                                   <span class="fu">I</span>((age<span class="dv">-10</span>)<span class="sc">*</span>(age <span class="sc">&gt;=</span> <span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                                   <span class="fu">I</span>((age<span class="dv">-20</span>)<span class="sc">*</span>(age <span class="sc">&gt;=</span> <span class="dv">20</span>)) <span class="sc">+</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                                   <span class="fu">I</span>((age<span class="dv">-30</span>)<span class="sc">*</span>(age <span class="sc">&gt;=</span> <span class="dv">30</span>)) <span class="sc">+</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">I</span>((age<span class="dv">-40</span>)<span class="sc">*</span>(age <span class="sc">&gt;=</span> <span class="dv">40</span>)),</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps))</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(splines)</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>pred.lm.bs <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps <span class="sc">~</span> <span class="fu">bs</span>(age, <span class="at">knots =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>),<span class="at">degree=</span><span class="dv">1</span>), <span class="at">data=</span>triceps))</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="sc">+</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps, </span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred.lm.bs, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>)<span class="sc">+</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps, </span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred7<span class="fl">+.2</span>, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -616,22 +461,6 @@ Attaching package: 'psych'</code></pre>
 \]</span></p>
 <p>we have as regression equation <span class="math display">\[Y_i=\beta_0+\beta_1x_i+\beta_2x_i^2+\beta_3 h(x_i,5)+\cdots+\beta_7 h(x_i,40) + \epsilon_i\]</span></p>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>pred.quadsmooth <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps<span class="sc">~</span> age <span class="sc">+</span> <span class="fu">I</span>(age<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">I</span>((age<span class="dv">-5</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>(age<span class="sc">&gt;=</span><span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">I</span>((age<span class="dv">-10</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>(age<span class="sc">&gt;=</span><span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">I</span>((age<span class="dv">-20</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>(age<span class="sc">&gt;=</span><span class="dv">20</span>)) <span class="sc">+</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">I</span>((age<span class="dv">-30</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>(age<span class="sc">&gt;=</span><span class="dv">30</span>)) <span class="sc">+</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">I</span>((age<span class="dv">-40</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>(age<span class="sc">&gt;=</span><span class="dv">40</span>)),</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> triceps))</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>pred.quadsmooth2 <span class="ot">&lt;-</span> <span class="fu">predict</span>(<span class="fu">lm</span>(triceps <span class="sc">~</span> <span class="fu">bs</span>(age, <span class="at">knots =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>),<span class="at">degree=</span><span class="dv">2</span>), <span class="at">data=</span>triceps))                        </span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="sc">+</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps, </span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred.quadsmooth, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"blue"</span>)<span class="sc">+</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data=</span>triceps, </span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">y =</span> pred.quadsmooth2<span class="fl">+.2</span>, <span class="at">x=</span>age), <span class="at">size =</span> <span class="dv">1</span>, <span class="at">col=</span><span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -658,26 +487,9 @@ Attaching package: 'psych'</code></pre>
 <h3 class="anchored" data-anchor-id="natural-spline">Natural Spline</h3>
 <p>Natural splines have an additional restriction that the fitted curve <em>linear at the extremes</em>, <code>splines::ns()</code></p>
 <div class="cell column-page">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>cub.splines.bs <span class="ot">&lt;-</span> <span class="fu">lm</span>(triceps <span class="sc">~</span> <span class="fu">bs</span>(age, <span class="at">knots =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>)), <span class="at">data=</span>triceps)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>cub.splines.ns <span class="ot">&lt;-</span> <span class="fu">lm</span>(triceps <span class="sc">~</span> <span class="fu">ns</span>(age, <span class="at">knots =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>)), <span class="at">data=</span>triceps)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
+
 </div>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(triceps, <span class="fu">aes</span>(<span class="at">x=</span>age, <span class="at">y=</span>triceps)) <span class="sc">+</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">geom_point</span>(<span class="at">alpha=</span><span class="fl">0.55</span>, <span class="at">color=</span><span class="st">"black"</span>) <span class="sc">+</span> </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">theme_minimal</span>() </span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>tri.age.plot <span class="sc">+</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">formula =</span> y<span class="sc">~</span><span class="fu">bs</span>(x,<span class="at">knots =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>)), </span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">lty =</span> <span class="dv">1</span>, <span class="at">col =</span> <span class="st">"green"</span>) <span class="sc">+</span> </span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stat_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">formula =</span> y<span class="sc">~</span><span class="fu">ns</span>(x,<span class="at">knots =</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>)), </span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">lty =</span> <span class="dv">1</span>, <span class="at">col =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -701,18 +513,6 @@ Attaching package: 'psych'</code></pre>
 <section id="lambda-determined-with-cross-validation" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="lambda-determined-with-cross-validation"><span class="math inline">\(\lambda\)</span> determined with cross-validation</h3>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>sspline <span class="ot">&lt;-</span> <span class="fu">smooth.spline</span>(<span class="at">x=</span>triceps<span class="sc">$</span>age, <span class="at">y=</span>triceps<span class="sc">$</span>triceps, <span class="at">cv=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in smooth.spline(x = triceps$age, y = triceps$triceps, cv = TRUE): cross-validation with non-unique 'x' values seems doubtful</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(triceps<span class="sc">$</span>age, triceps<span class="sc">$</span>triceps)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(sspline, <span class="at">lwd=</span><span class="dv">3</span>,<span class="at">col=</span><span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -725,14 +525,6 @@ Attaching package: 'psych'</code></pre>
 <section id="the-extremes-no-smooth-and-max-smooth" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="the-extremes-no-smooth-and-max-smooth">The extremes: no smooth and max smooth</h3>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>ssplineNosmooth <span class="ot">&lt;-</span> <span class="fu">smooth.spline</span>(<span class="at">x=</span>triceps<span class="sc">$</span>age, <span class="at">y=</span>triceps<span class="sc">$</span>triceps, <span class="at">lambda=</span><span class="dv">0</span>)</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>ssplineMaxsmooth <span class="ot">&lt;-</span> <span class="fu">smooth.spline</span>(<span class="at">x=</span>triceps<span class="sc">$</span>age, <span class="at">y=</span>triceps<span class="sc">$</span>triceps, <span class="at">lambda=</span><span class="dv">100</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(triceps<span class="sc">$</span>age, triceps<span class="sc">$</span>triceps)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(ssplineNosmooth, <span class="at">lwd=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">"red"</span>)</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(ssplineMaxsmooth, <span class="at">lwd=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">"blue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
@@ -750,21 +542,6 @@ Attaching package: 'psych'</code></pre>
 <h2 class="anchored" data-anchor-id="generalized-additive-model">Generalized additive model</h2>
 <p>Using <code>mgcv::gam()</code></p>
 <div class="cell page-columns page-full">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mgcv)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: nlme</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>This is mgcv 1.9-4. For overview type '?mgcv'.</code></pre>
-</div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>gamtri<span class="ot">&lt;-</span><span class="fu">gam</span>(triceps<span class="sc">~</span><span class="fu">s</span>(age,<span class="at">bs=</span><span class="st">"cr"</span>),<span class="at">data=</span>triceps)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(gamtri)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Family: gaussian 
@@ -784,10 +561,6 @@ s(age) 6.71   7.54 85.6  &lt;2e-16
 R-sq.(adj) =  0.419   Deviance explained = 42.3%
 GCV =  14.18  Scale est. = 14.057    n = 892</code></pre>
 </div>
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gamtri)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
