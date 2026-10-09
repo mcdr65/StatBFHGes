@@ -140,7 +140,7 @@ der von ihnen aufgespannte dreidimensionale Unterraum.
 
 ```{r}
 #| label: fig-row-column-space
-#| fig-cap: "Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobachtungsvektoren als Punkte im Variablenraum. Rechts: Variablenvektoren im Beobachtungsraum; der Vektor y wird auf den Spaltenraum der Designmatrix X projiziert."
+#| fig-cap: "Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobachtungsvektoren als Punkte im Variablenraum. Rechts: Variablenvektoren im Beobachtungsraum; der Vektor y wird auf den Spaltenraum der Designmatrix X projiziert." 
 #| fig-width: 12
 #| fig-height: 5.5
 
@@ -175,12 +175,62 @@ s_left <- scatterplot3d::scatterplot3d(
   ylab = expression(x[2]),
   zlab = expression(y),
   main = "Variablenraum",
-  angle = 45,
+  angle = 35,
   box = FALSE,
-  grid = TRUE
+  grid = TRUE,
+  col.grid = "grey85"
 )
-s_left$plane3d(fit, draw_polygon = TRUE,
-               polygon_args = list(col = adjustcolor("#F4A261", 0.35)))
+# Deutliches Raster auf der geschätzten Ebene; Hintergrundraster zurücknehmen.
+s_left$plane3d(fit, draw_polygon = TRUE, draw_lines = FALSE,
+               polygon_args = list(col = adjustcolor("#F4A261", 0.18),
+                                   border = "grey60"))
+x1_grid <- seq(min(x1), max(x1), length.out = 6)
+x2_grid <- seq(min(x2), max(x2), length.out = 6)
+b <- stats::coef(fit)
+draw_plane_line <- function(x1_values, x2_values, col, lwd = 1) {
+  z_values <- b[1] + b[2] * x1_values + b[3] * x2_values
+  projected <- s_left$xyz.convert(x1_values, x2_values, z_values)
+  lines(projected$x, projected$y, col = col, lwd = lwd)
+}
+for (x2_value in x2_grid) {
+  draw_plane_line(range(x1), rep(x2_value, 2), adjustcolor("#0072B2", 0.65))
+}
+for (x1_value in x1_grid) {
+  draw_plane_line(rep(x1_value, 2), range(x2), adjustcolor("#009E73", 0.65))
+}
+# Steigungsdreiecke: Grundseite parallel zur Prädiktorachse,
+# vertikale Seite parallel zur y-Achse und Hypotenuse auf der Ebene.
+s_left$points3d(x1, x2, y, pch = 19, col = "#2C7FB8")
+draw_slope_triangle <- function(start, direction, col) {
+  start[3] <- b[1] + b[2] * start[1] + b[3] * start[2]
+  base_end <- start
+  base_end[direction] <- base_end[direction] + 1
+  plane_end <- base_end
+  plane_end[3] <- b[1] + b[2] * plane_end[1] + b[3] * plane_end[2]
+  project <- function(v) s_left$xyz.convert(v[1], v[2], v[3])
+  p0 <- project(start)
+  p1 <- project(base_end)
+  p2 <- project(plane_end)
+  # Positive Einheitsänderung des Prädiktors bei konstantem y.
+  arrows(p0$x, p0$y, p1$x, p1$y, col = col, lwd = 2,
+         lty = 2, length = 0.08)
+  # Zugehörige Änderung der Vorhersage bei konstantem anderem Prädiktor.
+  arrows(p1$x, p1$y, p2$x, p2$y, col = col, lwd = 2,
+         length = 0.08)
+  segments(p0$x, p0$y, p2$x, p2$y, col = col, lwd = 3)
+  text((p0$x + p1$x) / 2, (p0$y + p1$y) / 2,
+       labels = sprintf("+1 in x%d", direction), pos = 1, cex = 0.65, col = col)
+  text((p1$x + p2$x) / 2, (p1$y + p2$y) / 2,
+       labels = sprintf("%+.2f in y", b[direction + 1]),
+       pos = 4, cex = 0.65, col = col)
+}
+draw_slope_triangle(c(-1.5, 1.5, 0), 1, "#0072B2")
+draw_slope_triangle(c(-1.8, -2.5, 0), 2, "#009E73")
+legend("topleft",
+       legend = c("Blaues Raster: x1 ändern, x2 konstant",
+                  "Grünes Raster: x2 ändern, x1 konstant"),
+       col = c("#0072B2", "#009E73"), lwd = 3,
+       bty = "n", cex = 0.7)
 
 # ------------------------------------------------------------------
 # Rechts: Spaltensicht im Beobachtungsraum R^n
@@ -198,6 +248,13 @@ beta_hat <- solve(crossprod(X_c), crossprod(X_c, y_c))
 y_hat_c  <- as.vector(X_c %*% beta_hat)
 e_c      <- y_c - y_hat_c
 
+# Numerische Kontrollen: Die rechte Grafik muss dieselbe Regression wie
+# die linke Grafik zeigen, lediglich nach Abtrennung des Achsenabschnitts.
+stopifnot(
+  max(abs(y_hat_c - unname(fitted(fit) - mean(y)))) < 1e-10,
+  max(abs(crossprod(X_c, e_c))) < 1e-10
+)
+
 # Orthonormale Basis des von x1_c, x2_c und y_c aufgespannten
 # Unterraums. Dadurch können die n-dimensionalen Vektoren mit drei
 # Koordinaten dargestellt werden, ohne Winkel oder Längen zu verändern.
@@ -210,13 +267,22 @@ v_x2   <- to_3d(x2_c)
 v_y    <- to_3d(y_c)
 v_yhat <- to_3d(y_hat_c)
 
+# Die dargestellte Fläche muss insbesondere den Projektionspunkt
+# y_hat_c = beta_hat[1] * x1_c + beta_hat[2] * x2_c enthalten.
+a_lim <- 1.15 * max(1, abs(beta_hat[1]))
+b_lim <- 1.15 * max(1, abs(beta_hat[2]))
+
+plane_corners <- list(
+  -a_lim * v_x1 - b_lim * v_x2,
+   a_lim * v_x1 - b_lim * v_x2,
+   a_lim * v_x1 + b_lim * v_x2,
+  -a_lim * v_x1 + b_lim * v_x2
+)
+
 all_coords <- rbind(
   c(0, 0, 0),
   v_x1, v_x2, v_y, v_yhat,
-  v_x1 + v_x2,
-  v_x1 - v_x2,
-  -v_x1 + v_x2,
-  -v_x1 - v_x2
+  do.call(rbind, plane_corners)
 )
 
 s_right <- scatterplot3d::scatterplot3d(
@@ -237,12 +303,6 @@ s_right <- scatterplot3d::scatterplot3d(
 xy <- function(v) s_right$xyz.convert(v[1], v[2], v[3])
 
 # Ein Ausschnitt der von x1 und x2 aufgespannten Modellebene
-plane_corners <- list(
-  -v_x1 - v_x2,
-   v_x1 - v_x2,
-   v_x1 + v_x2,
-  -v_x1 + v_x2
-)
 plane_2d <- lapply(plane_corners, xy)
 polygon(
   x = vapply(plane_2d, `[[`, numeric(1), "x"),

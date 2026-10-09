@@ -133,95 +133,305 @@
     "text": "Zusammenfassung\n\n\n\n\n\n\n\n\n\nDarstellung\nDargestellte Elemente\nUmgebender Raum\nLinear-algebraischer Bezug\n\n\n\n\nZeilensicht, links\n\\(n\\) Beobachtungsvektoren \\((x_{i1},x_{i2},y_i)^{\\mathsf T}\\)\nVariablenraum \\(\\mathbb R^3\\)\nZeilen von \\(\\mathbf D\\); ihre lineare Hülle ist \\(\\operatorname{Row}(\\mathbf D)\\)\n\n\nSpaltensicht, rechts\nVariablenvektoren \\(\\mathbf x_1\\), \\(\\mathbf x_2\\) und \\(\\mathbf y\\)\nBeobachtungsraum \\(\\mathbb R^n\\)\nSpalten von \\(\\mathbf D\\); ihre lineare Hülle ist \\(\\operatorname{Col}(\\mathbf D)\\)\n\n\nRegression, rechts\nPrädiktorvektoren \\(\\mathbf x_1\\) und \\(\\mathbf x_2\\)\nBeobachtungsraum \\(\\mathbb R^n\\)\n\\(\\operatorname{Col}(\\mathbf X)\\) ist der Modellraum\n\n\n\nDie beiden Darstellungen enthalten dieselben Zahlen, betrachten sie aber aus zwei verschiedenen Richtungen:\n\nLinks ist jede Beobachtung ein Vektor, dessen Koordinaten die Variablen sind. Rechts ist jede Variable ein Vektor, dessen Koordinaten die Beobachtungen sind.\n\nFür die Geometrie der linearen Regression ist vor allem die Spaltensicht entscheidend:\n\\[\n\\boxed{\n\\text{Regression ist die Projektion von }\\mathbf y\n\\text{ auf }\\operatorname{Col}(\\mathbf X).\n}\n\\]"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/fromLMtoSplines/index.html",
+    "href": "posts/fromLMtoSplines/index.html",
+    "title": "Beyond linearity",
     "section": "",
-    "text": "Welcome!"
+    "text": "Triceps skinfold thickness dataset: The data are derived from an anthropometric study of 892 females under 50 years in three Gambian villages in West Africa.\n\n\n\n\n\n\n\n\n\n\nage\nlntriceps\ntriceps\n\n\n\n\n1\n12.05\n1.22\n3.4\n\n\n2\n9.91\n1.39\n4\n\n\n3\n10.04\n1.44\n4.2\n\n\n4\n11.49\n1.44\n4.2\n\n\n…\n…\n…\n…\n\n\n889\n7.91\n1.92\n6.8\n\n\n890\n7.99\n1.44\n4.2\n\n\n891\n14.63\n2.2\n9\n\n\n892\n30.14\n2.1\n8.2"
   },
   {
-    "objectID": "posts/gendern/index.html",
-    "href": "posts/gendern/index.html",
-    "title": "Aber der Kaiser hat ja gar nichts an!",
+    "objectID": "posts/fromLMtoSplines/index.html#example-data",
+    "href": "posts/fromLMtoSplines/index.html#example-data",
+    "title": "Beyond linearity",
     "section": "",
-    "text": "In Zeiten, in denen – an vom Steuerzahler finanzierten Hochschulen – Sprachleitfaden verteilt werden, scheint es doch wichtig, Gegendruck auch aus der politischen Mitte – also nicht nur von der extremen Rechten – aufzubauen. Es ist nicht die Aufgabe staatlicher Institutionen, an der Verbreitung von Ideologien mitzuwirken und Vorgaben zu machen, was gute Sprache ist. Sprachpolitik zu betreiben ist aus meiner Sicht etwas vom Schlimmsten, was eine Hochschule machen kann.\nDas grammatikalische bildet nicht das biologische Geschlecht ab. Diese einfache Tatsache wird von der Linguistik der Genderist*innen geleugnet. Wer sich z.B. in der Klimadebatte gleich verhielte wie die Gender-Aktivisten mit der Sprache, würde sofort (und zurecht) als Wissenschaftsleugner diffamiert. Auch sind die vorgebrachten Assoziationsstudien gegen das generische Maskulinum wenig überzeugend:\n\nUm die mangelnde Eignung des generischen Maskulinums zum inklusiven Formulieren vorzuführen, wird immer wieder gerne folgende Frage präsentiert: „Wer ist dein Lieblingsschauspieler?“ (Stahlberg et al., 2001). Werden auf diese Frage überwiegend männliche Schauspieler genannt, so werten Befürworter des Genderns dies als Beleg dafür, dass generische Maskulina vorrangig die Vorstellung von Männern auslösen. Allerdings ist diese Frage nicht im Geringsten geeignet, die Untauglichkeit des inklusiven Maskulinums zu demonstrieren. Denn diese Frage ist keine typische Verwendung des generischen Maskulinums. Würde man ganz allgemein nach Lieblingsschauspielern fragen, so lautete die korrekte Formulierung „Wer/welche sind deine Lieblingsschauspieler?“ (Frage im Plural!). Im Singular würde man entweder fragen „Wer ist deine Lieblingsschauspielerin?“ oder „Wer ist dein männlicher Lieblingsschauspieler?“ Das generische Maskulinum wird bei allgemeinen Aussagen verwendet – nicht, wenn konkrete Personen gemeint sind (wie in der Frage nach dem Lieblingsschauspieler).\n\nLetztendlich ist es bei vielen die Angst, als frauenfeindlich (oder feindlich anderen sozialen Geschlechtern gegenüber) dazustehen, die es überhaupt ermöglicht, dass solche Sprachpolitik an den Hochschulen betrieben werden kann:\n\nVielleicht endet die Geschichte des geschlechtergerechten Sprachumbaus mit all seinen grotesken Auswüchsen eines Tages wie Andersens Märchen vom Kaiser und seinen neuen Kleidern. Dort ist es bekanntlich ein Kind, das am Ende ausruft: „Aber der Kaiser hat ja gar nichts an!“ und dem Spuk damit ein Ende macht. Zuvor wollte in dem Märchen niemand eingestehen, dass er überhaupt keine Kleider sieht, weil er Angst hatte, in diesem Fall für dumm zu gelten. Beim Gendern ist es unsere Angst, von den anderen für „frauenfeindlich“ gehalten zu werden oder nicht auf der Höhe der Zeit zu sein, die viele mitlaufen lässt. Dabei ist die geschlechtergerechte Sprache noch nicht einmal ein „neues Kleid“, sondern ein über 40 Jahre altes Konzept, bei dem die Frage erlaubt sein muss, was es heute noch für ein gleichberechtigtes Miteinander der Geschlechter zu leisten vermag.\n\nFür Tomas Kubelik ist die Sprache unschuldig. Hier ein unterhaltsamer, humorvoller und gut aufgebauter Vortrag. Sein aus meiner Sicht nachvollziehbares Fazit ist:\n\nAlle Formen des Genderns sind unbrauchbar. Sie sind in sich widersprüchlich, sie sind nicht konsequent durchführbar, sie stossen an die Grenzen von Logik, Praktikabilität und Akzeptanz. Sie sind unästhetisch, unökonomisch und irreführend. (Tomas Kubelik, Vortrag und Text)\n\nFür Ingo Meyer (Das Märchen vom Gendersterntaler) ist das Hauptargument gegen das Gendern:\n\nSprache entwickelt sich seit Jahrhunderten. Was funktioniert, setzt sich durch; was die Verständigung erschwert, wird abgeschliffen. Nie ist es ohne Schaden gelungen, diesen unbewussten Akt nachzuahmen. Zwar stimmt es: Wenn ich die Meldung „Sonntagsausflügler drängten ins Grüne“ lese, stelle ich mir die Menschen derzeit vorwiegend weiß vor. Um diesen Satz für mich „gerechter“ zu machen, bräuchte ich also vielerlei Hinweise. Gerecht in diesem Sinne wäre eine Formulierung wie „Die LSBTI+, PoC, alte und junge Menschen inkludierenden Sonntagsausflügler*innen drängten ins Grüne“. Das ist offensichtlich absurd. Sprache hat nicht die Aufgabe, von Dritten erwünschte Bedeutungen in unsere Köpfe zu pflanzen. Es gibt keine geschlechtergerechte Sprache. Es gibt überhaupt keine gerechte Sprache. Es steht uns aber frei, die vorhandene Sprache gerecht zu verwenden.\n\nEin einfach und klar geschriebenes Buch ist auch: Fabian Payr: Von Menschen und Mensch*innen. 20 gute Gründe, mit dem Gendern aufzuhören:\n\n„Studentin kann nur deshalb ‚weibliche Person, die studiert‘ bedeuten, weil das zugrunde liegende Wort Student ‚Person, die studiert‘ bedeutet und nicht etwa ‚männliche Person, die studiert‘“ (Lieb & Richter, 1990, S. 150).\n\nNatürlich lehnen auch sehr viele Frauen das Gendern ab. Persönlich kenne ich keine einzige Frau in meinem nicht-akademischen Umfeld, die Gendern gut findet.\n\nIch bin eine Frau und ich fühle mich belästigt von den In-Endungen, von dem Binnen-I und dem ganzen syntaktischen Gleichberechtigungsgefummel. Die fast extremistischen Züge des Verweiblichungswahns von Sprache haben wohl mit der Tradition des Alice Schwarzer Opferfeminismus zu tun. Offenbar haben bis heute manche mental nicht aus der weiblichen Opferrolle herausgefunden. Als Therapie und als Beleg des weiblichen Selbstbewusstseins fordere ich das generische Maskulinum daher zurück. Ich mache auch gleich ernst damit und verabschiede mich an dieser Stelle im maskulinen Gestus von Ihnen, lieber Leser, liebe Bürger, liebe Staatssekretäre, liebe Feministinnen, liebe Kritiker. Das fühlt sich gut an. (Dagmar Rosenfeld, in der Wochenzeitung die Zeit (2014) in einem „Aufschrei“)\n\nInzwischen wird auch in Frage gestellt, dass das biologische Geschlecht zweiwertig ist, die Biologie an sich wird als Naturwissenschaft nicht mehr ernst genommen. Ich hätte natürlich nie gedacht, dass ich mich eines Tages dafür rechtfertigen muss, im Statistik-Unterricht das biologische Geschlecht als Beispiel für eine zweiwertige kategoriale Variable heranzuziehen. Dazu ein Artikel aus unverdächtiger Quelle: Viele Geschlechter? Das ist Unfug!\nOb die extremen Anstrengungen für die so genannte Gleichstellung am Ende wirklich zielführend sind, wage ich doch sehr stark zu bezweifeln. So haben z.B. Länder mit hohem Gleichstellungsaufwand eine tieferen Frauen-Anteil an MINT Hochschul-Abschlüssen als Länder, die doch eher nicht als sehr matriarchalisch gelten. Trotz massiven Anstrengungen drängen Frauen in Skandinavien wieder mehr in klassische Frauenberufe. Das sollte uns zu denken geben.\n\n\nGender-Equality Paradox in Science, Technology, Engineering and Mathematics. See Stoet and Geary, 2018. See also corrigendum, 2019, and reply to Richardson et al., 2020.\n\n\n\nIn Frankreich hat die Académie française erklärt, das Gendern sei zur Verfolgung der damit bezweckten gesellschaftspolitischen Ziele (Gleichstellung) untauglich und kontraproduktiv. Der französische Bildungsminister hat die Verwendung geschlechtsneutraler Schriftsprache an Schulen per Erlass verboten.\nViele lesenswerte Texte zum Thema findet man unter Gendersterntaler und LinguistikUndGendern."
+    "text": "Triceps skinfold thickness dataset: The data are derived from an anthropometric study of 892 females under 50 years in three Gambian villages in West Africa.\n\n\n\n\n\n\n\n\n\n\nage\nlntriceps\ntriceps\n\n\n\n\n1\n12.05\n1.22\n3.4\n\n\n2\n9.91\n1.39\n4\n\n\n3\n10.04\n1.44\n4.2\n\n\n4\n11.49\n1.44\n4.2\n\n\n…\n…\n…\n…\n\n\n889\n7.91\n1.92\n6.8\n\n\n890\n7.99\n1.44\n4.2\n\n\n891\n14.63\n2.2\n9\n\n\n892\n30.14\n2.1\n8.2"
   },
   {
-    "objectID": "posts/Trace/index.html",
-    "href": "posts/Trace/index.html",
-    "title": "The trace of a matrix",
+    "objectID": "posts/fromLMtoSplines/index.html#polynomial-regression",
+    "href": "posts/fromLMtoSplines/index.html#polynomial-regression",
+    "title": "Beyond linearity",
+    "section": "Polynomial regression",
+    "text": "Polynomial regression\nUsing poly() in lm():"
+  },
+  {
+    "objectID": "posts/fromLMtoSplines/index.html#cross-validation-of-different-polynomials",
+    "href": "posts/fromLMtoSplines/index.html#cross-validation-of-different-polynomials",
+    "title": "Beyond linearity",
+    "section": "Cross-validation of different polynomials",
+    "text": "Cross-validation of different polynomials\n\nRMSE for quadratic\n\n\n\n\n\n\nRMSE\n\n\n\n\n3.866\n\n\n\n\n\n\n\n\nRMSE for different degrees\n\n\n     RMSE  RMSE  RMSE RMSE  RMSE  RMSE  RMSE  RMSE  RMSE  RMSE \n[1,] 3.985 4.083 3.83 3.776 3.787 3.741 3.847 3.803 3.867 3.804"
+  },
+  {
+    "objectID": "posts/fromLMtoSplines/index.html#piecewise-linear-regression",
+    "href": "posts/fromLMtoSplines/index.html#piecewise-linear-regression",
+    "title": "Beyond linearity",
+    "section": "Piecewise linear regression",
+    "text": "Piecewise linear regression\nInstead of fitting a high-degree polynomial over the entire range of \\(X\\), piecewise polynomial regression involves fitting separate low-degree polynomials over different regions of \\(X\\). For example, a piecewise cubic polynomial works by fitting a cubic regression model of the form\n\\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2x_i^2+\\beta_3x_i^3+\\epsilon_i,\\]\nwhere the coefficients differ in different parts of the range of \\(X\\). The points where the coefficients change are called knots \\(\\xi_k\\), \\(k=1,\\dots,K\\).\nLet us begin with a piecewise linear (degree=1):\n\n\n\n\n\n\n\n\n\n\nContinuous piecewise linear regression\nWe want a continuous function. Let us define a truncated power basis function (here of degree=1) per knot \\(\\xi\\),\n\\[h(x, \\xi)=(x-\\xi)^1_{+}=\n\\begin{cases}\n  x-\\xi, \\text{\\,if\\,} x&gt;\\xi\\\\\n  0, \\text{\\,else}.\n\\end{cases}\n\\]\nThe continuous piecewise regression equation is\n\\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2 h(x_i,5)+\\cdots+\\beta_6 h(x_i,40) + \\epsilon_i\\]\nThis can be done -by hand- or with B-splines splines::bs()"
+  },
+  {
+    "objectID": "posts/fromLMtoSplines/index.html#splines",
+    "href": "posts/fromLMtoSplines/index.html#splines",
+    "title": "Beyond linearity",
+    "section": "Splines",
+    "text": "Splines\n\nQuadratic spline\nWith\n\\[h(x, \\xi)=(x-\\xi)_{+}^2=\n\\begin{cases}\n  (x-\\xi)^2, \\text{\\,if\\,} x&gt;\\xi\\\\\n  0, \\text{\\,else},\n\\end{cases}\n\\]\nwe have as regression equation \\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2x_i^2+\\beta_3 h(x_i,5)+\\cdots+\\beta_7 h(x_i,40) + \\epsilon_i\\]\n\n\n\n\n\n\n\n\n\n\n\nCubic Spline\nMost often, cubic splines are used. Adding the following truncated power basis function per knot,\n\\[h(x, \\xi)=(x-\\xi)_{+}^3=\n\\begin{cases}\n  (x-\\xi)^3, \\text{\\,if\\,} x&gt;\\xi\\\\\n  0, \\text{\\,else},\n\\end{cases}\n\\]\nto the model for a cubic polynomial will lead to a discontinuity in only the third derivative at \\(\\xi\\); the function will remain continuous, with continuous first and second derivatives, at each of the knots:\n\\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2x_i^2+\\beta_3x_i^3+\\beta_4h(x_i,5)+\\cdots+\\beta_8h(x_i,40) + \\epsilon_i\\]\nOne can show that a cubic spline has \\(K+4\\) parameters.\n\n\nNatural Spline\nNatural splines have an additional restriction that the fitted curve linear at the extremes, splines::ns()\n\n\n\n\n\n\n\npolynomial cubic splines (green), natural cubic splines (red)"
+  },
+  {
+    "objectID": "posts/fromLMtoSplines/index.html#smoothing-splines",
+    "href": "posts/fromLMtoSplines/index.html#smoothing-splines",
+    "title": "Beyond linearity",
+    "section": "Smoothing splines",
+    "text": "Smoothing splines\nAvoids the knot selection problem completely by using a maximal set of knots. The complexity of the fit is controlled by regularization. Problem: among all functions \\(f(x)\\) with two continuous derivatives, find one that minimizes the penalized residual sum of squares\n\\[\n  RSS(f,\\lambda)=\\sum_{i=1}^N(y_i-f(x_i))^2+\\lambda[f''(t)]^2dt\n\\tag{1}\\]\nwhere \\(\\lambda\\) is a fixed smoothing parameter. The first term measures closeness to the data, while the second term penalizes curvature in the function, and \\(\\lambda\\) establishes a tradeoff between the two. Special cases: \\(\\lambda=0\\) (no constraint on \\(f\\)) and \\(\\lambda=\\infty\\) (\\(f\\) has to be linear).\nThe function \\(f(x)\\) that minimizes (Equation 1) can be shown to have some special properties: it is a piecewise cubic polynomial with knots at the unique values of \\(x_1,\\dots,x_n\\) and continuous first and second derivatives at each knot. Furthermore, it is linear in the region outside of the extreme knots. In other words, the function \\(f(x)\\) that minimizes (Equation 1) is a natural cubic spline with knots at \\(x_1,\\dots,x_n\\) ! However, it is not the same natural cubic spline that one would get if one applied the basis function approach described above – rather, it is a shrunken version of such a natural cubic spline, where the value of the tuning parameter \\(\\lambda\\) in (Equation 1) controls the level of shrinkage.\nSmoothing splines are implemented in smooth.spline().\n\n\\(\\lambda\\) determined with cross-validation\n\n\n\n\n\n\n\n\n\n\n\nThe extremes: no smooth and max smooth"
+  },
+  {
+    "objectID": "posts/fromLMtoSplines/index.html#generalized-additive-model",
+    "href": "posts/fromLMtoSplines/index.html#generalized-additive-model",
+    "title": "Beyond linearity",
+    "section": "Generalized additive model",
+    "text": "Generalized additive model\nUsing mgcv::gam()\n\n\n\nFamily: gaussian \nLink function: identity \n\nFormula:\ntriceps ~ s(age, bs = \"cr\")\n\nParametric coefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)\n(Intercept)    9.702      0.126    77.3   &lt;2e-16\n\nApproximate significance of smooth terms:\n        edf Ref.df    F p-value\ns(age) 6.71   7.54 85.6  &lt;2e-16\n\nR-sq.(adj) =  0.419   Deviance explained = 42.3%\nGCV =  14.18  Scale est. = 14.057    n = 892"
+  },
+  {
+    "objectID": "posts/Khatri-Rao-Product/index.html",
+    "href": "posts/Khatri-Rao-Product/index.html",
+    "title": "Design Matrix for interaction effects",
     "section": "",
-    "text": "One of the most important properties of the trace of a matrix is its cyclic invariance:\n\\[\n\\operatorname{tr}(ABC)\n=\n\\operatorname{tr}(BCA)\n=\n\\operatorname{tr}(CAB).\n\\]\nIn the context of factor analysis, this immediately implies\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThis identity has a deep geometric interpretation. In the common factor model\n\\[\n\\Sigma = \\Lambda \\Phi \\Lambda^T + \\Psi,\n\\]\nthe matrix\n\\[\n\\Sigma_c = \\Lambda \\Phi \\Lambda^T\n\\]\nrepresents the covariance structure explained by the common factors. It resides in the item space and has dimension \\(p \\times p\\), where \\(p\\) denotes the number of observed variables.\nUsing the cyclic property of the trace, the same common variance can be written as\n\\[\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThe matrix\n\\[\n\\Lambda^T \\Lambda\n\\]\nresides in the factor space and has dimension \\(m \\times m\\), where \\(m\\) denotes the number of factors.\nThe equality of these two trace values shows that the total variance explained by the common factors remains the same regardless of whether it is viewed in the high-dimensional space of observed variables or in the lower-dimensional latent factor space. The trace therefore acts as a kind of conservation law for common variance.\nGeometrically,\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes the structure of the data in item space, whereas\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes the same structure from the perspective of factor space. Although these matrices have different dimensions and represent different objects, they yield the same total amount of common variance.\n\n\nThe same idea appears in principal component analysis (PCA) and singular value decomposition (SVD). For any matrix \\(A\\),\n\\[\n\\operatorname{tr}(AA^T)\n=\n\\operatorname{tr}(A^TA).\n\\]\nThe matrix \\(AA^T\\) describes the geometry in one space, whereas \\(A^TA\\) describes the same structure in a different coordinate system. Both matrices contain the same total variance, even though they may have different dimensions.\nIn PCA, the trace of the covariance matrix equals the sum of its eigenvalues and therefore the total variance of the data:\n\\[\n\\operatorname{tr}(\\Sigma)\n=\n\\sum_{i=1}^{p} \\lambda_i.\n\\]\nFactor analysis extends this idea to the common variance component. The identity\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi)\n\\]\nshows that the explained common variance is invariant under whether it is viewed in item space or factor space.\n\n\n\nThe factor loading matrix \\(\\Lambda\\) can be viewed as a linear mapping from factor space into item space. The matrix\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes how factor variance is distributed across the observed variables. In contrast,\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes how the same variance is organized within the latent factor space.\nThe trace reveals that no common variance is lost when moving between these two perspectives—it is merely represented in a different coordinate system. The cyclic invariance of the trace therefore provides the mathematical foundation for the duality between item space and factor space in factor analysis."
+    "text": "Problem discussed with Niklaus Meier (Thank you.)\nAssume we want interaction terms of continuous variables (variables in \\(\\mathbf{X}\\)) with categorical variables (variables in \\(\\mathbf{J}\\)). The corresponding Design Matrix is the Transposed Khatri-Rao Product; this is a row-by-row Kronecker product of two matrices.\n\\[\n\\mathbf{J} \\bullet \\mathbf{X}\n=\n\\begin{bmatrix}\n\\mathbf{J}[1,] \\otimes \\mathbf{X}[1,]\\\\\\hline\n\\mathbf{J}[2,] \\otimes \\mathbf{X}[2,]\\\\\\hline\n\\mathbf{J}[3,] \\otimes \\mathbf{X}[3,]\\\\\\hline\n...\\\\\\hline\n\\mathbf{J}[n,] \\otimes \\mathbf{X}[n,]\\\\\n\\end{bmatrix}\n\\]"
   },
   {
-    "objectID": "posts/Trace/index.html#trace-as-a-bridge-between-item-space-and-factor-space",
-    "href": "posts/Trace/index.html#trace-as-a-bridge-between-item-space-and-factor-space",
-    "title": "The trace of a matrix",
+    "objectID": "posts/Khatri-Rao-Product/index.html#design-matrix-for-interaction-effects",
+    "href": "posts/Khatri-Rao-Product/index.html#design-matrix-for-interaction-effects",
+    "title": "Design Matrix for interaction effects",
     "section": "",
-    "text": "One of the most important properties of the trace of a matrix is its cyclic invariance:\n\\[\n\\operatorname{tr}(ABC)\n=\n\\operatorname{tr}(BCA)\n=\n\\operatorname{tr}(CAB).\n\\]\nIn the context of factor analysis, this immediately implies\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThis identity has a deep geometric interpretation. In the common factor model\n\\[\n\\Sigma = \\Lambda \\Phi \\Lambda^T + \\Psi,\n\\]\nthe matrix\n\\[\n\\Sigma_c = \\Lambda \\Phi \\Lambda^T\n\\]\nrepresents the covariance structure explained by the common factors. It resides in the item space and has dimension \\(p \\times p\\), where \\(p\\) denotes the number of observed variables.\nUsing the cyclic property of the trace, the same common variance can be written as\n\\[\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThe matrix\n\\[\n\\Lambda^T \\Lambda\n\\]\nresides in the factor space and has dimension \\(m \\times m\\), where \\(m\\) denotes the number of factors.\nThe equality of these two trace values shows that the total variance explained by the common factors remains the same regardless of whether it is viewed in the high-dimensional space of observed variables or in the lower-dimensional latent factor space. The trace therefore acts as a kind of conservation law for common variance.\nGeometrically,\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes the structure of the data in item space, whereas\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes the same structure from the perspective of factor space. Although these matrices have different dimensions and represent different objects, they yield the same total amount of common variance.\n\n\nThe same idea appears in principal component analysis (PCA) and singular value decomposition (SVD). For any matrix \\(A\\),\n\\[\n\\operatorname{tr}(AA^T)\n=\n\\operatorname{tr}(A^TA).\n\\]\nThe matrix \\(AA^T\\) describes the geometry in one space, whereas \\(A^TA\\) describes the same structure in a different coordinate system. Both matrices contain the same total variance, even though they may have different dimensions.\nIn PCA, the trace of the covariance matrix equals the sum of its eigenvalues and therefore the total variance of the data:\n\\[\n\\operatorname{tr}(\\Sigma)\n=\n\\sum_{i=1}^{p} \\lambda_i.\n\\]\nFactor analysis extends this idea to the common variance component. The identity\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi)\n\\]\nshows that the explained common variance is invariant under whether it is viewed in item space or factor space.\n\n\n\nThe factor loading matrix \\(\\Lambda\\) can be viewed as a linear mapping from factor space into item space. The matrix\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes how factor variance is distributed across the observed variables. In contrast,\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes how the same variance is organized within the latent factor space.\nThe trace reveals that no common variance is lost when moving between these two perspectives—it is merely represented in a different coordinate system. The cyclic invariance of the trace therefore provides the mathematical foundation for the duality between item space and factor space in factor analysis."
+    "text": "Problem discussed with Niklaus Meier (Thank you.)\nAssume we want interaction terms of continuous variables (variables in \\(\\mathbf{X}\\)) with categorical variables (variables in \\(\\mathbf{J}\\)). The corresponding Design Matrix is the Transposed Khatri-Rao Product; this is a row-by-row Kronecker product of two matrices.\n\\[\n\\mathbf{J} \\bullet \\mathbf{X}\n=\n\\begin{bmatrix}\n\\mathbf{J}[1,] \\otimes \\mathbf{X}[1,]\\\\\\hline\n\\mathbf{J}[2,] \\otimes \\mathbf{X}[2,]\\\\\\hline\n\\mathbf{J}[3,] \\otimes \\mathbf{X}[3,]\\\\\\hline\n...\\\\\\hline\n\\mathbf{J}[n,] \\otimes \\mathbf{X}[n,]\\\\\n\\end{bmatrix}\n\\]"
   },
   {
-    "objectID": "posts/Erwartungswerte/index.html",
-    "href": "posts/Erwartungswerte/index.html",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "objectID": "posts/popper/index.html",
+    "href": "posts/popper/index.html",
+    "title": "Das Anti-Falsifikations-Paradigma",
     "section": "",
-    "text": "Viele zentrale Konzepte der Wahrscheinlichkeitstheorie und Statistik lassen sich auf wenige grundlegende Grössen zurückführen:\n\\[\nE(X), \\qquad E(X^2), \\qquad E(XY)\n\\]\nsowie auf ihre bedingten Versionen\n\\[\nE(X\\mid Z)\n\\qquad\\text{und}\\qquad\n\\operatorname{Var}(X\\mid Z).\n\\]\nAus diesen Grössen entstehen Varianz, Kovarianz und Korrelation. Durch Konditionieren erhält man die Gesetze der totalen Erwartung, Varianz und Kovarianz. Dieselben Ideen führen weiter zu Regression, erklärter Varianz, \\(R^2\\), Mean Squared Error und der Bias-Variance-Zerlegung."
+    "text": "Karl Popper kritisierte erkenntnistheoretische Positionen, die die Existenz einer objektiven Realität, die Möglichkeit objektiver Erkenntnis, rationale Kritik oder wissenschaftliche Prüfbarkeit relativieren. Er verstand sich ausdrücklich als Verteidiger der Aufklärung: Vernunft, offene Kritik, argumentative Auseinandersetzung und die Möglichkeit objektiver Erkenntnis standen im Zentrum seines Denkens.\nPositionen, die wissenschaftliche Erkenntnis primär als soziale Konstruktion, Machtprodukt oder Perspektivenfrage interpretieren, gefährden aus seiner Sicht die rationale Kritik und fördern einen erkenntnistheoretischen Relativismus. Wissenschaft macht nach Popper gerade deshalb Fortschritte, weil Theorien an einer von uns unabhängigen Realität scheitern können. Werden dagegen alle Sichtweisen primär als „konstruiert“ betrachtet, wird die Unterscheidung zwischen besseren und schlechteren Erklärungen erschwert. Darin sah Popper eine problematische Abkehr vom aufklärerischen Ideal der kritischen Rationalität. Selbst Entwicklungen der modernen Physik, etwa die Quantenmechanik mit ihren kontraintuitiven Phänomenen, verstand Popper nicht als Argument gegen die Existenz einer objektiven Realität.\nDass wissenschaftliche Theorien immer wieder durch Beobachtungen und Experimente korrigiert werden müssen, wertete er vielmehr als Hinweis darauf, dass die Welt unabhängig von unseren Überzeugungen existiert und unseren Konstruktionen Grenzen setzt. Diese Sicht steht im deutlichen Gegensatz zu erkenntnistheoretischen Positionen, die wissenschaftliches Wissen primär als Ergebnis sozialer Aushandlungsprozesse verstehen.\n\nDazu mein Beitrag zum wissenschaftlichen Diskurs in den Gesundheitswissenschaften: Das Anti-Falsifikations-Paradigma"
   },
   {
-    "objectID": "posts/Erwartungswerte/index.html#beispiel-random-intercept-modell",
-    "href": "posts/Erwartungswerte/index.html#beispiel-random-intercept-modell",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
-    "section": "Beispiel: Random-Intercept-Modell",
-    "text": "Beispiel: Random-Intercept-Modell\nBetrachte\n\\[\nX_{ij}\n=\n\\mu+b_j+\\varepsilon_{ij},\n\\]\nmit\n\\[\nb_j\\sim(0,\\sigma_b^2)\n\\]\nund\n\\[\n\\varepsilon_{ij}\\sim(0,\\sigma_e^2).\n\\]\nDann ist die Gesamtvarianz\n\\[\n\\operatorname{Var}(X_{ij})\n=\n\\sigma_b^2+\\sigma_e^2.\n\\]\nDie Intraclass Correlation ist entsprechend\n\\[\n\\operatorname{ICC}\n=\n\\frac{\\sigma_b^2}\n{\\sigma_b^2+\\sigma_e^2}.\n\\]\nSie beschreibt den Anteil der Gesamtvarianz, der auf Unterschiede zwischen den Gruppen zurückzuführen ist."
-  },
-  {
-    "objectID": "posts/Erwartungswerte/index.html#total-variance-als-spezialfall",
-    "href": "posts/Erwartungswerte/index.html#total-variance-als-spezialfall",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
-    "section": "Total Variance als Spezialfall",
-    "text": "Total Variance als Spezialfall\nSetzt man \\(Y=X\\), erhält man\n\\[\n\\begin{aligned}\n\\operatorname{Cov}(X,X)\n&=\nE[\\operatorname{Cov}(X,X\\mid Z)]\\\\\n&\\quad+\n\\operatorname{Cov}(E[X\\mid Z],E[X\\mid Z]).\n\\end{aligned}\n\\]\nDamit folgt unmittelbar\n\\[\n\\operatorname{Var}(X)\n=\nE[\\operatorname{Var}(X\\mid Z)]\n+\n\\operatorname{Var}(E[X\\mid Z]).\n\\]\nDas Gesetz der totalen Varianz ist somit ein Spezialfall des Gesetzes der totalen Kovarianz."
-  },
-  {
-    "objectID": "posts/Erwartungswerte/index.html#herleitung",
-    "href": "posts/Erwartungswerte/index.html#herleitung",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
-    "section": "Herleitung",
-    "text": "Herleitung\nSchreibe\n\\[\nX-a\n=\n(X-E[X])+(E[X]-a).\n\\]\nDann\n\\[\n\\begin{aligned}\nE[(X-a)^2]\n&=\nE[(X-E[X])^2]\\\\\n&\\quad+\n2(E[X]-a)E[X-E[X]]\\\\\n&\\quad+\n(E[X]-a)^2.\n\\end{aligned}\n\\]\nDa\n\\[\nE[X-E[X]]=0,\n\\]\nverschwindet der Kreuzterm. Somit\n\\[\nE[(X-a)^2]\n=\n\\operatorname{Var}(X)+(E[X]-a)^2.\n\\]\nDiese einfache Identität ist die Grundlage der Bias-Variance-Zerlegung."
-  },
-  {
-    "objectID": "posts/Erwartungswerte/index.html#grundlegende-momente",
-    "href": "posts/Erwartungswerte/index.html#grundlegende-momente",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
-    "section": "Grundlegende Momente",
-    "text": "Grundlegende Momente\n\\[\nE(X),\\qquad E(X^2),\\qquad E(XY).\n\\]\nDaraus folgen\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X)\n&=E(X^2)-E(X)^2,\\\\\n\\operatorname{Cov}(X,Y)\n&=E(XY)-E(X)E(Y),\\\\\n\\rho_{XY}\n&=\n\\frac{\\operatorname{Cov}(X,Y)}\n{\\sqrt{\\operatorname{Var}(X)\\operatorname{Var}(Y)}}.\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "posts/Erwartungswerte/index.html#konditionieren",
-    "href": "posts/Erwartungswerte/index.html#konditionieren",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
-    "section": "Konditionieren",
-    "text": "Konditionieren\n\\[\nE(X\\mid Z),\n\\qquad\n\\operatorname{Var}(X\\mid Z).\n\\]\nDaraus folgen\n\\[\n\\boxed{\nE(X)=E[E(X\\mid Z)]\n}\n\\]\n\\[\n\\boxed{\n\\operatorname{Var}(X)\n=\nE[\\operatorname{Var}(X\\mid Z)]\n+\n\\operatorname{Var}(E[X\\mid Z])\n}\n\\]\nund\n\\[\n\\boxed{\n\\operatorname{Cov}(X,Y)\n=\nE[\\operatorname{Cov}(X,Y\\mid Z)]\n+\n\\operatorname{Cov}(E[X\\mid Z],E[Y\\mid Z]).\n}\n\\]"
-  },
-  {
-    "objectID": "posts/Erwartungswerte/index.html#quadratische-fehler",
-    "href": "posts/Erwartungswerte/index.html#quadratische-fehler",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
-    "section": "Quadratische Fehler",
-    "text": "Quadratische Fehler\nDie zentrale Identität\n\\[\nE[(X-a)^2]\n=\n\\operatorname{Var}(X)\n+\n(E[X]-a)^2\n\\]\nführt zu\n\\[\n\\boxed{\n\\operatorname{MSE}\n=\n\\operatorname{Var}\n+\n\\operatorname{Bias}^2\n}\n\\]\nund schliesslich zum Vorhersagefehler\n\\[\n\\boxed{\n\\text{Prediction Error}\n=\n\\sigma^2\n+\n\\operatorname{Var}\n+\n\\operatorname{Bias}^2.\n}\n\\]"
-  },
-  {
-    "objectID": "posts/Erwartungswerte/index.html#zentrale-konzeptionelle-verbindung",
-    "href": "posts/Erwartungswerte/index.html#zentrale-konzeptionelle-verbindung",
-    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
-    "section": "Zentrale konzeptionelle Verbindung",
-    "text": "Zentrale konzeptionelle Verbindung\nDie gemeinsame Idee hinter vielen dieser Resultate ist eine Zerlegung in einen systematischen bzw. erklärbaren Anteil und einen zufälligen bzw. nicht erklärbaren Anteil:\n\\[\n\\boxed{\nY\n=\nE(Y\\mid X)\n+\n[Y-E(Y\\mid X)].\n}\n\\]\nDaraus entstehen Varianzzerlegungen, Regression, erklärte Varianz, \\(R^2\\), Random-Effects-Modelle sowie zentrale Resultate der Schätz- und Vorhersagetheorie."
-  },
-  {
-    "objectID": "posts/LinearAlgebra/index.html",
-    "href": "posts/LinearAlgebra/index.html",
-    "title": "The Magic of Linear Algebra",
+    "objectID": "posts/logratioGeometry/index.html",
+    "href": "posts/logratioGeometry/index.html",
+    "title": "Compositions",
     "section": "",
-    "text": "Quantum Mechanics Through the Lens of Statistics\nA modern perspective views the superposition principle as the fundamental empirical observation underlying quantum mechanics. Experiments indicate that if two states \\(\\psi_1\\) and \\(\\psi_2\\) are physically possible, then any linear combination\n\\[\na\\psi_1 + b\\psi_2\n\\]\nis also a possible state. This implies that quantum states form a vector space, more precisely a Hilbert space. Once states are represented as vectors, the mathematical framework of linear algebra emerges naturally.\nTo be compatible with superposition, physical observables such as energy, momentum, or spin are represented by linear operators acting on the state space. Likewise, the time evolution of a quantum system must preserve superpositions and is therefore described by a linear dynamical law. The Schrödinger equation\n\\[\ni\\hbar \\frac{\\partial \\psi}{\\partial t}\n=\nH\\psi\n\\]\ncan be understood as the mathematical expression of continuous linear time evolution, where \\(H\\) denotes the Hamiltonian, the operator associated with energy.\nFrom a statistical perspective, there are several striking analogies. In multivariate statistics, a covariance matrix \\(\\Sigma\\) summarizes the dependence structure among variables. In quantum mechanics, a Hermitian operator such as the Hamiltonian \\(H\\) plays a similarly central role by determining the structure of a physical system and its possible energy states.\nEigenvalue decompositions are fundamental in both fields. In principal component analysis (PCA),\n\\[\n\\Sigma v = \\lambda v,\n\\]\nwhere \\(\\lambda\\) denotes the variance explained by the principal component \\(v\\). In quantum mechanics,\n\\[\nH\\psi = E\\psi,\n\\]\nwhere \\(E\\) denotes an energy level and \\(\\psi\\) the corresponding energy eigenstate. In both cases, eigenvectors identify privileged directions or states, and eigenvalues quantify important properties of those directions.\nThere is also a conceptual analogy between latent variable models and quantum theory. In factor analysis, observed correlations are explained through unobserved latent factors:\n\\[\n\\Sigma = \\Lambda \\Phi \\Lambda^\\top + \\Psi.\n\\]\nSimilarly, quantum mechanics postulates an underlying state \\(\\psi\\) that is not directly observable. What can be observed are the probabilities of measurement outcomes, which are derived from the state through the Born rule:\n\\[\nP(i)\n=\n\\left|\n\\langle i \\mid \\psi \\rangle\n\\right|^2.\n\\]\nThus, both statistics and quantum mechanics infer hidden structure from observable data.\nAnother parallel arises from spectral decomposition. In statistics, a covariance matrix can be decomposed as\n\\[\n\\Sigma = Q D Q^\\top,\n\\]\nwhere the columns of \\(Q\\) are eigenvectors and the diagonal elements of \\(D\\) are eigenvalues. In quantum mechanics, a Hermitian operator admits an analogous decomposition:\n\\[\nH = U D U^\\dagger,\n\\]\nwhere \\(U\\) is a unitary matrix and \\(D\\) contains the energy eigenvalues. The mathematical structure is nearly identical; only the interpretation differs.\nFrom this viewpoint, much of the mathematical machinery of quantum mechanics—Hilbert spaces, Hermitian operators, eigenvalues, eigenvectors, traces, and spectral decompositions—can be seen as consequences of the experimentally observed validity of superposition. The deepest mystery is perhaps not why quantum mechanics relies so heavily on linear algebra, but why nature itself appears to obey the superposition principle with such extraordinary precision.\n\n\nQuantum Mechanics as Generalized Probability Theory\nThe previous discussion emphasized why quantum mechanics naturally leads to linear algebra. However, quantum theory can also be viewed as a generalization of probability theory. This perspective becomes particularly clear through the concept of the density matrix, which plays a role analogous to a probability distribution in classical statistics.\nIn classical probability theory, a random variable \\(X\\) takes values \\(x_i\\) with probabilities \\(p_i\\). The expectation of \\(X\\) is given by\n\\[\nE(X)\n=\n\\sum_i x_i p_i.\n\\]\nThe probability distribution contains all information necessary to predict future observations and compute expectations.\nQuantum mechanics has a remarkably similar structure. The state of a system is described by a density matrix \\(\\rho\\), while a measurable quantity is represented by a Hermitian operator \\(A\\). In this analogy, the density matrix plays a role similar to a probability distribution, whereas observables generalize the notion of random variables.\nThe expectation of an observable is given by\n\\[\nE(A)\n=\n\\operatorname{tr}(\\rho A).\n\\]\nThis formula is the quantum analogue of the classical expectation.\nTo understand why, consider the spectral decomposition of the observable:\n\\[\nA\n=\n\\sum_i a_i P_i,\n\\]\nwhere \\(a_i\\) are the eigenvalues of \\(A\\) and \\(P_i\\) are the corresponding projection operators. The eigenvalues represent the possible outcomes of a measurement. Their probabilities are determined by the Born rule:\n\\[\nP(a_i)\n=\n\\operatorname{tr}(\\rho P_i).\n\\]\nThe expectation of the observable therefore becomes\n\\[\nE(A)\n=\n\\sum_i a_i P(a_i).\n\\]\nSubstituting the Born rule yields\n\\[\nE(A)\n=\n\\sum_i a_i \\operatorname{tr}(\\rho P_i).\n\\]\nUsing the linearity of the trace,\n\\[\nE(A)\n=\n\\operatorname{tr}\n\\left(\n\\rho\n\\sum_i a_i P_i\n\\right)\n=\n\\operatorname{tr}(\\rho A).\n\\]\nThus, the familiar formula for expectation in statistics reappears in quantum mechanics in matrix form.\nThe analogy can be summarized as follows:\n\n\n\n\n\n\n\nStatistics\nQuantum Mechanics\n\n\n\n\nProbability distribution \\(P\\)\nDensity matrix \\(\\rho\\)\n\n\nRandom variable \\(X\\)\nObservable \\(A\\)\n\n\nPossible values \\(x_i\\)\nEigenvalues \\(a_i\\)\n\n\nProbabilities \\(P(X=x_i)\\)\nBorn probabilities \\(\\operatorname{tr}(\\rho P_i)\\)\n\n\nExpectation \\(E(X)\\)\nExpectation \\(\\operatorname{tr}(\\rho A)\\)\n\n\n\nFrom this perspective, quantum mechanics may be viewed as a form of non-commutative probability theory. In classical probability, random variables are ordinary functions and therefore commute:\n\\[\nXY = YX.\n\\]\nIn quantum mechanics, observables are operators and generally do not commute:\n\\[\nAB \\neq BA.\n\\]\nThis seemingly small mathematical change has profound consequences. Non-commutativity leads to uncertainty relations, interference phenomena, and many of the characteristic features that distinguish quantum mechanics from classical probability theory.\nFrom a mathematical perspective, one may therefore view quantum mechanics as a generalization of probability theory in which probability distributions are replaced by density matrices, random variables by Hermitian operators, and integration by the trace operator. The familiar concepts of probabilities, expectations, variances, and mixtures survive, but they are expressed in the language of linear operators rather than functions."
+    "text": "Sample space of compositional data\nThe sample space of compositional data with \\(D\\) parts is a simplex \\(\\mathcal{S}^D\\) of dimension \\(D-1\\):\n\\(\\mathcal{S}^D=\\{\\mathbf{x}=[x_1,x_2,\\dots,x_D]\\in \\mathbb{R}^D \\mid\nx_i&gt;0, i=1,2,\\dots,D; \\sum_{i=1}^Dx_i=\\mathcal{k}\\}\\)\nThe only information is given by the ratios between components, so the information of a composition is preserved under multiplication by any positive constant. Therefore, the sample space of compositional data can always be assumed to be a standard simplex, i.e. \\(\\mathcal{k}\n= 1\\).\nNormalization to the standard simplex is called closure and is\n\\(\\mathcal{C}[x_1,x_2,\\dots,x_D]=\\left[\\frac{x_1}{\\sum_{i=1}^D x_i},\\frac{x_2}{\\sum_{i=1}^D x_i}, \\dots,\\frac{x_D}{\\sum_{i=1}^D x_i}\\right]\\)\n\n\nExample\n4 Raters rated a 4-part-composition on \\(n=20\\) subjects. See the interactive Tetrahedron"
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html",
+    "href": "posts/conditionalIndependence/index.html",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "",
+    "text": "Local independence is one of the central ideas in latent variable models.\nIn a latent class analysis (LCA) or latent profile analysis (LPA), the idea is relatively simple:\n\nOnce latent class membership is known, the observed indicators should no longer be associated.\n\nSymbolically, for indicators \\(Y_{i1},\\ldots,Y_{iK}\\) and latent class \\(C_i\\),\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\perp\\!\\!\\!\\perp\n\\mid C_i.\n\\]\nHowever, this formulation becomes less obvious when moving to longitudinal latent variable models.\nIn a latent class linear mixed model (LCLMM), repeated measurements remain correlated within a latent class because subjects have random effects. In a multivariate latent class mixed model (LCMM), multiple markers are additionally correlated because they measure the same underlying latent process.\nThe general principle remains the same:\n\nObserved variables should become conditionally independent once we condition on the latent quantities introduced by the model to explain their dependence.\n\nWhat changes between models is therefore not the basic idea of conditional independence, but what we have to condition on."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#introduction",
+    "href": "posts/conditionalIndependence/index.html#introduction",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "",
+    "text": "Local independence is one of the central ideas in latent variable models.\nIn a latent class analysis (LCA) or latent profile analysis (LPA), the idea is relatively simple:\n\nOnce latent class membership is known, the observed indicators should no longer be associated.\n\nSymbolically, for indicators \\(Y_{i1},\\ldots,Y_{iK}\\) and latent class \\(C_i\\),\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\perp\\!\\!\\!\\perp\n\\mid C_i.\n\\]\nHowever, this formulation becomes less obvious when moving to longitudinal latent variable models.\nIn a latent class linear mixed model (LCLMM), repeated measurements remain correlated within a latent class because subjects have random effects. In a multivariate latent class mixed model (LCMM), multiple markers are additionally correlated because they measure the same underlying latent process.\nThe general principle remains the same:\n\nObserved variables should become conditionally independent once we condition on the latent quantities introduced by the model to explain their dependence.\n\nWhat changes between models is therefore not the basic idea of conditional independence, but what we have to condition on."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#lca-and-lpa",
+    "href": "posts/conditionalIndependence/index.html#lca-and-lpa",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "LCA and LPA",
+    "text": "LCA and LPA\nConsider \\(K\\) indicators\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\]\nand a categorical latent variable\n\\[\nC_i\\in\\{1,\\ldots,G\\}.\n\\]\nIn a standard LCA or LPA, the latent class is intended to explain the association among the indicators.\nThe local-independence assumption is\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\perp\\!\\!\\!\\perp\n\\mid C_i.\n\\]\nFor two indicators this implies\n\\[\n\\operatorname{Cov}\n\\left(\nY_{ij},Y_{ik}\n\\mid C_i=g\n\\right)\n=\n0.\n\\]\nThe indicators can nevertheless be associated marginally.\nThis follows from the law of total covariance:\n\\[\n\\operatorname{Cov}(Y_j,Y_k)\n=\nE\\left[\n\\operatorname{Cov}(Y_j,Y_k\\mid C)\n\\right]\n+\n\\operatorname{Cov}\n\\left(\nE[Y_j\\mid C],\nE[Y_k\\mid C]\n\\right).\n\\]\nUnder local independence,\n\\[\nE\\left[\n\\operatorname{Cov}(Y_j,Y_k\\mid C)\n\\right]\n=\n0,\n\\]\nbut\n\\[\n\\operatorname{Cov}\n\\left(\nE[Y_j\\mid C],\nE[Y_k\\mid C]\n\\right)\n\\]\ncan be non-zero.\nThus, the indicators are associated because the latent classes differ jointly in their indicator means.\n\nLPA and the covariance matrix\nFor continuous indicators, a common LPA specification is\n\\[\n\\mathbf Y_i\\mid C_i=g\n\\sim\nN(\\boldsymbol\\mu_g,\\boldsymbol\\Sigma_g).\n\\]\nStrict local independence corresponds to a diagonal within-class covariance matrix,\n\\[\n\\boldsymbol\\Sigma_g\n=\n\\begin{pmatrix}\n\\sigma_{1g}^2 & 0 & \\cdots & 0\\\\\n0 & \\sigma_{2g}^2 & \\cdots & 0\\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\n0 & 0 & \\cdots & \\sigma_{Kg}^2\n\\end{pmatrix}.\n\\]\nAllowing non-zero within-class covariances relaxes the local-independence assumption."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#moving-to-longitudinal-data",
+    "href": "posts/conditionalIndependence/index.html#moving-to-longitudinal-data",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "Moving to longitudinal data",
+    "text": "Moving to longitudinal data\nSuppose we now observe the same outcome repeatedly,\n\\[\nY_i(t_1),Y_i(t_2),\\ldots,Y_i(t_T).\n\\]\nThe question becomes:\n\nShould repeated measurements be independent once we know the latent class?\n\nThe answer depends on the longitudinal model.\nThis distinction becomes particularly clear when comparing a latent class growth analysis with a latent class linear mixed model."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#latent-class-growth-analysis",
+    "href": "posts/conditionalIndependence/index.html#latent-class-growth-analysis",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "Latent class growth analysis",
+    "text": "Latent class growth analysis\nA simple latent class growth analysis (LCGA) can be written as\n\\[\nY_i(t)\n=\nX_i(t)^\\top\\beta_{C_i}\n+\n\\epsilon_i(t).\n\\]\nThe latent class determines the trajectory.\nFor example, with a linear trajectory,\n\\[\nY_i(t)\n=\n\\beta_{0C_i}\n+\n\\beta_{1C_i}t\n+\n\\epsilon_i(t).\n\\]\nIf the residual errors are independent,\n\\[\n\\epsilon_i(t_1)\n\\perp\\!\\!\\!\\perp\n\\epsilon_i(t_2),\n\\]\nthen\n\\[\nY_i(t_1)\n\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i.\n\\]\nIn this model, the latent classes themselves explain the systematic heterogeneity in trajectories.\nThere are no subject-specific random effects producing additional within-class dependence."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#latent-class-linear-mixed-models",
+    "href": "posts/conditionalIndependence/index.html#latent-class-linear-mixed-models",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "Latent class linear mixed models",
+    "text": "Latent class linear mixed models\nA latent class linear mixed model adds subject-specific random effects:\n\\[\nY_i(t)\n=\nX_i(t)^\\top\\beta_{C_i}\n+\nZ_i(t)^\\top b_i\n+\n\\epsilon_i(t).\n\\]\nFor example, with a random intercept and random slope,\n\\[\nY_i(t)\n=\n\\beta_{0C_i}\n+\n\\beta_{1C_i}t\n+\nb_{0i}\n+\nb_{1i}t\n+\n\\epsilon_i(t).\n\\]\nNow subjects within the same latent class can have different individual trajectories.\nThis changes the conditional-independence structure fundamentally.\n\nConditioning only on class is not enough\nConsider two observations from the same subject:\n\\[\nY_i(t_1)\n\\]\nand\n\\[\nY_i(t_2).\n\\]\nEven if we know that the subject belongs to class \\(g\\), both observations still contain the same random effects \\(b_i\\).\nTherefore,\n\\[\nY_i(t_1)\n\\not\\!\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i.\n\\]\nFor a random-intercept model,\n\\[\nY_i(t)\n=\n\\beta_{0C_i}\n+\n\\beta_{1C_i}t\n+\nb_{0i}\n+\n\\epsilon_i(t),\n\\]\nwe obtain, assuming independent residual errors,\n\\[\n\\operatorname{Cov}\n\\left\\{\nY_i(t_1),Y_i(t_2)\n\\mid C_i=g\n\\right\\}\n=\n\\operatorname{Var}(b_{0i}).\n\\]\nThus, within-class correlation is not a violation of the model. It is deliberately introduced by the random effect.\n\n\nConditioning on class and random effects\nOnce we additionally condition on the subject-specific random effects,\n\\[\nY_i(t_1)\n\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i,b_i,\n\\]\nprovided the remaining residual errors are independent.\nThe relevant analogue of local independence in an LCLMM is therefore not independence conditional on \\(C_i\\) alone, but conditional independence given\n\\[\n(C_i,b_i).\n\\]\nThis illustrates an important distinction:\n\nLatent classes explain discrete heterogeneity between trajectory types, whereas random effects explain continuous heterogeneity between subjects within a class."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#latent-process-models-with-multiple-markers",
+    "href": "posts/conditionalIndependence/index.html#latent-process-models-with-multiple-markers",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "Latent process models with multiple markers",
+    "text": "Latent process models with multiple markers\nNow suppose several longitudinal markers measure a common underlying process.\nLet\n\\[\nY_{ik}(t)\n\\]\ndenote marker \\(k\\) for subject \\(i\\) at time \\(t\\).\nA simple linear measurement model is\n\\[\nY_{ik}(t)\n=\n\\eta_k\n+\n\\alpha_k\\Lambda_i(t)\n+\n\\epsilon_{ik}(t),\n\\]\nwhere \\(\\Lambda_i(t)\\) is the common latent process.\nThe markers are therefore expected to be associated.\nFor two markers,\n\\[\nY_{i1}(t)\n\\leftarrow\n\\Lambda_i(t)\n\\rightarrow\nY_{i2}(t).\n\\]\nTheir marginal association is not evidence against the model. On the contrary, this association is precisely what the common latent process is intended to explain.\n\nConditional independence of markers\nIf the marker-specific residual errors are independent,\n\\[\n\\epsilon_{ik}(t)\n\\perp\\!\\!\\!\\perp\n\\epsilon_{ik'}(t),\n\\]\nthen\n\\[\nY_{ik}(t)\n\\perp\\!\\!\\!\\perp\nY_{ik'}(t)\n\\mid\n\\Lambda_i(t).\n\\]\nThus, the analogue of local independence is now conditional independence of the markers given the common latent process.\nAgain, the general principle has not changed. What has changed is the latent quantity on which we condition."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#multivariate-latent-class-mixed-models",
+    "href": "posts/conditionalIndependence/index.html#multivariate-latent-class-mixed-models",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "Multivariate latent class mixed models",
+    "text": "Multivariate latent class mixed models\nA multivariate LCMM combines the previous structures.\nThe latent trajectory may be described by\n\\[\n\\Lambda_i(t)\\mid C_i=g\n=\nX_i(t)^\\top\\beta_g\n+\nZ_i(t)^\\top b_i.\n\\]\nMultiple markers are then linked to this common latent trajectory:\n\\[\nY_{ik}(t)\n=\nH_k\n\\left\\{\n\\Lambda_i(t)\n+\n\\epsilon_{ik}(t)\n\\right\\}.\n\\]\nThis model therefore contains several sources of dependence.\n\nDependence across time\nRepeated observations from the same subject share the same random effects.\nConsequently,\n\\[\nY_i(t_1)\n\\not\\!\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i.\n\\]\nThe latent class alone does not explain the longitudinal dependence.\nConditioning additionally on the individual trajectory or random effects removes the dependence generated by those random effects.\n\n\nDependence across markers\nDifferent markers share the common latent process \\(\\Lambda_i(t)\\).\nTherefore,\n\\[\nY_{ik}(t)\n\\not\\!\\perp\\!\\!\\!\\perp\nY_{ik'}(t)\n\\]\nmarginally.\nWith independent marker-specific residual errors,\n\\[\nY_{ik}(t)\n\\perp\\!\\!\\!\\perp\nY_{ik'}(t)\n\\mid\n\\Lambda_i(t).\n\\]\nThe common latent process therefore plays a role analogous to the latent class in a simple LPA: it explains why observed variables are associated."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#a-hierarchy-of-conditional-independence",
+    "href": "posts/conditionalIndependence/index.html#a-hierarchy-of-conditional-independence",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "A hierarchy of conditional independence",
+    "text": "A hierarchy of conditional independence\nThe models can be summarized by asking which latent quantities are required to explain the dependence among observations.\n\n\n\n\n\n\n\n\nModel\nDependence explained by\nConditional independence\n\n\n\n\nLCA\nlatent class\nindicators independent given \\(C_i\\)\n\n\nLPA\nlatent class\nindicators independent given \\(C_i\\) under local independence\n\n\nLCGA\nlatent class\nrepeated outcomes independent given \\(C_i\\) if residuals are independent\n\n\nLCLMM / GMM\nclass + random effects\nrepeated outcomes independent given \\(C_i,b_i\\) if residuals are independent\n\n\nLatent process model\ncommon latent process\nmarkers independent given \\(\\Lambda_i(t)\\) if marker residuals are independent\n\n\nMultivariate LCMM\nclass + random effects + latent process\ndependence across time and markers is explained by the corresponding latent quantities\n\n\n\nThis suggests a more general formulation of local independence:\n\nObserved variables are locally independent when they are conditionally independent after conditioning on the latent structure that the model assumes generates their dependence.\n\nUnder this interpretation, local independence is not restricted to latent class analysis. It is a general principle underlying many latent variable models."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#why-this-distinction-matters",
+    "href": "posts/conditionalIndependence/index.html#why-this-distinction-matters",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "Why this distinction matters",
+    "text": "Why this distinction matters\nIt would be incorrect to take the LPA statement\n\\[\nY_j\\perp\\!\\!\\!\\perp Y_k\\mid C\n\\]\nand mechanically apply it to every latent class model.\nIn an LCLMM, observations within the same class are deliberately correlated through the random effects.\nIn a multivariate LCMM, markers are deliberately correlated through the common latent process.\nThe relevant question is therefore not simply\n\nAre the observations independent within a latent class?\n\nInstead, we should ask\n\nAfter conditioning on the latent variables and random effects that the model introduces to explain dependence, is there residual association left that the model does not account for?\n\nThis is the more general and useful interpretation of local independence."
+  },
+  {
+    "objectID": "posts/conditionalIndependence/index.html#summary",
+    "href": "posts/conditionalIndependence/index.html#summary",
+    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
+    "section": "Summary",
+    "text": "Summary\nThe concept of local independence develops naturally as latent variable models become more complex.\nFor LCA and standard LPA,\n\\[\n\\text{condition on } C_i.\n\\]\nFor an LCLMM,\n\\[\n\\text{condition on } C_i \\text{ and } b_i.\n\\]\nFor multiple markers measuring a latent process,\n\\[\n\\text{condition on } \\Lambda_i(t).\n\\]\nFor a multivariate LCMM, both ideas operate simultaneously: latent classes describe qualitatively different trajectories, random effects describe individual variation within classes, and the common latent process explains association among multiple markers.\nThe common principle is therefore\n\\[\n\\boxed{\n\\text{dependence in the observed data}\n\\quad\\longrightarrow\\quad\n\\text{latent structure}\n\\quad\\longrightarrow\\quad\n\\text{conditional independence}\n}\n\\]\nThe phrase local independence is easiest to understand not as “independence within classes”, but more generally as:\n\nindependence after conditioning on the latent structure responsible for the observed dependence."
+  },
+  {
+    "objectID": "posts/exponentialGrowth/index.html",
+    "href": "posts/exponentialGrowth/index.html",
+    "title": "Exponential Growth",
+    "section": "",
+    "text": "The greatest shortcoming of the human race is the inability to understand the exponential function. (Al Bartlett)"
+  },
+  {
+    "objectID": "posts/exponentialGrowth/index.html#inzidenz-und-kumulierte-inzidenz",
+    "href": "posts/exponentialGrowth/index.html#inzidenz-und-kumulierte-inzidenz",
+    "title": "Exponential Growth",
+    "section": "Inzidenz und kumulierte Inzidenz",
+    "text": "Inzidenz und kumulierte Inzidenz\n\n\n\n\nInzidenz\n\n\n\n\n\n\n\nkumulierte Indzidenz\n\n\n\n\n\n\n\nlog kumulierte Indzidenz"
+  },
+  {
+    "objectID": "posts/exponentialGrowth/index.html#erste-welle-covid-19",
+    "href": "posts/exponentialGrowth/index.html#erste-welle-covid-19",
+    "title": "Exponential Growth",
+    "section": "Erste Welle Covid-19",
+    "text": "Erste Welle Covid-19\n\n\n\n\nInzidenz\n\n\n\n\n\n\n\nlog Inzidenz\n\n\n\n\n\nErste Welle. Example of doubling times: 1 day (solid), 2 days (dashed), 3 days (red), seven days (dotted), with reported cases Covid19 in Switzerland. Horizontal line: swiss population. On a logarithmic scale, a straight line indicates exponential growth. Quelle."
+  },
+  {
+    "objectID": "posts/exponentialGrowth/index.html#auswirkung-vorfaktor",
+    "href": "posts/exponentialGrowth/index.html#auswirkung-vorfaktor",
+    "title": "Exponential Growth",
+    "section": "Auswirkung Vorfaktor",
+    "text": "Auswirkung Vorfaktor\nAnnahme: Verdoppelung alle drei Tage, 10 Prozent der Infizierten müssen ins Spital. Die Anzahl Cases von heute sind die Anzahl Spitalpatienten in 9 Tagen, wenn mann nichts macht.\n\\(0.1\\times 2^{0.33t}=0.1\\times (2^{0.33})^t=0.1\\times\n1.3^t=1.3^{\\log_{1.3}0.1}1.3^t=1.3^{t+\\log_{1.3}0.1}=1.3^{t-8.776}\\)\nAnalog kann man zeigen: Wenn die Mortalitätsrate bei einem Prozent der bestätigten Fälle liegt, dann ist die Anzahl der bestätigten Fälle die zu erwartende Anzahl der Todesfälle ca. 18 Tage später, wenn man nichts macht.\n\\(0.01\\times 2^{0.33t}=0.01\\times (2^{0.33})^t=0.01\\times\n1.3^t=1.3^{\\log_{1.3}0.01}1.3^t=1.3^{t+\\log_{1.3}0.01}=1.3^{t-17.553}\\)\n\n\n[1] -8.776\n\n\n[1] -17.55\n\n\n\n\nAuswirkung Vorfaktor"
+  },
+  {
+    "objectID": "posts/exponentialGrowth/index.html#footnotes",
+    "href": "posts/exponentialGrowth/index.html#footnotes",
+    "title": "Exponential Growth",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nProof: \\[x(t)=x_0e^{kt}=x_0e^{t/\\tau}=x_0 2^{\\frac{t}{\\tau}\\log_2e}=x_02^{\\frac{t}{\\tau} \\frac{1}{\\log 2 }}=x_02^{t/T}\\]↩︎"
+  },
+  {
+    "objectID": "skript.html",
+    "href": "skript.html",
+    "title": "Statistik",
+    "section": "",
+    "text": "Statistik\n\nEinführung in die Wahrscheinlichkeitstheorie, Statistische Grundlagen, Lineare Modelle, Beispiele mit R: Statistik-Skript\nWahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung: Skript Wahrscheinlichkeitstheorie"
+  },
+  {
+    "objectID": "angebot.html",
+    "href": "angebot.html",
+    "title": "Angebot",
+    "section": "",
+    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
+  },
+  {
+    "objectID": "angebot.html#forschung",
+    "href": "angebot.html#forschung",
+    "title": "Angebot",
+    "section": "",
+    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen"
+  },
+  {
+    "objectID": "angebot.html#lehre",
+    "href": "angebot.html#lehre",
+    "title": "Angebot",
+    "section": "",
+    "text": "Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
+  },
+  {
+    "objectID": "Kolloquium.html",
+    "href": "Kolloquium.html",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Einmal monatlich tauschen sich Statistik-Interessierte über ausgewählte Themen zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von den Teilnehmern eingebracht und auch vorgestellt werden. \nHinweis: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.\n\n\n\n\nZeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\nOrt: Murtenstrasse 10, Raum 123\n\n\nThemen 2026Themen 2025Themen 2024Themen 2023\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n7.1\nMetaanalyse\nAndré\n\n\n\nMI\n4.2\n—\n—\n\n\n\nMI\n4.3\nNon-Null \\(H_0\\)\nAndré\n\n\n\nMI\n1.4\nFisher/Neyman/Bayes\nAndré\n\n\n\nMI\n6.5\nGit/GitLab/Magit Workflow\nAndré\n\n\n\nMI\n3.6\nGit/GitLab, Exercises (ÜbungsProjekt)\nAndré und Patric\n\n\n\nMI\n2.9\nLongitudinal Latent Variable Models (GitLabPage)\nAndré\n\n\n\nMI\n7.10\n—\n—\n\n\n\nMI\n4.11\nGaussian finite mixture models (Latent Profile Analysis)\nAndré\n\n\n\nMI\n2.12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n5.2\nDiagnostik und Bayes\nAndré\n\n\n\nMI\n5.3\nPrinzipien Power und Fallzahl\nAndré\n\n\n\nMI\n2.4\nKlassifikation, Neural Network, Link zu KI\nAndré\n\n\n\nMI\n7.5\nLatent Variable Model: EFA\nAndré\n\n\n\nMI\n4.6\nLatent Variable Model: CFA\nAndré\n\n\n\nMI\n3.9\nLatent Class Linear Mixed Model\nAndré\n\n\n\nMI\n1.10\n—\nAndré\nverschoben\n\n\nMI\n5.11\nDas Anti-Falsifikations-Paradigma\nAndré\nPhilosophischer Exkurs\n\n\nMI\n3.12\nGüte von Klassifikatoren\nAndré\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\nA. DI\n9.1\n–\n–\n\n\nB. MI\n7.2\nLikelihood\nAndré\n\n\nA. DI\n5.3\nSevere Testing\nAndré\n\n\nB. MI\n3.4\nfällt aus\nAndré\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\n\n\nMI\n4.9\nBayesian \\(t\\)-test\nAndré\n\n\nMI\n2.10\nGeneralised Linear Model\nAndré\n\n\nMI\n6.11\nLinear Mixed Model\nAndré\n\n\nMI\n4.12\nProjekt Linear Mixed Model\nAglaja\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric\n\n\n\n\n\n\n\n\n\nStatistik Kolloquium G"
+  },
+  {
+    "objectID": "Kolloquium.html#zeitpunkt-und-information",
+    "href": "Kolloquium.html#zeitpunkt-und-information",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Zeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\nOrt: Murtenstrasse 10, Raum 123\n\n\nThemen 2026Themen 2025Themen 2024Themen 2023\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n7.1\nMetaanalyse\nAndré\n\n\n\nMI\n4.2\n—\n—\n\n\n\nMI\n4.3\nNon-Null \\(H_0\\)\nAndré\n\n\n\nMI\n1.4\nFisher/Neyman/Bayes\nAndré\n\n\n\nMI\n6.5\nGit/GitLab/Magit Workflow\nAndré\n\n\n\nMI\n3.6\nGit/GitLab, Exercises (ÜbungsProjekt)\nAndré und Patric\n\n\n\nMI\n2.9\nLongitudinal Latent Variable Models (GitLabPage)\nAndré\n\n\n\nMI\n7.10\n—\n—\n\n\n\nMI\n4.11\nGaussian finite mixture models (Latent Profile Analysis)\nAndré\n\n\n\nMI\n2.12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n5.2\nDiagnostik und Bayes\nAndré\n\n\n\nMI\n5.3\nPrinzipien Power und Fallzahl\nAndré\n\n\n\nMI\n2.4\nKlassifikation, Neural Network, Link zu KI\nAndré\n\n\n\nMI\n7.5\nLatent Variable Model: EFA\nAndré\n\n\n\nMI\n4.6\nLatent Variable Model: CFA\nAndré\n\n\n\nMI\n3.9\nLatent Class Linear Mixed Model\nAndré\n\n\n\nMI\n1.10\n—\nAndré\nverschoben\n\n\nMI\n5.11\nDas Anti-Falsifikations-Paradigma\nAndré\nPhilosophischer Exkurs\n\n\nMI\n3.12\nGüte von Klassifikatoren\nAndré\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\nA. DI\n9.1\n–\n–\n\n\nB. MI\n7.2\nLikelihood\nAndré\n\n\nA. DI\n5.3\nSevere Testing\nAndré\n\n\nB. MI\n3.4\nfällt aus\nAndré\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\n\n\nMI\n4.9\nBayesian \\(t\\)-test\nAndré\n\n\nMI\n2.10\nGeneralised Linear Model\nAndré\n\n\nMI\n6.11\nLinear Mixed Model\nAndré\n\n\nMI\n4.12\nProjekt Linear Mixed Model\nAglaja\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric"
+  },
+  {
+    "objectID": "Kolloquium.html#ablage",
+    "href": "Kolloquium.html#ablage",
+    "title": "Statistik-Kolloquium am G",
+    "section": "",
+    "text": "Statistik Kolloquium G"
+  },
+  {
+    "objectID": "organisation.html",
+    "href": "organisation.html",
+    "title": "Organisation",
+    "section": "",
+    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\n\n\nMontag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108\n\n\n\n\nKurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)\n\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers.\n\n\n\n\nNach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+  },
+  {
+    "objectID": "organisation.html#präsenz",
+    "href": "organisation.html#präsenz",
+    "title": "Organisation",
+    "section": "",
+    "text": "Montag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108"
+  },
+  {
+    "objectID": "organisation.html#anfrage",
+    "href": "organisation.html#anfrage",
+    "title": "Organisation",
+    "section": "",
+    "text": "Kurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)"
+  },
+  {
+    "objectID": "organisation.html#rahmen",
+    "href": "organisation.html#rahmen",
+    "title": "Organisation",
+    "section": "",
+    "text": "Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers."
+  },
+  {
+    "objectID": "organisation.html#externe-aufträge",
+    "href": "organisation.html#externe-aufträge",
+    "title": "Organisation",
+    "section": "",
+    "text": "Nach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "👋 Hi, I’m André Meichtry\n\n🌱 I’m currently working as a statistics consultant at the School of Health Professions, Bern University of Applied Sciences.\n\n👀 I’m interested in philosophy, physics, quantitative research methodology and biostatistics.\n🏢\nBerner Fachhochschule / Bern University of Applied Sciences\nDepartement Gesundheit / Department of Health Professions\nAndré Meichtry\nMurtenstrasse 10\n(Büro: Finkenhubelweg 11, Raum/Office F108)\n3008 Bern\nSwitzerland\n+41 31 848 60 18\n\nandre.meichtry@bfh.ch\nbfh.ch/gesundheit"
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Software\n\n\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\nStatistik: R (plattformunabhängig), JAGS (MCMC)\nBetriebsystem: Windows, Linux (Ubuntu)\nEditoren: RStudio, EMACS (ESS)\nLiterate Programming: \\(\\lx\\) und R-Markdown mit knitr, quarto\nVersionsverwaltung: Git, GitHub, BFH GitLab"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Beiträge zu Statistik und Wissenschaftstheorie",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nZeilenraum und Spaltenraum in der linearen Regression\n\n\n\nLineare Algebra\n\n\n\nProjektionsgeometrie\n\n\n\n\n\nOct 8, 2026\n\n\n\n\n\n\n\nErwartungswert, Varianz und zentrale Zerlegungen\n\n\n\nWahrscheinlichkeitstheorie\n\n\n\nKonzepte der Wahrscheinlichkeitstheorie\n\n\n\n\n\nOct 5, 2026\n\n\n\n\n\n\n\nLocal Independence in Latent Class and Longitudinal Latent Variable Models\n\n\n\nLatent Variable Models\n\n\n\nFrom LPA to LCMM: what are observations independent of, and what explains their dependence?\n\n\n\n\n\nSep 3, 2026\n\n\n\n\n\n\n\nDas Anti-Falsifikations-Paradigma\n\n\n\nmeinung\n\nphilosophie\n\n\n\nWir brauchen wieder mehr Popper\n\n\n\n\n\nJul 3, 2026\n\n\n\n\n\n\n\nThe trace of a matrix\n\n\n\nphilosophie\n\n\n\nTrace as a Bridge Between Item Space and Factor Space\n\n\n\n\n\nJun 9, 2026\n\n\n\n\n\n\n\nThe Magic of Linear Algebra\n\n\n\nLineare Algebra\n\n\n\nAnalogies in Quantum Mechanics and Statistics\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\n\n\n“All Is Integration”\n\n\n\nphilosophie\n\n\n\nIntegrieren über unbekannte Welten\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\n\n\nDesign Matrix for interaction effects\n\n\n\ncode\n\nanalysis\n\n\n\nMatrix Algebra\n\n\n\n\n\nFeb 6, 2025\n\n\n\n\n\n\n\nNoncollapsibility of the odds ratio\n\n\n\ncode\n\nanalysis\n\n\n\nIPW-analysis\n\n\n\n\n\nDec 2, 2023\n\n\n\n\n\n\n\nCompositions\n\n\n\ncode\n\nanalysis\n\n\n\nSimplex as sample space: Tetrahedron for 4-part compositions\n\n\n\n\n\nNov 3, 2022\n\n\n\n\n\n\n\nAber der Kaiser hat ja gar nichts an!\n\n\n\nmeinung\n\n\n\nGegen Identitätspolitik\n\n\n\n\n\nOct 25, 2022\n\n\n\n\n\n\n\nBeyond linearity\n\n\n\ncode\n\nanalysis\n\n\n\nFrom linear model to GAM\n\n\n\n\n\nOct 6, 2022\n\n\n\n\n\n\n\nExponential Growth\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nexp and log\n\n\n\n\n\nSep 29, 2022\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 26, 2022\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/noncollaps/index.html",
@@ -343,361 +553,95 @@
     "text": "Comparison\n\n\n\n\n    \n\n    \n\n    \n    \n    \n      \n        \n        \n              \n                 \n                marginal\n                conditional\n                IPW\n                IPWs\n              \n        \n        \n        \n                \n                  (Intercept)\n                  -2.333\n                  -2.736\n                  -2.069\n                  -2.069\n                \n                \n                  \n                  (0.147)\n                  (0.165)\n                  (0.100)\n                  (0.132)\n                \n                \n                  X\n                  1.587\n                  1.211\n                  1.081\n                  1.081\n                \n                \n                  \n                  (0.180)\n                  (0.191)\n                  (0.123)\n                  (0.171)\n                \n                \n                  C\n                  \n                  1.614\n                  \n                  \n                \n                \n                  \n                  \n                  (0.183)\n                  \n                  \n                \n                \n                  Num.Obs.\n                  1000\n                  1000\n                  1000\n                  1000\n                \n                \n                  AIC\n                  880.1\n                  802.5\n                  1847.3\n                  1004.4\n                \n                \n                  BIC\n                  889.9\n                  817.3\n                  1857.1\n                  1014.2\n                \n                \n                  Log.Lik.\n                  -438.049\n                  -398.272\n                  -921.632\n                  -500.206\n                \n                \n                  F\n                  77.828\n                  71.500\n                  77.460\n                  39.837\n                \n                \n                  RMSE\n                  0.37\n                  0.35\n                  0.37\n                  0.37"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Beiträge zu Statistik und Wissenschaftstheorie",
+    "objectID": "posts/LinearAlgebra/index.html",
+    "href": "posts/LinearAlgebra/index.html",
+    "title": "The Magic of Linear Algebra",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nZeilenraum und Spaltenraum in der linearen Regression\n\n\n\nLineare Algebra\n\n\n\nProjektionsgeometrie\n\n\n\n\n\nOct 8, 2026\n\n\n\n\n\n\n\nErwartungswert, Varianz und zentrale Zerlegungen\n\n\n\nWahrscheinlichkeitstheorie\n\n\n\nKonzepte der Wahrscheinlichkeitstheorie\n\n\n\n\n\nOct 5, 2026\n\n\n\n\n\n\n\nLocal Independence in Latent Class and Longitudinal Latent Variable Models\n\n\n\nLatent Variable Models\n\n\n\nFrom LPA to LCMM: what are observations independent of, and what explains their dependence?\n\n\n\n\n\nSep 3, 2026\n\n\n\n\n\n\n\nDas Anti-Falsifikations-Paradigma\n\n\n\nmeinung\n\nphilosophie\n\n\n\nWir brauchen wieder mehr Popper\n\n\n\n\n\nJul 3, 2026\n\n\n\n\n\n\n\nThe trace of a matrix\n\n\n\nphilosophie\n\n\n\nTrace as a Bridge Between Item Space and Factor Space\n\n\n\n\n\nJun 9, 2026\n\n\n\n\n\n\n\nThe Magic of Linear Algebra\n\n\n\nphilosophie\n\n\n\nAnalogies in Quantum Mechanics and Statistics\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\n\n\n“All Is Integration”\n\n\n\nphilosophie\n\n\n\nIntegrieren über unbekannte Welten\n\n\n\n\n\nMay 20, 2026\n\n\n\n\n\n\n\nDesign Matrix for interaction effects\n\n\n\ncode\n\nanalysis\n\n\n\nMatrix Algebra\n\n\n\n\n\nFeb 6, 2025\n\n\n\n\n\n\n\nNoncollapsibility of the odds ratio\n\n\n\ncode\n\nanalysis\n\n\n\nIPW-analysis\n\n\n\n\n\nDec 2, 2023\n\n\n\n\n\n\n\nCompositions\n\n\n\ncode\n\nanalysis\n\n\n\nSimplex as sample space: Tetrahedron for 4-part compositions\n\n\n\n\n\nNov 3, 2022\n\n\n\n\n\n\n\nAber der Kaiser hat ja gar nichts an!\n\n\n\nmeinung\n\n\n\nGegen Identitätspolitik\n\n\n\n\n\nOct 25, 2022\n\n\n\n\n\n\n\nBeyond linearity\n\n\n\ncode\n\nanalysis\n\n\n\nFrom linear model to GAM\n\n\n\n\n\nOct 6, 2022\n\n\n\n\n\n\n\nExponential Growth\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\nexp and log\n\n\n\n\n\nSep 29, 2022\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nSep 26, 2022\n\n\n\n\n\nNo matching items"
+    "text": "Quantum Mechanics Through the Lens of Statistics\nA modern perspective views the superposition principle as the fundamental empirical observation underlying quantum mechanics. Experiments indicate that if two states \\(\\psi_1\\) and \\(\\psi_2\\) are physically possible, then any linear combination\n\\[\na\\psi_1 + b\\psi_2\n\\]\nis also a possible state. This implies that quantum states form a vector space, more precisely a Hilbert space. Once states are represented as vectors, the mathematical framework of linear algebra emerges naturally.\nTo be compatible with superposition, physical observables such as energy, momentum, or spin are represented by linear operators acting on the state space. Likewise, the time evolution of a quantum system must preserve superpositions and is therefore described by a linear dynamical law. The Schrödinger equation\n\\[\ni\\hbar \\frac{\\partial \\psi}{\\partial t}\n=\nH\\psi\n\\]\ncan be understood as the mathematical expression of continuous linear time evolution, where \\(H\\) denotes the Hamiltonian, the operator associated with energy.\nFrom a statistical perspective, there are several striking analogies. In multivariate statistics, a covariance matrix \\(\\Sigma\\) summarizes the dependence structure among variables. In quantum mechanics, a Hermitian operator such as the Hamiltonian \\(H\\) plays a similarly central role by determining the structure of a physical system and its possible energy states.\nEigenvalue decompositions are fundamental in both fields. In principal component analysis (PCA),\n\\[\n\\Sigma v = \\lambda v,\n\\]\nwhere \\(\\lambda\\) denotes the variance explained by the principal component \\(v\\). In quantum mechanics,\n\\[\nH\\psi = E\\psi,\n\\]\nwhere \\(E\\) denotes an energy level and \\(\\psi\\) the corresponding energy eigenstate. In both cases, eigenvectors identify privileged directions or states, and eigenvalues quantify important properties of those directions.\nThere is also a conceptual analogy between latent variable models and quantum theory. In factor analysis, observed correlations are explained through unobserved latent factors:\n\\[\n\\Sigma = \\Lambda \\Phi \\Lambda^\\top + \\Psi.\n\\]\nSimilarly, quantum mechanics postulates an underlying state \\(\\psi\\) that is not directly observable. What can be observed are the probabilities of measurement outcomes, which are derived from the state through the Born rule:\n\\[\nP(i)\n=\n\\left|\n\\langle i \\mid \\psi \\rangle\n\\right|^2.\n\\]\nThus, both statistics and quantum mechanics infer hidden structure from observable data.\nAnother parallel arises from spectral decomposition. In statistics, a covariance matrix can be decomposed as\n\\[\n\\Sigma = Q D Q^\\top,\n\\]\nwhere the columns of \\(Q\\) are eigenvectors and the diagonal elements of \\(D\\) are eigenvalues. In quantum mechanics, a Hermitian operator admits an analogous decomposition:\n\\[\nH = U D U^\\dagger,\n\\]\nwhere \\(U\\) is a unitary matrix and \\(D\\) contains the energy eigenvalues. The mathematical structure is nearly identical; only the interpretation differs.\nFrom this viewpoint, much of the mathematical machinery of quantum mechanics—Hilbert spaces, Hermitian operators, eigenvalues, eigenvectors, traces, and spectral decompositions—can be seen as consequences of the experimentally observed validity of superposition. The deepest mystery is perhaps not why quantum mechanics relies so heavily on linear algebra, but why nature itself appears to obey the superposition principle with such extraordinary precision.\n\n\nQuantum Mechanics as Generalized Probability Theory\nThe previous discussion emphasized why quantum mechanics naturally leads to linear algebra. However, quantum theory can also be viewed as a generalization of probability theory. This perspective becomes particularly clear through the concept of the density matrix, which plays a role analogous to a probability distribution in classical statistics.\nIn classical probability theory, a random variable \\(X\\) takes values \\(x_i\\) with probabilities \\(p_i\\). The expectation of \\(X\\) is given by\n\\[\nE(X)\n=\n\\sum_i x_i p_i.\n\\]\nThe probability distribution contains all information necessary to predict future observations and compute expectations.\nQuantum mechanics has a remarkably similar structure. The state of a system is described by a density matrix \\(\\rho\\), while a measurable quantity is represented by a Hermitian operator \\(A\\). In this analogy, the density matrix plays a role similar to a probability distribution, whereas observables generalize the notion of random variables.\nThe expectation of an observable is given by\n\\[\nE(A)\n=\n\\operatorname{tr}(\\rho A).\n\\]\nThis formula is the quantum analogue of the classical expectation.\nTo understand why, consider the spectral decomposition of the observable:\n\\[\nA\n=\n\\sum_i a_i P_i,\n\\]\nwhere \\(a_i\\) are the eigenvalues of \\(A\\) and \\(P_i\\) are the corresponding projection operators. The eigenvalues represent the possible outcomes of a measurement. Their probabilities are determined by the Born rule:\n\\[\nP(a_i)\n=\n\\operatorname{tr}(\\rho P_i).\n\\]\nThe expectation of the observable therefore becomes\n\\[\nE(A)\n=\n\\sum_i a_i P(a_i).\n\\]\nSubstituting the Born rule yields\n\\[\nE(A)\n=\n\\sum_i a_i \\operatorname{tr}(\\rho P_i).\n\\]\nUsing the linearity of the trace,\n\\[\nE(A)\n=\n\\operatorname{tr}\n\\left(\n\\rho\n\\sum_i a_i P_i\n\\right)\n=\n\\operatorname{tr}(\\rho A).\n\\]\nThus, the familiar formula for expectation in statistics reappears in quantum mechanics in matrix form.\nThe analogy can be summarized as follows:\n\n\n\n\n\n\n\nStatistics\nQuantum Mechanics\n\n\n\n\nProbability distribution \\(P\\)\nDensity matrix \\(\\rho\\)\n\n\nRandom variable \\(X\\)\nObservable \\(A\\)\n\n\nPossible values \\(x_i\\)\nEigenvalues \\(a_i\\)\n\n\nProbabilities \\(P(X=x_i)\\)\nBorn probabilities \\(\\operatorname{tr}(\\rho P_i)\\)\n\n\nExpectation \\(E(X)\\)\nExpectation \\(\\operatorname{tr}(\\rho A)\\)\n\n\n\nFrom this perspective, quantum mechanics may be viewed as a form of non-commutative probability theory. In classical probability, random variables are ordinary functions and therefore commute:\n\\[\nXY = YX.\n\\]\nIn quantum mechanics, observables are operators and generally do not commute:\n\\[\nAB \\neq BA.\n\\]\nThis seemingly small mathematical change has profound consequences. Non-commutativity leads to uncertainty relations, interference phenomena, and many of the characteristic features that distinguish quantum mechanics from classical probability theory.\nFrom a mathematical perspective, one may therefore view quantum mechanics as a generalization of probability theory in which probability distributions are replaced by density matrices, random variables by Hermitian operators, and integration by the trace operator. The familiar concepts of probabilities, expectations, variances, and mixtures survive, but they are expressed in the language of linear operators rather than functions."
   },
   {
-    "objectID": "software.html",
-    "href": "software.html",
-    "title": "Software",
+    "objectID": "posts/Erwartungswerte/index.html",
+    "href": "posts/Erwartungswerte/index.html",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
     "section": "",
-    "text": "Software\n\n\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\nStatistik: R (plattformunabhängig), JAGS (MCMC)\nBetriebsystem: Windows, Linux (Ubuntu)\nEditoren: RStudio, EMACS (ESS)\nLiterate Programming: \\(\\lx\\) und R-Markdown mit knitr, quarto\nVersionsverwaltung: Git, GitHub, BFH GitLab"
+    "text": "Viele zentrale Konzepte der Wahrscheinlichkeitstheorie und Statistik lassen sich auf wenige grundlegende Grössen zurückführen:\n\\[\nE(X), \\qquad E(X^2), \\qquad E(XY)\n\\]\nsowie auf ihre bedingten Versionen\n\\[\nE(X\\mid Z)\n\\qquad\\text{und}\\qquad\n\\operatorname{Var}(X\\mid Z).\n\\]\nAus diesen Grössen entstehen Varianz, Kovarianz und Korrelation. Durch Konditionieren erhält man die Gesetze der totalen Erwartung, Varianz und Kovarianz. Dieselben Ideen führen weiter zu Regression, erklärter Varianz, \\(R^2\\), Mean Squared Error und der Bias-Variance-Zerlegung."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/Erwartungswerte/index.html#beispiel-random-intercept-modell",
+    "href": "posts/Erwartungswerte/index.html#beispiel-random-intercept-modell",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "section": "Beispiel: Random-Intercept-Modell",
+    "text": "Beispiel: Random-Intercept-Modell\nBetrachte\n\\[\nX_{ij}\n=\n\\mu+b_j+\\varepsilon_{ij},\n\\]\nmit\n\\[\nb_j\\sim(0,\\sigma_b^2)\n\\]\nund\n\\[\n\\varepsilon_{ij}\\sim(0,\\sigma_e^2).\n\\]\nDann ist die Gesamtvarianz\n\\[\n\\operatorname{Var}(X_{ij})\n=\n\\sigma_b^2+\\sigma_e^2.\n\\]\nDie Intraclass Correlation ist entsprechend\n\\[\n\\operatorname{ICC}\n=\n\\frac{\\sigma_b^2}\n{\\sigma_b^2+\\sigma_e^2}.\n\\]\nSie beschreibt den Anteil der Gesamtvarianz, der auf Unterschiede zwischen den Gruppen zurückzuführen ist."
+  },
+  {
+    "objectID": "posts/Erwartungswerte/index.html#total-variance-als-spezialfall",
+    "href": "posts/Erwartungswerte/index.html#total-variance-als-spezialfall",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "section": "Total Variance als Spezialfall",
+    "text": "Total Variance als Spezialfall\nSetzt man \\(Y=X\\), erhält man\n\\[\n\\begin{aligned}\n\\operatorname{Cov}(X,X)\n&=\nE[\\operatorname{Cov}(X,X\\mid Z)]\\\\\n&\\quad+\n\\operatorname{Cov}(E[X\\mid Z],E[X\\mid Z]).\n\\end{aligned}\n\\]\nDamit folgt unmittelbar\n\\[\n\\operatorname{Var}(X)\n=\nE[\\operatorname{Var}(X\\mid Z)]\n+\n\\operatorname{Var}(E[X\\mid Z]).\n\\]\nDas Gesetz der totalen Varianz ist somit ein Spezialfall des Gesetzes der totalen Kovarianz."
+  },
+  {
+    "objectID": "posts/Erwartungswerte/index.html#herleitung",
+    "href": "posts/Erwartungswerte/index.html#herleitung",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "section": "Herleitung",
+    "text": "Herleitung\nSchreibe\n\\[\nX-a\n=\n(X-E[X])+(E[X]-a).\n\\]\nDann\n\\[\n\\begin{aligned}\nE[(X-a)^2]\n&=\nE[(X-E[X])^2]\\\\\n&\\quad+\n2(E[X]-a)E[X-E[X]]\\\\\n&\\quad+\n(E[X]-a)^2.\n\\end{aligned}\n\\]\nDa\n\\[\nE[X-E[X]]=0,\n\\]\nverschwindet der Kreuzterm. Somit\n\\[\nE[(X-a)^2]\n=\n\\operatorname{Var}(X)+(E[X]-a)^2.\n\\]\nDiese einfache Identität ist die Grundlage der Bias-Variance-Zerlegung."
+  },
+  {
+    "objectID": "posts/Erwartungswerte/index.html#grundlegende-momente",
+    "href": "posts/Erwartungswerte/index.html#grundlegende-momente",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "section": "Grundlegende Momente",
+    "text": "Grundlegende Momente\n\\[\nE(X),\\qquad E(X^2),\\qquad E(XY).\n\\]\nDaraus folgen\n\\[\n\\begin{aligned}\n\\operatorname{Var}(X)\n&=E(X^2)-E(X)^2,\\\\\n\\operatorname{Cov}(X,Y)\n&=E(XY)-E(X)E(Y),\\\\\n\\rho_{XY}\n&=\n\\frac{\\operatorname{Cov}(X,Y)}\n{\\sqrt{\\operatorname{Var}(X)\\operatorname{Var}(Y)}}.\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "posts/Erwartungswerte/index.html#konditionieren",
+    "href": "posts/Erwartungswerte/index.html#konditionieren",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "section": "Konditionieren",
+    "text": "Konditionieren\n\\[\nE(X\\mid Z),\n\\qquad\n\\operatorname{Var}(X\\mid Z).\n\\]\nDaraus folgen\n\\[\n\\boxed{\nE(X)=E[E(X\\mid Z)]\n}\n\\]\n\\[\n\\boxed{\n\\operatorname{Var}(X)\n=\nE[\\operatorname{Var}(X\\mid Z)]\n+\n\\operatorname{Var}(E[X\\mid Z])\n}\n\\]\nund\n\\[\n\\boxed{\n\\operatorname{Cov}(X,Y)\n=\nE[\\operatorname{Cov}(X,Y\\mid Z)]\n+\n\\operatorname{Cov}(E[X\\mid Z],E[Y\\mid Z]).\n}\n\\]"
+  },
+  {
+    "objectID": "posts/Erwartungswerte/index.html#quadratische-fehler",
+    "href": "posts/Erwartungswerte/index.html#quadratische-fehler",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "section": "Quadratische Fehler",
+    "text": "Quadratische Fehler\nDie zentrale Identität\n\\[\nE[(X-a)^2]\n=\n\\operatorname{Var}(X)\n+\n(E[X]-a)^2\n\\]\nführt zu\n\\[\n\\boxed{\n\\operatorname{MSE}\n=\n\\operatorname{Var}\n+\n\\operatorname{Bias}^2\n}\n\\]\nund schliesslich zum Vorhersagefehler\n\\[\n\\boxed{\n\\text{Prediction Error}\n=\n\\sigma^2\n+\n\\operatorname{Var}\n+\n\\operatorname{Bias}^2.\n}\n\\]"
+  },
+  {
+    "objectID": "posts/Erwartungswerte/index.html#zentrale-konzeptionelle-verbindung",
+    "href": "posts/Erwartungswerte/index.html#zentrale-konzeptionelle-verbindung",
+    "title": "Erwartungswert, Varianz und zentrale Zerlegungen",
+    "section": "Zentrale konzeptionelle Verbindung",
+    "text": "Zentrale konzeptionelle Verbindung\nDie gemeinsame Idee hinter vielen dieser Resultate ist eine Zerlegung in einen systematischen bzw. erklärbaren Anteil und einen zufälligen bzw. nicht erklärbaren Anteil:\n\\[\n\\boxed{\nY\n=\nE(Y\\mid X)\n+\n[Y-E(Y\\mid X)].\n}\n\\]\nDaraus entstehen Varianzzerlegungen, Regression, erklärte Varianz, \\(R^2\\), Random-Effects-Modelle sowie zentrale Resultate der Schätz- und Vorhersagetheorie."
+  },
+  {
+    "objectID": "posts/Trace/index.html",
+    "href": "posts/Trace/index.html",
+    "title": "The trace of a matrix",
     "section": "",
-    "text": "👋 Hi, I’m André Meichtry\n\n🌱 I’m currently working as a statistics consultant at the School of Health Professions, Bern University of Applied Sciences.\n\n👀 I’m interested in philosophy, physics, quantitative research methodology and biostatistics.\n🏢\nBerner Fachhochschule / Bern University of Applied Sciences\nDepartement Gesundheit / Department of Health Professions\nAndré Meichtry\nMurtenstrasse 10\n(Büro: Finkenhubelweg 11, Raum/Office F108)\n3008 Bern\nSwitzerland\n+41 31 848 60 18\n\nandre.meichtry@bfh.ch\nbfh.ch/gesundheit"
+    "text": "One of the most important properties of the trace of a matrix is its cyclic invariance:\n\\[\n\\operatorname{tr}(ABC)\n=\n\\operatorname{tr}(BCA)\n=\n\\operatorname{tr}(CAB).\n\\]\nIn the context of factor analysis, this immediately implies\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThis identity has a deep geometric interpretation. In the common factor model\n\\[\n\\Sigma = \\Lambda \\Phi \\Lambda^T + \\Psi,\n\\]\nthe matrix\n\\[\n\\Sigma_c = \\Lambda \\Phi \\Lambda^T\n\\]\nrepresents the covariance structure explained by the common factors. It resides in the item space and has dimension \\(p \\times p\\), where \\(p\\) denotes the number of observed variables.\nUsing the cyclic property of the trace, the same common variance can be written as\n\\[\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThe matrix\n\\[\n\\Lambda^T \\Lambda\n\\]\nresides in the factor space and has dimension \\(m \\times m\\), where \\(m\\) denotes the number of factors.\nThe equality of these two trace values shows that the total variance explained by the common factors remains the same regardless of whether it is viewed in the high-dimensional space of observed variables or in the lower-dimensional latent factor space. The trace therefore acts as a kind of conservation law for common variance.\nGeometrically,\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes the structure of the data in item space, whereas\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes the same structure from the perspective of factor space. Although these matrices have different dimensions and represent different objects, they yield the same total amount of common variance.\n\n\nThe same idea appears in principal component analysis (PCA) and singular value decomposition (SVD). For any matrix \\(A\\),\n\\[\n\\operatorname{tr}(AA^T)\n=\n\\operatorname{tr}(A^TA).\n\\]\nThe matrix \\(AA^T\\) describes the geometry in one space, whereas \\(A^TA\\) describes the same structure in a different coordinate system. Both matrices contain the same total variance, even though they may have different dimensions.\nIn PCA, the trace of the covariance matrix equals the sum of its eigenvalues and therefore the total variance of the data:\n\\[\n\\operatorname{tr}(\\Sigma)\n=\n\\sum_{i=1}^{p} \\lambda_i.\n\\]\nFactor analysis extends this idea to the common variance component. The identity\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi)\n\\]\nshows that the explained common variance is invariant under whether it is viewed in item space or factor space.\n\n\n\nThe factor loading matrix \\(\\Lambda\\) can be viewed as a linear mapping from factor space into item space. The matrix\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes how factor variance is distributed across the observed variables. In contrast,\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes how the same variance is organized within the latent factor space.\nThe trace reveals that no common variance is lost when moving between these two perspectives—it is merely represented in a different coordinate system. The cyclic invariance of the trace therefore provides the mathematical foundation for the duality between item space and factor space in factor analysis."
   },
   {
-    "objectID": "organisation.html",
-    "href": "organisation.html",
-    "title": "Organisation",
+    "objectID": "posts/Trace/index.html#trace-as-a-bridge-between-item-space-and-factor-space",
+    "href": "posts/Trace/index.html#trace-as-a-bridge-between-item-space-and-factor-space",
+    "title": "The trace of a matrix",
     "section": "",
-    "text": "\\[\n\\def\\RR{{\\textsf{R}}}\n\\def\\lx{{\\LaTeX}}\n\\]\n\n\n\n\nMontag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108\n\n\n\n\nKurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)\n\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers.\n\n\n\n\nNach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
+    "text": "One of the most important properties of the trace of a matrix is its cyclic invariance:\n\\[\n\\operatorname{tr}(ABC)\n=\n\\operatorname{tr}(BCA)\n=\n\\operatorname{tr}(CAB).\n\\]\nIn the context of factor analysis, this immediately implies\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThis identity has a deep geometric interpretation. In the common factor model\n\\[\n\\Sigma = \\Lambda \\Phi \\Lambda^T + \\Psi,\n\\]\nthe matrix\n\\[\n\\Sigma_c = \\Lambda \\Phi \\Lambda^T\n\\]\nrepresents the covariance structure explained by the common factors. It resides in the item space and has dimension \\(p \\times p\\), where \\(p\\) denotes the number of observed variables.\nUsing the cyclic property of the trace, the same common variance can be written as\n\\[\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi).\n\\]\nThe matrix\n\\[\n\\Lambda^T \\Lambda\n\\]\nresides in the factor space and has dimension \\(m \\times m\\), where \\(m\\) denotes the number of factors.\nThe equality of these two trace values shows that the total variance explained by the common factors remains the same regardless of whether it is viewed in the high-dimensional space of observed variables or in the lower-dimensional latent factor space. The trace therefore acts as a kind of conservation law for common variance.\nGeometrically,\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes the structure of the data in item space, whereas\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes the same structure from the perspective of factor space. Although these matrices have different dimensions and represent different objects, they yield the same total amount of common variance.\n\n\nThe same idea appears in principal component analysis (PCA) and singular value decomposition (SVD). For any matrix \\(A\\),\n\\[\n\\operatorname{tr}(AA^T)\n=\n\\operatorname{tr}(A^TA).\n\\]\nThe matrix \\(AA^T\\) describes the geometry in one space, whereas \\(A^TA\\) describes the same structure in a different coordinate system. Both matrices contain the same total variance, even though they may have different dimensions.\nIn PCA, the trace of the covariance matrix equals the sum of its eigenvalues and therefore the total variance of the data:\n\\[\n\\operatorname{tr}(\\Sigma)\n=\n\\sum_{i=1}^{p} \\lambda_i.\n\\]\nFactor analysis extends this idea to the common variance component. The identity\n\\[\n\\operatorname{tr}(\\Lambda \\Phi \\Lambda^T)\n=\n\\operatorname{tr}(\\Lambda^T \\Lambda \\Phi)\n\\]\nshows that the explained common variance is invariant under whether it is viewed in item space or factor space.\n\n\n\nThe factor loading matrix \\(\\Lambda\\) can be viewed as a linear mapping from factor space into item space. The matrix\n\\[\n\\Lambda \\Phi \\Lambda^T\n\\]\ndescribes how factor variance is distributed across the observed variables. In contrast,\n\\[\n\\Lambda^T \\Lambda \\Phi\n\\]\ndescribes how the same variance is organized within the latent factor space.\nThe trace reveals that no common variance is lost when moving between these two perspectives—it is merely represented in a different coordinate system. The cyclic invariance of the trace therefore provides the mathematical foundation for the duality between item space and factor space in factor analysis."
   },
   {
-    "objectID": "organisation.html#präsenz",
-    "href": "organisation.html#präsenz",
-    "title": "Organisation",
+    "objectID": "posts/gendern/index.html",
+    "href": "posts/gendern/index.html",
+    "title": "Aber der Kaiser hat ja gar nichts an!",
     "section": "",
-    "text": "Montag-Donnerstag\nFinkenhubelweg 11, Raum/Office F108"
+    "text": "In Zeiten, in denen – an vom Steuerzahler finanzierten Hochschulen – Sprachleitfaden verteilt werden, scheint es doch wichtig, Gegendruck auch aus der politischen Mitte – also nicht nur von der extremen Rechten – aufzubauen. Es ist nicht die Aufgabe staatlicher Institutionen, an der Verbreitung von Ideologien mitzuwirken und Vorgaben zu machen, was gute Sprache ist. Sprachpolitik zu betreiben ist aus meiner Sicht etwas vom Schlimmsten, was eine Hochschule machen kann.\nDas grammatikalische bildet nicht das biologische Geschlecht ab. Diese einfache Tatsache wird von der Linguistik der Genderist*innen geleugnet. Wer sich z.B. in der Klimadebatte gleich verhielte wie die Gender-Aktivisten mit der Sprache, würde sofort (und zurecht) als Wissenschaftsleugner diffamiert. Auch sind die vorgebrachten Assoziationsstudien gegen das generische Maskulinum wenig überzeugend:\n\nUm die mangelnde Eignung des generischen Maskulinums zum inklusiven Formulieren vorzuführen, wird immer wieder gerne folgende Frage präsentiert: „Wer ist dein Lieblingsschauspieler?“ (Stahlberg et al., 2001). Werden auf diese Frage überwiegend männliche Schauspieler genannt, so werten Befürworter des Genderns dies als Beleg dafür, dass generische Maskulina vorrangig die Vorstellung von Männern auslösen. Allerdings ist diese Frage nicht im Geringsten geeignet, die Untauglichkeit des inklusiven Maskulinums zu demonstrieren. Denn diese Frage ist keine typische Verwendung des generischen Maskulinums. Würde man ganz allgemein nach Lieblingsschauspielern fragen, so lautete die korrekte Formulierung „Wer/welche sind deine Lieblingsschauspieler?“ (Frage im Plural!). Im Singular würde man entweder fragen „Wer ist deine Lieblingsschauspielerin?“ oder „Wer ist dein männlicher Lieblingsschauspieler?“ Das generische Maskulinum wird bei allgemeinen Aussagen verwendet – nicht, wenn konkrete Personen gemeint sind (wie in der Frage nach dem Lieblingsschauspieler).\n\nLetztendlich ist es bei vielen die Angst, als frauenfeindlich (oder feindlich anderen sozialen Geschlechtern gegenüber) dazustehen, die es überhaupt ermöglicht, dass solche Sprachpolitik an den Hochschulen betrieben werden kann:\n\nVielleicht endet die Geschichte des geschlechtergerechten Sprachumbaus mit all seinen grotesken Auswüchsen eines Tages wie Andersens Märchen vom Kaiser und seinen neuen Kleidern. Dort ist es bekanntlich ein Kind, das am Ende ausruft: „Aber der Kaiser hat ja gar nichts an!“ und dem Spuk damit ein Ende macht. Zuvor wollte in dem Märchen niemand eingestehen, dass er überhaupt keine Kleider sieht, weil er Angst hatte, in diesem Fall für dumm zu gelten. Beim Gendern ist es unsere Angst, von den anderen für „frauenfeindlich“ gehalten zu werden oder nicht auf der Höhe der Zeit zu sein, die viele mitlaufen lässt. Dabei ist die geschlechtergerechte Sprache noch nicht einmal ein „neues Kleid“, sondern ein über 40 Jahre altes Konzept, bei dem die Frage erlaubt sein muss, was es heute noch für ein gleichberechtigtes Miteinander der Geschlechter zu leisten vermag.\n\nFür Tomas Kubelik ist die Sprache unschuldig. Hier ein unterhaltsamer, humorvoller und gut aufgebauter Vortrag. Sein aus meiner Sicht nachvollziehbares Fazit ist:\n\nAlle Formen des Genderns sind unbrauchbar. Sie sind in sich widersprüchlich, sie sind nicht konsequent durchführbar, sie stossen an die Grenzen von Logik, Praktikabilität und Akzeptanz. Sie sind unästhetisch, unökonomisch und irreführend. (Tomas Kubelik, Vortrag und Text)\n\nFür Ingo Meyer (Das Märchen vom Gendersterntaler) ist das Hauptargument gegen das Gendern:\n\nSprache entwickelt sich seit Jahrhunderten. Was funktioniert, setzt sich durch; was die Verständigung erschwert, wird abgeschliffen. Nie ist es ohne Schaden gelungen, diesen unbewussten Akt nachzuahmen. Zwar stimmt es: Wenn ich die Meldung „Sonntagsausflügler drängten ins Grüne“ lese, stelle ich mir die Menschen derzeit vorwiegend weiß vor. Um diesen Satz für mich „gerechter“ zu machen, bräuchte ich also vielerlei Hinweise. Gerecht in diesem Sinne wäre eine Formulierung wie „Die LSBTI+, PoC, alte und junge Menschen inkludierenden Sonntagsausflügler*innen drängten ins Grüne“. Das ist offensichtlich absurd. Sprache hat nicht die Aufgabe, von Dritten erwünschte Bedeutungen in unsere Köpfe zu pflanzen. Es gibt keine geschlechtergerechte Sprache. Es gibt überhaupt keine gerechte Sprache. Es steht uns aber frei, die vorhandene Sprache gerecht zu verwenden.\n\nEin einfach und klar geschriebenes Buch ist auch: Fabian Payr: Von Menschen und Mensch*innen. 20 gute Gründe, mit dem Gendern aufzuhören:\n\n„Studentin kann nur deshalb ‚weibliche Person, die studiert‘ bedeuten, weil das zugrunde liegende Wort Student ‚Person, die studiert‘ bedeutet und nicht etwa ‚männliche Person, die studiert‘“ (Lieb & Richter, 1990, S. 150).\n\nNatürlich lehnen auch sehr viele Frauen das Gendern ab. Persönlich kenne ich keine einzige Frau in meinem nicht-akademischen Umfeld, die Gendern gut findet.\n\nIch bin eine Frau und ich fühle mich belästigt von den In-Endungen, von dem Binnen-I und dem ganzen syntaktischen Gleichberechtigungsgefummel. Die fast extremistischen Züge des Verweiblichungswahns von Sprache haben wohl mit der Tradition des Alice Schwarzer Opferfeminismus zu tun. Offenbar haben bis heute manche mental nicht aus der weiblichen Opferrolle herausgefunden. Als Therapie und als Beleg des weiblichen Selbstbewusstseins fordere ich das generische Maskulinum daher zurück. Ich mache auch gleich ernst damit und verabschiede mich an dieser Stelle im maskulinen Gestus von Ihnen, lieber Leser, liebe Bürger, liebe Staatssekretäre, liebe Feministinnen, liebe Kritiker. Das fühlt sich gut an. (Dagmar Rosenfeld, in der Wochenzeitung die Zeit (2014) in einem „Aufschrei“)\n\nInzwischen wird auch in Frage gestellt, dass das biologische Geschlecht zweiwertig ist, die Biologie an sich wird als Naturwissenschaft nicht mehr ernst genommen. Ich hätte natürlich nie gedacht, dass ich mich eines Tages dafür rechtfertigen muss, im Statistik-Unterricht das biologische Geschlecht als Beispiel für eine zweiwertige kategoriale Variable heranzuziehen. Dazu ein Artikel aus unverdächtiger Quelle: Viele Geschlechter? Das ist Unfug!\nOb die extremen Anstrengungen für die so genannte Gleichstellung am Ende wirklich zielführend sind, wage ich doch sehr stark zu bezweifeln. So haben z.B. Länder mit hohem Gleichstellungsaufwand eine tieferen Frauen-Anteil an MINT Hochschul-Abschlüssen als Länder, die doch eher nicht als sehr matriarchalisch gelten. Trotz massiven Anstrengungen drängen Frauen in Skandinavien wieder mehr in klassische Frauenberufe. Das sollte uns zu denken geben.\n\n\nGender-Equality Paradox in Science, Technology, Engineering and Mathematics. See Stoet and Geary, 2018. See also corrigendum, 2019, and reply to Richardson et al., 2020.\n\n\n\nIn Frankreich hat die Académie française erklärt, das Gendern sei zur Verfolgung der damit bezweckten gesellschaftspolitischen Ziele (Gleichstellung) untauglich und kontraproduktiv. Der französische Bildungsminister hat die Verwendung geschlechtsneutraler Schriftsprache an Schulen per Erlass verboten.\nViele lesenswerte Texte zum Thema findet man unter Gendersterntaler und LinguistikUndGendern."
   },
   {
-    "objectID": "organisation.html#anfrage",
-    "href": "organisation.html#anfrage",
-    "title": "Organisation",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "Kurzes Mail an andre.meichtry@bfh.ch mit Angabe:\n\nEinheit (Fachbereich, Institut, Kompetenz-Zentrum, APP)\nForschung oder Lehre\nProjekt / Thema\nStadium (Planung, Analyse, Interpretation, Publikation)"
-  },
-  {
-    "objectID": "organisation.html#rahmen",
-    "href": "organisation.html#rahmen",
-    "title": "Organisation",
-    "section": "",
-    "text": "Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\n\n\n\nArbeiten im Bereich der Planung, Aufbereitung, Analysen, Interpretation und Dissemination/Publikation können innerhalb eines Projektes – je nach Vereinbarung – übernommen werden.\n\n\n\n\nBereits während dem Beratungsgesprächs sollten allfällige Co-Autorenschaften geklärt werden.\n\n\n\nDer Umgang mit Daten ist vertraulich. Verwendung der Daten für Lehre oder Forschung geschieht nur nach ausdrücklichem schriftlichen Einverständnis des Auftraggebers."
-  },
-  {
-    "objectID": "organisation.html#externe-aufträge",
-    "href": "organisation.html#externe-aufträge",
-    "title": "Organisation",
-    "section": "",
-    "text": "Nach einem Beratungsgespräch wird bei geplanter Zusammenarbeit in einem Projekt ein Zeitplan und ein Kostenvoranschlag erstellt. Der minimale Aufwand zur Bearbeitung eines Projekts beträgt ungefähr 30-50 Arbeitsstunden."
-  },
-  {
-    "objectID": "Kolloquium.html",
-    "href": "Kolloquium.html",
-    "title": "Statistik-Kolloquium am G",
-    "section": "",
-    "text": "Einmal monatlich tauschen sich Statistik-Interessierte über ausgewählte Themen zu quantitativen Methoden, Statistik und Wissenschaftsphilosophie aus. Themen können von den Teilnehmern eingebracht und auch vorgestellt werden. \nHinweis: Im Rahmen des Kolloquiums können keine vollständigen Einführungskurse z.B. in R usw. stattfinden. Dazu sei verwiesen auf entsprechende Angebote der Hochschulen.\n\n\n\n\nZeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\nOrt: Murtenstrasse 10, Raum 123\n\n\nThemen 2026Themen 2025Themen 2024Themen 2023\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n7.1\nMetaanalyse\nAndré\n\n\n\nMI\n4.2\n—\n—\n\n\n\nMI\n4.3\nNon-Null \\(H_0\\)\nAndré\n\n\n\nMI\n1.4\nFisher/Neyman/Bayes\nAndré\n\n\n\nMI\n6.5\nGit/GitLab/Magit Workflow\nAndré\n\n\n\nMI\n3.6\nGit/GitLab, Exercises (ÜbungsProjekt)\nAndré und Patric\n\n\n\nMI\n2.9\nLongitudinal Latent Variable Models (GitLabPage)\nAndré\n\n\n\nMI\n7.10\n—\n—\n\n\n\nMI\n4.11\nGaussian finite mixture models (Latent Profile Analysis)\nAndré\n\n\n\nMI\n2.12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n5.2\nDiagnostik und Bayes\nAndré\n\n\n\nMI\n5.3\nPrinzipien Power und Fallzahl\nAndré\n\n\n\nMI\n2.4\nKlassifikation, Neural Network, Link zu KI\nAndré\n\n\n\nMI\n7.5\nLatent Variable Model: EFA\nAndré\n\n\n\nMI\n4.6\nLatent Variable Model: CFA\nAndré\n\n\n\nMI\n3.9\nLatent Class Linear Mixed Model\nAndré\n\n\n\nMI\n1.10\n—\nAndré\nverschoben\n\n\nMI\n5.11\nDas Anti-Falsifikations-Paradigma\nAndré\nPhilosophischer Exkurs\n\n\nMI\n3.12\nGüte von Klassifikatoren\nAndré\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\nA. DI\n9.1\n–\n–\n\n\nB. MI\n7.2\nLikelihood\nAndré\n\n\nA. DI\n5.3\nSevere Testing\nAndré\n\n\nB. MI\n3.4\nfällt aus\nAndré\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\n\n\nMI\n4.9\nBayesian \\(t\\)-test\nAndré\n\n\nMI\n2.10\nGeneralised Linear Model\nAndré\n\n\nMI\n6.11\nLinear Mixed Model\nAndré\n\n\nMI\n4.12\nProjekt Linear Mixed Model\nAglaja\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric\n\n\n\n\n\n\n\n\n\nStatistik Kolloquium G"
-  },
-  {
-    "objectID": "Kolloquium.html#zeitpunkt-und-information",
-    "href": "Kolloquium.html#zeitpunkt-und-information",
-    "title": "Statistik-Kolloquium am G",
-    "section": "",
-    "text": "Zeitpunkt: Erster Mittwoch Monat: 13:00 bis 14:00\nOrt: Murtenstrasse 10, Raum 123\n\n\nThemen 2026Themen 2025Themen 2024Themen 2023\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n7.1\nMetaanalyse\nAndré\n\n\n\nMI\n4.2\n—\n—\n\n\n\nMI\n4.3\nNon-Null \\(H_0\\)\nAndré\n\n\n\nMI\n1.4\nFisher/Neyman/Bayes\nAndré\n\n\n\nMI\n6.5\nGit/GitLab/Magit Workflow\nAndré\n\n\n\nMI\n3.6\nGit/GitLab, Exercises (ÜbungsProjekt)\nAndré und Patric\n\n\n\nMI\n2.9\nLongitudinal Latent Variable Models (GitLabPage)\nAndré\n\n\n\nMI\n7.10\n—\n—\n\n\n\nMI\n4.11\nGaussian finite mixture models (Latent Profile Analysis)\nAndré\n\n\n\nMI\n2.12\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\n\nMI\n5.2\nDiagnostik und Bayes\nAndré\n\n\n\nMI\n5.3\nPrinzipien Power und Fallzahl\nAndré\n\n\n\nMI\n2.4\nKlassifikation, Neural Network, Link zu KI\nAndré\n\n\n\nMI\n7.5\nLatent Variable Model: EFA\nAndré\n\n\n\nMI\n4.6\nLatent Variable Model: CFA\nAndré\n\n\n\nMI\n3.9\nLatent Class Linear Mixed Model\nAndré\n\n\n\nMI\n1.10\n—\nAndré\nverschoben\n\n\nMI\n5.11\nDas Anti-Falsifikations-Paradigma\nAndré\nPhilosophischer Exkurs\n\n\nMI\n3.12\nGüte von Klassifikatoren\nAndré\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nLead\n\n\n\n\nA. DI\n9.1\n–\n–\n\n\nB. MI\n7.2\nLikelihood\nAndré\n\n\nA. DI\n5.3\nSevere Testing\nAndré\n\n\nB. MI\n3.4\nfällt aus\nAndré\n\n\nA. DI\n7.5\nRegression to the mean\nAndré\n\n\nB. MI\n5.6\nÄquivalenztests\nAndré\n\n\nMI\n4.9\nBayesian \\(t\\)-test\nAndré\n\n\nMI\n2.10\nGeneralised Linear Model\nAndré\n\n\nMI\n6.11\nLinear Mixed Model\nAndré\n\n\nMI\n4.12\nProjekt Linear Mixed Model\nAglaja\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTag\nDatum\nThema\nBereich\nLead\n\n\n\n\nB. Mi\n5.4\nFisher-Neyman\nPhilosophischer Exkurs\nAndré\n\n\nA. Di\n2.5\nBayes\nPhilosophischer Exkurs\nAndré\n\n\nB. MI\n7.6\nFallzahl (Power, Precision)\nPlanung\nAndré\n\n\nA. DI\n5.9\nDas Allgemeine Lineare Modell (LM)\nModell\nAndré\n\n\nB. MI\n4.10\nKategorielle Eingangsgrössen (LM)\nModell\nAndré\n\n\nA. DI\n7.11\nLM “ANCOVA”\nModell\nAndré\n\n\nB. MI\n6.12\nggplot\nAnwendung\nPatric"
-  },
-  {
-    "objectID": "Kolloquium.html#ablage",
-    "href": "Kolloquium.html#ablage",
-    "title": "Statistik-Kolloquium am G",
-    "section": "",
-    "text": "Statistik Kolloquium G"
-  },
-  {
-    "objectID": "angebot.html",
-    "href": "angebot.html",
-    "title": "Angebot",
-    "section": "",
-    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen\n\n\n\n\n\nBei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
-  },
-  {
-    "objectID": "angebot.html#forschung",
-    "href": "angebot.html#forschung",
-    "title": "Angebot",
-    "section": "",
-    "text": "Planung: Design, Fallzahl, Simulationen\nDatenaufbereitung\nAnalysen\nInterpretation\nDissemination/Publikationen\nInterne Fortbildungen"
-  },
-  {
-    "objectID": "angebot.html#lehre",
-    "href": "angebot.html#lehre",
-    "title": "Angebot",
-    "section": "",
-    "text": "Bei Beratungen zu Bachelor- oder Master-Thesis ist es wertvoll, dass nebst den Studenten auch die jeweiligen Betreuer am Beratungsgespräch teilnehmen.\n\nDesign, Fallzahl\nHilfestellung bei komplexeren Modellen / Analysen\nInterpretation\nDissemination/Publikationen"
-  },
-  {
-    "objectID": "skript.html",
-    "href": "skript.html",
-    "title": "Statistik",
-    "section": "",
-    "text": "Statistik\n\nEinführung in die Wahrscheinlichkeitstheorie, Statistische Grundlagen, Lineare Modelle, Beispiele mit R: Statistik-Skript\nWahrscheinlichkeitstheorie, Zufallsvariablen und ihre Verteilung: Skript Wahrscheinlichkeitstheorie"
-  },
-  {
-    "objectID": "posts/exponentialGrowth/index.html",
-    "href": "posts/exponentialGrowth/index.html",
-    "title": "Exponential Growth",
-    "section": "",
-    "text": "The greatest shortcoming of the human race is the inability to understand the exponential function. (Al Bartlett)"
-  },
-  {
-    "objectID": "posts/exponentialGrowth/index.html#inzidenz-und-kumulierte-inzidenz",
-    "href": "posts/exponentialGrowth/index.html#inzidenz-und-kumulierte-inzidenz",
-    "title": "Exponential Growth",
-    "section": "Inzidenz und kumulierte Inzidenz",
-    "text": "Inzidenz und kumulierte Inzidenz\n\n\n\n\nInzidenz\n\n\n\n\n\n\n\nkumulierte Indzidenz\n\n\n\n\n\n\n\nlog kumulierte Indzidenz"
-  },
-  {
-    "objectID": "posts/exponentialGrowth/index.html#erste-welle-covid-19",
-    "href": "posts/exponentialGrowth/index.html#erste-welle-covid-19",
-    "title": "Exponential Growth",
-    "section": "Erste Welle Covid-19",
-    "text": "Erste Welle Covid-19\n\n\n\n\nInzidenz\n\n\n\n\n\n\n\nlog Inzidenz\n\n\n\n\n\nErste Welle. Example of doubling times: 1 day (solid), 2 days (dashed), 3 days (red), seven days (dotted), with reported cases Covid19 in Switzerland. Horizontal line: swiss population. On a logarithmic scale, a straight line indicates exponential growth. Quelle."
-  },
-  {
-    "objectID": "posts/exponentialGrowth/index.html#auswirkung-vorfaktor",
-    "href": "posts/exponentialGrowth/index.html#auswirkung-vorfaktor",
-    "title": "Exponential Growth",
-    "section": "Auswirkung Vorfaktor",
-    "text": "Auswirkung Vorfaktor\nAnnahme: Verdoppelung alle drei Tage, 10 Prozent der Infizierten müssen ins Spital. Die Anzahl Cases von heute sind die Anzahl Spitalpatienten in 9 Tagen, wenn mann nichts macht.\n\\(0.1\\times 2^{0.33t}=0.1\\times (2^{0.33})^t=0.1\\times\n1.3^t=1.3^{\\log_{1.3}0.1}1.3^t=1.3^{t+\\log_{1.3}0.1}=1.3^{t-8.776}\\)\nAnalog kann man zeigen: Wenn die Mortalitätsrate bei einem Prozent der bestätigten Fälle liegt, dann ist die Anzahl der bestätigten Fälle die zu erwartende Anzahl der Todesfälle ca. 18 Tage später, wenn man nichts macht.\n\\(0.01\\times 2^{0.33t}=0.01\\times (2^{0.33})^t=0.01\\times\n1.3^t=1.3^{\\log_{1.3}0.01}1.3^t=1.3^{t+\\log_{1.3}0.01}=1.3^{t-17.553}\\)\n\n\n[1] -8.776\n\n\n[1] -17.55\n\n\n\n\nAuswirkung Vorfaktor"
-  },
-  {
-    "objectID": "posts/exponentialGrowth/index.html#footnotes",
-    "href": "posts/exponentialGrowth/index.html#footnotes",
-    "title": "Exponential Growth",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nProof: \\[x(t)=x_0e^{kt}=x_0e^{t/\\tau}=x_0 2^{\\frac{t}{\\tau}\\log_2e}=x_02^{\\frac{t}{\\tau} \\frac{1}{\\log 2 }}=x_02^{t/T}\\]↩︎"
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html",
-    "href": "posts/conditionalIndependence/index.html",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "",
-    "text": "Local independence is one of the central ideas in latent variable models.\nIn a latent class analysis (LCA) or latent profile analysis (LPA), the idea is relatively simple:\n\nOnce latent class membership is known, the observed indicators should no longer be associated.\n\nSymbolically, for indicators \\(Y_{i1},\\ldots,Y_{iK}\\) and latent class \\(C_i\\),\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\perp\\!\\!\\!\\perp\n\\mid C_i.\n\\]\nHowever, this formulation becomes less obvious when moving to longitudinal latent variable models.\nIn a latent class linear mixed model (LCLMM), repeated measurements remain correlated within a latent class because subjects have random effects. In a multivariate latent class mixed model (LCMM), multiple markers are additionally correlated because they measure the same underlying latent process.\nThe general principle remains the same:\n\nObserved variables should become conditionally independent once we condition on the latent quantities introduced by the model to explain their dependence.\n\nWhat changes between models is therefore not the basic idea of conditional independence, but what we have to condition on."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#introduction",
-    "href": "posts/conditionalIndependence/index.html#introduction",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "",
-    "text": "Local independence is one of the central ideas in latent variable models.\nIn a latent class analysis (LCA) or latent profile analysis (LPA), the idea is relatively simple:\n\nOnce latent class membership is known, the observed indicators should no longer be associated.\n\nSymbolically, for indicators \\(Y_{i1},\\ldots,Y_{iK}\\) and latent class \\(C_i\\),\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\perp\\!\\!\\!\\perp\n\\mid C_i.\n\\]\nHowever, this formulation becomes less obvious when moving to longitudinal latent variable models.\nIn a latent class linear mixed model (LCLMM), repeated measurements remain correlated within a latent class because subjects have random effects. In a multivariate latent class mixed model (LCMM), multiple markers are additionally correlated because they measure the same underlying latent process.\nThe general principle remains the same:\n\nObserved variables should become conditionally independent once we condition on the latent quantities introduced by the model to explain their dependence.\n\nWhat changes between models is therefore not the basic idea of conditional independence, but what we have to condition on."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#lca-and-lpa",
-    "href": "posts/conditionalIndependence/index.html#lca-and-lpa",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "LCA and LPA",
-    "text": "LCA and LPA\nConsider \\(K\\) indicators\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\]\nand a categorical latent variable\n\\[\nC_i\\in\\{1,\\ldots,G\\}.\n\\]\nIn a standard LCA or LPA, the latent class is intended to explain the association among the indicators.\nThe local-independence assumption is\n\\[\nY_{i1},\\ldots,Y_{iK}\n\\perp\\!\\!\\!\\perp\n\\mid C_i.\n\\]\nFor two indicators this implies\n\\[\n\\operatorname{Cov}\n\\left(\nY_{ij},Y_{ik}\n\\mid C_i=g\n\\right)\n=\n0.\n\\]\nThe indicators can nevertheless be associated marginally.\nThis follows from the law of total covariance:\n\\[\n\\operatorname{Cov}(Y_j,Y_k)\n=\nE\\left[\n\\operatorname{Cov}(Y_j,Y_k\\mid C)\n\\right]\n+\n\\operatorname{Cov}\n\\left(\nE[Y_j\\mid C],\nE[Y_k\\mid C]\n\\right).\n\\]\nUnder local independence,\n\\[\nE\\left[\n\\operatorname{Cov}(Y_j,Y_k\\mid C)\n\\right]\n=\n0,\n\\]\nbut\n\\[\n\\operatorname{Cov}\n\\left(\nE[Y_j\\mid C],\nE[Y_k\\mid C]\n\\right)\n\\]\ncan be non-zero.\nThus, the indicators are associated because the latent classes differ jointly in their indicator means.\n\nLPA and the covariance matrix\nFor continuous indicators, a common LPA specification is\n\\[\n\\mathbf Y_i\\mid C_i=g\n\\sim\nN(\\boldsymbol\\mu_g,\\boldsymbol\\Sigma_g).\n\\]\nStrict local independence corresponds to a diagonal within-class covariance matrix,\n\\[\n\\boldsymbol\\Sigma_g\n=\n\\begin{pmatrix}\n\\sigma_{1g}^2 & 0 & \\cdots & 0\\\\\n0 & \\sigma_{2g}^2 & \\cdots & 0\\\\\n\\vdots & \\vdots & \\ddots & \\vdots\\\\\n0 & 0 & \\cdots & \\sigma_{Kg}^2\n\\end{pmatrix}.\n\\]\nAllowing non-zero within-class covariances relaxes the local-independence assumption."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#moving-to-longitudinal-data",
-    "href": "posts/conditionalIndependence/index.html#moving-to-longitudinal-data",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "Moving to longitudinal data",
-    "text": "Moving to longitudinal data\nSuppose we now observe the same outcome repeatedly,\n\\[\nY_i(t_1),Y_i(t_2),\\ldots,Y_i(t_T).\n\\]\nThe question becomes:\n\nShould repeated measurements be independent once we know the latent class?\n\nThe answer depends on the longitudinal model.\nThis distinction becomes particularly clear when comparing a latent class growth analysis with a latent class linear mixed model."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#latent-class-growth-analysis",
-    "href": "posts/conditionalIndependence/index.html#latent-class-growth-analysis",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "Latent class growth analysis",
-    "text": "Latent class growth analysis\nA simple latent class growth analysis (LCGA) can be written as\n\\[\nY_i(t)\n=\nX_i(t)^\\top\\beta_{C_i}\n+\n\\epsilon_i(t).\n\\]\nThe latent class determines the trajectory.\nFor example, with a linear trajectory,\n\\[\nY_i(t)\n=\n\\beta_{0C_i}\n+\n\\beta_{1C_i}t\n+\n\\epsilon_i(t).\n\\]\nIf the residual errors are independent,\n\\[\n\\epsilon_i(t_1)\n\\perp\\!\\!\\!\\perp\n\\epsilon_i(t_2),\n\\]\nthen\n\\[\nY_i(t_1)\n\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i.\n\\]\nIn this model, the latent classes themselves explain the systematic heterogeneity in trajectories.\nThere are no subject-specific random effects producing additional within-class dependence."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#latent-class-linear-mixed-models",
-    "href": "posts/conditionalIndependence/index.html#latent-class-linear-mixed-models",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "Latent class linear mixed models",
-    "text": "Latent class linear mixed models\nA latent class linear mixed model adds subject-specific random effects:\n\\[\nY_i(t)\n=\nX_i(t)^\\top\\beta_{C_i}\n+\nZ_i(t)^\\top b_i\n+\n\\epsilon_i(t).\n\\]\nFor example, with a random intercept and random slope,\n\\[\nY_i(t)\n=\n\\beta_{0C_i}\n+\n\\beta_{1C_i}t\n+\nb_{0i}\n+\nb_{1i}t\n+\n\\epsilon_i(t).\n\\]\nNow subjects within the same latent class can have different individual trajectories.\nThis changes the conditional-independence structure fundamentally.\n\nConditioning only on class is not enough\nConsider two observations from the same subject:\n\\[\nY_i(t_1)\n\\]\nand\n\\[\nY_i(t_2).\n\\]\nEven if we know that the subject belongs to class \\(g\\), both observations still contain the same random effects \\(b_i\\).\nTherefore,\n\\[\nY_i(t_1)\n\\not\\!\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i.\n\\]\nFor a random-intercept model,\n\\[\nY_i(t)\n=\n\\beta_{0C_i}\n+\n\\beta_{1C_i}t\n+\nb_{0i}\n+\n\\epsilon_i(t),\n\\]\nwe obtain, assuming independent residual errors,\n\\[\n\\operatorname{Cov}\n\\left\\{\nY_i(t_1),Y_i(t_2)\n\\mid C_i=g\n\\right\\}\n=\n\\operatorname{Var}(b_{0i}).\n\\]\nThus, within-class correlation is not a violation of the model. It is deliberately introduced by the random effect.\n\n\nConditioning on class and random effects\nOnce we additionally condition on the subject-specific random effects,\n\\[\nY_i(t_1)\n\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i,b_i,\n\\]\nprovided the remaining residual errors are independent.\nThe relevant analogue of local independence in an LCLMM is therefore not independence conditional on \\(C_i\\) alone, but conditional independence given\n\\[\n(C_i,b_i).\n\\]\nThis illustrates an important distinction:\n\nLatent classes explain discrete heterogeneity between trajectory types, whereas random effects explain continuous heterogeneity between subjects within a class."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#latent-process-models-with-multiple-markers",
-    "href": "posts/conditionalIndependence/index.html#latent-process-models-with-multiple-markers",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "Latent process models with multiple markers",
-    "text": "Latent process models with multiple markers\nNow suppose several longitudinal markers measure a common underlying process.\nLet\n\\[\nY_{ik}(t)\n\\]\ndenote marker \\(k\\) for subject \\(i\\) at time \\(t\\).\nA simple linear measurement model is\n\\[\nY_{ik}(t)\n=\n\\eta_k\n+\n\\alpha_k\\Lambda_i(t)\n+\n\\epsilon_{ik}(t),\n\\]\nwhere \\(\\Lambda_i(t)\\) is the common latent process.\nThe markers are therefore expected to be associated.\nFor two markers,\n\\[\nY_{i1}(t)\n\\leftarrow\n\\Lambda_i(t)\n\\rightarrow\nY_{i2}(t).\n\\]\nTheir marginal association is not evidence against the model. On the contrary, this association is precisely what the common latent process is intended to explain.\n\nConditional independence of markers\nIf the marker-specific residual errors are independent,\n\\[\n\\epsilon_{ik}(t)\n\\perp\\!\\!\\!\\perp\n\\epsilon_{ik'}(t),\n\\]\nthen\n\\[\nY_{ik}(t)\n\\perp\\!\\!\\!\\perp\nY_{ik'}(t)\n\\mid\n\\Lambda_i(t).\n\\]\nThus, the analogue of local independence is now conditional independence of the markers given the common latent process.\nAgain, the general principle has not changed. What has changed is the latent quantity on which we condition."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#multivariate-latent-class-mixed-models",
-    "href": "posts/conditionalIndependence/index.html#multivariate-latent-class-mixed-models",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "Multivariate latent class mixed models",
-    "text": "Multivariate latent class mixed models\nA multivariate LCMM combines the previous structures.\nThe latent trajectory may be described by\n\\[\n\\Lambda_i(t)\\mid C_i=g\n=\nX_i(t)^\\top\\beta_g\n+\nZ_i(t)^\\top b_i.\n\\]\nMultiple markers are then linked to this common latent trajectory:\n\\[\nY_{ik}(t)\n=\nH_k\n\\left\\{\n\\Lambda_i(t)\n+\n\\epsilon_{ik}(t)\n\\right\\}.\n\\]\nThis model therefore contains several sources of dependence.\n\nDependence across time\nRepeated observations from the same subject share the same random effects.\nConsequently,\n\\[\nY_i(t_1)\n\\not\\!\\perp\\!\\!\\!\\perp\nY_i(t_2)\n\\mid C_i.\n\\]\nThe latent class alone does not explain the longitudinal dependence.\nConditioning additionally on the individual trajectory or random effects removes the dependence generated by those random effects.\n\n\nDependence across markers\nDifferent markers share the common latent process \\(\\Lambda_i(t)\\).\nTherefore,\n\\[\nY_{ik}(t)\n\\not\\!\\perp\\!\\!\\!\\perp\nY_{ik'}(t)\n\\]\nmarginally.\nWith independent marker-specific residual errors,\n\\[\nY_{ik}(t)\n\\perp\\!\\!\\!\\perp\nY_{ik'}(t)\n\\mid\n\\Lambda_i(t).\n\\]\nThe common latent process therefore plays a role analogous to the latent class in a simple LPA: it explains why observed variables are associated."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#a-hierarchy-of-conditional-independence",
-    "href": "posts/conditionalIndependence/index.html#a-hierarchy-of-conditional-independence",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "A hierarchy of conditional independence",
-    "text": "A hierarchy of conditional independence\nThe models can be summarized by asking which latent quantities are required to explain the dependence among observations.\n\n\n\n\n\n\n\n\nModel\nDependence explained by\nConditional independence\n\n\n\n\nLCA\nlatent class\nindicators independent given \\(C_i\\)\n\n\nLPA\nlatent class\nindicators independent given \\(C_i\\) under local independence\n\n\nLCGA\nlatent class\nrepeated outcomes independent given \\(C_i\\) if residuals are independent\n\n\nLCLMM / GMM\nclass + random effects\nrepeated outcomes independent given \\(C_i,b_i\\) if residuals are independent\n\n\nLatent process model\ncommon latent process\nmarkers independent given \\(\\Lambda_i(t)\\) if marker residuals are independent\n\n\nMultivariate LCMM\nclass + random effects + latent process\ndependence across time and markers is explained by the corresponding latent quantities\n\n\n\nThis suggests a more general formulation of local independence:\n\nObserved variables are locally independent when they are conditionally independent after conditioning on the latent structure that the model assumes generates their dependence.\n\nUnder this interpretation, local independence is not restricted to latent class analysis. It is a general principle underlying many latent variable models."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#why-this-distinction-matters",
-    "href": "posts/conditionalIndependence/index.html#why-this-distinction-matters",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "Why this distinction matters",
-    "text": "Why this distinction matters\nIt would be incorrect to take the LPA statement\n\\[\nY_j\\perp\\!\\!\\!\\perp Y_k\\mid C\n\\]\nand mechanically apply it to every latent class model.\nIn an LCLMM, observations within the same class are deliberately correlated through the random effects.\nIn a multivariate LCMM, markers are deliberately correlated through the common latent process.\nThe relevant question is therefore not simply\n\nAre the observations independent within a latent class?\n\nInstead, we should ask\n\nAfter conditioning on the latent variables and random effects that the model introduces to explain dependence, is there residual association left that the model does not account for?\n\nThis is the more general and useful interpretation of local independence."
-  },
-  {
-    "objectID": "posts/conditionalIndependence/index.html#summary",
-    "href": "posts/conditionalIndependence/index.html#summary",
-    "title": "Local Independence in Latent Class and Longitudinal Latent Variable Models",
-    "section": "Summary",
-    "text": "Summary\nThe concept of local independence develops naturally as latent variable models become more complex.\nFor LCA and standard LPA,\n\\[\n\\text{condition on } C_i.\n\\]\nFor an LCLMM,\n\\[\n\\text{condition on } C_i \\text{ and } b_i.\n\\]\nFor multiple markers measuring a latent process,\n\\[\n\\text{condition on } \\Lambda_i(t).\n\\]\nFor a multivariate LCMM, both ideas operate simultaneously: latent classes describe qualitatively different trajectories, random effects describe individual variation within classes, and the common latent process explains association among multiple markers.\nThe common principle is therefore\n\\[\n\\boxed{\n\\text{dependence in the observed data}\n\\quad\\longrightarrow\\quad\n\\text{latent structure}\n\\quad\\longrightarrow\\quad\n\\text{conditional independence}\n}\n\\]\nThe phrase local independence is easiest to understand not as “independence within classes”, but more generally as:\n\nindependence after conditioning on the latent structure responsible for the observed dependence."
-  },
-  {
-    "objectID": "posts/logratioGeometry/index.html",
-    "href": "posts/logratioGeometry/index.html",
-    "title": "Compositions",
-    "section": "",
-    "text": "Sample space of compositional data\nThe sample space of compositional data with \\(D\\) parts is a simplex \\(\\mathcal{S}^D\\) of dimension \\(D-1\\):\n\\(\\mathcal{S}^D=\\{\\mathbf{x}=[x_1,x_2,\\dots,x_D]\\in \\mathbb{R}^D \\mid\nx_i&gt;0, i=1,2,\\dots,D; \\sum_{i=1}^Dx_i=\\mathcal{k}\\}\\)\nThe only information is given by the ratios between components, so the information of a composition is preserved under multiplication by any positive constant. Therefore, the sample space of compositional data can always be assumed to be a standard simplex, i.e. \\(\\mathcal{k}\n= 1\\).\nNormalization to the standard simplex is called closure and is\n\\(\\mathcal{C}[x_1,x_2,\\dots,x_D]=\\left[\\frac{x_1}{\\sum_{i=1}^D x_i},\\frac{x_2}{\\sum_{i=1}^D x_i}, \\dots,\\frac{x_D}{\\sum_{i=1}^D x_i}\\right]\\)\n\n\nExample\n4 Raters rated a 4-part-composition on \\(n=20\\) subjects. See the interactive Tetrahedron"
-  },
-  {
-    "objectID": "posts/popper/index.html",
-    "href": "posts/popper/index.html",
-    "title": "Das Anti-Falsifikations-Paradigma",
-    "section": "",
-    "text": "Karl Popper kritisierte erkenntnistheoretische Positionen, die die Existenz einer objektiven Realität, die Möglichkeit objektiver Erkenntnis, rationale Kritik oder wissenschaftliche Prüfbarkeit relativieren. Er verstand sich ausdrücklich als Verteidiger der Aufklärung: Vernunft, offene Kritik, argumentative Auseinandersetzung und die Möglichkeit objektiver Erkenntnis standen im Zentrum seines Denkens.\nPositionen, die wissenschaftliche Erkenntnis primär als soziale Konstruktion, Machtprodukt oder Perspektivenfrage interpretieren, gefährden aus seiner Sicht die rationale Kritik und fördern einen erkenntnistheoretischen Relativismus. Wissenschaft macht nach Popper gerade deshalb Fortschritte, weil Theorien an einer von uns unabhängigen Realität scheitern können. Werden dagegen alle Sichtweisen primär als „konstruiert“ betrachtet, wird die Unterscheidung zwischen besseren und schlechteren Erklärungen erschwert. Darin sah Popper eine problematische Abkehr vom aufklärerischen Ideal der kritischen Rationalität. Selbst Entwicklungen der modernen Physik, etwa die Quantenmechanik mit ihren kontraintuitiven Phänomenen, verstand Popper nicht als Argument gegen die Existenz einer objektiven Realität.\nDass wissenschaftliche Theorien immer wieder durch Beobachtungen und Experimente korrigiert werden müssen, wertete er vielmehr als Hinweis darauf, dass die Welt unabhängig von unseren Überzeugungen existiert und unseren Konstruktionen Grenzen setzt. Diese Sicht steht im deutlichen Gegensatz zu erkenntnistheoretischen Positionen, die wissenschaftliches Wissen primär als Ergebnis sozialer Aushandlungsprozesse verstehen.\n\nDazu mein Beitrag zum wissenschaftlichen Diskurs in den Gesundheitswissenschaften: Das Anti-Falsifikations-Paradigma"
-  },
-  {
-    "objectID": "posts/Khatri-Rao-Product/index.html",
-    "href": "posts/Khatri-Rao-Product/index.html",
-    "title": "Design Matrix for interaction effects",
-    "section": "",
-    "text": "Problem discussed with Niklaus Meier (Thank you.)\nAssume we want interaction terms of continuous variables (variables in \\(\\mathbf{X}\\)) with categorical variables (variables in \\(\\mathbf{J}\\)). The corresponding Design Matrix is the Transposed Khatri-Rao Product; this is a row-by-row Kronecker product of two matrices.\n\\[\n\\mathbf{J} \\bullet \\mathbf{X}\n=\n\\begin{bmatrix}\n\\mathbf{J}[1,] \\otimes \\mathbf{X}[1,]\\\\\\hline\n\\mathbf{J}[2,] \\otimes \\mathbf{X}[2,]\\\\\\hline\n\\mathbf{J}[3,] \\otimes \\mathbf{X}[3,]\\\\\\hline\n...\\\\\\hline\n\\mathbf{J}[n,] \\otimes \\mathbf{X}[n,]\\\\\n\\end{bmatrix}\n\\]"
-  },
-  {
-    "objectID": "posts/Khatri-Rao-Product/index.html#design-matrix-for-interaction-effects",
-    "href": "posts/Khatri-Rao-Product/index.html#design-matrix-for-interaction-effects",
-    "title": "Design Matrix for interaction effects",
-    "section": "",
-    "text": "Problem discussed with Niklaus Meier (Thank you.)\nAssume we want interaction terms of continuous variables (variables in \\(\\mathbf{X}\\)) with categorical variables (variables in \\(\\mathbf{J}\\)). The corresponding Design Matrix is the Transposed Khatri-Rao Product; this is a row-by-row Kronecker product of two matrices.\n\\[\n\\mathbf{J} \\bullet \\mathbf{X}\n=\n\\begin{bmatrix}\n\\mathbf{J}[1,] \\otimes \\mathbf{X}[1,]\\\\\\hline\n\\mathbf{J}[2,] \\otimes \\mathbf{X}[2,]\\\\\\hline\n\\mathbf{J}[3,] \\otimes \\mathbf{X}[3,]\\\\\\hline\n...\\\\\\hline\n\\mathbf{J}[n,] \\otimes \\mathbf{X}[n,]\\\\\n\\end{bmatrix}\n\\]"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html",
-    "href": "posts/fromLMtoSplines/index.html",
-    "title": "Beyond linearity",
-    "section": "",
-    "text": "Triceps skinfold thickness dataset: The data are derived from an anthropometric study of 892 females under 50 years in three Gambian villages in West Africa.\n\n\n\n\n\n\n\n\n\n\nage\nlntriceps\ntriceps\n\n\n\n\n1\n12.05\n1.22\n3.4\n\n\n2\n9.91\n1.39\n4\n\n\n3\n10.04\n1.44\n4.2\n\n\n4\n11.49\n1.44\n4.2\n\n\n…\n…\n…\n…\n\n\n889\n7.91\n1.92\n6.8\n\n\n890\n7.99\n1.44\n4.2\n\n\n891\n14.63\n2.2\n9\n\n\n892\n30.14\n2.1\n8.2"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html#example-data",
-    "href": "posts/fromLMtoSplines/index.html#example-data",
-    "title": "Beyond linearity",
-    "section": "",
-    "text": "Triceps skinfold thickness dataset: The data are derived from an anthropometric study of 892 females under 50 years in three Gambian villages in West Africa.\n\n\n\n\n\n\n\n\n\n\nage\nlntriceps\ntriceps\n\n\n\n\n1\n12.05\n1.22\n3.4\n\n\n2\n9.91\n1.39\n4\n\n\n3\n10.04\n1.44\n4.2\n\n\n4\n11.49\n1.44\n4.2\n\n\n…\n…\n…\n…\n\n\n889\n7.91\n1.92\n6.8\n\n\n890\n7.99\n1.44\n4.2\n\n\n891\n14.63\n2.2\n9\n\n\n892\n30.14\n2.1\n8.2"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html#polynomial-regression",
-    "href": "posts/fromLMtoSplines/index.html#polynomial-regression",
-    "title": "Beyond linearity",
-    "section": "Polynomial regression",
-    "text": "Polynomial regression\nUsing poly() in lm():"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html#cross-validation-of-different-polynomials",
-    "href": "posts/fromLMtoSplines/index.html#cross-validation-of-different-polynomials",
-    "title": "Beyond linearity",
-    "section": "Cross-validation of different polynomials",
-    "text": "Cross-validation of different polynomials\n\nRMSE for quadratic\n\n\n\n\n\n\nRMSE\n\n\n\n\n3.866\n\n\n\n\n\n\n\n\nRMSE for different degrees\n\n\n     RMSE  RMSE  RMSE RMSE  RMSE  RMSE  RMSE  RMSE  RMSE  RMSE \n[1,] 3.985 4.083 3.83 3.776 3.787 3.741 3.847 3.803 3.867 3.804"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html#piecewise-linear-regression",
-    "href": "posts/fromLMtoSplines/index.html#piecewise-linear-regression",
-    "title": "Beyond linearity",
-    "section": "Piecewise linear regression",
-    "text": "Piecewise linear regression\nInstead of fitting a high-degree polynomial over the entire range of \\(X\\), piecewise polynomial regression involves fitting separate low-degree polynomials over different regions of \\(X\\). For example, a piecewise cubic polynomial works by fitting a cubic regression model of the form\n\\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2x_i^2+\\beta_3x_i^3+\\epsilon_i,\\]\nwhere the coefficients differ in different parts of the range of \\(X\\). The points where the coefficients change are called knots \\(\\xi_k\\), \\(k=1,\\dots,K\\).\nLet us begin with a piecewise linear (degree=1):\n\n\n\n\n\n\n\n\n\n\nContinuous piecewise linear regression\nWe want a continuous function. Let us define a truncated power basis function (here of degree=1) per knot \\(\\xi\\),\n\\[h(x, \\xi)=(x-\\xi)^1_{+}=\n\\begin{cases}\n  x-\\xi, \\text{\\,if\\,} x&gt;\\xi\\\\\n  0, \\text{\\,else}.\n\\end{cases}\n\\]\nThe continuous piecewise regression equation is\n\\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2 h(x_i,5)+\\cdots+\\beta_6 h(x_i,40) + \\epsilon_i\\]\nThis can be done -by hand- or with B-splines splines::bs()"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html#splines",
-    "href": "posts/fromLMtoSplines/index.html#splines",
-    "title": "Beyond linearity",
-    "section": "Splines",
-    "text": "Splines\n\nQuadratic spline\nWith\n\\[h(x, \\xi)=(x-\\xi)_{+}^2=\n\\begin{cases}\n  (x-\\xi)^2, \\text{\\,if\\,} x&gt;\\xi\\\\\n  0, \\text{\\,else},\n\\end{cases}\n\\]\nwe have as regression equation \\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2x_i^2+\\beta_3 h(x_i,5)+\\cdots+\\beta_7 h(x_i,40) + \\epsilon_i\\]\n\n\n\n\n\n\n\n\n\n\n\nCubic Spline\nMost often, cubic splines are used. Adding the following truncated power basis function per knot,\n\\[h(x, \\xi)=(x-\\xi)_{+}^3=\n\\begin{cases}\n  (x-\\xi)^3, \\text{\\,if\\,} x&gt;\\xi\\\\\n  0, \\text{\\,else},\n\\end{cases}\n\\]\nto the model for a cubic polynomial will lead to a discontinuity in only the third derivative at \\(\\xi\\); the function will remain continuous, with continuous first and second derivatives, at each of the knots:\n\\[Y_i=\\beta_0+\\beta_1x_i+\\beta_2x_i^2+\\beta_3x_i^3+\\beta_4h(x_i,5)+\\cdots+\\beta_8h(x_i,40) + \\epsilon_i\\]\nOne can show that a cubic spline has \\(K+4\\) parameters.\n\n\nNatural Spline\nNatural splines have an additional restriction that the fitted curve linear at the extremes, splines::ns()\n\n\n\n\n\n\n\npolynomial cubic splines (green), natural cubic splines (red)"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html#smoothing-splines",
-    "href": "posts/fromLMtoSplines/index.html#smoothing-splines",
-    "title": "Beyond linearity",
-    "section": "Smoothing splines",
-    "text": "Smoothing splines\nAvoids the knot selection problem completely by using a maximal set of knots. The complexity of the fit is controlled by regularization. Problem: among all functions \\(f(x)\\) with two continuous derivatives, find one that minimizes the penalized residual sum of squares\n\\[\n  RSS(f,\\lambda)=\\sum_{i=1}^N(y_i-f(x_i))^2+\\lambda[f''(t)]^2dt\n\\tag{1}\\]\nwhere \\(\\lambda\\) is a fixed smoothing parameter. The first term measures closeness to the data, while the second term penalizes curvature in the function, and \\(\\lambda\\) establishes a tradeoff between the two. Special cases: \\(\\lambda=0\\) (no constraint on \\(f\\)) and \\(\\lambda=\\infty\\) (\\(f\\) has to be linear).\nThe function \\(f(x)\\) that minimizes (Equation 1) can be shown to have some special properties: it is a piecewise cubic polynomial with knots at the unique values of \\(x_1,\\dots,x_n\\) and continuous first and second derivatives at each knot. Furthermore, it is linear in the region outside of the extreme knots. In other words, the function \\(f(x)\\) that minimizes (Equation 1) is a natural cubic spline with knots at \\(x_1,\\dots,x_n\\) ! However, it is not the same natural cubic spline that one would get if one applied the basis function approach described above – rather, it is a shrunken version of such a natural cubic spline, where the value of the tuning parameter \\(\\lambda\\) in (Equation 1) controls the level of shrinkage.\nSmoothing splines are implemented in smooth.spline().\n\n\\(\\lambda\\) determined with cross-validation\n\n\n\n\n\n\n\n\n\n\n\nThe extremes: no smooth and max smooth"
-  },
-  {
-    "objectID": "posts/fromLMtoSplines/index.html#generalized-additive-model",
-    "href": "posts/fromLMtoSplines/index.html#generalized-additive-model",
-    "title": "Beyond linearity",
-    "section": "Generalized additive model",
-    "text": "Generalized additive model\nUsing mgcv::gam()\n\n\n\nFamily: gaussian \nLink function: identity \n\nFormula:\ntriceps ~ s(age, bs = \"cr\")\n\nParametric coefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)\n(Intercept)    9.702      0.126    77.3   &lt;2e-16\n\nApproximate significance of smooth terms:\n        edf Ref.df    F p-value\ns(age) 6.71   7.54 85.6  &lt;2e-16\n\nR-sq.(adj) =  0.419   Deviance explained = 42.3%\nGCV =  14.18  Scale est. = 14.057    n = 892"
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "",
-    "text": "Wir betrachten eine Regression mit zwei Eingangsgrössen \\(x_1\\) und \\(x_2\\) und einer Zielgrösse \\(y\\). Die beobachteten Werte fassen wir zunächst in der erweiterten Datenmatrix\n\\[\n\\mathbf D\n=\n\\begin{pmatrix}\nx_{11} & x_{12} & y_1\\\\\nx_{21} & x_{22} & y_2\\\\\n\\vdots & \\vdots & \\vdots\\\\\nx_{n1} & x_{n2} & y_n\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n\\mathbf x_1 & \\mathbf x_2 & \\mathbf y\n\\end{pmatrix}\n\\in\\mathbb R^{n\\times 3}\n\\]\nzusammen. Die Zeilen von \\(\\mathbf D\\) entsprechen den \\(n\\) Beobachtungen, die Spalten den drei Variablen \\(x_1\\), \\(x_2\\) und \\(y\\).\nDieselbe Matrix kann geometrisch aus zwei verschiedenen Richtungen betrachtet werden:\n\nJede Zeile ist ein Beobachtungsvektor in \\(\\mathbb R^3\\).\nJede Spalte ist ein Variablenvektor in \\(\\mathbb R^n\\).\n\nDiese beiden Sichtweisen führen zum Zeilenraum und zum Spaltenraum."
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html#ausgangspunkt-eine-datenmatrix",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html#ausgangspunkt-eine-datenmatrix",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "",
-    "text": "Wir betrachten eine Regression mit zwei Eingangsgrössen \\(x_1\\) und \\(x_2\\) und einer Zielgrösse \\(y\\). Die beobachteten Werte fassen wir zunächst in der erweiterten Datenmatrix\n\\[\n\\mathbf D\n=\n\\begin{pmatrix}\nx_{11} & x_{12} & y_1\\\\\nx_{21} & x_{22} & y_2\\\\\n\\vdots & \\vdots & \\vdots\\\\\nx_{n1} & x_{n2} & y_n\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n\\mathbf x_1 & \\mathbf x_2 & \\mathbf y\n\\end{pmatrix}\n\\in\\mathbb R^{n\\times 3}\n\\]\nzusammen. Die Zeilen von \\(\\mathbf D\\) entsprechen den \\(n\\) Beobachtungen, die Spalten den drei Variablen \\(x_1\\), \\(x_2\\) und \\(y\\).\nDieselbe Matrix kann geometrisch aus zwei verschiedenen Richtungen betrachtet werden:\n\nJede Zeile ist ein Beobachtungsvektor in \\(\\mathbb R^3\\).\nJede Spalte ist ein Variablenvektor in \\(\\mathbb R^n\\).\n\nDiese beiden Sichtweisen führen zum Zeilenraum und zum Spaltenraum."
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html#zeilenraum",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html#zeilenraum",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "Zeilenraum",
-    "text": "Zeilenraum\nDie \\(i\\)-te Zeile von \\(\\mathbf D\\) ist\n\\[\n\\mathbf d_i\n=\n\\begin{pmatrix}\nx_{i1}\\\\\nx_{i2}\\\\\ny_i\n\\end{pmatrix}\n\\in\\mathbb R^3.\n\\]\nSie beschreibt eine einzelne Beobachtung anhand ihrer Werte auf den drei Variablen. Der Zeilenraum ist die lineare Hülle aller Zeilenvektoren:\n\\[\n\\operatorname{Row}(\\mathbf D)\n=\n\\operatorname{span}\n\\left\\{\n\\mathbf d_1,\\ldots,\\mathbf d_n\n\\right\\}\n\\subseteq\\mathbb R^3.\n\\]\nIn der üblichen Darstellung werden die \\(n\\) Beobachtungsvektoren als \\(n\\) Punkte im dreidimensionalen Raum gezeichnet. Die Achsen dieses Raums entsprechen den Variablen \\(x_1\\), \\(x_2\\) und \\(y\\). Deshalb bezeichnen wir diesen Raum als Variablenraum.\nDer Begriff bezieht sich auf die Bedeutung der Koordinatenachsen: Die Punkte repräsentieren Beobachtungen, ihre Koordinaten aber Variablen."
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html#spaltenraum",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html#spaltenraum",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "Spaltenraum",
-    "text": "Spaltenraum\nDie Spalten der erweiterten Datenmatrix sind\n\\[\n\\mathbf x_1=\n\\begin{pmatrix}\nx_{11}\\\\ \\vdots\\\\ x_{n1}\n\\end{pmatrix},\n\\qquad\n\\mathbf x_2=\n\\begin{pmatrix}\nx_{12}\\\\ \\vdots\\\\ x_{n2}\n\\end{pmatrix},\n\\qquad\n\\mathbf y=\n\\begin{pmatrix}\ny_1\\\\ \\vdots\\\\ y_n\n\\end{pmatrix}.\n\\]\nJeder dieser Vektoren enthält die Werte einer Variablen für alle \\(n\\) Beobachtungen. Deshalb gilt\n\\[\n\\mathbf x_1,\\mathbf x_2,\\mathbf y\\in\\mathbb R^n.\n\\]\nDer Spaltenraum von \\(\\mathbf D\\) ist\n\\[\n\\operatorname{Col}(\\mathbf D)\n=\n\\operatorname{span}\n\\left\\{\n\\mathbf x_1,\\mathbf x_2,\\mathbf y\n\\right\\}\n\\subseteq\\mathbb R^n.\n\\]\nDie Koordinaten dieses Raums entsprechen den \\(n\\) Beobachtungen. Deshalb wird \\(\\mathbb R^n\\) in diesem Zusammenhang als Beobachtungsraum bezeichnet.\nObwohl \\(\\mathbb R^n\\) möglicherweise hochdimensional ist, liegen die drei Vektoren \\(\\mathbf x_1\\), \\(\\mathbf x_2\\) und \\(\\mathbf y\\) gemeinsam in einem höchstens dreidimensionalen Unterraum. Nur dieser Unterraum muss für die Abbildung dargestellt werden."
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html#die-beiden-darstellungen",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html#die-beiden-darstellungen",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "Die beiden Darstellungen",
-    "text": "Die beiden Darstellungen\nDer folgende Code simuliert Daten aus dem Modell\n\\[\ny_i=1+1.2x_{i1}-0.8x_{i2}+\\varepsilon_i.\n\\]\nLinks werden die Zeilen von \\(\\mathbf D\\) als Punkte im Variablenraum \\(\\mathbb R^3\\) dargestellt. Rechts werden die Spalten von \\(\\mathbf D\\) als Vektoren im Beobachtungsraum aufgefasst. Gezeichnet wird dort lediglich der von ihnen aufgespannte dreidimensionale Unterraum.\n\n\nCode\nif (!requireNamespace(\"scatterplot3d\", quietly = TRUE)) {\n  stop(\"Für diese Abbildung wird das Paket 'scatterplot3d' benötigt.\")\n}\n\nset.seed(20261008)\nn &lt;- 30\nx1 &lt;- rnorm(n)\nx2 &lt;- rnorm(n)\ny  &lt;- 1 + 1.2 * x1 - 0.8 * x2 + rnorm(n, sd = 0.65)\n\n# Erweiterte Datenmatrix\nD &lt;- cbind(x1 = x1, x2 = x2, y = y)\n\n# Lineares Regressionsmodell mit Achsenabschnitt\nfit &lt;- lm(y ~ x1 + x2)\n\nop &lt;- par(mfrow = c(1, 2), mar = c(3, 3, 3, 1))\n\n# ------------------------------------------------------------------\n# Links: Zeilensicht im Variablenraum R^3\n# ------------------------------------------------------------------\ns_left &lt;- scatterplot3d::scatterplot3d(\n  x = x1,\n  y = x2,\n  z = y,\n  pch = 19,\n  color = \"#2C7FB8\",\n  xlab = expression(x[1]),\n  ylab = expression(x[2]),\n  zlab = expression(y),\n  main = \"Variablenraum\",\n  angle = 45,\n  box = FALSE,\n  grid = TRUE\n)\ns_left$plane3d(fit, draw_polygon = TRUE,\n               polygon_args = list(col = adjustcolor(\"#F4A261\", 0.35)))\n\n# ------------------------------------------------------------------\n# Rechts: Spaltensicht im Beobachtungsraum R^n\n#\n# Für eine anschauliche Ebene zentrieren wir die Variablen. Damit wird\n# der Achsenabschnitt separat behandelt und der relevante Modellraum ist\n# span{x1_c, x2_c}.\n# ------------------------------------------------------------------\nx1_c &lt;- x1 - mean(x1)\nx2_c &lt;- x2 - mean(x2)\ny_c  &lt;- y  - mean(y)\nX_c  &lt;- cbind(x1_c, x2_c)\n\nbeta_hat &lt;- solve(crossprod(X_c), crossprod(X_c, y_c))\ny_hat_c  &lt;- as.vector(X_c %*% beta_hat)\ne_c      &lt;- y_c - y_hat_c\n\n# Orthonormale Basis des von x1_c, x2_c und y_c aufgespannten\n# Unterraums. Dadurch können die n-dimensionalen Vektoren mit drei\n# Koordinaten dargestellt werden, ohne Winkel oder Längen zu verändern.\nQ &lt;- qr.Q(qr(cbind(x1_c, x2_c, y_c)))\n\nto_3d &lt;- function(v) as.vector(crossprod(Q, v))\n\nv_x1   &lt;- to_3d(x1_c)\nv_x2   &lt;- to_3d(x2_c)\nv_y    &lt;- to_3d(y_c)\nv_yhat &lt;- to_3d(y_hat_c)\n\nall_coords &lt;- rbind(\n  c(0, 0, 0),\n  v_x1, v_x2, v_y, v_yhat,\n  v_x1 + v_x2,\n  v_x1 - v_x2,\n  -v_x1 + v_x2,\n  -v_x1 - v_x2\n)\n\ns_right &lt;- scatterplot3d::scatterplot3d(\n  x = all_coords[, 1],\n  y = all_coords[, 2],\n  z = all_coords[, 3],\n  type = \"n\",\n  xlab = \"Basisrichtung 1\",\n  ylab = \"Basisrichtung 2\",\n  zlab = \"Basisrichtung 3\",\n  main = \"Beobachtungsraum\",\n  angle = 55,\n  box = FALSE,\n  grid = TRUE\n)\n\n# Projektion dreidimensionaler Koordinaten in die Zeichenebene\nxy &lt;- function(v) s_right$xyz.convert(v[1], v[2], v[3])\n\n# Ein Ausschnitt der von x1 und x2 aufgespannten Modellebene\nplane_corners &lt;- list(\n  -v_x1 - v_x2,\n   v_x1 - v_x2,\n   v_x1 + v_x2,\n  -v_x1 + v_x2\n)\nplane_2d &lt;- lapply(plane_corners, xy)\npolygon(\n  x = vapply(plane_2d, `[[`, numeric(1), \"x\"),\n  y = vapply(plane_2d, `[[`, numeric(1), \"y\"),\n  col = adjustcolor(\"#F4A261\", 0.25),\n  border = \"#D97706\"\n)\n\ndraw_vector &lt;- function(v, col, label, lwd = 2) {\n  origin &lt;- xy(c(0, 0, 0))\n  end &lt;- xy(v)\n  arrows(origin$x, origin$y, end$x, end$y,\n         length = 0.09, lwd = lwd, col = col)\n  text(end$x, end$y, labels = label, col = col, pos = 3, cex = 0.9)\n}\n\ndraw_vector(v_x1, \"#1B9E77\", expression(bold(x)[1]))\ndraw_vector(v_x2, \"#7570B3\", expression(bold(x)[2]))\ndraw_vector(v_y, \"#D7301F\", expression(bold(y)))\ndraw_vector(v_yhat, \"#2C7FB8\", expression(hat(bold(y))))\n\n# Residuum: Verbindung von y-hat zu y, orthogonal zum Modellraum\np_hat &lt;- xy(v_yhat)\np_y   &lt;- xy(v_y)\nsegments(p_hat$x, p_hat$y, p_y$x, p_y$y,\n         lty = 2, lwd = 2, col = \"grey30\")\ntext((p_hat$x + p_y$x) / 2, (p_hat$y + p_y$y) / 2,\n     labels = expression(bold(e)), pos = 4, cex = 0.9)\n\npar(op)\n\n\n\n\n\nAbbildung 1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobachtungsvektoren als Punkte im Variablenraum. Rechts: Variablenvektoren im Beobachtungsraum; der Vektor y wird auf den Spaltenraum der Designmatrix X projiziert."
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html#der-spaltenraum-als-modellraum",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html#der-spaltenraum-als-modellraum",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "Der Spaltenraum als Modellraum",
-    "text": "Der Spaltenraum als Modellraum\nFür die Regression müssen wir zwischen der erweiterten Datenmatrix \\(\\mathbf D\\) und der eigentlichen Designmatrix unterscheiden. Ohne Achsenabschnitt lautet die Designmatrix\n\\[\n\\mathbf X\n=\n\\begin{pmatrix}\n\\mathbf x_1 & \\mathbf x_2\n\\end{pmatrix}\n\\in\\mathbb R^{n\\times 2}.\n\\]\nDas lineare Modell ist\n\\[\n\\mathbf y\n=\n\\mathbf X\\boldsymbol\\beta+\\boldsymbol\\varepsilon\n=\n\\beta_1\\mathbf x_1+\n\\beta_2\\mathbf x_2+\n\\boldsymbol\\varepsilon.\n\\]\nAlle durch das Modell möglichen Vorhersagevektoren haben die Form\n\\[\n\\mathbf X\\boldsymbol\\beta\n=\n\\beta_1\\mathbf x_1+\n\\beta_2\\mathbf x_2.\n\\]\nSie liegen daher im Spaltenraum der Designmatrix:\n\\[\n\\operatorname{Col}(\\mathbf X)\n=\n\\operatorname{span}\n\\left\\{\n\\mathbf x_1,\\mathbf x_2\n\\right\\}\n\\subseteq\\mathbb R^n.\n\\]\nDieser Spaltenraum ist der Modellraum. Sind die beiden Prädiktorvektoren linear unabhängig, handelt es sich um eine zweidimensionale Ebene im \\(n\\)-dimensionalen Beobachtungsraum.\nDer beobachtete Vektor \\(\\mathbf y\\) liegt im Allgemeinen nicht in dieser Ebene. Die Methode der kleinsten Quadrate bestimmt den Vektor im Modellraum, der \\(\\mathbf y\\) bezüglich der euklidischen Distanz am nächsten liegt:\n\\[\n\\widehat{\\mathbf y}\n=\n\\mathbf X\\widehat{\\boldsymbol\\beta}.\n\\]\nGeometrisch ist \\(\\widehat{\\mathbf y}\\) die orthogonale Projektion von \\(\\mathbf y\\) auf \\(\\operatorname{Col}(\\mathbf X)\\):\n\\[\n\\widehat{\\mathbf y}\n=\n\\mathbf P_X\\mathbf y,\n\\qquad\n\\mathbf P_X\n=\n\\mathbf X\n(\\mathbf X^{\\mathsf T}\\mathbf X)^{-1}\n\\mathbf X^{\\mathsf T}.\n\\]\nDer Residuenvektor\n\\[\n\\mathbf e\n=\n\\mathbf y-\\widehat{\\mathbf y}\n\\]\nsteht senkrecht auf dem gesamten Spaltenraum der Designmatrix:\n\\[\n\\mathbf X^{\\mathsf T}\\mathbf e=\\mathbf 0.\n\\]\nDies sind genau die Normalgleichungen der Kleinste-Quadrate-Schätzung."
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html#modell-mit-achsenabschnitt",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html#modell-mit-achsenabschnitt",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "Modell mit Achsenabschnitt",
-    "text": "Modell mit Achsenabschnitt\nEnthält das Regressionsmodell einen Achsenabschnitt, ist\n\\[\n\\mathbf X\n=\n\\begin{pmatrix}\n\\mathbf 1 & \\mathbf x_1 & \\mathbf x_2\n\\end{pmatrix}\n\\]\nund damit\n\\[\n\\operatorname{Col}(\\mathbf X)\n=\n\\operatorname{span}\n\\left\\{\n\\mathbf 1,\\mathbf x_1,\\mathbf x_2\n\\right\\}.\n\\]\nDer Modellraum ist dann höchstens dreidimensional. In der Abbildung wurden \\(\\mathbf x_1\\), \\(\\mathbf x_2\\) und \\(\\mathbf y\\) zentriert. Dadurch wird die Richtung des Einsvektors \\(\\mathbf 1\\) abgetrennt, und die eigentliche Projektionsgeometrie kann wieder als Projektion auf die von \\(\\mathbf x_1\\) und \\(\\mathbf x_2\\) aufgespannte Ebene gezeigt werden."
-  },
-  {
-    "objectID": "posts/Projektionsgeometrie/row_column_space_regression.html#zusammenfassung",
-    "href": "posts/Projektionsgeometrie/row_column_space_regression.html#zusammenfassung",
-    "title": "Zeilenraum und Spaltenraum in der linearen Regression",
-    "section": "Zusammenfassung",
-    "text": "Zusammenfassung\n\n\n\n\n\n\n\n\n\nDarstellung\nDargestellte Elemente\nUmgebender Raum\nLinear-algebraischer Bezug\n\n\n\n\nZeilensicht, links\n\\(n\\) Beobachtungsvektoren \\((x_{i1},x_{i2},y_i)^{\\mathsf T}\\)\nVariablenraum \\(\\mathbb R^3\\)\nZeilen von \\(\\mathbf D\\); ihre lineare Hülle ist \\(\\operatorname{Row}(\\mathbf D)\\)\n\n\nSpaltensicht, rechts\nVariablenvektoren \\(\\mathbf x_1\\), \\(\\mathbf x_2\\) und \\(\\mathbf y\\)\nBeobachtungsraum \\(\\mathbb R^n\\)\nSpalten von \\(\\mathbf D\\); ihre lineare Hülle ist \\(\\operatorname{Col}(\\mathbf D)\\)\n\n\nRegression, rechts\nPrädiktorvektoren \\(\\mathbf x_1\\) und \\(\\mathbf x_2\\)\nBeobachtungsraum \\(\\mathbb R^n\\)\n\\(\\operatorname{Col}(\\mathbf X)\\) ist der Modellraum\n\n\n\nDie beiden Darstellungen enthalten dieselben Zahlen, betrachten sie aber aus zwei verschiedenen Richtungen:\n\nLinks ist jede Beobachtung ein Vektor, dessen Koordinaten die Variablen sind. Rechts ist jede Variable ein Vektor, dessen Koordinaten die Beobachtungen sind.\n\nFür die Geometrie der linearen Regression ist vor allem die Spaltensicht entscheidend:\n\\[\n\\boxed{\n\\text{Regression ist die Projektion von }\\mathbf y\n\\text{ auf }\\operatorname{Col}(\\mathbf X).\n}\n\\]"
+    "text": "Welcome!"
   },
   {
     "objectID": "posts/AllIsIntegration/index.html",

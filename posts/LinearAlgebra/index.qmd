@@ -2,7 +2,7 @@
 title: "The Magic of Linear Algebra"
 date: "2026-05-20"
 description: "Analogies in Quantum Mechanics and Statistics"
-categories: [philosophie]
+categories: [Lineare Algebra]
 ---
 
 
