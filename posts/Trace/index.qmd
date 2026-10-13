@@ -2,7 +2,7 @@
 title: "The trace of a matrix"
 date: "2026-06-09"
 description: "Trace as a Bridge Between Item Space and Factor Space"
-categories: [philosophie]
+categories: [Lineare Algebra]
 ---
 
 ## Trace as a Bridge Between Item Space and Factor Space
