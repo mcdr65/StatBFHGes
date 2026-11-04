@@ -450,7 +450,7 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
   <pubDate>Sun, 04 Oct 2026 22:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Local Independence in Latent Class and Longitudinal Latent Variable Models</title>
+  <title>Local Independence in Latent Variable Models</title>
   <dc:creator>André Meichtry</dc:creator>
   <link>https://github.com/mcdr65/posts/conditionalIndependence/</link>
   <description><![CDATA[ 
@@ -461,20 +461,41 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p><strong>Local independence</strong> is one of the central ideas in latent variable models.</p>
-<p>In a latent class analysis (LCA) or latent profile analysis (LPA), the idea is relatively simple:</p>
-<blockquote class="blockquote">
-<p>Once latent class membership is known, the observed indicators should no longer be associated.</p>
-</blockquote>
-<p>Symbolically, for indicators <img src="https://latex.codecogs.com/png.latex?Y_%7Bi1%7D,%5Cldots,Y_%7BiK%7D"> and latent class <img src="https://latex.codecogs.com/png.latex?C_i">,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bi1%7D,%5Cldots,Y_%7BiK%7D%0A%5Cperp%5C!%5C!%5C!%5Cperp%0A%5Cmid%20C_i.%0A"></p>
-<p>However, this formulation becomes less obvious when moving to longitudinal latent variable models.</p>
-<p>In a latent class linear mixed model (LCLMM), repeated measurements remain correlated within a latent class because subjects have random effects. In a multivariate latent class mixed model (LCMM), multiple markers are additionally correlated because they measure the same underlying latent process.</p>
-<p>The general principle remains the same:</p>
-<blockquote class="blockquote">
-<p><strong>Observed variables should become conditionally independent once we condition on the latent quantities introduced by the model to explain their dependence.</strong></p>
-</blockquote>
-<p>What changes between models is therefore not the basic idea of conditional independence, but <strong>what we have to condition on</strong>.</p>
+<p><strong>Local independence</strong> means that observed indicators are mutually independent conditional on the latent variables specified by a model. Indicators may be strongly associated in the population while being independent at a given value of the latent variable.</p>
+<p>For subject <img src="https://latex.codecogs.com/png.latex?i">, let <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20Y_i=(Y_%7Bi1%7D,%5Cldots,Y_%7BiK%7D)"> denote the observed indicators and <img src="https://latex.codecogs.com/png.latex?L_i"> the latent variable or vector of latent variables. Local independence states that</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Cmathbf%20y_i%5Cmid%20L_i)%0A=%0A%5Cprod_%7Bk=1%7D%5E%7BK%7Dp(y_%7Bik%7D%5Cmid%20L_i),%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?p"> denotes a probability mass function or density, as appropriate. Model parameters and any observed covariates are held fixed; when covariates enter the measurement model, they are also included in the conditioning set.</p>
+<p>This is <strong>mutual conditional independence</strong>, which is stronger than zero conditional pairwise correlations in general. The word <em>local</em> refers to conditioning on a value of the latent variable, not to geographical proximity or nearby observations.</p>
+<p>The main discussion focuses on three central families of latent variable models: <strong>latent class and latent profile analysis</strong>, <strong>factor analysis</strong>, and <strong>item response theory</strong>. Longitudinal extensions are treated in the appendix.</p>
+</section>
+<section id="why-local-independence-is-important" class="level2">
+<h2 class="anchored" data-anchor-id="why-local-independence-is-important">Why local independence is important</h2>
+<section id="interpreting-the-latent-variable" class="level3">
+<h3 class="anchored" data-anchor-id="interpreting-the-latent-variable">Interpreting the latent variable</h3>
+<p>Local independence specifies what the latent variable is intended to explain: the joint dependence among the indicators. In a latent class model, the dependence is represented through differences between classes; in a factor or item response model, it is represented through variation in continuous latent traits.</p>
+<p>For example, two questionnaire items may remain associated at the same latent trait level because they have nearly identical wording or refer to the same specific situation. This is residual dependence beyond the proposed trait. The example is illustrative: it identifies a possible mechanism, not a finding from observed data.</p>
+<p>Residual dependence matters because a model can attribute it to the wrong source. A class model may introduce additional classes to accommodate associations within existing classes; a factor model may represent shared wording through an additional factor. Better fit alone does not establish that such classes or factors have the intended substantive meaning.</p>
+</section>
+<section id="constructing-the-likelihood" class="level3">
+<h3 class="anchored" data-anchor-id="constructing-the-likelihood">Constructing the likelihood</h3>
+<p>The factorization above makes the conditional response distribution tractable. For a discrete latent variable with class probabilities <img src="https://latex.codecogs.com/png.latex?%5Cpi_g=P(C_i=g)">,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Cmathbf%20y_i)%0A=%0A%5Csum_%7Bg=1%7D%5E%7BG%7D%5Cpi_g%0A%5Cprod_%7Bk=1%7D%5E%7BK%7Dp(y_%7Bik%7D%5Cmid%20C_i=g).%0A"></p>
+<p>For a continuous latent variable with density <img src="https://latex.codecogs.com/png.latex?f(%5Cboldsymbol%5Ceta_i)">,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Cmathbf%20y_i)%0A=%0A%5Cint%0A%5Cprod_%7Bk=1%7D%5E%7BK%7Dp(y_%7Bik%7D%5Cmid%5Cboldsymbol%5Ceta_i)%0Af(%5Cboldsymbol%5Ceta_i)%5C,d%5Cboldsymbol%5Ceta_i.%0A"></p>
+<p>Thus, the model combines simple conditional distributions into a marginal distribution that allows dependent indicators. The finite-mixture construction is used, for example, in the <a href="https://www.jstatsoft.org/article/view/v042i10">standard LCA formulation described by Linzer and Lewis</a>.</p>
+<p>The computational advantage is that we can evaluate a product of univariate probability mass functions or densities instead of specifying and evaluating an unrestricted joint distribution. For <img src="https://latex.codecogs.com/png.latex?K"> binary indicators, an unrestricted within-class distribution assigns probabilities to <img src="https://latex.codecogs.com/png.latex?2%5EK"> response patterns and therefore requires <img src="https://latex.codecogs.com/png.latex?2%5EK-1"> free parameters per class. Under local independence, only the <img src="https://latex.codecogs.com/png.latex?K"> probabilities <img src="https://latex.codecogs.com/png.latex?P(Y_%7Bik%7D=1%5Cmid%20C_i=g)"> are needed. For example, with ten binary indicators, the comparison is <img src="https://latex.codecogs.com/png.latex?2%5E%7B10%7D-1=1023"> versus <img src="https://latex.codecogs.com/png.latex?10"> parameters per class, excluding class-membership probabilities. This is an illustrative parameter count, not an estimated result.</p>
+<p>The conditional log-likelihood also becomes a sum of indicator-specific contributions:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Clog%20p(%5Cmathbf%20y_i%5Cmid%20L_i)%0A=%0A%5Csum_%7Bk=1%7D%5E%7BK%7D%5Clog%20p(y_%7Bik%7D%5Cmid%20L_i).%0A"></p>
+<p>This structure simplifies likelihood evaluation and the updates used in many estimation algorithms. For continuous latent variables, the parameter savings depend on the chosen measurement model; the binary-indicator count above does not apply directly. Moreover, the marginal likelihood still requires summation over latent classes or integration over latent variables, as shown above. In particular, high-dimensional integration can remain computationally demanding even under local independence.</p>
+<p>The additivity above applies to the <strong>conditional</strong> log-likelihood. After summing over classes or integrating over continuous latent variables, the marginal log-likelihood generally does not decompose into a sum of indicator-specific marginal log-likelihoods: the indicators remain dependent marginally.</p>
+<p>Local independence imposes substantive restrictions; it is not merely a computational convenience. It reduces the number of association parameters, but does not by itself guarantee model identification.</p>
+<p>Independence across subjects is a separate assumption. Local independence concerns indicators within a subject conditional on the latent structure; it does not rule out dependence between subjects in the same family, classroom, or other cluster. Such clustering requires an appropriate additional model structure before a likelihood can be formed as a product of independent subject contributions.</p>
+</section>
+<section id="assessing-measurement-quality-and-uncertainty" class="level3">
+<h3 class="anchored" data-anchor-id="assessing-measurement-quality-and-uncertainty">Assessing measurement quality and uncertainty</h3>
+<p>When residual dependence is ignored, indicators can provide less distinct information than the fitted model assumes. Parameter estimates, posterior class probabilities or latent trait estimates, and their uncertainty can consequently be distorted. The direction and magnitude depend on the form of the misspecification; overconfidence is a concern, not an inevitable result of every violation.</p>
+<p>Local independence therefore gives model checking a concrete target: <strong>does the fitted latent structure account for the observed associations?</strong> A lack of a statistically significant diagnostic does not establish independence.</p>
+</section>
 </section>
 <section id="lca-and-lpa" class="level2">
 <h2 class="anchored" data-anchor-id="lca-and-lpa">LCA and LPA</h2>
@@ -484,8 +505,8 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 <p><img src="https://latex.codecogs.com/png.latex?%0AC_i%5Cin%5C%7B1,%5Cldots,G%5C%7D.%0A"></p>
 <p>In a standard LCA or LPA, the latent class is intended to explain the association among the indicators.</p>
 <p>The local-independence assumption is</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bi1%7D,%5Cldots,Y_%7BiK%7D%0A%5Cperp%5C!%5C!%5C!%5Cperp%0A%5Cmid%20C_i.%0A"></p>
-<p>For two indicators this implies</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ap(%5Cmathbf%20y_i%5Cmid%20C_i=g)%0A=%0A%5Cprod_%7Bk=1%7D%5E%7BK%7Dp(y_%7Bik%7D%5Cmid%20C_i=g).%0A"></p>
+<p>For two distinct indicators with finite second moments, this implies</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BCov%7D%0A%5Cleft(%0AY_%7Bij%7D,Y_%7Bik%7D%0A%5Cmid%20C_i=g%0A%5Cright)%0A=%0A0.%0A"></p>
 <p>The indicators can nevertheless be associated <strong>marginally</strong>.</p>
 <p>This follows from the law of total covariance:</p>
@@ -495,7 +516,7 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 <p>but</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BCov%7D%0A%5Cleft(%0AE%5BY_j%5Cmid%20C%5D,%0AE%5BY_k%5Cmid%20C%5D%0A%5Cright)%0A"></p>
 <p>can be non-zero.</p>
-<p>Thus, the indicators are associated because the latent classes differ jointly in their indicator means.</p>
+<p>Thus, non-zero marginal covariance can arise because the latent classes differ jointly in their indicator means. Zero covariance alone does not establish independence; the defining assumption is the factorization of the full conditional distribution.</p>
 <section id="lpa-and-the-covariance-matrix" class="level3">
 <h3 class="anchored" data-anchor-id="lpa-and-the-covariance-matrix">LPA and the covariance matrix</h3>
 <p>For continuous indicators, a common LPA specification is</p>
@@ -505,56 +526,169 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 <p>Allowing non-zero within-class covariances relaxes the local-independence assumption.</p>
 </section>
 </section>
-<section id="moving-to-longitudinal-data" class="level2">
-<h2 class="anchored" data-anchor-id="moving-to-longitudinal-data">Moving to longitudinal data</h2>
+<section id="factor-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="factor-analysis">Factor analysis</h2>
+<p>Factor analysis represents dependence among continuous indicators through one or more continuous latent factors. A linear measurement model is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cmathbf%20Y_i%0A=%0A%5Cboldsymbol%5Cnu%0A+%0A%5Cmathbf%20A%5Cboldsymbol%5Ceta_i%0A+%0A%5Cboldsymbol%5Cepsilon_i,%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%5Cnu"> contains indicator intercepts, <img src="https://latex.codecogs.com/png.latex?%5Cmathbf%20A"> is the loading matrix, and <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%5Ceta_i"> is the factor vector. Suppose</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboldsymbol%5Cepsilon_i%5Cmid%5Cboldsymbol%5Ceta_i%0A%5Csim%20N(%5Cmathbf%200,%5Cboldsymbol%5CPsi),%0A"></p>
+<p>with a distribution that does not depend on <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%5Ceta_i">. If <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%5CPsi"> is diagonal, the indicators are mutually independent conditional on the <strong>complete factor vector</strong>.</p>
+<p>Writing <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%5CPhi=%5Coperatorname%7BVar%7D(%5Cboldsymbol%5Ceta_i)"> gives</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BVar%7D(%5Cmathbf%20Y_i)%0A=%0A%5Cmathbf%20A%5Cboldsymbol%5CPhi%5Cmathbf%20A%5E%5Ctop%0A+%0A%5Cboldsymbol%5CPsi.%0A"></p>
+<p>Under local independence, all off-diagonal covariances are represented by the common factors. The factors themselves may be correlated: independence of factors is a separate assumption.</p>
+<p>Allowing correlated residuals relaxes strict local independence for the affected indicators. Such parameters may be justified by shared methods or item content, but require a substantive explanation. Without a Gaussian residual assumption, a diagonal residual covariance matrix establishes conditional uncorrelatedness, not necessarily conditional independence.</p>
+</section>
+<section id="item-response-theory" class="level2">
+<h2 class="anchored" data-anchor-id="item-response-theory">Item response theory</h2>
+<p>Item response theory (IRT) models categorical item responses using continuous latent traits. In a two-parameter logistic model for binary items,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(Y_%7Bik%7D=1%5Cmid%5Ctheta_i)%0A=%0A%5Cfrac%7B1%7D%7B1+%5Cexp%5C%7B-a_k(%5Ctheta_i-b_k)%5C%7D%7D,%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Ctheta_i"> is the subject’s latent trait, <img src="https://latex.codecogs.com/png.latex?a_k%3E0"> the item discrimination, and <img src="https://latex.codecogs.com/png.latex?b_k"> the item difficulty. The Rasch model constrains the discriminations to a common value, conventionally one after fixing the latent scale.</p>
+<p>The item response function specifies each item’s conditional probability. <strong>Local independence is the additional assumption that these probabilities determine the joint response distribution through a product:</strong></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AP(%5Cmathbf%20Y_i=%5Cmathbf%20y_i%5Cmid%5Ctheta_i)%0A=%0A%5Cprod_%7Bk=1%7D%5E%7BK%7D%0AP(Y_%7Bik%7D=y_%7Bik%7D%5Cmid%5Ctheta_i).%0A"></p>
+<p>Items can therefore be associated marginally because they measure the same trait, while being independent at a fixed trait level. For multidimensional IRT, the conditioning variable is the complete trait vector <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%5Ctheta_i">; local independence does not imply unidimensionality.</p>
+<p>Items based on a shared passage, for example, may exhibit residual dependence even at a fixed ability level. A testlet factor or another substantively justified dimension can represent that shared variation. The relevant independence statement then conditions on the expanded latent structure.</p>
+</section>
+<section id="comparing-the-central-models" class="level2">
+<h2 class="anchored" data-anchor-id="comparing-the-central-models">Comparing the central models</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Observed indicators</th>
+<th>Latent structure</th>
+<th>Local-independence assumption</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LCA</td>
+<td>Categorical</td>
+<td>Discrete class <img src="https://latex.codecogs.com/png.latex?C_i"></td>
+<td>Joint response probabilities factorize within each class</td>
+</tr>
+<tr class="even">
+<td>LPA</td>
+<td>Continuous</td>
+<td>Discrete class <img src="https://latex.codecogs.com/png.latex?C_i"></td>
+<td>Within-class Gaussian covariance matrices are diagonal</td>
+</tr>
+<tr class="odd">
+<td>Factor analysis</td>
+<td>Continuous</td>
+<td>Continuous factor vector <img src="https://latex.codecogs.com/png.latex?%5Cboldsymbol%5Ceta_i"></td>
+<td>Residuals are mutually independent given the factors</td>
+</tr>
+<tr class="even">
+<td>IRT</td>
+<td>Categorical</td>
+<td>Continuous trait or trait vector</td>
+<td>Joint item response probabilities factorize given all traits</td>
+</tr>
+</tbody>
+</table>
+<p>These are standard locally independent specifications, not restrictions that every extension of these model families must satisfy. Models with residual associations explicitly relax the assumption.</p>
+</section>
+<section id="checking-local-independence-in-practice" class="level2">
+<h2 class="anchored" data-anchor-id="checking-local-independence-in-practice">Checking local independence in practice</h2>
+<p>Start with the measurement design: shared wording, common stimuli, overlapping content, and repeated administration can suggest dependence beyond the proposed latent variable. Then examine whether the fitted model reproduces the relevant observed associations.</p>
+<p>For LCA, bivariate residuals compare observed indicator-pair tables with those implied by the fitted mixture. For Gaussian LPA and factor models, inspect residual covariance patterns. For IRT, local-dependence statistics and Yen’s <img src="https://latex.codecogs.com/png.latex?Q_3"> are available; the <a href="https://philchalmers.github.io/mirt/reference/residuals-method.html">mirt residual-diagnostic documentation</a> describes these options. Their interpretation depends on sample size, item properties, estimation, and the number of comparisons; a single universal cutoff is insufficient.</p>
+<p>These pairwise diagnostics cannot establish mutual conditional independence: higher-order dependence may remain even when every pair is conditionally independent. Where feasible, also examine response-pattern fit or other checks of the joint distribution. For non-Gaussian outcomes, residual covariance checks alone have the further limitation that zero covariance need not imply pairwise independence.</p>
+<p>Because latent variables are unobserved, grouping subjects by their most likely class or treating estimated factor scores as known does not directly test the model’s conditional-independence statement. Diagnostics should account for the fitted latent variable model.</p>
+<p>If meaningful residual dependence remains, possible responses include a justified residual association, a method or testlet factor, or a revised latent structure. Adding classes or factors solely to improve fit risks changing the interpretation of the model. Any revision should be supported by the measurement context and assessed for its effect on substantive conclusions.</p>
+<section id="distinguishing-local-independence-from-measurement-invariance" class="level3">
+<h3 class="anchored" data-anchor-id="distinguishing-local-independence-from-measurement-invariance">Distinguishing local independence from measurement invariance</h3>
+<p>Local independence concerns dependence among indicators at a given value of the latent variable. <strong>Measurement invariance</strong> concerns whether the conditional measurement distributions are the same across groups or occasions after placing the latent variable on a common scale. Indicators can be locally independent within each group or occasion while their intercepts, loadings, difficulties, or thresholds differ between groups or over time.</p>
+<p>Consequently, local independence alone does not justify interpreting group differences or longitudinal changes as differences in the same latent construct. Relevant measurement-invariance assumptions must also be assessed. For IRT, group-specific item parameters and equality constraints are described in the <a href="https://philchalmers.github.io/mirt/reference/multipleGroup.html">mirt multiple-group documentation</a>.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Local independence connects the interpretation of latent variables to the likelihood and to model checking. LCA and LPA condition on a discrete class; factor analysis and IRT condition on continuous latent variables. In every case, the central question is:</p>
+<blockquote class="blockquote">
+<p><strong>After conditioning on the complete latent structure specified by the model, is there residual dependence among the indicators that the model does not account for?</strong></p>
+</blockquote>
+<p>The assumption concerns conditional rather than marginal independence. Its plausibility must be assessed, and more complex latent structures do not automatically make it true.</p>
+</section>
+<section id="sec-longitudinal" class="level2">
+<h2 class="anchored" data-anchor-id="sec-longitudinal">Appendix: Longitudinal data</h2>
+<p>In longitudinal models, repeated measurements may share random effects as well as a latent class. With multiple markers, they may also share a latent process. The conditioning set must reflect these structures. Throughout this appendix, time points and design covariates are treated as fixed, and conditional-independence statements assume that residual errors are mutually independent given the stated latent quantities. Additional serial or marker-specific residual dependence would require further modeling.</p>
+<section id="moving-to-longitudinal-data" class="level3">
+<h3 class="anchored" data-anchor-id="moving-to-longitudinal-data">Moving to longitudinal data</h3>
 <p>Suppose we now observe the same outcome repeatedly,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_1),Y_i(t_2),%5Cldots,Y_i(t_T).%0A"></p>
 <p>The question becomes:</p>
 <blockquote class="blockquote">
-<p>Should repeated measurements be independent once we know the latent class?</p>
+<p>Which latent quantities must we condition on for repeated measurements to be independent?</p>
 </blockquote>
-<p>The answer depends on the longitudinal model.</p>
-<p>This distinction becomes particularly clear when comparing a latent class growth analysis with a latent class linear mixed model.</p>
+<p>We first consider a random-intercept model without latent classes, then compare models in which trajectories differ between latent classes.</p>
 </section>
-<section id="latent-class-growth-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="latent-class-growth-analysis">Latent class growth analysis</h2>
+<section id="sec-random-intercept" class="level3">
+<h3 class="anchored" data-anchor-id="sec-random-intercept">A random-intercept model for repeated measures</h3>
+<p>A simple model for a continuous outcome measured repeatedly is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_j)%0A=%0A%5Cbeta_0+%5Cbeta_1t_j+b_%7B0i%7D+%5Cepsilon_i(t_j),%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Cbeta_0+%5Cbeta_1t_j"> is the population mean trajectory and <img src="https://latex.codecogs.com/png.latex?b_%7B0i%7D"> is a subject-specific deviation in intercept. Assume</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ab_%7B0i%7D%5Csim%20N(0,%5Ctau%5E2),%0A%5Cqquad%0A%5Cepsilon_i(t_j)%5Csim%20N(0,%5Csigma%5E2),%0A"></p>
+<p>with mutually independent residual errors that are independent of the random intercept, and independent random quantities across subjects. This is an illustrative model specification, not a fitted model.</p>
+<section id="marginal-dependence-within-subjects" class="level4">
+<h4 class="anchored" data-anchor-id="marginal-dependence-within-subjects">Marginal dependence within subjects</h4>
+<p>Two observations from the same subject share <img src="https://latex.codecogs.com/png.latex?b_%7B0i%7D">. For distinct measurement occasions <img src="https://latex.codecogs.com/png.latex?j%5Cne%5Cell">,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BCov%7D%5C%7BY_i(t_j),Y_i(t_%5Cell)%5C%7D%0A=%0A%5Coperatorname%7BVar%7D(b_%7B0i%7D)%0A=%0A%5Ctau%5E2.%0A"></p>
+<p>Since <img src="https://latex.codecogs.com/png.latex?%5Coperatorname%7BVar%7D%5C%7BY_i(t_j)%5C%7D=%5Ctau%5E2+%5Csigma%5E2">, their correlation is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BCorr%7D%5C%7BY_i(t_j),Y_i(t_%5Cell)%5C%7D%0A=%0A%5Cfrac%7B%5Ctau%5E2%7D%7B%5Ctau%5E2+%5Csigma%5E2%7D,%0A"></p>
+<p>assuming a positive total variance. This is the intraclass correlation coefficient (ICC) for this model. It is constant across pairs of measurement occasions: a random intercept with independent, homoscedastic errors produces a compound-symmetric covariance structure. It does not represent correlations that decay with time lag.</p>
+</section>
+<section id="conditional-independence-given-the-random-intercept" class="level4">
+<h4 class="anchored" data-anchor-id="conditional-independence-given-the-random-intercept">Conditional independence given the random intercept</h4>
+<p>Once <img src="https://latex.codecogs.com/png.latex?b_%7B0i%7D"> is given, the only remaining random terms are the independent residual errors. Consequently,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_j)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0AY_i(t_%5Cell)%0A%5Cmid%20b_%7B0i%7D,%0A%5Cqquad%20j%5Cne%5Cell.%0A"></p>
+<p>More generally, all repeated measurements are mutually independent conditional on <img src="https://latex.codecogs.com/png.latex?b_%7B0i%7D"> under the stated assumptions. Thus, <strong>the random intercept is a continuous latent variable that represents within-subject dependence</strong>; latent classes are not needed for this example of local independence.</p>
+<p>Normality is not required for this conditional-independence result. It follows from the mutual independence of the residual errors and their independence from the random intercept. Gaussian distributions provide a convenient specification; with finite variances and the same independence and homoscedasticity assumptions, the covariance and ICC expressions above also hold without normality.</p>
+<p>If residual serial dependence remains after conditioning on <img src="https://latex.codecogs.com/png.latex?b_%7B0i%7D">, this independence statement no longer holds. A random intercept alone need not account for all longitudinal dependence.</p>
+</section>
+</section>
+<section id="latent-class-growth-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="latent-class-growth-analysis">Latent class growth analysis</h3>
 <p>A simple latent class growth analysis (LCGA) can be written as</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t)%0A=%0AX_i(t)%5E%5Ctop%5Cbeta_%7BC_i%7D%0A+%0A%5Cepsilon_i(t).%0A"></p>
 <p>The latent class determines the trajectory.</p>
 <p>For example, with a linear trajectory,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t)%0A=%0A%5Cbeta_%7B0C_i%7D%0A+%0A%5Cbeta_%7B1C_i%7Dt%0A+%0A%5Cepsilon_i(t).%0A"></p>
-<p>If the residual errors are independent,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cepsilon_i(t_1)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0A%5Cepsilon_i(t_2),%0A"></p>
+<p>If the residual errors are independent conditional on class,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cepsilon_i(t_1)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0A%5Cepsilon_i(t_2)%0A%5Cmid%20C_i,%0A"></p>
 <p>then</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_1)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0AY_i(t_2)%0A%5Cmid%20C_i.%0A"></p>
 <p>In this model, the latent classes themselves explain the systematic heterogeneity in trajectories.</p>
 <p>There are no subject-specific random effects producing additional within-class dependence.</p>
 </section>
-<section id="latent-class-linear-mixed-models" class="level2">
-<h2 class="anchored" data-anchor-id="latent-class-linear-mixed-models">Latent class linear mixed models</h2>
+<section id="latent-class-linear-mixed-models" class="level3">
+<h3 class="anchored" data-anchor-id="latent-class-linear-mixed-models">Latent class linear mixed models</h3>
 <p>A latent class linear mixed model adds subject-specific random effects:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t)%0A=%0AX_i(t)%5E%5Ctop%5Cbeta_%7BC_i%7D%0A+%0AZ_i(t)%5E%5Ctop%20b_i%0A+%0A%5Cepsilon_i(t).%0A"></p>
 <p>For example, with a random intercept and random slope,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t)%0A=%0A%5Cbeta_%7B0C_i%7D%0A+%0A%5Cbeta_%7B1C_i%7Dt%0A+%0Ab_%7B0i%7D%0A+%0Ab_%7B1i%7Dt%0A+%0A%5Cepsilon_i(t).%0A"></p>
 <p>Now subjects within the same latent class can have different individual trajectories.</p>
 <p>This changes the conditional-independence structure fundamentally.</p>
-<section id="conditioning-only-on-class-is-not-enough" class="level3">
-<h3 class="anchored" data-anchor-id="conditioning-only-on-class-is-not-enough">Conditioning only on class is not enough</h3>
+<section id="conditioning-only-on-class-is-not-enough" class="level4">
+<h4 class="anchored" data-anchor-id="conditioning-only-on-class-is-not-enough">Conditioning only on class is not enough</h4>
 <p>Consider two observations from the same subject:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_1)%0A"></p>
 <p>and</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_2).%0A"></p>
 <p>Even if we know that the subject belongs to class <img src="https://latex.codecogs.com/png.latex?g">, both observations still contain the same random effects <img src="https://latex.codecogs.com/png.latex?b_i">.</p>
-<p>Therefore,</p>
+<p>In general, therefore,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_1)%0A%5Cnot%5C!%5Cperp%5C!%5C!%5C!%5Cperp%0AY_i(t_2)%0A%5Cmid%20C_i.%0A"></p>
-<p>For a random-intercept model,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t)%0A=%0A%5Cbeta_%7B0C_i%7D%0A+%0A%5Cbeta_%7B1C_i%7Dt%0A+%0Ab_%7B0i%7D%0A+%0A%5Cepsilon_i(t),%0A"></p>
-<p>we obtain, assuming independent residual errors,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BCov%7D%0A%5Cleft%5C%7B%0AY_i(t_1),Y_i(t_2)%0A%5Cmid%20C_i=g%0A%5Cright%5C%7D%0A=%0A%5Coperatorname%7BVar%7D(b_%7B0i%7D).%0A"></p>
+<p>For the special case with a random intercept only, the argument from the simple random-intercept model applies within each class. For distinct times, assuming residual errors with conditional mean zero that are independent of each other and of the random intercept within each class,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BCov%7D%0A%5Cleft%5C%7B%0AY_i(t_1),Y_i(t_2)%0A%5Cmid%20C_i=g%0A%5Cright%5C%7D%0A=%0A%5Coperatorname%7BVar%7D(b_%7B0i%7D%5Cmid%20C_i=g).%0A"></p>
 <p>Thus, within-class correlation is not a violation of the model. It is deliberately introduced by the random effect.</p>
 </section>
-<section id="conditioning-on-class-and-random-effects" class="level3">
-<h3 class="anchored" data-anchor-id="conditioning-on-class-and-random-effects">Conditioning on class and random effects</h3>
+<section id="conditioning-on-class-and-random-effects" class="level4">
+<h4 class="anchored" data-anchor-id="conditioning-on-class-and-random-effects">Conditioning on class and random effects</h4>
 <p>Once we additionally condition on the subject-specific random effects,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_1)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0AY_i(t_2)%0A%5Cmid%20C_i,b_i,%0A"></p>
 <p>provided the remaining residual errors are independent.</p>
@@ -566,8 +700,8 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 </blockquote>
 </section>
 </section>
-<section id="latent-process-models-with-multiple-markers" class="level2">
-<h2 class="anchored" data-anchor-id="latent-process-models-with-multiple-markers">Latent process models with multiple markers</h2>
+<section id="latent-process-models-with-multiple-markers" class="level3">
+<h3 class="anchored" data-anchor-id="latent-process-models-with-multiple-markers">Latent process models with multiple markers</h3>
 <p>Now suppose several longitudinal markers measure a common underlying process.</p>
 <p>Let</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bik%7D(t)%0A"></p>
@@ -579,133 +713,46 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 <p>For two markers,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bi1%7D(t)%0A%5Cleftarrow%0A%5CLambda_i(t)%0A%5Crightarrow%0AY_%7Bi2%7D(t).%0A"></p>
 <p>Their marginal association is not evidence against the model. On the contrary, this association is precisely what the common latent process is intended to explain.</p>
-<section id="conditional-independence-of-markers" class="level3">
-<h3 class="anchored" data-anchor-id="conditional-independence-of-markers">Conditional independence of markers</h3>
-<p>If the marker-specific residual errors are independent,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cepsilon_%7Bik%7D(t)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0A%5Cepsilon_%7Bik'%7D(t),%0A"></p>
+<section id="conditional-independence-of-markers" class="level4">
+<h4 class="anchored" data-anchor-id="conditional-independence-of-markers">Conditional independence of markers</h4>
+<p>For distinct markers, if the marker-specific residual errors are independent conditional on the latent process,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cepsilon_%7Bik%7D(t)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0A%5Cepsilon_%7Bik'%7D(t)%0A%5Cmid%5CLambda_i(t),%0A"></p>
 <p>then</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bik%7D(t)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0AY_%7Bik'%7D(t)%0A%5Cmid%0A%5CLambda_i(t).%0A"></p>
 <p>Thus, the analogue of local independence is now conditional independence of the markers <strong>given the common latent process</strong>.</p>
 <p>Again, the general principle has not changed. What has changed is the latent quantity on which we condition.</p>
 </section>
 </section>
-<section id="multivariate-latent-class-mixed-models" class="level2">
-<h2 class="anchored" data-anchor-id="multivariate-latent-class-mixed-models">Multivariate latent class mixed models</h2>
+<section id="multivariate-latent-class-mixed-models" class="level3">
+<h3 class="anchored" data-anchor-id="multivariate-latent-class-mixed-models">Multivariate latent class mixed models</h3>
 <p>A multivariate LCMM combines the previous structures.</p>
 <p>The latent trajectory may be described by</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0A%5CLambda_i(t)%5Cmid%20C_i=g%0A=%0AX_i(t)%5E%5Ctop%5Cbeta_g%0A+%0AZ_i(t)%5E%5Ctop%20b_i.%0A"></p>
 <p>Multiple markers are then linked to this common latent trajectory:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bik%7D(t)%0A=%0AH_k%0A%5Cleft%5C%7B%0A%5CLambda_i(t)%0A+%0A%5Cepsilon_%7Bik%7D(t)%0A%5Cright%5C%7D.%0A"></p>
 <p>This model therefore contains several sources of dependence.</p>
-<section id="dependence-across-time" class="level3">
-<h3 class="anchored" data-anchor-id="dependence-across-time">Dependence across time</h3>
+<section id="dependence-across-time" class="level4">
+<h4 class="anchored" data-anchor-id="dependence-across-time">Dependence across time</h4>
 <p>Repeated observations from the same subject share the same random effects.</p>
-<p>Consequently,</p>
+<p>Consequently, repeated observations are generally dependent within class:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_i(t_1)%0A%5Cnot%5C!%5Cperp%5C!%5C!%5C!%5Cperp%0AY_i(t_2)%0A%5Cmid%20C_i.%0A"></p>
 <p>The latent class alone does not explain the longitudinal dependence.</p>
 <p>Conditioning additionally on the individual trajectory or random effects removes the dependence generated by those random effects.</p>
 </section>
-<section id="dependence-across-markers" class="level3">
-<h3 class="anchored" data-anchor-id="dependence-across-markers">Dependence across markers</h3>
+<section id="dependence-across-markers" class="level4">
+<h4 class="anchored" data-anchor-id="dependence-across-markers">Dependence across markers</h4>
 <p>Different markers share the common latent process <img src="https://latex.codecogs.com/png.latex?%5CLambda_i(t)">.</p>
-<p>Therefore,</p>
+<p>For distinct markers whose conditional response distributions vary with the shared process through the functions <img src="https://latex.codecogs.com/png.latex?H_k">, variation in a non-degenerate latent process generally produces marginal dependence:</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bik%7D(t)%0A%5Cnot%5C!%5Cperp%5C!%5C!%5C!%5Cperp%0AY_%7Bik'%7D(t)%0A"></p>
 <p>marginally.</p>
 <p>With independent marker-specific residual errors,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%0AY_%7Bik%7D(t)%0A%5Cperp%5C!%5C!%5C!%5Cperp%0AY_%7Bik'%7D(t)%0A%5Cmid%0A%5CLambda_i(t).%0A"></p>
 <p>The common latent process therefore plays a role analogous to the latent class in a simple LPA: it explains why observed variables are associated.</p>
-</section>
-</section>
-<section id="a-hierarchy-of-conditional-independence" class="level2">
-<h2 class="anchored" data-anchor-id="a-hierarchy-of-conditional-independence">A hierarchy of conditional independence</h2>
-<p>The models can be summarized by asking which latent quantities are required to explain the dependence among observations.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 13%">
-<col style="width: 26%">
-<col style="width: 59%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Model</th>
-<th>Dependence explained by</th>
-<th>Conditional independence</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>LCA</td>
-<td>latent class</td>
-<td>indicators independent given <img src="https://latex.codecogs.com/png.latex?C_i"></td>
-</tr>
-<tr class="even">
-<td>LPA</td>
-<td>latent class</td>
-<td>indicators independent given <img src="https://latex.codecogs.com/png.latex?C_i"> under local independence</td>
-</tr>
-<tr class="odd">
-<td>LCGA</td>
-<td>latent class</td>
-<td>repeated outcomes independent given <img src="https://latex.codecogs.com/png.latex?C_i"> if residuals are independent</td>
-</tr>
-<tr class="even">
-<td>LCLMM / GMM</td>
-<td>class + random effects</td>
-<td>repeated outcomes independent given <img src="https://latex.codecogs.com/png.latex?C_i,b_i"> if residuals are independent</td>
-</tr>
-<tr class="odd">
-<td>Latent process model</td>
-<td>common latent process</td>
-<td>markers independent given <img src="https://latex.codecogs.com/png.latex?%5CLambda_i(t)"> if marker residuals are independent</td>
-</tr>
-<tr class="even">
-<td>Multivariate LCMM</td>
-<td>class + random effects + latent process</td>
-<td>dependence across time and markers is explained by the corresponding latent quantities</td>
-</tr>
-</tbody>
-</table>
-<p>This suggests a more general formulation of local independence:</p>
-<blockquote class="blockquote">
-<p><strong>Observed variables are locally independent when they are conditionally independent after conditioning on the latent structure that the model assumes generates their dependence.</strong></p>
-</blockquote>
-<p>Under this interpretation, local independence is not restricted to latent class analysis. It is a general principle underlying many latent variable models.</p>
-</section>
-<section id="why-this-distinction-matters" class="level2">
-<h2 class="anchored" data-anchor-id="why-this-distinction-matters">Why this distinction matters</h2>
-<p>It would be incorrect to take the LPA statement</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0AY_j%5Cperp%5C!%5C!%5C!%5Cperp%20Y_k%5Cmid%20C%0A"></p>
-<p>and mechanically apply it to every latent class model.</p>
-<p>In an LCLMM, observations within the same class are deliberately correlated through the random effects.</p>
-<p>In a multivariate LCMM, markers are deliberately correlated through the common latent process.</p>
-<p>The relevant question is therefore not simply</p>
-<blockquote class="blockquote">
-<p>Are the observations independent within a latent class?</p>
-</blockquote>
-<p>Instead, we should ask</p>
-<blockquote class="blockquote">
-<p><strong>After conditioning on the latent variables and random effects that the model introduces to explain dependence, is there residual association left that the model does not account for?</strong></p>
-</blockquote>
-<p>This is the more general and useful interpretation of local independence.</p>
-</section>
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>The concept of local independence develops naturally as latent variable models become more complex.</p>
-<p>For LCA and standard LPA,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bcondition%20on%20%7D%20C_i.%0A"></p>
-<p>For an LCLMM,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bcondition%20on%20%7D%20C_i%20%5Ctext%7B%20and%20%7D%20b_i.%0A"></p>
-<p>For multiple markers measuring a latent process,</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctext%7Bcondition%20on%20%7D%20%5CLambda_i(t).%0A"></p>
-<p>For a multivariate LCMM, both ideas operate simultaneously: latent classes describe qualitatively different trajectories, random effects describe individual variation within classes, and the common latent process explains association among multiple markers.</p>
-<p>The common principle is therefore</p>
-<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboxed%7B%0A%5Ctext%7Bdependence%20in%20the%20observed%20data%7D%0A%5Cquad%5Clongrightarrow%5Cquad%0A%5Ctext%7Blatent%20structure%7D%0A%5Cquad%5Clongrightarrow%5Cquad%0A%5Ctext%7Bconditional%20independence%7D%0A%7D%0A"></p>
-<p>The phrase <strong>local independence</strong> is easiest to understand not as “independence within classes”, but more generally as:</p>
-<blockquote class="blockquote">
-<p><strong>independence after conditioning on the latent structure responsible for the observed dependence.</strong></p>
-</blockquote>
+<p>More elaborate multivariate LCMMs may include marker-specific random intercepts or an additional stochastic process, as described in the <a href="https://cecileproust-lima.github.io/lcmm/reference/multlcmm.html">LCMM documentation</a>. Marker-specific random intercepts can induce dependence across repeated measurements of the same marker even after conditioning on the common process. Conditional independence across all observations then requires conditioning on those intercepts as well. Similarly, when a stochastic process contributes additional shared variation, conditioning only on class and random effects is insufficient; the relevant process values must also be included. These are extensions of the simplified specification above.</p>
 
 
+</section>
+</section>
 </section>
 
  ]]></description>

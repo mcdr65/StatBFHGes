@@ -24,8 +24,6 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 
 
 
-
-
 ## Themen 2026
 
 
@@ -40,7 +38,25 @@ Einmal monatlich tauschen sich Statistik-Interessierte über **ausgewählte Them
 | MI  | 2.9   | Longitudinal Latent Variable Models ([GitLabPage](https://mta3.pages.ti.bfh.ch/lcmm/)) | André            |   |
 | MI  | 7.10  | ---                                                                                    | ---              |   |
 | MI  | 4.11  | Gaussian finite mixture models (Latent Profile Analysis)                               | André            |   |
-| MI  | 2.12  |                                                                                        |                  |   |
+| MI  | 2.12  | Principal Component Analysis                                                           | André            |   |
+
+
+
+## Themen 2027
+
+| Tag | Datum | Thema | Lead  |   |
+|-----|-------|-------|-------|---|
+| MI  | 6.1   |       |  |
+| MI  | 3.2   |       |
+| MI  | 3.3   |       |
+| MI  | 7.4   |       |
+| MI  | 5.5   |       |
+| MI  | 2.6   |       |
+| MI  | 1.9   |       |
+| MI  | 6.10  |       |
+| MI  | 3.11  |       |
+| MI  | 1.12  |       |
+
 
 
 <!-- ```{r echo=FALSE} -->
