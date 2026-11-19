@@ -2,7 +2,7 @@
 title: "Erwartungswert, Varianz und zentrale Zerlegungen"
 date: "2026-10-05"
 description: "Konzepte der Wahrscheinlichkeitstheorie"
-categories: [Wahrscheinlichkeitstheorie]
+categories: [wahrscheinlichkeitstheorie]
 ---
 
 

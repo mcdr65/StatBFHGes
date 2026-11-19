@@ -10,7 +10,395 @@
 <atom:link href="https://github.com/mcdr65/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.36</generator>
-<lastBuildDate>Wed, 07 Oct 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 18 Nov 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Delta Method: Linearization and the Propagation of Uncertainty</title>
+  <dc:creator>André Meichtry</dc:creator>
+  <link>https://github.com/mcdr65/posts/DeltaMethod/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="the-underlying-idea-linearization" class="level1">
+<h1>The underlying idea: linearization</h1>
+<p>Many relationships in science are nonlinear. Near a particular point, however, a smooth nonlinear function can be approximated by its tangent line (or, with several inputs, by its tangent plane).</p>
+<p>For a differentiable function <img src="https://latex.codecogs.com/png.latex?g">, the <strong>first-order Taylor approximation</strong> around <img src="https://latex.codecogs.com/png.latex?x_0"> is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ag(x)%20%5Capprox%20g(x_0)+g'(x_0)(x-x_0).%0A"></p>
+<p>The right-hand side is an <strong>affine</strong> function of <img src="https://latex.codecogs.com/png.latex?x">: it has the form <img src="https://latex.codecogs.com/png.latex?ax+b">. In strict mathematical terminology, a linear function has the form <img src="https://latex.codecogs.com/png.latex?ax"> and passes through the origin; an affine function can also include an intercept. This distinction does not affect the variance calculation because adding a constant leaves variance unchanged.</p>
+<p>This strategy is used throughout science: small-oscillation approximations in physics, linearized dynamical systems in engineering, Newton’s method in numerical mathematics, and the propagation of measurement uncertainty.</p>
+</section>
+<section id="the-delta-method" class="level1">
+<h1>The delta method</h1>
+<p>The <strong>delta method</strong> applies linearization to an estimator in order to approximate the distribution and variance of a <strong>nonlinear transformation</strong> of that estimator.</p>
+<p>Let <img src="https://latex.codecogs.com/png.latex?%5Chat%5Ctheta"> estimate <img src="https://latex.codecogs.com/png.latex?%5Ctheta">. Suppose</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Csqrt%20n(%5Chat%5Ctheta-%5Ctheta)%5Cxrightarrow%7Bd%7DN(0,V).%0A"></p>
+<p>We want to understand <img src="https://latex.codecogs.com/png.latex?g(%5Chat%5Ctheta)"> for a differentiable function <img src="https://latex.codecogs.com/png.latex?g">. Taylor-expanding around the <strong>true parameter</strong> <img src="https://latex.codecogs.com/png.latex?%5Ctheta"> gives</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ag(%5Chat%5Ctheta)=g(%5Ctheta)+g'(%5Ctheta)(%5Chat%5Ctheta-%5Ctheta)+R_n,%0A"></p>
+<p>where the remainder <img src="https://latex.codecogs.com/png.latex?R_n"> is negligible on the <img src="https://latex.codecogs.com/png.latex?n%5E%7B-1/2%7D"> scale under the usual regularity conditions. Consequently,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cunderbrace%7Bg(%5Chat%5Ctheta)-g(%5Ctheta)%7D_%7B%5Ctext%7Btransformed%20estimation%20error%7D%7D%0A%5Capprox%0A%5Cunderbrace%7Bg'(%5Ctheta)%7D_%7B%5Ctext%7Blocal%20slope%7D%7D%0A%5Cunderbrace%7B(%5Chat%5Ctheta-%5Ctheta)%7D_%7B%5Ctext%7Boriginal%20estimation%20error%7D%7D.%0A"></p>
+<p>The reason this is useful is the elementary identity</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BVar%7D(aX+b)=a%5E2%5Coperatorname%7BVar%7D(X).%0A"></p>
+<p>Because <img src="https://latex.codecogs.com/png.latex?g'(%5Ctheta)"> is a constant, linearization suggests</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboxed%7B%5Coperatorname%7BVar%7D%5C%7Bg(%5Chat%5Ctheta)%5C%7D%5Capprox%5Bg'(%5Ctheta)%5D%5E2%5Coperatorname%7BVar%7D(%5Chat%5Ctheta).%7D%0A"></p>
+<p>It also provides a limiting distribution (when <img src="https://latex.codecogs.com/png.latex?g'(%5Ctheta)%5Cne0">):</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboxed%7B%5Csqrt%20n%5C%7Bg(%5Chat%5Ctheta)-g(%5Ctheta)%5C%7D%5Cxrightarrow%7Bd%7DN%5Cbigl(0,%5Bg'(%5Ctheta)%5D%5E2V%5Cbigr).%7D%0A"></p>
+<p>Thus, the method accomplishes <strong>two connected tasks</strong>: approximate <em>variance propagation</em> and establish <em>asymptotic normality</em> after a smooth transformation.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Exact normality versus asymptotic normality
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If <img src="https://latex.codecogs.com/png.latex?X"> is exactly normal, an affine transformation <img src="https://latex.codecogs.com/png.latex?aX+b"> is exactly normal, but a nonlinear transformation generally is not. For example, <img src="https://latex.codecogs.com/png.latex?e%5EX"> is lognormal. The delta method does <strong>not</strong> claim nonlinear transformations preserve exact normality: it says that a smooth transformation of an increasingly concentrated, asymptotically normal estimator is <strong>asymptotically normal</strong> after appropriate centering and scaling, provided the first derivative is nonzero.</p>
+</div>
+</div>
+</section>
+<section id="example-the-log-odds-of-a-binomial-proportion" class="level1">
+<h1>Example: the log odds of a binomial proportion</h1>
+<p>Let <img src="https://latex.codecogs.com/png.latex?Y%5Csim%5Coperatorname%7BBin%7D(n,p)"> with <img src="https://latex.codecogs.com/png.latex?0%3Cp%3C1"> and <img src="https://latex.codecogs.com/png.latex?%5Chat%20p=Y/n">. The binomial central limit theorem gives</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20p%5C;%5Cdot%5Csim%5C;N%5Cleft(p,%5Cfrac%7Bp(1-p)%7D%7Bn%7D%5Cright).%0A"></p>
+<p>Consider <img src="https://latex.codecogs.com/png.latex?g(p)=%5Coperatorname%7Blogit%7D(p)=%5Clog%5Bp/(1-p)%5D">. Its derivative is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ag'(p)=%5Cfrac1p+%5Cfrac1%7B1-p%7D=%5Cfrac1%7Bp(1-p)%7D.%0A"></p>
+<p>Applying the delta-method variance formula yields</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Coperatorname%7BVar%7D%5C%7B%5Coperatorname%7Blogit%7D(%5Chat%20p)%5C%7D%0A&amp;%5Capprox%20%5Cleft%5B%5Cfrac1%7Bp(1-p)%7D%5Cright%5D%5E2%5Cfrac%7Bp(1-p)%7Dn%5C%5C%0A&amp;=%5Cboxed%7B%5Cfrac1%7Bnp(1-p)%7D%7D.%0A%5Cend%7Baligned%7D%0A"></p>
+<p>This also implies the asymptotic normal approximation</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7Blogit%7D(%5Chat%20p)%5C;%5Cdot%5Csim%5C;N%5Cleft(%5Coperatorname%7Blogit%7D(p),%5Cfrac1%7Bnp(1-p)%7D%5Cright).%0A"></p>
+<p>The approximation is most useful away from the boundary probabilities <img src="https://latex.codecogs.com/png.latex?0"> and <img src="https://latex.codecogs.com/png.latex?1"> and when the expected counts of events and non-events are sufficiently large.</p>
+</section>
+<section id="multivariate-delta-method" class="level1">
+<h1>Multivariate delta method</h1>
+<p>With several estimated parameters, write <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cboldsymbol%5Ctheta%7D=(%5Chat%5Ctheta_1,%5Cldots,%5Chat%5Ctheta_k)%5E%5Ctop">. For a differentiable scalar-valued function <img src="https://latex.codecogs.com/png.latex?g">, the first-order Taylor expansion is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ag(%5Chat%7B%5Cboldsymbol%5Ctheta%7D)%5Capprox%20g(%5Cboldsymbol%5Ctheta)+%5Cnabla%20g(%5Cboldsymbol%5Ctheta)%5E%5Ctop(%5Chat%7B%5Cboldsymbol%5Ctheta%7D-%5Cboldsymbol%5Ctheta).%0A"></p>
+<p>If <img src="https://latex.codecogs.com/png.latex?%5CSigma=%5Coperatorname%7BCov%7D(%5Chat%7B%5Cboldsymbol%5Ctheta%7D)">, use the linear-combination identity <img src="https://latex.codecogs.com/png.latex?%5Coperatorname%7BVar%7D(%5Cmathbf%20a%5E%5Ctop%5Cmathbf%20X)=%5Cmathbf%20a%5E%5Ctop%5Coperatorname%7BCov%7D(%5Cmathbf%20X)%5Cmathbf%20a"> to obtain</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboxed%7B%5Coperatorname%7BVar%7D%5C%7Bg(%5Chat%7B%5Cboldsymbol%5Ctheta%7D)%5C%7D%5Capprox%5Cnabla%20g(%5Cboldsymbol%5Ctheta)%5E%5Ctop%5CSigma%5Cnabla%20g(%5Cboldsymbol%5Ctheta).%7D%0A"></p>
+<p>For two inputs this is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BVar%7D%5C%7Bg(%5Chat%5Ctheta_1,%5Chat%5Ctheta_2)%5C%7D%5Capprox%0A%5Cleft(%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%5Ctheta_1%7D%5Cright)%5E2%5C!%5Coperatorname%7BVar%7D(%5Chat%5Ctheta_1)%0A+%5Cleft(%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%5Ctheta_2%7D%5Cright)%5E2%5C!%5Coperatorname%7BVar%7D(%5Chat%5Ctheta_2)%0A+2%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%5Ctheta_1%7D%5Cfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%5Ctheta_2%7D%5Coperatorname%7BCov%7D(%5Chat%5Ctheta_1,%5Chat%5Ctheta_2).%0A"></p>
+<p>All derivatives are evaluated at the true parameter values. In applications these are replaced by consistent estimates.</p>
+<section id="connection-to-propagation-of-measurement-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="connection-to-propagation-of-measurement-uncertainty">Connection to propagation of measurement uncertainty</h2>
+<p>The same formula is often called <strong>first-order (Gaussian) error propagation</strong> in physics and metrology. If <img src="https://latex.codecogs.com/png.latex?Z=g(X_1,X_2)"> is derived from measured quantities, local slopes determine how uncertainty in each measurement contributes to uncertainty in <img src="https://latex.codecogs.com/png.latex?Z">. The statistical delta method emphasizes sampling distributions of estimators and asymptotic justification, but the linearization is the same.</p>
+</section>
+</section>
+<section id="from-normal-approximation-to-wald-inference" class="level1">
+<h1>From normal approximation to Wald inference</h1>
+<p>If an estimator is asymptotically normal and we consistently estimate its variance, we may test <img src="https://latex.codecogs.com/png.latex?H_0:%5Ctheta=%5Ctheta_0"> using</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AZ_W=%5Cfrac%7B%5Chat%5Ctheta-%5Ctheta_0%7D%7B%5Cwidehat%7B%5Coperatorname%7BSE%7D%7D(%5Chat%5Ctheta)%7D%5Cxrightarrow%7Bd%7DN(0,1)%0A%5Cqquad%5Ctext%7Bunder%20%7DH_0.%0A"></p>
+<p>For a smooth transformed parameter <img src="https://latex.codecogs.com/png.latex?%5Cphi=g(%5Ctheta)">, the delta method supplies the approximate standard error for <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cphi=g(%5Chat%5Ctheta)">, yielding a Wald test or confidence interval <strong>on the transformed scale</strong>.</p>
+<p>In the case of the log odds ratio, the appendix proves the familiar standard-error formula. It leads to</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AZ_W=%5Cfrac%7B%5Clog(%5Cwidehat%7BOR%7D)-%5Clog(OR_0)%7D%7B%5Csqrt%7B1/a+1/b+1/c+1/d%7D%7D.%0A"></p>
+<p>For <img src="https://latex.codecogs.com/png.latex?OR_0=1">, the numerator is simply <img src="https://latex.codecogs.com/png.latex?%5Clog(%5Cwidehat%7BOR%7D)">.</p>
+<section id="connection-to-likelihood-theory" class="level2">
+<h2 class="anchored" data-anchor-id="connection-to-likelihood-theory">Connection to likelihood theory</h2>
+<p>There are two complementary derivations of the asymptotic normality of the <em>same</em> log-odds-ratio estimator:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><img src="https://latex.codecogs.com/png.latex?2%5Ctimes2"> table / delta method</th>
+<th>Logistic regression / likelihood theory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CLT for sample proportions <img src="https://latex.codecogs.com/png.latex?%5Chat%20p_1,%5Chat%20p_0"></td>
+<td>CLT for the likelihood score</td>
+</tr>
+<tr class="even">
+<td>First-order Taylor expansion of the logit transformation</td>
+<td>Quadratic expansion of the log-likelihood (equivalently, first-order expansion of its score)</td>
+</tr>
+<tr class="odd">
+<td>Asymptotic normality of <img src="https://latex.codecogs.com/png.latex?%5Clog(%5Cwidehat%7BOR%7D)"></td>
+<td>Asymptotic normality of the MLE <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cbeta_1"></td>
+</tr>
+<tr class="even">
+<td>Variance from the delta method</td>
+<td>Variance from inverse Fisher information</td>
+</tr>
+</tbody>
+</table>
+<p>In unadjusted logistic regression with a binary predictor,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7Blogit%7D%5C%7BP(Y=1%5Cmid%20X=x)%5C%7D=%5Cbeta_0+%5Cbeta_1x,%0A%5Cqquad%20%5Cbeta_1=%5Clog(OR),%0A"></p>
+<p>so <img src="https://latex.codecogs.com/png.latex?%5Chat%5Cbeta_1=%5Clog(%5Cwidehat%7BOR%7D)">. In this model the usual information-based variance estimate is <strong>exactly the same formula</strong> as the plug-in delta-method estimate derived in the appendix. The normal approximation itself remains asymptotic. The local quadratic approximation of the log-likelihood helps explain this information-based variance; the CLT for the score is also required to justify the Wald reference distribution.</p>
+</section>
+</section>
+<section id="limits-of-first-order-linearization" class="level1">
+<h1>Limits of first-order linearization</h1>
+<p>A first-order delta method can fail to give a <em>nondegenerate</em> limiting normal distribution when <img src="https://latex.codecogs.com/png.latex?g'(%5Ctheta)=0">. For example, if <img src="https://latex.codecogs.com/png.latex?g(%5Ctheta)=%5Ctheta%5E2"> and the true value is <img src="https://latex.codecogs.com/png.latex?%5Ctheta=0">, then <img src="https://latex.codecogs.com/png.latex?g'(0)=0">. If <img src="https://latex.codecogs.com/png.latex?%5Csqrt%20n%5Chat%5Ctheta%5Cxrightarrow%7Bd%7DN(0,V)">, the appropriate nondegenerate result is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0An%5Chat%5Ctheta%5E2%5Cxrightarrow%7Bd%7DV%5Cchi_1%5E2,%0A"></p>
+<p>not a normal limit. Higher-order expansions are then required. Nonsmooth transformations and parameter values on boundaries can also require other methods.</p>
+</section>
+<section id="sec-appendix" class="level1 page-columns page-full">
+<h1>Appendix: Proof of the asymptotic variance of <img src="https://latex.codecogs.com/png.latex?%5Clog(%5Cwidehat%7BOR%7D)"></h1>
+<section id="a.-set-up-two-independent-binomial-samples" class="level2">
+<h2 class="anchored" data-anchor-id="a.-set-up-two-independent-binomial-samples">A. Set up two independent binomial samples</h2>
+<p>Consider the <img src="https://latex.codecogs.com/png.latex?2%5Ctimes2"> table:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Group</th>
+<th style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?Y=1"></th>
+<th style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?Y=0"></th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?X=1"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?a"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?b"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?n_1=a+b"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><img src="https://latex.codecogs.com/png.latex?X=0"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?c"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?d"></td>
+<td style="text-align: right;"><img src="https://latex.codecogs.com/png.latex?n_0=c+d"></td>
+</tr>
+</tbody>
+</table>
+<p>Assume independent groups with fixed sample sizes,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0AA%5Csim%5Coperatorname%7BBin%7D(n_1,p_1),%5Cqquad%20C%5Csim%5Coperatorname%7BBin%7D(n_0,p_0),%0A"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?a"> and <img src="https://latex.codecogs.com/png.latex?c"> denote their observed event counts. Then</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%20p_1=%5Cfrac%7Ba%7D%7Bn_1%7D,%5Cqquad%5Chat%20p_0=%5Cfrac%7Bc%7D%7Bn_0%7D,%0A"></p>
+<p>and <img src="https://latex.codecogs.com/png.latex?%5Coperatorname%7BCov%7D(%5Chat%20p_1,%5Chat%20p_0)=0"> by independence. The parameter and estimator are</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Ctheta=%5Clog(OR)=%5Coperatorname%7Blogit%7D(p_1)-%5Coperatorname%7Blogit%7D(p_0),%0A"></p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%5Ctheta=%5Coperatorname%7Blogit%7D(%5Chat%20p_1)-%5Coperatorname%7Blogit%7D(%5Chat%20p_0)=%5Clog%5C!%5Cleft(%5Cfrac%7Bad%7D%7Bbc%7D%5Cright).%0A"></p>
+<p>We assume <img src="https://latex.codecogs.com/png.latex?0%3Cp_0,p_1%3C1"> and both group sizes grow, with their ratio bounded away from zero and infinity.</p>
+</section>
+<section id="b.-joint-approximate-distribution-of-the-sample-proportions" class="level2">
+<h2 class="anchored" data-anchor-id="b.-joint-approximate-distribution-of-the-sample-proportions">B. Joint approximate distribution of the sample proportions</h2>
+<p>The two binomial CLTs imply</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bpmatrix%7D%5Chat%20p_1%5C%5C%5Chat%20p_0%5Cend%7Bpmatrix%7D%0A%5C;%5Cdot%5Csim%5C;%0AN_2%5C!%5Cleft%5B%0A%5Cbegin%7Bpmatrix%7Dp_1%5C%5Cp_0%5Cend%7Bpmatrix%7D,%0A%5Cunderbrace%7B%5Cbegin%7Bpmatrix%7D%0A%5Cdfrac%7Bp_1(1-p_1)%7D%7Bn_1%7D&amp;0%5C%5C%0A0&amp;%5Cdfrac%7Bp_0(1-p_0)%7D%7Bn_0%7D%0A%5Cend%7Bpmatrix%7D%7D_%7B%5CSigma%7D%0A%5Cright%5D.%0A"></p>
+</section>
+<section id="c.-compute-the-gradient-of-the-log-odds-ratio" class="level2">
+<h2 class="anchored" data-anchor-id="c.-compute-the-gradient-of-the-log-odds-ratio">C. Compute the gradient of the log odds ratio</h2>
+<p>Define</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0Ag(p_1,p_0)=%5Clog%20p_1-%5Clog(1-p_1)-%5Clog%20p_0+%5Clog(1-p_0).%0A"></p>
+<p>Its gradient is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cnabla%20g(p_1,p_0)=%0A%5Cbegin%7Bpmatrix%7D%0A%5Cdfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20p_1%7D%5C%5C%5B6pt%5D%0A%5Cdfrac%7B%5Cpartial%20g%7D%7B%5Cpartial%20p_0%7D%0A%5Cend%7Bpmatrix%7D%0A=%0A%5Cbegin%7Bpmatrix%7D%0A%5Cdfrac1%7Bp_1(1-p_1)%7D%5C%5C%5B6pt%5D%0A-%5Cdfrac1%7Bp_0(1-p_0)%7D%0A%5Cend%7Bpmatrix%7D.%0A"></p>
+<p>Therefore the first-order Taylor expansion is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Chat%5Ctheta-%5Ctheta%5Capprox%0A%5Cfrac%7B%5Chat%20p_1-p_1%7D%7Bp_1(1-p_1)%7D%0A-%5Cfrac%7B%5Chat%20p_0-p_0%7D%7Bp_0(1-p_0)%7D.%0A"></p>
+</section>
+<section id="d.-propagate-the-variance" class="level2">
+<h2 class="anchored" data-anchor-id="d.-propagate-the-variance">D. Propagate the variance</h2>
+<p>Apply the multivariate variance rule:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Coperatorname%7BVar%7D(%5Chat%5Ctheta)%0A%5Capprox%5Cnabla%20g%5E%5Ctop%5CSigma%5Cnabla%20g.%0A"></p>
+<p>Because the covariance between the proportions is zero,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Coperatorname%7BVar%7D(%5Chat%5Ctheta)%0A&amp;%5Capprox%0A%5Cleft%5B%5Cfrac1%7Bp_1(1-p_1)%7D%5Cright%5D%5E2%5Cfrac%7Bp_1(1-p_1)%7D%7Bn_1%7D%0A+%5Cleft%5B-%5Cfrac1%7Bp_0(1-p_0)%7D%5Cright%5D%5E2%5Cfrac%7Bp_0(1-p_0)%7D%7Bn_0%7D%5C%5C%5B8pt%5D%0A&amp;=%5Cboxed%7B%5Cfrac1%7Bn_1p_1(1-p_1)%7D+%5Cfrac1%7Bn_0p_0(1-p_0)%7D%7D.%0A%5Cend%7Baligned%7D%0A"></p>
+<p>The negative sign in the second gradient component disappears after squaring. If the groups were dependent, the covariance term would also need to be included.</p>
+</section>
+<section id="e.-replace-unknown-probabilities-by-sample-proportions" class="level2">
+<h2 class="anchored" data-anchor-id="e.-replace-unknown-probabilities-by-sample-proportions">E. Replace unknown probabilities by sample proportions</h2>
+<p>The plug-in variance estimator is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cwidehat%7B%5Coperatorname%7BVar%7D%7D(%5Chat%5Ctheta)%0A=%5Cfrac1%7Bn_1%5Chat%20p_1(1-%5Chat%20p_1)%7D+%5Cfrac1%7Bn_0%5Chat%20p_0(1-%5Chat%20p_0)%7D.%0A"></p>
+<p>For the first group,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Baligned%7D%0A%5Cfrac1%7Bn_1%5Chat%20p_1(1-%5Chat%20p_1)%7D%0A&amp;=%5Cfrac1%7B(a+b)%5Cfrac%7Ba%7D%7Ba+b%7D%5Cfrac%7Bb%7D%7Ba+b%7D%7D%5C%5C%0A&amp;=%5Cfrac%7Ba+b%7D%7Bab%7D%5C%5C%0A&amp;=%5Cfrac1a+%5Cfrac1b.%0A%5Cend%7Baligned%7D%0A"></p>
+<p>Likewise,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cfrac1%7Bn_0%5Chat%20p_0(1-%5Chat%20p_0)%7D=%5Cfrac1c+%5Cfrac1d.%0A"></p>
+<p>Thus,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboxed%7B%5Cwidehat%7B%5Coperatorname%7BVar%7D%7D%5C%7B%5Clog(%5Cwidehat%7BOR%7D)%5C%7D%0A=%5Cfrac1a+%5Cfrac1b+%5Cfrac1c+%5Cfrac1d%7D%0A"></p>
+<p>and</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboxed%7B%5Cwidehat%7B%5Coperatorname%7BSE%7D%7D%5C%7B%5Clog(%5Cwidehat%7BOR%7D)%5C%7D%0A=%5Csqrt%7B%5Cfrac1a+%5Cfrac1b+%5Cfrac1c+%5Cfrac1d%7D.%7D%0A"></p>
+<p>This is an <strong>estimated asymptotic variance</strong>, not the exact finite-sample variance of the log odds ratio. It requires nonzero cell counts to be directly evaluated.</p>
+</section>
+<section id="f.-connection-to-the-wald-statistic" class="level2">
+<h2 class="anchored" data-anchor-id="f.-connection-to-the-wald-statistic">F. Connection to the Wald statistic</h2>
+<p>For the null hypothesis <img src="https://latex.codecogs.com/png.latex?H_0:OR=1"> (equivalently <img src="https://latex.codecogs.com/png.latex?%5Ctheta=0">), the usual test is</p>
+<p><img src="https://latex.codecogs.com/png.latex?%0A%5Cboxed%7BZ_W=%5Cfrac%7B%5Clog(ad/bc)%7D%7B%5Csqrt%7B1/a+1/b+1/c+1/d%7D%7D%5Coverset%7BH_0%7D%7B%5Capprox%7DN(0,1).%7D%0A"></p>
+<p>This is exactly the conventional coefficient-level Wald statistic obtained from an unadjusted logistic regression of binary <img src="https://latex.codecogs.com/png.latex?Y"> on binary <img src="https://latex.codecogs.com/png.latex?X">, with an intercept, when all four cell counts are positive.</p>
+</section>
+<section id="g.-optional-numerical-check-in-r" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="g.-optional-numerical-check-in-r">G. Optional numerical check in R</h2>
+<p>The following chunk can be run when rendering with an R-enabled Quarto installation:</p>
+<div class="cell column-page">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">a <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>; b <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">60</span>; c <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>; d <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">80</span></span>
+<span id="cb1-2">log_or <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> d <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> (b <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> c))</span>
+<span id="cb1-3">se_delta <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>b <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>c <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>d)</span>
+<span id="cb1-4">z_delta <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> log_or <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> se_delta</span>
+<span id="cb1-5"></span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Fit a weighted Bernoulli logistic regression to the four cells.</span></span>
+<span id="cb1-7">dat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(</span>
+<span id="cb1-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">X =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>),</span>
+<span id="cb1-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">Y =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>),</span>
+<span id="cb1-10">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">count =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(a, b, c, d)</span>
+<span id="cb1-11">)</span>
+<span id="cb1-12">fit <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glm</span>(Y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> X, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> dat, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">weights =</span> count, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">family =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">binomial</span>())</span>
+<span id="cb1-13"></span>
+<span id="cb1-14"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">log_OR =</span> log_or, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">SE_delta =</span> se_delta, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">z_delta =</span> z_delta)</span>
+<span id="cb1-15"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(fit))[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"X"</span>, ]</span>
+<span id="cb1-16"></span>
+<span id="cb1-17"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">stopifnot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">isTRUE</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">all.equal</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unname</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coef</span>(fit)[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"X"</span>]), log_or)))</span>
+<span id="cb1-18"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">stopifnot</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">isTRUE</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">all.equal</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unname</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">vcov</span>(fit)[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"X"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"X"</span>])), se_delta)))</span></code></pre></div></div>
+</details>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>analysis</category>
+  <guid>https://github.com/mcdr65/posts/DeltaMethod/</guid>
+  <pubDate>Wed, 18 Nov 2026 23:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Zeilenraum und Spaltenraum in der linearen Regression</title>
   <dc:creator>André Meichtry</dc:creator>
@@ -151,7 +539,7 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 </section>
 
  ]]></description>
-  <category>Lineare Algebra</category>
+  <category>linear algebra</category>
   <guid>https://github.com/mcdr65/posts/Projektionsgeometrie/</guid>
   <pubDate>Wed, 07 Oct 2026 22:00:00 GMT</pubDate>
 </item>
@@ -445,7 +833,7 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 </section>
 
  ]]></description>
-  <category>Wahrscheinlichkeitstheorie</category>
+  <category>wahrscheinlichkeitstheorie</category>
   <guid>https://github.com/mcdr65/posts/Erwartungswerte/</guid>
   <pubDate>Sun, 04 Oct 2026 22:00:00 GMT</pubDate>
 </item>
@@ -756,7 +1144,7 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 </section>
 
  ]]></description>
-  <category>Latent Variable Models</category>
+  <category>latent variables</category>
   <guid>https://github.com/mcdr65/posts/conditionalIndependence/</guid>
   <pubDate>Wed, 02 Sep 2026 22:00:00 GMT</pubDate>
 </item>
@@ -842,7 +1230,7 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 </section>
 
  ]]></description>
-  <category>Lineare Algebra</category>
+  <category>linear algebra</category>
   <guid>https://github.com/mcdr65/posts/Trace/</guid>
   <pubDate>Mon, 08 Jun 2026 22:00:00 GMT</pubDate>
 </item>
@@ -949,7 +1337,7 @@ Figure&nbsp;1: Dieselben Regressionsdaten in zwei Darstellungen. Links: Beobacht
 </section>
 
  ]]></description>
-  <category>Lineare Algebra</category>
+  <category>linear algebra</category>
   <guid>https://github.com/mcdr65/posts/LinearAlgebra/</guid>
   <pubDate>Tue, 19 May 2026 22:00:00 GMT</pubDate>
 </item>

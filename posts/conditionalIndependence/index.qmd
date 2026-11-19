@@ -2,7 +2,7 @@
 title: "Local Independence in Latent Variable Models"
 date: "2026-09-03"
 description: "Why local independence matters in LCA, LPA, factor analysis, and item response theory, with longitudinal extensions in an appendix."
-categories: [Latent Variable Models]
+categories: [latent variables]
 ---
 
 ## Introduction

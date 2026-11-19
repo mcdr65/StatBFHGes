@@ -2,7 +2,7 @@
 title: "Zeilenraum und Spaltenraum in der linearen Regression"
 date: "2026-10-08"
 description: "Projektionsgeometrie"
-categories: [Lineare Algebra]
+categories: [linear algebra]
 ---
 
 

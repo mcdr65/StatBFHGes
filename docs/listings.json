@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/DeltaMethod/index.html",
       "/posts/Projektionsgeometrie/index.html",
       "/posts/Erwartungswerte/index.html",
       "/posts/conditionalIndependence/index.html",
