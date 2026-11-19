@@ -6,8 +6,6 @@ description: "Variance Estimation"
 categories: [analysis]
 ---
 
-
-
 # The underlying idea: linearization
 
 Many relationships in science are nonlinear. Near a particular point, however, a smooth nonlinear function can be approximated by its tangent line (or, with several inputs, by its tangent plane).
@@ -106,6 +104,10 @@ $$
 The approximation is most useful away from the boundary probabilities $0$ and $1$ and when the expected counts of events and non-events are sufficiently large.
 
 # Multivariate delta method
+
+Figure @fig-multivariate-delta illustrates the geometric idea for two parameters: the nonlinear surface $z=g(\theta_1,\theta_2)$ is replaced locally by its tangent plane at the true parameter vector. The gradient gives the direction and sensitivity of this local change. The covariance matrix determines the uncertainty ellipse of the estimators; projecting that uncertainty through the gradient gives the approximate variance of the transformed estimator.
+
+![Geometric interpretation of the multivariate delta method: tangent-plane linearization and propagation of uncertainty through the gradient.](delta_method_assets/multivariate_delta_method.png){#fig-multivariate-delta width=100% fig-alt="Two-panel illustration showing a nonlinear surface with a tangent plane and, in parameter space, a covariance ellipse with a gradient direction."}
 
 With several estimated parameters, write $\hat{\boldsymbol\theta}=(\hat\theta_1,\ldots,\hat\theta_k)^\top$. For a differentiable scalar-valued function $g$, the first-order Taylor expansion is
 
