@@ -73,7 +73,7 @@
 </section>
 <section id="multivariate-delta-method" class="level1">
 <h1>Multivariate delta method</h1>
-<p>Figure Figure&nbsp;1 illustrates the geometric idea for two parameters: the nonlinear surface <img src="https://latex.codecogs.com/png.latex?z=g(%5Ctheta_1,%5Ctheta_2)"> is replaced locally by its tangent plane at the true parameter vector. The gradient gives the direction and sensitivity of this local change. The covariance matrix determines the uncertainty ellipse of the estimators; projecting that uncertainty through the gradient gives the approximate variance of the transformed estimator.</p>
+<p>Figure&nbsp;1 illustrates the geometric idea for two parameters: the nonlinear surface <img src="https://latex.codecogs.com/png.latex?z=g(%5Ctheta_1,%5Ctheta_2)"> is replaced locally by its tangent plane at the true parameter vector. The gradient gives the direction and sensitivity of this local change. The covariance matrix determines the uncertainty ellipse of the estimators; projecting that uncertainty through the gradient gives the approximate variance of the transformed estimator.</p>
 <div id="fig-multivariate-delta" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two-panel illustration showing a nonlinear surface with a tangent plane and, in parameter space, a covariance ellipse with a gradient direction.">
 <figure class="quarto-float quarto-float-fig figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-fig" id="fig-multivariate-delta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
